@@ -1,7 +1,50 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-Fellix-sans: 'Fellix', sans-serif;
 }
+
+@font-face {
+  font-family: 'Fellix';
+  src:url('/src/fonts/Fellix-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Fellix';
+  src:url('/src/fonts/Fellix-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Fellix';
+  src:url('/src/fonts/Fellix-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Fellix';
+  src:url('/src/fonts/Fellix-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Fellix';
+  src:url('/src/fonts/Fellix-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Fellix';
+  src:url('/src/fonts/Fellix-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Fellix';
+  src:url('/src/fonts/Fellix-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Fellix';
+  src:url('/src/fonts/Fellix-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -19,7 +62,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-Fellix-sans) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
