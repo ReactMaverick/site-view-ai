@@ -41,8 +41,8 @@ export const MUIStyle = {
     BannerContent: {
         width: {
             xs: "100%",
-            sm: "100%",
-            md: "100%",
+            sm: "50%",
+            md: "50%",
             lg: "50%",
             xl: "50%",
         },
@@ -143,10 +143,33 @@ export const MUIStyle = {
         borderRadius: "50%",
         background: commonColor.green,
         color: commonColor.black,
+        transition: "all 0.3s ease",
     },
 
-
-
+    ScrollDownBtn : {
+        position: "absolute",
+        bottom: "30px",
+        left: "50%",
+        transform: "translateX(-50%)",
+        background: commonColor.whitetrans,
+        color: commonColor.black,
+        borderRadius: "50px",
+        padding: "8px 16px",
+        boxShadow: "none",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "10px",
+        fontSize: FONT_SIZE.text12,
+        textTransform: "capitalize",
+        fontWeight: FONT_WEIGHT.MEDIUM,
+        lineHeight: "20px",
+        border: `1px solid ${commonColor.blacktrans}`,
+    },
+    ScrollDownIcon: {
+        fontSize: FONT_SIZE.heading24,
+        color: commonColor.black,
+    },
 
 
 

@@ -29,7 +29,13 @@ export default function Banner() {
                 </Box>
 
             </Container>
-
+                <Button sx={MUIStyle.ScrollDownBtn} variant="text" size="large">
+                    <Box component={"span"} className="ScrollDownIcon" sx={MUIStyle.ScrollDownIcon}>
+                    <Icon icon="bi:mouse" />
+                    </Box>
+                    Scroll Down
+                </Button>
+          
         </Box>
     );
 }

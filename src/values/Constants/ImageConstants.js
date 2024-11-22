@@ -5,4 +5,6 @@ const URL = (url) => {
 }
 export const LOGO = URL('/images/logo.png');
 export const BANNER = URL('/images/Hero-section.png');
+export const BANNER1 = URL('/images/next1sec.png');
+export const DASHBOARD = URL('/images/360degimg.png');
 
