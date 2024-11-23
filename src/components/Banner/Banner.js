@@ -17,10 +17,12 @@ export default function Banner() {
                             </Typography>
                               
                                 <Button sx={MUIStyle.BannerBtn} variant="contained" size="large">
+                                    
                                     <Box component={"span"} className="BannerBtnIcon" sx={MUIStyle.BannerBtnIcon}>
                                     <Icon icon="flowbite:arrow-right-outline" />
                                     </Box>
                                 Try Now
+                                <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG}/>
                                 </Button>
                         </Box>
                      

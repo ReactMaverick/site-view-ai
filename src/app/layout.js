@@ -4,9 +4,42 @@ import Header from "@/components/Header/Header";
 import FooterSec from "@/components/FooterSec/FooterSec";
 
 const Fellix = localFont({
-  src: "./fonts/Fellix-Thin.ttf",
+  src: "./fonts/Fellix-Black.ttf",
   variable: "--font-Fellix-sans",
-  weight: "100 900",
+  src: [
+    {
+      path: './fonts/Fellix-Thin.ttf',
+      weight: '200',
+    },
+    {
+      path: './fonts/Fellix-Light.ttf',
+      weight: '300',
+    },
+    {
+      path: './fonts/Fellix-Regular.ttf',
+      weight: '400',
+    },
+    {
+      path: './fonts/Fellix-Medium.ttf',
+      weight: '500',
+    },
+    {
+      path: './fonts/Fellix-SemiBold.ttf',
+      weight: '600',
+    },
+    {
+      path: './fonts/Fellix-Bold.ttf',
+      weight: '700',
+    },
+    {
+      path: './fonts/Fellix-ExtraBold.ttf',
+      weight: '800',
+    },
+    {
+      path: './fonts/Fellix-Black.ttf',
+      weight: '900',
+    },
+  ],
 });
 
 export const metadata = {

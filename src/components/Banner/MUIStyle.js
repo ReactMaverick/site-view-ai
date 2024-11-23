@@ -1,6 +1,7 @@
 import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 import { BANNER } from "@/values/Constants/ImageConstants";
+import zIndex from "@mui/material/styles/zIndex";
 
 export const MUIStyle = {
     BannerMain: {
@@ -108,12 +109,15 @@ export const MUIStyle = {
     BannerBtn: {
         background: commonColor.trans,
         color: commonColor.black,
-        borderRadius: "10px",
-        padding: "18px 24px",
+        borderRadius: "99px",
+        padding: "0px 35px 0px 0px",
         boxShadow: "none",
+        overflow: "hidden",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        zIndex: "1",
+        position: "relative",
         gap: "10px",
         fontSize: {
             xs: FONT_SIZE.text16,
@@ -123,27 +127,41 @@ export const MUIStyle = {
             xl: FONT_SIZE.text16,
         },
         textTransform: "capitalize",
-        fontWeight: FONT_WEIGHT.MEDIUM,
+        fontWeight: FONT_WEIGHT.SEMI_BOLD,
         lineHeight: "24px",
         "&:hover": {
             boxShadow: "none",
         },
        "&:hover .BannerBtnIcon": {
-            background: commonColor.black,
-            color: commonColor.green,
+        transform: "translateX(10px)",
         },
+        "&:hover .BannerBtnBG": {
+            width: "100%",
+            
+        },
+    },
+    BannerBtnBG: {
+        position: "absolute",
+        top: "0",
+        left: "0",
+        height: "100%",
+        width: "0%",
+        background: commonColor.green,
+        transition: "all 0.8s ease",
+        zIndex: "-1",
+        borderRadius: "99px",
     },
     BannerBtnIcon: {
         fontSize: FONT_SIZE.heading24,
-        height:"48px",
-        width:"48px",
+        height:"60px",
+        width:"60px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         borderRadius: "50%",
         background: commonColor.green,
         color: commonColor.black,
-        transition: "all 0.3s ease",
+        transition: "all 0.8s ease",
     },
 
     ScrollDownBtn : {

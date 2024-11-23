@@ -75,10 +75,23 @@ export default function FooterSec() {
                       
                     </Box>
                     <Box sx={MUIStyle.FooterCopyRightRow}>
-                        <Typography variant="h3" sx={MUIStyle.FooterCopyRightText}>
+                        <Typography variant="p" sx={MUIStyle.FooterCopyRightText}>
                             © 2021 SiteView. All Rights Reserved.
                         </Typography>
-                       
+                    <Box sx={MUIStyle.FooterPolicyBox}>
+                    <Link href="/privacy-policy">
+                            <Typography sx={MUIStyle.FooterPolicyText}>Privacy Policy</Typography>
+                        </Link>
+                        <Typography sx={MUIStyle.FooterPolicyDivider}>|</Typography>
+                        <Link href="/terms-conditions">
+                            <Typography sx={MUIStyle.FooterPolicyText}>Terms & Conditions</Typography>
+                        </Link>
+                        <Typography sx={MUIStyle.FooterPolicyDivider}>|</Typography>
+                        <Link href="/cookie-policy">
+                            <Typography sx={MUIStyle.FooterPolicyText}>Cookie Policy</Typography>
+                        </Link>
+                    
+                    </Box>
                         </Box>
                 </Container>
             </Box>

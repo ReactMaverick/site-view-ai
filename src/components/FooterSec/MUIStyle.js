@@ -1,5 +1,6 @@
 import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_FAMILY, FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
+import zIndex from "@mui/material/styles/zIndex";
 
 export const MUIStyle = {
     FooterSec: {
@@ -19,8 +20,9 @@ export const MUIStyle = {
         bottom: "0",
         left: "50%",
         transform: "translateX(-50%)",
-        width: "93%",
-        zIndex: "1",
+        width: "95%",
+        objectFit: "contain",
+        zIndex: "0",
     },
     SocialMediaBox: {
         display: "flex",
@@ -238,7 +240,38 @@ export const MUIStyle = {
             },
         },
     },
-
+    FooterCopyRightRow : {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: "100%",
+        padding: "20px 0",
+        position: "relative",
+        zIndex  : "1",
+    },
+    FooterCopyRightText : {
+        fontSize: FONT_SIZE.text16,
+        fontWeight: FONT_WEIGHT.MEDIUM,
+        color: commonColor.grey,
+        lineHeight: "24px",
+    },
+    FooterPolicyBox : {
+        display: "flex",
+        gap: "20px",
+        alignItems: "center",
+    },
+    FooterPolicyText : {
+        fontSize: FONT_SIZE.text16,
+        fontWeight: FONT_WEIGHT.MEDIUM,
+        color: commonColor.grey,
+        lineHeight: "24px",
+    },
+    FooterPolicyDivider : {
+        fontSize: FONT_SIZE.text16,
+        fontWeight: FONT_WEIGHT.MEDIUM,
+        color: commonColor.grey,
+        lineHeight: "24px",
+    },
 
 
 
