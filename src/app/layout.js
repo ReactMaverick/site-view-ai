@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header/Header";
+import FooterSec from "@/components/FooterSec/FooterSec";
 
 const Fellix = localFont({
   src: "./fonts/Fellix-Thin.ttf",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className={`${Fellix.variable}`}>
         <Header/>
         {children}
+        <FooterSec/>
       </body>
     </html>
   );

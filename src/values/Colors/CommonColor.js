@@ -15,4 +15,7 @@ export const commonColor = {
     grey: "#6B7280",
     whitetrans: "rgba(255, 255, 255, 0.2)",
     blacktrans: "rgba(0, 0, 0, 0.05)",
+    gredientBGWLTR: "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)",
+    gredientBGWRTR: "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+    blackGredient: "linear-gradient(180deg, rgba(3, 7, 18, 0) 0%, #030712 100%)",
 };  
