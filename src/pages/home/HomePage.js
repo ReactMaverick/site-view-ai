@@ -7,6 +7,7 @@ import Project from "@/components/Project/Project";
 import Workflow from "@/components/Workflow/Workflow";
 import VideoSec from "@/components/VideoSec/VideoSec";
 import Industries from "@/components/Industries/Industries";
+import OurTeam from "@/components/OurTeam/OurTeam";
 
 
 export default function HomePage() {
@@ -19,6 +20,7 @@ export default function HomePage() {
       <Workflow/>
       <VideoSec/>
       <Industries/>
+      <OurTeam/>
         </Box>
     );
 }

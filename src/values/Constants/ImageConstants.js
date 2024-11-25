@@ -21,4 +21,13 @@ export const VIDEOGREADIENT = URL('/images/ProductOverlay.png');
 export const VIDEOBG1 = URL('/images/VideoBg.png');
 export const VIDEO = URL('/video/example_video.mp4');
 export const VIDEOICON = URL('/images/VideoButton.png');
+export const MENUFACTURINGIMG = URL('/images/menufacturingImg.png');
+export const WAVY = URL('/images/Wavy.png');
+export const TEAM = URL('/images/team.png');
+export const TEAM2 = URL('/images/team2.png');
+export const TEAM3 = URL('/images/team3.png');
+export const TEAM4 = URL('/images/team4.png');
+export const TEAM5 = URL('/images/team5.png');
+export const TEAM6 = URL('/images/team6.png');
+export const TEAM7 = URL('/images/team7.png');
 

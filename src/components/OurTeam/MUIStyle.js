@@ -3,7 +3,7 @@ import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 import { BANNER } from "@/values/Constants/ImageConstants";
 
 export const MUIStyle = {
-  IndustriesMain: {
+  BuildForMain: {
     width: "100%",
     padding: {
       xs: "100px 0",
@@ -12,19 +12,20 @@ export const MUIStyle = {
       lg: "132px 0",
       xl: "132px 0",
     },
+    background:commonColor.black,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
   },
 
-  IndustriesHeadingBoxOuter: {
+  BuildForHeadingBoxOuter: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
   },
-  IndustriesHeadingBoxInner: {
+  BuildForHeadingBoxInner: {
     maxWidth: {
         xs: "100%",
         sm: "100%",
@@ -35,16 +36,16 @@ export const MUIStyle = {
     marginBottom: {
       xs: "30px",
       sm: "30px",
-      md: "180px",
-      lg: "180px",
-      xl: "180px",
+      md: "80px",
+      lg: "80px",
+      xl: "80px",
     },
   },
   Heading: {
     fontSize: FONT_SIZE.heading32,
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.REGULAR,
-    color: commonColor.black,
+    color: commonColor.white,
     textTransform: "uppercase",
     textAlign: "center",
     margin: "0",
@@ -57,39 +58,43 @@ export const MUIStyle = {
     textAlign: "center",
     marginBottom: "24px",
   },
-  IndustriesSec: {
+
+
+  OurTeamBox: {
+    width: "100%",
+    height: "100%",
+    minHeight: "300px",
     display: "flex",
     justifyContent: "center",
+    alignItems: "start",
+    flexDirection: "column",
+    padding: "20px",
+    borderRadius: "20px",
+    overflow: "hidden",
+  },
+  OurTeamBoxHeader: {
+    display: "flex",
+    justifyContent: "start",
     alignItems: "center",
-    gap: "24px 50px",
-    flexWrap: "wrap",
+    marginBottom: "20px",
+    gap: "16px",
   },
-  IndustriesButton: {
-    backgroundColor: commonColor.trans,
-    color: commonColor.black,
-    fontSize: {
-        xs: FONT_SIZE.heading24,
-        sm: FONT_SIZE.heading24,
-        md: FONT_SIZE.heading32,
-        lg: FONT_SIZE.heading32,
-        xl: FONT_SIZE.heading32,
-    },
-    lineHeight: "40px",
-    fontWeight: FONT_WEIGHT.REGULAR,
-    border: `1px solid ${commonColor.boderColor}`,
-    textTransform: "capitalize",
-    borderRadius: "99px",
-    padding: "16px 24px",
-    "&:hover": {
-      backgroundColor: commonColor.green,
-      border: `1px solid ${commonColor.green}`,
-    },
+  OurTeamIcon: {
+    width: "37px",
+    height: "37px",
+    objectFit: "contain",
   },
-  CustomTooltip: {
-    position: "absolute",
-    bottom: "115%",
-    left: "50%",
-    transform: "translateX(-50%)",
-    zIndex: 1,
+  TeamRole: {
+    fontSize: FONT_SIZE.heading24,
+    lineHeight: "34px",
+    fontWeight: FONT_WEIGHT.MEDIUM,
+    color: commonColor.lime,
   },
+  OurTeamImg: {
+    width: "100%",
+    height: "200px",
+    objectFit: "cover",
+    borderRadius: "20px",
+  },
+
 };

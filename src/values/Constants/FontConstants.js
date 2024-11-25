@@ -7,6 +7,7 @@ export const FONT_SIZE = {
     text20: '2.0rem',
     text22: '2.2rem',
     heading24: '2.4rem',
+    heading26: '2.6rem',
     heading28: '2.8rem',
     heading32: '3.2rem',
     heading36: '3.6rem',

@@ -19,4 +19,9 @@ export const commonColor = {
     gredientBGWLTR: "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)",
     gredientBGWRTR: "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
     blackGredient: "linear-gradient(180deg, rgba(3, 7, 18, 0) 0%, #030712 100%)",
+    green80: "rgba(223, 255, 96, 0.8)",
+    greenFade1: "#F7FFC7",
+    greenFade2: "#EDFF95",
+    greenFade3: "#DFFF60",
+    lime: "#223201",
 };  
