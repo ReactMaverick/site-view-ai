@@ -1,11 +1,51 @@
 "use client";
 import { Box, Button, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ButtonTooltip from "../ButtonTooltip/ButtonTooltip";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Industries() {
   const [hoveredButton, setHoveredButton] = useState(null);
+  const industriesRef = useRef(null);
+
+  useEffect(() => {
+    const buttons = gsap.utils.toArray(".IndustriesButton");
+
+    gsap.fromTo(
+      buttons,
+      { opacity: 0, filter: "blur(5px)"},
+      {
+        opacity: 1,
+        filter: "blur(0px)",
+        duration: 1.5,
+        stagger: {
+          each: 0.1,
+          from: "random",
+        },
+        scrollTrigger: {
+          trigger: industriesRef.current,
+          start: "top top",
+          end: "+=2000", // Adjust this value based on the height of your section and desired animation duration
+          scrub: true,
+          pin: true,
+          markers: true,  // Set to true to see the trigger area
+        },
+      }
+    );
+
+    buttons.forEach((button) => {
+      button.addEventListener("mouseenter", () => {
+        gsap.to(button, { scale: 1.1, duration: 0.3 });
+      });
+      button.addEventListener("mouseleave", () => {
+        gsap.to(button, { scale: 1, duration: 0.3 });
+      });
+    });
+  }, []);
 
   const handleMouseEnter = (industry) => {
     setHoveredButton(industry);
@@ -29,7 +69,7 @@ export default function Industries() {
           </Box>
         </Box>
 
-        <Box sx={MUIStyle.IndustriesSec}>
+        <Box sx={MUIStyle.IndustriesSec} ref={industriesRef}>
           {[
             "Oil & Gas",
             "Museums & Galleries",

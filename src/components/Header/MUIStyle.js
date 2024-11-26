@@ -63,12 +63,13 @@ export const MUIStyle = {
     borderRadius: "100px",
     textTransform: "capitalize",
     fontSize: {
-      xs: FONT_SIZE.text14,
-      sm: FONT_SIZE.text16,
+      xs: FONT_SIZE.text18,
+      sm: FONT_SIZE.text18,
       md: FONT_SIZE.text18,
       lg: FONT_SIZE.text20,
     },
-    fontWeight: FONT_WEIGHT.REGULAR,
+    lineHeight: "1.8",
+    fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
     "&:hover": {
       background: commonColor.trans,
@@ -209,7 +210,7 @@ export const MUIStyle = {
     justifyContent: "flex-end",
     alignItems: "center",
     fontSize: "30px",
-    color: commonColor.green,
+    color: commonColor.lime,
   },
   LogoImgMob: {
     width: {

@@ -1,6 +1,7 @@
 import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 import { BANNER } from "@/values/Constants/ImageConstants";
+import zIndex from "@mui/material/styles/zIndex";
 
 export const MUIStyle = {
   IndustriesMain: {
@@ -32,13 +33,7 @@ export const MUIStyle = {
         lg: "45%",
         xl: "45%",
     },
-    marginBottom: {
-      xs: "30px",
-      sm: "30px",
-      md: "180px",
-      lg: "180px",
-      xl: "180px",
-    },
+  
   },
   Heading: {
     fontSize: FONT_SIZE.heading32,
@@ -58,6 +53,13 @@ export const MUIStyle = {
     marginBottom: "24px",
   },
   IndustriesSec: {
+    padding: {
+      xs: "30px 0",
+      sm: "30px 0",
+      md: "300px 0",
+      lg: "300px 0",
+      xl: "300px 0",
+    },
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -65,6 +67,8 @@ export const MUIStyle = {
     flexWrap: "wrap",
   },
   IndustriesButton: {
+    position: "relative",
+    zIndex: 1,
     backgroundColor: commonColor.trans,
     color: commonColor.black,
     fontSize: {
@@ -90,6 +94,6 @@ export const MUIStyle = {
     bottom: "115%",
     left: "50%",
     transform: "translateX(-50%)",
-    zIndex: 1,
+    zIndex: 2,
   },
 };

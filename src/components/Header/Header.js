@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { MUIStyle } from "./MUIStyle";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import { LOGO } from "@/values/Constants/ImageConstants";
+import { LOGO, LOGOFTR } from "@/values/Constants/ImageConstants";
 import { commonColor } from "@/values/Colors/CommonColor";
 
 export default function Header() {
@@ -67,7 +67,7 @@ export default function Header() {
                   <Link href="/">
                     <Box
                       component={"img"}
-                      src={LOGO}
+                      src={LOGOFTR}
                       alt="logo"
                       sx={MUIStyle.LogoImgMob}
                     />
@@ -169,8 +169,6 @@ export default function Header() {
                         marginTop: "20px",
                       },
                     ]}
-                    variant="contained"
-                    color="primary"
                   >
                     Login
                   </Button>
@@ -190,8 +188,6 @@ export default function Header() {
                 },
               },
             ]}
-            variant="contained"
-            color="primary"
           >
             Login{" "}
           </Button>

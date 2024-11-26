@@ -8,6 +8,7 @@ import Workflow from "@/components/Workflow/Workflow";
 import VideoSec from "@/components/VideoSec/VideoSec";
 import Industries from "@/components/Industries/Industries";
 import OurTeam from "@/components/OurTeam/OurTeam";
+import CTA from "@/components/CTA/CTA";
 
 
 export default function HomePage() {
@@ -21,6 +22,7 @@ export default function HomePage() {
       <VideoSec/>
       <Industries/>
       <OurTeam/>
+      <CTA/>
         </Box>
     );
 }

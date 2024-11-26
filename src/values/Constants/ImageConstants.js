@@ -30,4 +30,7 @@ export const TEAM4 = URL('/images/team4.png');
 export const TEAM5 = URL('/images/team5.png');
 export const TEAM6 = URL('/images/team6.png');
 export const TEAM7 = URL('/images/team7.png');
+export const CTABG = URL('/images/CTASection.png');
+export const HELMATE = URL('/images/helmetcamera.png');
+export const LINEARROW = URL('/images/Linearrow.png');
 
