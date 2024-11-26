@@ -24,4 +24,5 @@ export const commonColor = {
     greenFade2: "#EDFF95",
     greenFade3: "#DFFF60",
     lime: "#223201",
+    boxShadowColor: "rgba(0, 0, 0, 0.12)",
 };  

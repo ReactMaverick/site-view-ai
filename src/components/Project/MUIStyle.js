@@ -51,42 +51,9 @@ export const MUIStyle = {
         textAlign: "center",
         marginBottom: "24px",
     },
-    partnersLogoSec: {
-        margin: {
-            xs: "30px 0",
-            sm: "30px 0",
-            md: "48px 0",
-            lg: "48px 0",
-            xl: "48px 0",
-        },
-position: "relative",
-"&::after": {
-    content: "''",
-    position: "absolute",
-    top: "0",
-    left: "0",
-    width: "290px",
-    height: "100%",
-    background:commonColor.gredientBGWLTR,
-    zIndex: "1",
-},
-"&::before": {
-    content: "''",
-    position: "absolute",
-    top: "0",
-    right: "0",
-    width: "290px",
-    height: "100%",
-    background:commonColor.gredientBGWRTR,
-    zIndex: "2",
-},
 
-},
-    partnersLogo : {
-        width: "120px",
-        height: "100%",
-        objectFit: "contain",
+    ProjectSec  : {
+        margin: "180px 0",
     },
-
 
 };

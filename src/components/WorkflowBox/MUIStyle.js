@@ -12,7 +12,7 @@ export const MUIStyle = {
     maxWidth: "400px",
     minHeight: "474px",
     background: commonColor.white,
-    boxShadow: "0px 0px 32px rgba(0, 0, 0, 0.12)",
+    boxShadow: `0px 0px 32px ${commonColor.boxShadowColor}`,
     borderRadius: "32px",
     overflow: "hidden",
   },
