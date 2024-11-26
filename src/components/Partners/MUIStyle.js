@@ -25,7 +25,13 @@ export const MUIStyle = {
         flexDirection: "column",
     },
     PartnersHeadingBoxInner: {
-        maxWidth: "40%",
+        maxWidth: {
+            xs: "100%",
+            sm: "100%",
+            md: "40%",
+            lg: "40%",
+            xl: "40%",
+        },
         marginBottom: {
             xs: "30px",
             sm: "30px",

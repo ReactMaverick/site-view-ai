@@ -33,4 +33,7 @@ export const TEAM7 = URL('/images/team7.png');
 export const CTABG = URL('/images/CTASection.png');
 export const HELMATE = URL('/images/helmetcamera.png');
 export const LINEARROW = URL('/images/Linearrow.png');
+export const VIDEOINNER = URL('/images/Video.png');
+export const DOWN = URL('/images/down.png');
+export const UP = URL('/images/up.png');
 

@@ -96,9 +96,9 @@ export default function Header() {
                     <Link
                       className={
                         "headerMenu" +
-                        (pathName === "/Why-siteview" ? " active" : "")
+                        (pathName === "/WhySiteView" ? " active" : "")
                       }
-                      href="/aboutUs"
+                      href="/WhySiteView"
                     >
                       <Typography component={"p"} sx={MUIStyle.HeaderMenuBtn}>
                         Why SiteView

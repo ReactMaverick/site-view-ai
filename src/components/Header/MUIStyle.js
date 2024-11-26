@@ -264,7 +264,7 @@ export const MUIStyle = {
       lg: commonColor.black,
     },
     fontSize: FONT_SIZE.text18,
-    fontWeight: FONT_WEIGHT.REGULAR,
+    fontWeight: FONT_WEIGHT.MEDIUM,
     cursor: "pointer",
     padding: "10px 18px",
     transition: "all 0.3s",

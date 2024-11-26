@@ -26,7 +26,13 @@ export const MUIStyle = {
     flexDirection: "column",
   },
   workflowHeadingBoxInner: {
-    maxWidth: "50%",
+    maxWidth: {
+      xs: "100%",
+      sm: "100%",
+      md: "50%",
+      lg: "50%",
+      xl: "50%",
+  },
     marginBottom: {
       xs: "30px",
       sm: "30px",
