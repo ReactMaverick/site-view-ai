@@ -5,7 +5,7 @@ import { PROJECTIMG } from "@/values/Constants/ImageConstants";
 
 export default function ProjectBox() {
   return (
-    <Box sx={MUIStyle.ProjectBoxOuter}>
+    <Box sx={MUIStyle.ProjectBoxOuter} className="card__inner">
       <Box sx={MUIStyle.ProjectBoxImgBox}>
         <Box component={"img"} src={PROJECTIMG} sx={MUIStyle.ProjectImg} />
         <Typography variant="h3" sx={MUIStyle.ProjectTitle}>

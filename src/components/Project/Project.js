@@ -1,22 +1,27 @@
-"use client";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { Box, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import ProjectBox from "../ProjectBox/ProjectBox";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
 export default function Project() {
-  useEffect(() => {
+  const projectBoxes = Array(5).fill(null); // Adjust the number of ProjectBox components as needed
+
+  // Runs before the first render
+  useLayoutEffect(() => {
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+  }, []);
+
+  useGSAP(() => {
     let cards = gsap.utils.toArray(".card");
 
     cards.forEach((card, index) => {
       const cardInner = card.querySelector(".card__inner");
 
-      gsap.fromTo(cardInner, 
-        { y: 100, opacity: 1 }, 
+      gsap.fromTo(card,
+        { y: 100, opacity: 1, marker: true },
         {
           y: 0,
           opacity: 1,
@@ -25,9 +30,10 @@ export default function Project() {
             start: "top center",
             end: "top center",
             scrub: true,
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
+            markers: true,  // Set to true to see the trigger area
           }
-        }
+        },
       );
     });
 
@@ -38,9 +44,7 @@ export default function Project() {
       pin: true,
       pinSpacing: true
     });
-  }, []);
-
-  const projectBoxes = Array(5).fill(null); // Adjust the number of ProjectBox components as needed
+  });
 
   return (
     <Box sx={MUIStyle.PartnersMain}>
@@ -56,10 +60,12 @@ export default function Project() {
           </Box>
         </Box>
 
-        <Box className="projectSec" sx={{ ...MUIStyle.ProjectSec,}}>
+        <Box className="projectSec" sx={{ ...MUIStyle.ProjectSec, }}>
           {projectBoxes.map((_, index) => (
-            <div key={index} className="card" style={{}}>
-                <ProjectBox />
+            <div key={index} className="card"
+              style={{}}
+            >
+              <ProjectBox />
             </div>
           ))}
         </Box>

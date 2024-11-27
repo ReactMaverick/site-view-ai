@@ -1,14 +1,22 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { Box, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import WorkflowBox from "../WorkflowBox/WorkflowBox";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { useGSAP } from "@gsap/react";
 
 export default function Workflow() {
-  useEffect(() => {
+
+  const workflowBoxes = Array(10).fill(null);
+
+  // Runs before the first render
+  useLayoutEffect(() => {
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+  }, []);
+
+  useGSAP(() => {
     let cards = gsap.utils.toArray(".card-wrapper");
 
     gsap.to(cards, {
@@ -25,10 +33,11 @@ export default function Workflow() {
     });
 
     cards.forEach((card, index) => {
-      gsap.fromTo(card, 
-        { rotation: index % 2 === 0 ? -7 : 5,
-           opacity: 0,
-          }, 
+      gsap.fromTo(card,
+        {
+          rotation: index % 2 === 0 ? -7 : 5,
+          opacity: 0,
+        },
         {
           opacity: 1,
           scrollTrigger: {
@@ -41,11 +50,7 @@ export default function Workflow() {
         }
       );
     });
-
-  },
-   []);
-
-  const workflowBoxes = Array(10).fill(null);
+  });
 
   return (
     <Box className="workflowSec" sx={MUIStyle.workflowMain}>
@@ -60,15 +65,15 @@ export default function Workflow() {
             </Typography>
           </Box>
         </Box>
-        </Container>
-        <Box sx={MUIStyle.SliderOuter}>
-          {workflowBoxes.map((_, index) => (
-            <Box key={index} className="card-wrapper" sx={MUIStyle.SliderInner} style={{ minWidth: '400px', margin: '80px 10px', scrollSnapAlign: 'center' }}>
-              <WorkflowBox />
-            </Box>
-          ))}
-        </Box>
-     
+      </Container>
+      <Box sx={MUIStyle.SliderOuter}>
+        {workflowBoxes.map((_, index) => (
+          <Box key={index} className="card-wrapper" sx={MUIStyle.SliderInner} style={{ minWidth: '400px', margin: '80px 10px', scrollSnapAlign: 'center' }}>
+            <WorkflowBox />
+          </Box>
+        ))}
+      </Box>
+
     </Box>
   );
 }
