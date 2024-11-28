@@ -273,15 +273,11 @@ a {
 
 /* THREE */
 
-/* TEST */
-.cardTest {
-  width: 20vw;
-  height: 50vh;
-  text-align: center;
-  margin: auto;
-  overflow: hidden;
-  top: 0;
-  background-color: blue;
-}
+/* PROJECT SECTION */
 
-/* TEST */
+/* .projectSec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+} */
