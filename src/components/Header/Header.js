@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Container, debounce, Typography } from "@mui/material";
 import styles from "./Header.module.css";
 import { useEffect, useRef, useState } from "react";
 import { MUIStyle } from "./MUIStyle";
@@ -8,7 +8,15 @@ import Link from "next/link";
 import { LOGO, LOGOFTR } from "@/values/Constants/ImageConstants";
 import { commonColor } from "@/values/Colors/CommonColor";
 
-export default function Header() {
+const menuItems = [
+  { label: "Home", path: "/" },
+  { label: "Why SiteView", path: "/why-site-view" },
+  { label: "Our Tech", path: "/our-tech" },
+  { label: "Blogs", path: "/blogs" },
+  { label: "FAQ", path: "/faq" },
+  { label: "Contact Us", path: "/contact-us" },
+];
+export default function Header({ theme = "light" }) {
   const headerRef = useRef(null); // Create a ref for the header element
   const [isSticky, setIsSticky] = useState(false); // State to track sticky behavior
   const [isActiveMenuVisible, setIsActiveMenuVisible] = useState(false);
@@ -16,13 +24,13 @@ export default function Header() {
   /* global window */
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsSticky(scrollY > 100); // Add sticky class if scrolled past 200px
+      setIsSticky(window.scrollY > 100);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    const debounceScroll = debounce(handleScroll, 50);
+    window.addEventListener("scroll", debounceScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup on unmount
+    return () => window.removeEventListener("scroll", debounceScroll);
   }, []);
   /* global window */
   useEffect(() => {
@@ -35,7 +43,9 @@ export default function Header() {
     <Box
       ref={headerRef}
       className={isSticky ? styles.stickyHeader : ""}
-      sx={MUIStyle.HeaderMain}
+      sx={[MUIStyle.HeaderMain,
+       { borderColor: theme === "dark" ? "#D6D6D6" : commonColor.white10,}
+      ]}
     >
       <Container maxWidth="xl">
         <Box sx={MUIStyle.HeaderInner}>
@@ -44,7 +54,7 @@ export default function Header() {
               <Box
                 sx={MUIStyle.logoImage}
                 component={"img"}
-                src={LOGO}
+                src={theme === "light" ? LOGO : LOGOFTR}
                 alt="Logo"
               />
             </Link>
@@ -79,82 +89,44 @@ export default function Header() {
                     <Icon icon="charm:cross" />
                   </Box>
                 </Box>
-                <Box component={"ul"} sx={MUIStyle.HEaderMenu}>
-                  <Box component={"li"} sx={MUIStyle.HEaderMenuLi}>
-                    <Link
-                      className={
-                        "headerMenu" + (pathName === "/" ? " active" : "")
-                      }
-                      href="/"
-                    >
-                      <Typography component={"p"} sx={MUIStyle.HeaderMenuBtn}>
-                        Home
-                      </Typography>
-                    </Link>
-                  </Box>
-                  <Box component={"li"} sx={MUIStyle.HEaderMenuLi}>
-                    <Link
-                      className={
-                        "headerMenu" +
-                        (pathName === "/WhySiteView" ? " active" : "")
-                      }
-                      href="/WhySiteView"
-                    >
-                      <Typography component={"p"} sx={MUIStyle.HeaderMenuBtn}>
-                        Why SiteView
-                      </Typography>
-                    </Link>
-                  </Box>
-                  <Box component={"li"} sx={MUIStyle.HEaderMenuLi}>
-                    <Link
-                      className={
-                        "headerMenu" +
-                        (pathName === "/our-tech" ? " active" : "")
-                      }
-                      href="/service"
-                    >
-                      <Typography component={"p"} sx={MUIStyle.HeaderMenuBtn}>
-                        Our Tech
-                      </Typography>
-                    </Link>
-                  </Box>
-                  <Box component={"li"} sx={MUIStyle.HEaderMenuLi}>
-                    <Link
-                      className={
-                        "headerMenu" + (pathName === "/blogs" ? " active" : "")
-                      }
-                      href="/caseStudy"
-                    >
-                      <Typography component={"p"} sx={MUIStyle.HeaderMenuBtn}>
-                        Blogs
-                      </Typography>
-                    </Link>
-                  </Box>
-                  <Box component={"li"} sx={MUIStyle.HEaderMenuLi}>
-                    <Link
-                      className={
-                        "headerMenu" + (pathName === "/faq" ? " active" : "")
-                      }
-                      href="/contactUs"
-                    >
-                      <Typography component={"p"} sx={MUIStyle.HeaderMenuBtn}>
-                        FAQ
-                      </Typography>
-                    </Link>
-                  </Box>
-                  <Box component={"li"} sx={MUIStyle.HEaderMenuLi}>
-                    <Link
-                      className={
-                        "headerMenu" +
-                        (pathName === "/contactUs" ? " active" : "")
-                      }
-                      href="/contactUs"
-                    >
-                      <Typography component={"p"} sx={MUIStyle.HeaderMenuBtn}>
-                        Contact Us
-                      </Typography>
-                    </Link>
-                  </Box>
+                <Box
+                  component="ul"
+                  sx={[
+                    MUIStyle.HEaderMenu,
+                    {
+                      background:
+                        theme === "dark"
+                          ? commonColor.trans
+                          : commonColor.white10,
+                      borderRadius: "90px",
+                    },
+                  ]}
+                >
+                  {menuItems.map(({ label, path }) => (
+                    <Box component="li" key={path} sx={MUIStyle.HEaderMenuLi}>
+                      <Link
+                        className={
+                          "headerMenu" + (pathName === path ? " active" : "")
+                        }
+                        href={path}
+                      >
+                        <Typography
+                          component="p"
+                          sx={[
+                            MUIStyle.HeaderMenuBtn,
+                            {
+                              color:
+                                theme === "light"
+                                  ? commonColor.black
+                                  : commonColor.white,
+                            },
+                          ]}
+                        >
+                          {label}
+                        </Typography>
+                      </Link>
+                    </Box>
+                  ))}
                   <Button
                     sx={[
                       MUIStyle.HeaderBtn,

@@ -1,10 +1,13 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import { Icon } from "@iconify/react";
+import { commonColor } from "@/values/Colors/CommonColor";
 
-export default function BannerNew() {
+export default function BannerNew( {theme="light"} ) {
   return (
-    <Box sx={MUIStyle.BannerMain}>
+    <Box sx={[MUIStyle.BannerMain, {
+      background: theme === "dark" ? commonColor.white : commonColor.black,
+    }]}>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.BannerRow}>
           <Box sx={MUIStyle.BannerContent}>
@@ -12,14 +15,18 @@ export default function BannerNew() {
               <Typography variant="span" sx={MUIStyle.BannerTopHeading}>
                 Simplify Construction
               </Typography>
-              <Typography variant="h1" sx={MUIStyle.BannerHeading}>
+              <Typography variant="h1" sx={[MUIStyle.BannerHeading, {
+                color: theme === "dark" ? commonColor.black : commonColor.white,
+              }]}>
                 Fixing the Gaps in Construction Monitoring
               </Typography>
               <Typography variant="body1" sx={MUIStyle.BannerText}>
                 From missed inspections to rework costs, SiteView.ai bridges the
                 gaps with visual clarity and actionable insights.
               </Typography>
-              <Button sx={MUIStyle.BannerBtn} variant="contained" size="large">
+              <Button sx={[MUIStyle.BannerBtn, {
+                color: theme === "dark" ? commonColor.black : commonColor.white,
+             }]} variant="contained" size="large">
                 <Box
                   component={"span"}
                   className="BannerBtnIcon"

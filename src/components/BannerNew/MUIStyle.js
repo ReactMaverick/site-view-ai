@@ -5,7 +5,6 @@ import zIndex from "@mui/material/styles/zIndex";
 
 export const MUIStyle = {
     BannerMain: {
-        background:commonColor.white,
         width: "100%",
         padding: {
             xs: "100px 0",
@@ -104,7 +103,6 @@ export const MUIStyle = {
 
     BannerBtn: {
         background: commonColor.trans,
-        color: commonColor.black,
         borderRadius: "99px",
         padding: "0px 35px 0px 0px",
         boxShadow: "none",

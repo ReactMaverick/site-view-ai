@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${Fellix.variable}`}>
-        <Header/>
+        <Header />
         {children}
         <FooterSec/>
       </body>

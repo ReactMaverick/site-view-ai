@@ -27,4 +27,5 @@ export const commonColor = {
     boxShadowColor: "rgba(0, 0, 0, 0.12)",
     black5: "rgba(0, 0, 0, 0.05)",
     white10: "rgba(255, 255, 255, 0.1)",
+    white5: "rgba(255, 255, 255, 0.05)",
 };  

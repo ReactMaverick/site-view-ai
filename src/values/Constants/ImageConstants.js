@@ -36,4 +36,5 @@ export const LINEARROW = URL('/images/Linearrow.png');
 export const VIDEOINNER = URL('/images/Video.png');
 export const DOWN = URL('/images/down.png');
 export const UP = URL('/images/up.png');
-
+export const VISION = URL('/images/vision.png');
+export const PROJECTLOGO = URL('/images/Projectlogo.png');

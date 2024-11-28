@@ -93,3 +93,6 @@ a {
 .IndustriesButton{
   cursor: url(/images/HandPointing.png) 30 30, auto;
 }
+a.headerMenu.active p {
+  color: #c9f625;
+}

@@ -4,7 +4,7 @@ import { FOOTERBG } from "@/values/Constants/ImageConstants";
 import { commonStyle } from "@/values/Styles/CommonStyle";
 
 export const MUIStyle = {
-  HeaderMain: {
+    HeaderMain: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -13,9 +13,8 @@ export const MUIStyle = {
     position: "absolute",
     top: "0",
     left: "0",
-    padding: "10px 0",
+    padding: "26px 0",
     borderBottom: "1px solid",
-    borderColor: "#D6D6D6",
   },
 
   HeaderInner: {
@@ -23,7 +22,7 @@ export const MUIStyle = {
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-    padding: "10px 0",
+    padding: "0px 0",
     gap: {
       xs: "10px",
       sm: "20px",
@@ -238,7 +237,7 @@ export const MUIStyle = {
       lg: "20px",
     },
     listStyle: "none",
-    padding: 0,
+    padding:"5px 8px",
     margin: 0,
     background: commonColor.trans,
   },
@@ -257,16 +256,10 @@ export const MUIStyle = {
     },
   },
   HeaderMenuBtn: {
-    color: {
-      xs: commonColor.white,
-      sm: commonColor.white,
-      md: commonColor.black,
-      lg: commonColor.black,
-    },
     fontSize: FONT_SIZE.text18,
     fontWeight: FONT_WEIGHT.MEDIUM,
     cursor: "pointer",
-    padding: "10px 18px",
+    padding: "10px 16px",
     transition: "all 0.3s",
     "&:hover": {
       color: commonColor.green,
