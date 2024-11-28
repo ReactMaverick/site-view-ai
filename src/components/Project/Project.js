@@ -27,12 +27,12 @@ export default function Project() {
         trigger: card, // The element that ScrollTrigger will "trigger" when it comes into view
         start: "top top", // When the top of the trigger hits the top of the viewport
         end: "top bottom", // When the top of the trigger hits the bottom of the viewport
-        endTrigger: projectSecRef.current, // The element that ScrollTrigger will use as the end of the trigger.
+        endTrigger: ".workflowSec", // The element that ScrollTrigger will use as the end of the trigger.
         pin: true, // Pin the trigger element while it is in view
         pinSpacing: false, // Don't reserve the pin element's space in the document
         markers: true, // Show markers for testing purposes
         scrub: true, // Smoothly animate the pin movement
-        anticipatePin: 1 // Wait for 1 second before pinning the element
+        anticipatePin: 1, // Wait for 1 second before pinning the element
       });
     });
   });
