@@ -74,12 +74,26 @@ export const MUIStyle = {
   TabBarSecButton:{
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems:{
+      xs: "stretch",
+      sm: "stretch",
+      md: "stretch",
+      lg: "center",
+      xl: "center",
+    },
     flexDirection: "column",
+    position: "relative",
+    minHeight: "64px",
   },
   TabBarSecButtonHead: {
     background: commonColor.black5,
-    width: "420px",
+    width: {
+      xs: "100%",
+      sm: "100%",
+      md: "100%",
+      lg: "420px",
+      xl: "420px",
+    },
     minHeight: "64px",
     display: "flex",
     justifyContent: "center",
@@ -91,10 +105,18 @@ export const MUIStyle = {
     padding: "12px 24px",
     borderRadius: "32px",
     cursor: "pointer",
+    textAlign: "center",
+ 
   },
   TabBarSecButtonBody: {
     background: commonColor.greenFade3,
-    width: "556px",
+    width: {
+      xs: "100%",
+      sm: "100%",
+      md: "100%",
+      lg: "556px",
+      xl: "556px",
+    },
     minHeight: "275px",
     display: "flex",
     flexDirection: "column",
@@ -104,6 +126,7 @@ export const MUIStyle = {
     borderRadius: "32px",
     textAlign: "center",
     boxShadow: "0px 0px 32px rgba(0, 0, 0, 0.12)",
+
   },
   TabBarSecButtonBodyTop :{
     display: "flex",
@@ -134,6 +157,50 @@ export const MUIStyle = {
         fontWeight: FONT_WEIGHT.REGULAR,
         textAlign: "center",
         paddingTop: "10px",
-    }
+    },
+    TabBarSecMyRow:{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: {
+        xs: "column",
+        sm: "column",
+        md: "row",
+        lg: "row",
+        xl: "row",
+      },
+      gap: "20px",
+    },
+    TabBarSecMyColLeft :{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+      gap: "20px",
+      width: {
+        xs: "100%",
+        sm: "100%",
+        md: "70%",
+        lg: "70%",
+        xl: "70%",
+      },
+    },
+    TabBarSecMyColRight :{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+      gap: "20px",
+      width: {
+        xs: "100%",
+        sm: "100%",
+        md: "30%",
+        lg: "30%",
+        xl: "30%",
+      },
+    },
 
+    TestImage :{
+      width:"600px", 
+    },
 };

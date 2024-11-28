@@ -5,8 +5,20 @@ export const MUIStyle = {
         background:commonColor.black,
         position: "relative",
         width: "100%",
-        minHeight: "400px",
-        marginTop: "100px",
+        minHeight: {
+            xs: "auto",
+            sm: "auto",
+            md: "400px",
+            lg: "400px",
+            xl: "400px",
+        },
+        marginTop: {
+            xs: "50px",
+            sm: "50px",
+            md: "100px",
+            lg: "100px",
+            xl: "100px",
+        },
     },
  
     VideoInnerSecInner: {
@@ -29,7 +41,13 @@ export const MUIStyle = {
                 lg: "580px",
                 xl: "580px",
             },
-            marginTop: "-170px",
+            marginTop: {
+                xs: "-80px",
+                sm: "-80px",
+                md: "-170px",
+                lg: "-170px",
+                xl: "-170px",
+            },
             padding: "12px",
             borderRadius: "24px",
             objectFit: "contain",
