@@ -25,15 +25,15 @@ export default function BannerThree() {
     useGSAP(() => {
         if (!topLayerFirstRef.current || !camera || !scene || !renderer) return;
 
-        gsapAnimation({
-            canvasWrapperRef,
-            topLayerFirstRef,
-            gsap,
-            ScrollTrigger,
-            camera,
-            scene,
-            renderer
-        });
+        // gsapAnimation({
+        //     canvasWrapperRef,
+        //     topLayerFirstRef,
+        //     gsap,
+        //     ScrollTrigger,
+        //     camera,
+        //     scene,
+        //     renderer
+        // });
     }, { dependencies: [topLayerFirstRef.current, camera, scene, renderer] });
 
     useEffect(() => {
