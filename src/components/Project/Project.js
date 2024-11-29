@@ -21,45 +21,40 @@ export default function Project() {
 
     console.log("cards", cards);
 
-    // Set initial positions of the cards
-    gsap.set(cards, {
-      x: (i) => window.innerWidth - cards[i].offsetWidth - (window.innerWidth / 5),
-      y: (i) => (window.innerHeight - cards[i].offsetHeight) / 2,
-    });
-
 
     cards.forEach((card, i) => {
       ScrollTrigger.create({
         trigger: card, // The element that ScrollTrigger will "trigger" when it comes into view
-        start: "-200px " + (i * 10) + "px", // When the top of the trigger hits 200px above the bottom of the viewport
-        end: "-100px bottom", // When the top of the trigger hits the bottom of the viewport
+        start: "top 300px", // When the top of the trigger hits 200px above the bottom of the viewport
+        end: "top bottom", // When the top of the trigger hits the bottom of the viewport
         endTrigger: ".workflowSec", // The element that ScrollTrigger will use as the end of the trigger.
         pin: true, // Pin the trigger element while it is in view
         // pinType: "transform", // Use transforms for pinning instead of fixed positioning
         pinSpacing: false, // Don't reserve the pin element's space in the document
         markers: true, // Show markers for testing purposes
-        scrub: 0.5, // Smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        anticipatePin: 2, // Wait for 1 second before pinning the element
+        // scrub: 1, // Smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        // anticipatePin: 0.5, // Wait for 0.5 second before pinning the element
         onEnter: () => {
-          console.log("onEnter");
+          console.log("onEnter", i);
 
           gsap.to(card, {
-            x: (window.innerWidth - cards[0].offsetWidth - (window.innerWidth / 5)) - (cards.length - i) * (100 - i * 10), // Slightly move the card in the x direction
-            y: (window.innerHeight - cards[0].offsetHeight) / 2 - (cards.length - i) * 30, // Slightly move the card in the y direction
+            x: `${-((window.innerWidth - card.offsetWidth) / 2 - 200) + i * (window.innerWidth / 8)}`, // Move the card to the left
+            y: i * 30 - 150, // Move the card dynamically
             rotate: i - 2, // Rotate the card
             duration: 1, // Animation duration
-            ease: "power1.out", // Animation easing
+            // ease: "power1.out", // Animation easing
           });
         },
+
         onLeaveBack: () => {
           console.log("onLeaveBack");
 
           gsap.to(card, {
-            x: window.innerWidth - cards[0].offsetWidth - (window.innerWidth / 5), // Move the card back to the center of the screen
-            y: (window.innerHeight - cards[0].offsetHeight) / 2, // Move the card back to the center of the screen
-            rotate: 0, // Reset the rotation of the card
+            x: 0, // Move the card to the left
+            y: 0, // Move the card down
+            rotate: 0, // Rotate the card
             duration: 1, // Animation duration
-            ease: "power1.out", // Animation easing
+            // ease: "power1.out", // Animation easing
           });
         },
       });
@@ -80,16 +75,14 @@ export default function Project() {
           </Box>
         </Box>
 
-        <Box className="projectSec" sx={{ ...MUIStyle.ProjectSec, }} ref={projectSecRef}>
-          {projectBoxes.map((_, index) => (
-            // <div key={index} className="card"
-            //   style={{}}
-            // >
-            <ProjectBox
-              key={index}
-            />
-            // </div>
-          ))}
+        <Box className="projectSecOuter" sx={MUIStyle.ProjectSecOuter}>
+          <Box className="projectSec" sx={{ ...MUIStyle.ProjectSec, }} ref={projectSecRef}>
+            {projectBoxes.map((_, index) => (
+              <ProjectBox
+                key={index}
+              />
+            ))}
+          </Box>
         </Box>
       </Container>
     </Box>
