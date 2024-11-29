@@ -13,6 +13,7 @@ export const MUIStyle = {
             lg: "175px 0",
             xl: "175px 0",
         },
+        overflow: "hidden",
 
     },
     AboutSecOuterBox: {

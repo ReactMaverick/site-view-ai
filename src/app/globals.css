@@ -281,3 +281,6 @@ a {
   align-items: center;
   gap: 100px;
 } */
+a.headerMenu.active p {
+  color: #c9f625;
+}
