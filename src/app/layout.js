@@ -50,10 +50,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${Fellix.variable}`}>
+      <body
+        className={`${Fellix.variable}`}
+      >
         <Header />
         {children}
-        <FooterSec/>
+        <FooterSec />
       </body>
     </html>
   );

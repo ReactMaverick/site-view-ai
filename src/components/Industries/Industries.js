@@ -1,23 +1,35 @@
 "use client";
 import { Box, Button, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import ButtonTooltip from "../ButtonTooltip/ButtonTooltip";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useGSAP } from "@gsap/react";
 
 export default function Industries() {
   const [hoveredButton, setHoveredButton] = useState(null);
   const industriesRef = useRef(null);
 
-  useEffect(() => {
+  const handleMouseEnter = (industry) => {
+    setHoveredButton(industry);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredButton(null);
+  };
+
+  // Runs before the first render
+  useLayoutEffect(() => {
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+  }, []);
+
+  useGSAP(() => {
     const buttons = gsap.utils.toArray(".IndustriesButton");
 
     gsap.fromTo(
       buttons,
-      { opacity: 0, filter: "blur(5px)"},
+      { opacity: 0, filter: "blur(5px)" },
       {
         opacity: 1,
         filter: "blur(0px)",
@@ -45,15 +57,7 @@ export default function Industries() {
         gsap.to(button, { scale: 1, duration: 0.3 });
       });
     });
-  }, []);
-
-  const handleMouseEnter = (industry) => {
-    setHoveredButton(industry);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredButton(null);
-  };
+  });
 
   return (
     <Box sx={MUIStyle.IndustriesMain}>

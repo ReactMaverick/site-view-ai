@@ -1,10 +1,8 @@
-import HomePage from '@/pages/home/HomePage'
+import { redirect } from 'next/navigation'
 import React from 'react'
 
 const page = () => {
-  return (
-   <HomePage/>
-  )
+  redirect('/home')
 }
 
 export default page
