@@ -1,10 +1,9 @@
-
-import WhySiteView from '@/pages/WhySiteView/WhySiteView'
+import WhySiteView from '@/pageComponents/WhySiteViewPage/WhySiteViewPage'
 import React from 'react'
 
 const page = () => {
   return (
-   <WhySiteView/>
+    <WhySiteView />
   )
 }
 
