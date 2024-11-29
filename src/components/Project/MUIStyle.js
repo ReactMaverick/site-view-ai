@@ -17,7 +17,7 @@ export const MUIStyle = {
         alignItems: "center",
         flexDirection: "column",
     },
-   
+
     PartnersHeadingBoxOuter: {
         display: "flex",
         justifyContent: "center",
@@ -57,8 +57,14 @@ export const MUIStyle = {
         textAlign: "center",
         marginBottom: "24px",
     },
+    ProjectSecOuter: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+    },
 
-    ProjectSec  : {
+    ProjectSec: {
         margin: "180px 0",
     },
 

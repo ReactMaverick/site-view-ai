@@ -201,6 +201,12 @@ export const MUIStyle = {
     },
 
     TestImage :{
-      width:"600px", 
+      width:{
+        xs: "100%",
+        sm: "100%",
+        md: "500px",
+        lg: "600px",
+        xl: "600px",
+      }, 
     },
 };

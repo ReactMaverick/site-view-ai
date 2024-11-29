@@ -2,18 +2,18 @@ import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 
 export const MUIStyle = {
-  ProjectBoxOuter: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-    gap: "24px",
-    maxWidth: "400px",
-    background: commonColor.white,
-    boxShadow: "0px 0px 32px rgba(0, 0, 0, 0.12)",
-    borderRadius: "32px",
-    overflow: "hidden",
-  },
+    ProjectBoxOuter: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        gap: "24px",
+        maxWidth: "400px",
+        background: commonColor.white,
+        boxShadow: "0px 0px 32px rgba(0, 0, 0, 0.12)",
+        borderRadius: "32px",
+        overflow: "hidden",
+    },
     ProjectBoxImgBox: {
         position: "relative",
         maxHeight: "280px",
@@ -34,7 +34,7 @@ export const MUIStyle = {
         padding: "0px 24px",
         minHeight: "300px",
     },
-   
+
     ProjectTitle: {
         fontSize: FONT_SIZE.heading32,
         lineHeight: "40px",
