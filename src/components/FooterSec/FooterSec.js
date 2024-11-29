@@ -19,31 +19,31 @@ export default function FooterSec() {
                             </Typography>
                             <Box sx={MUIStyle.FooterSocialBox}>
                             <Button sx={MUIStyle.FooterSocialButton}>
-                                <Icon icon="hugeicons:linkedin-01" color="#fff" width="30" height="30" />
+                                <Icon icon="hugeicons:linkedin-01" />
                             </Button>
                             <Button sx={MUIStyle.FooterSocialButton}>
-                                <Icon icon="lucide:instagram" color="#fff" width="30" height="30" />
+                                <Icon icon="lucide:instagram" />
                             </Button>
                             <Button sx={MUIStyle.FooterSocialButton}>
-                                <Icon icon="hugeicons:new-twitter" color="#fff" width="30" height="30" />
+                                <Icon icon="hugeicons:new-twitter"/>
                             </Button>
                             </Box>
                         </Box>
                         <Box sx={MUIStyle.FooterMenuBoxOuter}>
                         <Box sx={MUIStyle.FooterMenuBox}>
                             <Typography variant="h3" sx={MUIStyle.FooterMenuTitleText}>About</Typography>
-                            <Box sx={MUIStyle.FooterMenuUl}>
-                                <Box sx={MUIStyle.FooterMenuLi}>
+                            <Box component={"ul"} sx={MUIStyle.FooterMenuUl}>
+                                <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
                                     <Link href="/">
                                         <Typography sx={MUIStyle.FooterMenuText}>Home</Typography>
                                     </Link>
                                 </Box>
-                                <Box sx={MUIStyle.FooterMenuLi}>
+                                <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
                                     <Link href="/">
                                         <Typography sx={MUIStyle.FooterMenuText}>Why SiteView</Typography>
                                     </Link>
                                 </Box>
-                                <Box sx={MUIStyle.FooterMenuLi}>
+                                <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
                                     <Link href="/">
                                         <Typography sx={MUIStyle.FooterMenuText}>Our Tech</Typography>
                                     </Link>
@@ -52,18 +52,18 @@ export default function FooterSec() {
                         </Box>
                         <Box sx={MUIStyle.FooterMenuBox}>
                             <Typography variant="h3" sx={MUIStyle.FooterMenuTitleText}>Company</Typography>
-                            <Box sx={MUIStyle.FooterMenuUl}>
-                                <Box sx={MUIStyle.FooterMenuLi}>
+                            <Box component={"ul"} sx={MUIStyle.FooterMenuUl}>
+                                <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
                                     <Link href="/">
                                         <Typography sx={MUIStyle.FooterMenuText}>Blogs</Typography>
                                     </Link>
                                 </Box>
-                                <Box sx={MUIStyle.FooterMenuLi}>
+                                <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
                                     <Link href="/">
                                         <Typography sx={MUIStyle.FooterMenuText}>FAQ</Typography>
                                     </Link>
                                 </Box>
-                                <Box sx={MUIStyle.FooterMenuLi}>
+                                <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
                                     <Link href="/">
                                         <Typography sx={MUIStyle.FooterMenuText}>Contact Us</Typography>
                                     </Link>

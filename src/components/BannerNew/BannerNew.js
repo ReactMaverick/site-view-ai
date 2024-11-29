@@ -6,7 +6,7 @@ import { commonColor } from "@/values/Colors/CommonColor";
 export default function BannerNew( {theme="light"} ) {
   return (
     <Box sx={[MUIStyle.BannerMain, {
-      background: theme === "dark" ? commonColor.white : commonColor.black,
+      background: theme === "light" ? commonColor.white : commonColor.black,
     }]}>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.BannerRow}>
@@ -16,7 +16,7 @@ export default function BannerNew( {theme="light"} ) {
                 Simplify Construction
               </Typography>
               <Typography variant="h1" sx={[MUIStyle.BannerHeading, {
-                color: theme === "dark" ? commonColor.black : commonColor.white,
+                color: theme === "light" ? commonColor.black : commonColor.white,
               }]}>
                 Fixing the Gaps in Construction Monitoring
               </Typography>
@@ -25,7 +25,7 @@ export default function BannerNew( {theme="light"} ) {
                 gaps with visual clarity and actionable insights.
               </Typography>
               <Button sx={[MUIStyle.BannerBtn, {
-                color: theme === "dark" ? commonColor.black : commonColor.white,
+                color: theme === "light" ? commonColor.black : commonColor.white,
              }]} variant="contained" size="large">
                 <Box
                   component={"span"}
