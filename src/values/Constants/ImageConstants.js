@@ -38,3 +38,7 @@ export const DOWN = URL('/images/down.png');
 export const UP = URL('/images/up.png');
 export const VISION = URL('/images/vision.png');
 export const PROJECTLOGO = URL('/images/Projectlogo.png');
+export const IMAGE2 = URL('/images/Iamge2.png');
+export const MACBOOKPRO = URL('/images/MacBookPro.png');
+export const IPHONE = URL('/images/Mobile.png');
+export const DEVICE1 = URL('/images/Device1.png');

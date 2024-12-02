@@ -16,13 +16,13 @@ import BannerThree from "@/components/BannerThree/BannerThree";
 export default function HomePage() {
   return (
     <Box className={styles.homePage}>
-      {/* <BannerThree /> */}
+      <BannerThree />
       <About />
       <Partners />
       <Project />
       <Workflow />
       <VideoSec />
-      <Industries />
+      <Industries/>
       <OurTeam />
       <CTA />
     </Box>
