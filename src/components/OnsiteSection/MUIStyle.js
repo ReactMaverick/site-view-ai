@@ -7,8 +7,8 @@ export const MUIStyle = {
     padding: {
       xs: "100px 0",
       sm: "100px 0",
-      md: "100px 130px",
-      lg: "284px 130px",
+      md: "100px 10px",
+      lg: "284px 10px",
       xl: "284px 130px",
     },
     display: "flex",
@@ -33,8 +33,8 @@ export const MUIStyle = {
       xl: "45%",
     },
     marginBottom: {
-      xs: "30px",
-      sm: "30px",
+      xs: "80px",
+      sm: "80px",
       md: "96px",
       lg: "96px",
       xl: "96px",
@@ -74,6 +74,7 @@ export const MUIStyle = {
       lg: "135px",
       xl: "135px",
     },
+   
     display: "flex",
     justifyContent: "center",
     // alignItems: "center",
@@ -85,8 +86,8 @@ export const MUIStyle = {
       xl: "row",
     },
     gap: {
-      xs: "0",
-      sm: "0",
+      xs: "50px",
+      sm: "50px",
       md: "100px",
       lg: "100px",
       xl: "100px",

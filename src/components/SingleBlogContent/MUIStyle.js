@@ -1,26 +1,23 @@
 import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
-import { BANNER } from "@/values/Constants/ImageConstants";
-import zIndex from "@mui/material/styles/zIndex";
 
 export const MUIStyle = {
-  VisionMain: {
+  SingleBlogMain: {
     width: "100%",
     padding: {
       xs: "100px 0",
       sm: "100px 0",
       md: "100px 0",
-      lg: "284px 0 0px",
-      xl: "284px 0 0px",
+      lg: "100px 0",
+      xl: "100px 0",
     },
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-backgroundColor: commonColor.black,
   },
 
-  VisionRow: {
+  SingleBlogRow: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -46,7 +43,7 @@ backgroundColor: commonColor.black,
       xl: "0 130px",
     },
   },
-  VisionColLeft: {
+  SingleBlogColLeft: {
     maxWidth: {
         xs: "100%",
         sm: "100%",
@@ -60,7 +57,7 @@ backgroundColor: commonColor.black,
     fontSize: FONT_SIZE.heading32,
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
-    color: commonColor.white,
+    color: commonColor.black,
     marginBottom: "20px",
     paddingRight:{
       xs: "0",
@@ -70,22 +67,14 @@ backgroundColor: commonColor.black,
       xl: "40px", 
     }
   },
-  smallTitle  : {
-    fontSize: FONT_SIZE.text16,
-    lineHeight: "24px",
-    fontWeight: FONT_WEIGHT.REGULAR,
-    color: commonColor.grey,
-    display: "block",
-    marginBottom: "16px",
-  },
   SubHeading: {
-    fontSize: FONT_SIZE.text18,
-    lineHeight: "26px",
+    fontSize: FONT_SIZE.heading24,
+    lineHeight: "32px",
     fontWeight: FONT_WEIGHT.MEDIUM,
-    color: commonColor.white,
+    color: commonColor.grey,
     marginBottom: "16px",
   },
-  VisionColRight: {
+  SingleBlogColRight: {
     maxWidth: {
         xs: "100%",
         sm: "100%",
@@ -101,6 +90,45 @@ backgroundColor: commonColor.black,
       width: "100%",
       height: "100%",
       objectFit: "cover",
+    },
+  },
+  SingleBlogContent   : {
+    marginBottom: "30px",
+  },
+  CustomBtn: {
+    background: commonColor.green,
+    border: "2px solid",
+    borderColor: commonColor.green,
+    boxShadow: "none",
+    padding: "12px 24px",
+    borderRadius: "100px",
+    textTransform: "capitalize",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    transition: "all 0.3s ease-in-out",
+    fontSize: {
+      xs: FONT_SIZE.text18,
+      sm: FONT_SIZE.text18,
+      md: FONT_SIZE.text18,
+      lg: FONT_SIZE.text20,
+    },
+    lineHeight: "1.8",
+    fontWeight: FONT_WEIGHT.MEDIUM,
+    color: commonColor.black,
+    "&:hover": {
+      background: commonColor.trans,
+      boxShadow: "none",
+      color: commonColor.green,
+    },
+    "& span": {
+      fontSize: FONT_SIZE.heading24,
+      lineHeight: FONT_SIZE.heading24,
+      transition: "all 0.3s ease-in-out",
+    },
+    "&:hover span": {
+      color: commonColor.green,
     },
   },
 };

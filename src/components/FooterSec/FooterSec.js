@@ -39,12 +39,12 @@ export default function FooterSec() {
                                     </Link>
                                 </Box>
                                 <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
-                                    <Link href="/">
+                                    <Link href="/why-site-view">
                                         <Typography sx={MUIStyle.FooterMenuText}>Why SiteView</Typography>
                                     </Link>
                                 </Box>
                                 <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
-                                    <Link href="/">
+                                    <Link href="/our-tech">
                                         <Typography sx={MUIStyle.FooterMenuText}>Our Tech</Typography>
                                     </Link>
                                 </Box>
@@ -54,17 +54,17 @@ export default function FooterSec() {
                             <Typography variant="h3" sx={MUIStyle.FooterMenuTitleText}>Company</Typography>
                             <Box component={"ul"} sx={MUIStyle.FooterMenuUl}>
                                 <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
-                                    <Link href="/">
+                                    <Link href="/blogs">
                                         <Typography sx={MUIStyle.FooterMenuText}>Blogs</Typography>
                                     </Link>
                                 </Box>
                                 <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
-                                    <Link href="/">
+                                    <Link href="/faq">
                                         <Typography sx={MUIStyle.FooterMenuText}>FAQ</Typography>
                                     </Link>
                                 </Box>
                                 <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
-                                    <Link href="/">
+                                    <Link href="/contact-us">
                                         <Typography sx={MUIStyle.FooterMenuText}>Contact Us</Typography>
                                     </Link>
                                 </Box>

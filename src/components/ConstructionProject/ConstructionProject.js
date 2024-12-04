@@ -45,6 +45,7 @@ export default function ConstructionProject() {
                   blind spots or missed areas.{" "}
                 </Typography>
               </Box>
+              <Box sx={MUIStyle.DividerBox}/>
               <Box sx={MUIStyle.ConstructionProjectBox}>
                 <Typography variant="h2" sx={MUIStyle.Heading}>
                   3. MONITOR

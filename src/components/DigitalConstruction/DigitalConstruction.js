@@ -23,7 +23,7 @@ export default function DigitalConstruction() {
           <Box sx={MUIStyle.DigitalColLeft}>
             <Box
               sx={[
-                MUIStyle.DigitalContentBox1,
+                MUIStyle.DigitalContentBox,
                 {
                   backgroundColor: commonColor.greenFade1,
                 },
@@ -38,17 +38,17 @@ export default function DigitalConstruction() {
             </Box>
             <Box
               sx={[
-                MUIStyle.DigitalContentBox2,
+                MUIStyle.DigitalContentBox,
                 {
-                  backgroundColor: commonColor.greenFade1,
+                  backgroundColor: commonColor.greenFade3,
                 },
               ]}
             >
               <Typography variant="h2" sx={MUIStyle.ContentHeading}>
-                Site Notes
+              360° Site Capture
               </Typography>
               <Typography variant="body1" sx={MUIStyle.ContentText}>
-                Pin Sticky Notes directly to specific site locations
+              Document every angle with immersive 360° visuals
               </Typography>
             </Box>
           </Box>
@@ -62,32 +62,32 @@ export default function DigitalConstruction() {
           <Box sx={MUIStyle.DigitalColRight}>
           <Box
               sx={[
-                MUIStyle.DigitalContentBox1,
+                MUIStyle.DigitalContentBox,
                 {
-                  backgroundColor: commonColor.greenFade1,
+                  backgroundColor: commonColor.greenFade3,
                 },
               ]}
             >
               <Typography variant="h2" sx={MUIStyle.ContentHeading}>
-                Site Notes
+              Floorplan Management
               </Typography>
               <Typography variant="body1" sx={MUIStyle.ContentText}>
-                Pin Sticky Notes directly to specific site locations
+              Upload, annotate, and organize floorplans with ease
               </Typography>
             </Box>
             <Box
               sx={[
-                MUIStyle.DigitalContentBox2,
+                MUIStyle.DigitalContentBox,
                 {
                   backgroundColor: commonColor.greenFade1,
                 },
               ]}
             >
               <Typography variant="h2" sx={MUIStyle.ContentHeading}>
-                Site Notes
+              Real-Time Uploads
               </Typography>
               <Typography variant="body1" sx={MUIStyle.ContentText}>
-                Pin Sticky Notes directly to specific site locations
+              Sync captured data instantly to the cloud
               </Typography>
             </Box>
           </Box>

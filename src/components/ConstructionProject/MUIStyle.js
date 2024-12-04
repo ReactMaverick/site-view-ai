@@ -33,8 +33,8 @@ backgroundColor: commonColor.black,
       xl: "45%",
   },
     marginBottom: {
-      xs: "30px",
-      sm: "30px",
+      xs: "80px",
+      sm: "80px",
       md: "48px",
       lg: "48px",
       xl: "48px",
@@ -91,6 +91,19 @@ backgroundColor: commonColor.black,
     },
     position: "relative",
   },
+  DividerBox: {
+    width: "100%",
+    height: "200px",
+    margin: "0 auto",
+    display:{
+      xs: "block",
+      sm: "block",
+      md: "none",
+      lg: "none",
+      xl: "none",
+    }
+  },
+
   ConstructionProjectImg : {
     maxWidth: {
       xs: "100%",

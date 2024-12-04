@@ -9,6 +9,7 @@ import Vision2 from "@/components/Vision2/Vision2";
 import OnsiteSection from "@/components/OnsiteSection/OnsiteSection";
 import TabBarSec from "@/components/TabBarSec/TabBarSec";
 import DigitalConstruction from "@/components/DigitalConstruction/DigitalConstruction";
+import FAQSec from "@/components/FAQSec/FAQSec";
 
 export default function () {
   return (
@@ -22,6 +23,8 @@ export default function () {
       <TabBarSec/>
       <Vision2 />
       <DigitalConstruction />
+      <FAQSec />
+
     </Box>
   );
 }
