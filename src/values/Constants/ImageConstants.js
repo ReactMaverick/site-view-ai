@@ -47,3 +47,5 @@ export const BLOGIMG = URL('/images/Blogimage.png');
 export const CONTAINSBLOG = URL('/images/ContainsBlog.png');
 export const BLOG1 = URL('/images/Blog1.png');
 export const BLOG2 = URL('/images/Blog2.png');
+export const EXTRABG = URL('/images/extrabg.png');
+export const MAP = URL('/images/map.png');

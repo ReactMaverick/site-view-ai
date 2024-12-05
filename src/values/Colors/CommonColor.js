@@ -29,4 +29,5 @@ export const commonColor = {
     white10: "rgba(255, 255, 255, 0.1)",
     white5: "rgba(255, 255, 255, 0.05)",
     grey3: "#D1D5DB",
+    grey4: "#F3F4F6",
 };  
