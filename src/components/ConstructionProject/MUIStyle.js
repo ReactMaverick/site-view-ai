@@ -33,12 +33,21 @@ backgroundColor: commonColor.black,
       xl: "45%",
   },
     marginBottom: {
-      xs: "30px",
-      sm: "30px",
+      xs: "80px",
+      sm: "80px",
       md: "48px",
       lg: "48px",
       xl: "48px",
     },
+  },
+  SubHeading : {
+    fontSize: FONT_SIZE.text18,
+    lineHeight: "32px",
+    fontWeight: FONT_WEIGHT.REGULAR,
+    color: commonColor.grey,
+    textAlign: "center",
+    transition: "all 0.5s ease-in-out",
+    marginBottom: "24px",
   },
   Heading: {
     fontSize: FONT_SIZE.heading32,
@@ -82,6 +91,19 @@ backgroundColor: commonColor.black,
     },
     position: "relative",
   },
+  DividerBox: {
+    width: "100%",
+    height: "200px",
+    margin: "0 auto",
+    display:{
+      xs: "block",
+      sm: "block",
+      md: "none",
+      lg: "none",
+      xl: "none",
+    }
+  },
+
   ConstructionProjectImg : {
     maxWidth: {
       xs: "100%",

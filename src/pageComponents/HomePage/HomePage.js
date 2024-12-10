@@ -22,7 +22,7 @@ export default function HomePage() {
       <Project />
       <Workflow />
       <VideoSec />
-      <Industries />
+      <Industries/>
       <OurTeam />
       <CTA />
     </Box>

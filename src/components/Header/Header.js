@@ -44,7 +44,7 @@ export default function Header({ theme = "light" }) {
       ref={headerRef}
       className={isSticky ? styles.stickyHeader : ""}
       sx={[MUIStyle.HeaderMain,
-       { borderColor: theme === "dark" ? "#D6D6D6" : commonColor.white10,}
+       { borderColor: theme === "light" ? "#D6D6D6" : commonColor.white10,}
       ]}
     >
       <Container maxWidth="xl">
@@ -95,7 +95,7 @@ export default function Header({ theme = "light" }) {
                     MUIStyle.HEaderMenu,
                     {
                       background:
-                        theme === "dark"
+                        theme === "light"
                           ? commonColor.trans
                           : commonColor.white10,
                       borderRadius: "90px",
@@ -115,11 +115,17 @@ export default function Header({ theme = "light" }) {
                           sx={[
                             MUIStyle.HeaderMenuBtn,
                             {
-                              color:
-                                theme === "light"
+                             color:{
+                                    xs: "white",
+                                    sm:  "white",
+                                    md:  theme === "light"
+                                    ? commonColor.black
+                                    : commonColor.white,
+                                    lg:  theme === "light"
                                   ? commonColor.black
                                   : commonColor.white,
-                            },
+                                  },
+                                },
                           ]}
                         >
                           {label}
