@@ -269,10 +269,10 @@ export const stopAnimation = ({
 }) => {
     renderer.setAnimationLoop(null);
 
-    scene.visible = false;
+    scene && (scene.visible = false);
 
     // Hide the canvas
-    const canvasWrapper = canvasWrapperRef.current;
+    const canvasWrapper = canvasWrapperRef?.current;
 
     if (canvasWrapper) {
         canvasWrapper.classList.add('d-none');

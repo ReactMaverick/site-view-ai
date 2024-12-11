@@ -2,7 +2,7 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import { Icon } from "@iconify/react";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { setupThreeJS } from "./BannerThreeJS";
+import { setupThreeJS, stopAnimation } from "./BannerThreeJS";
 import { useGSAP } from "@gsap/react";
 import { gsapAnimation } from "./BannerScroll";
 import gsap from "gsap";
@@ -25,15 +25,16 @@ export default function BannerThree() {
     useGSAP(() => {
         if (!topLayerFirstRef.current || !camera || !scene || !renderer) return;
 
-        // gsapAnimation({
-        //     canvasWrapperRef,
-        //     topLayerFirstRef,
-        //     gsap,
-        //     ScrollTrigger,
-        //     camera,
-        //     scene,
-        //     renderer
-        // });
+        gsapAnimation({
+            canvasWrapperRef,
+            topLayerFirstRef,
+            gsap,
+            ScrollTrigger,
+            camera,
+            scene,
+            renderer
+        });
+
     }, { dependencies: [topLayerFirstRef.current, camera, scene, renderer] });
 
     useEffect(() => {
