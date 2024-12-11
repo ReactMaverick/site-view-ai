@@ -57,7 +57,7 @@ export default function BannerThree() {
             <Box className="canvasWrapper" ref={canvasWrapperRef}>
                 <canvas id="threeCanvas" ref={canvasRef} />
             </Box>
-            <Box className="topLayer-first-wrapper">
+            <Box className="topLayer-first-wrapper" id="topLayer-first-wrapper">
                 {/* First Layer */}
                 <Box className="topLayer-first hide" ref={topLayerFirstRef}>
                     <Box sx={MUIStyle.BannerContentInner}>

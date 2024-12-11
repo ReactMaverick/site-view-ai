@@ -21,6 +21,8 @@ export const gsapAnimation = ({
         });
     };
 
+    let isScrolledToTopSection = false;
+
     ScrollTrigger.create({
         trigger: topLayerFirstRef.current,
         start: "top center", // When the top of the trigger hits the center of the viewport
@@ -52,15 +54,24 @@ export const gsapAnimation = ({
                         scene,
                         renderer,
                         canvasWrapperRef,
-                        topLayerFirstRef
+                        topLayerFirstRef,
+                        gsap,
                     });
                 });
+
+                // isScrolledToTopSection = false;
 
             } else {
                 // Scrolling up
                 console.log("Scrolling up");
 
                 if (progress === 0) return; // If the progress is 0, which means the element is visible, return
+
+                // if (!isScrolledToTopSection) {
+                //     isScrolledToTopSection = true;
+
+                //     gsap.to(window, { duration: 0.5, scrollTo: "#topLayer-first-wrapper" });
+                // }
 
                 if (!scene.visible) {
 
@@ -72,6 +83,8 @@ export const gsapAnimation = ({
 
 
                     scene.visible = true;
+
+                    // gsap.to(window, { duration: 0.5, scrollTo: "#canvasWrapper" });
 
                     // console.log(scene.children);
 

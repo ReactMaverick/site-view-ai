@@ -5,6 +5,7 @@ import ProjectBox from "../ProjectBox/ProjectBox";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 export default function Project() {
   const projectBoxes = Array(5).fill(null); // Adjust the number of ProjectBox components as needed
@@ -14,6 +15,7 @@ export default function Project() {
   // Runs before the first render
   useLayoutEffect(() => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
+    gsap.registerPlugin(useGSAP, ScrollToPlugin);
   }, []);
 
   useGSAP(() => {

@@ -265,18 +265,24 @@ export const setupThreeJS = ({
 export const stopAnimation = ({
     renderer,
     scene,
-    canvasWrapperRef
+    topLayerFirstRef,
+    gsap
 }) => {
     renderer.setAnimationLoop(null);
 
     scene && (scene.visible = false);
 
-    // Hide the canvas
-    const canvasWrapper = canvasWrapperRef?.current;
+    // // Hide the canvas
+    // const canvasWrapper = canvasWrapperRef?.current;
 
-    if (canvasWrapper) {
-        canvasWrapper.classList.add('d-none');
-    }
+    // if (canvasWrapper) {
+    //     // console.log('Hiding canvas', canvasWrapper);
+
+    //     canvasWrapper.classList.add('d-none');
+    // }
+
+    // Move to the next about section
+    gsap.to(window, { duration: 0.5, scrollTo: "#aboutSection" });
 }
 
 // Function to animate and hide the top layer
@@ -285,8 +291,10 @@ export function animateAndHideTopLayer({
     scene,
     renderer,
     canvasWrapperRef,
-    topLayerFirstRef
+    topLayerFirstRef,
+    gsap
 }) {
+
     // Scrolling down
     camera.position.z += 0.2;
 
@@ -314,7 +322,7 @@ export function animateAndHideTopLayer({
     //     stopAnimation();
     // }
 
-    console.log(scene.children[0].material.opacity);
+    // console.log(scene.children[0].material.opacity);
 
 
     if (scene.children.find(child => child.material.opacity <= 0.01)) {
@@ -323,8 +331,10 @@ export function animateAndHideTopLayer({
         stopAnimation({
             scene,
             renderer,
-            canvasWrapperRef
+            topLayerFirstRef,
+            gsap
         });
+
     }
 
     renderer.render(scene, camera);

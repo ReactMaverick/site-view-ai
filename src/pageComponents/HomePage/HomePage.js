@@ -17,14 +17,16 @@ export default function HomePage() {
   return (
     <Box className={styles.homePage}>
       <BannerThree />
+      {/* <div className='homeContent'> */}
       <About />
       <Partners />
       <Project />
       <Workflow />
       <VideoSec />
-      <Industries/>
+      <Industries />
       <OurTeam />
       <CTA />
+      {/* </div> */}
     </Box>
   );
 }
