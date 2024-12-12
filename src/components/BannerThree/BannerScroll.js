@@ -16,7 +16,7 @@ export const gsapAnimation = ({
         // console.log('Scroll Triggers ==> ', ScrollTrigger.getAll());
 
         ScrollTrigger.getAll().forEach(trigger => {
-            console.log("trigger", trigger.trigger);
+            // console.log("trigger", trigger.trigger);
             // trigger.kill();
         });
     };
@@ -41,74 +41,61 @@ export const gsapAnimation = ({
                 // Scrolling down
                 console.log("Scrolling down");
 
-                // If the progress is 1, which means the element is not visible, return
-                if (progress === 1) {
-                    clearScrollTrigger();
-                    return;
-                }
+                // If the progress is not 1, continue with the block
+                if (progress !== 1) {
+                    // Prevent scrolling
+                    document.body.style.overflow = 'hidden';
 
-                // Call the animate function
-                renderer.setAnimationLoop(() => {
-                    animateAndHideTopLayer({
-                        camera,
-                        scene,
-                        renderer,
-                        canvasWrapperRef,
-                        topLayerFirstRef,
-                        gsap,
+                    // Call the animate function
+                    renderer.setAnimationLoop(() => {
+                        animateAndHideTopLayer({
+                            camera,
+                            scene,
+                            renderer,
+                            canvasWrapperRef,
+                            topLayerFirstRef,
+                            gsap,
+                        });
                     });
-                });
-
-                // isScrolledToTopSection = false;
+                }
 
             } else {
                 // Scrolling up
                 console.log("Scrolling up");
 
-                if (progress === 0) return; // If the progress is 0, which means the element is visible, return
+                // If the progress is not 0, continue with the block
+                if (progress !== 0) {
+                    if (!scene.visible) {
 
-                // if (!isScrolledToTopSection) {
-                //     isScrolledToTopSection = true;
+                        const canvasWrapper = canvasWrapperRef.current;
 
-                //     gsap.to(window, { duration: 0.5, scrollTo: "#topLayer-first-wrapper" });
-                // }
+                        if (canvasWrapper) {
+                            canvasWrapper.classList.remove('d-none');
+                        }
 
-                if (!scene.visible) {
+                        scene.visible = true;
 
-                    const canvasWrapper = canvasWrapperRef.current;
+                        scene?.children?.forEach((child) => {
+                            child.material.opacity = 1;
+                        });
 
-                    if (canvasWrapper) {
-                        canvasWrapper.classList.remove('d-none');
+                        camera.position.z = 0;
+
+                        renderer.setAnimationLoop(() => {
+                            animateAndShowTopLayer({
+                                camera,
+                                scene,
+                                renderer,
+                                topLayerFirstRef
+                            });
+                        });
                     }
-
-
-                    scene.visible = true;
-
-                    // gsap.to(window, { duration: 0.5, scrollTo: "#canvasWrapper" });
-
-                    // console.log(scene.children);
-
-
-                    scene?.children?.forEach((child) => {
-                        child.material.opacity = 1;
-                    });
-
-                    camera.position.z = 0;
-
-                    renderer.setAnimationLoop(() => {
-                        animateAndShowTopLayer({
-                            camera,
-                            scene,
-                            renderer,
-                            topLayerFirstRef
-                        })
-                    });
                 }
             }
 
             // Update the previous scroll position
             previousScroll = currentScroll;
-        }
+        },
     });
 
 }

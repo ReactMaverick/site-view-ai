@@ -13,7 +13,7 @@ export const setupThreeJS = ({
     const scene = new THREE.Scene();
 
     // Add fog to the scene
-    scene.fog = new THREE.Fog(0xffffff, 1, 10); // Color, near distance, far distance
+    scene.fog = new THREE.Fog(0xffffff, 1, 8); // Color, near distance, far distance
 
     // Store the aspect ratio of the window
     let aspectRatio = window.innerWidth / window.innerHeight;
@@ -282,7 +282,15 @@ export const stopAnimation = ({
     // }
 
     // Move to the next about section
-    gsap.to(window, { duration: 0.5, scrollTo: "#aboutSection" });
+    gsap.to(window,
+        {
+            duration: 0.5,
+            scrollTo: "#aboutSection",
+            onComplete: () => {
+                document.body.style.overflow = 'auto';
+            }
+        }
+    );
 }
 
 // Function to animate and hide the top layer
@@ -359,6 +367,7 @@ export function animateAndShowTopLayer({
 
         topLayerFirst?.classList.add('show');
         topLayerFirst?.classList.remove('hide');
+
     }
 
     renderer.render(scene, camera);

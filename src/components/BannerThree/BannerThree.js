@@ -8,7 +8,9 @@ import { gsapAnimation } from "./BannerScroll";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function BannerThree() {
+export default function BannerThree({
+    setIsThreeJSLoading
+}) {
 
     const canvasWrapperRef = useRef(null);
     const canvasRef = useRef(null);
@@ -49,6 +51,11 @@ export default function BannerThree() {
         setCamera(camera);
         setScene(scene);
         setRenderer(renderer);
+
+        console.log("ThreeJS Scene Initialized");
+
+        setIsThreeJSLoading(false);
+
 
     }, []);
 
