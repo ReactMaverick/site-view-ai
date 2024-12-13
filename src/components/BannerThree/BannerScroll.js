@@ -39,7 +39,7 @@ export const gsapAnimation = ({
 
             if (currentScroll > previousScroll) {
                 // Scrolling down
-                console.log("Scrolling down");
+                // console.log("Scrolling down");
 
                 // If the progress is not 1, continue with the block
                 if (progress !== 1) {
@@ -61,7 +61,7 @@ export const gsapAnimation = ({
 
             } else {
                 // Scrolling up
-                console.log("Scrolling up");
+                // console.log("Scrolling up");
 
                 // If the progress is not 0, continue with the block
                 if (progress !== 0) {

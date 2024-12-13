@@ -9,7 +9,6 @@ export const MUIStyle = {
         flexDirection: "column",
         gap: "24px",
         maxWidth: "400px",
-        background: commonColor.white,
         boxShadow: "0px 0px 32px rgba(0, 0, 0, 0.12)",
         borderRadius: "32px",
         overflow: "hidden",
@@ -53,5 +52,10 @@ export const MUIStyle = {
         color: commonColor.grey,
         textAlign: "center",
     },
+    ProjectImg: {
+        width: "400px",
+        height: "280px",
+        objectFit: "cover",
+    }
 
 };

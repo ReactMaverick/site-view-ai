@@ -5,7 +5,7 @@ import { MUIStyle } from "./MUIStyle";
 import React from "react";
 import { BLOG2 } from "@/values/Constants/ImageConstants";
 
-export default function () {
+export default function BlogDetails() {
   return (
     <Box sx={MUIStyle.BlogDetailsSec}>
       <Container maxWidth="xl">
@@ -93,7 +93,7 @@ export default function () {
                 <Typography variant="body1" sx={MUIStyle.BlogText}>
                   <strong>Ease of expansion : </strong> Companies have realized that they can operate even with limited people in their office which allows them to expand with the existing infrastructure, reducing their overhead cost, making it a cost efficient process. While there is a need to invest some in technology to work in a virtual environment but is considerably less as compared to adding more office space & infrastructure.
                   <br />
-COVID 19 has had an immediate negative impact on the construction though not as severe as other businesses, but pushing it towards adoption of technology will prove to be a blessing in the long run.
+                  COVID 19 has had an immediate negative impact on the construction though not as severe as other businesses, but pushing it towards adoption of technology will prove to be a blessing in the long run.
                 </Typography>
               </Box>
             </Box>

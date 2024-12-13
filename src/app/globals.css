@@ -108,6 +108,10 @@ a {
 }
 
 .IndustriesButton {
+  cursor: auto;
+}
+
+.IndustriesButton.hovered {
   cursor: url(/images/HandPointing.png) 30 30, auto;
 }
 
@@ -274,7 +278,8 @@ a {
 a.headerMenu.active p {
   color: #c9f625;
 }
-p.BlogContent{
+
+p.BlogContent {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;

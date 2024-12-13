@@ -12,29 +12,30 @@ export const MUIStyle = {
       lg: "150px 0 100px",
       xl: "150px 0 100px",
     },
-background: `url(${CTABG}) no-repeat center center`,
+    // background: `url(${CTABG}) no-repeat center center`,
     backgroundSize: "cover",
+    position: "relative",
   },
-  CTAInner  : {
+  CTAInner: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     marginBottom: "200px",
   },
-  CTAHeading : {
+  CTAHeading: {
     fontSize: FONT_SIZE.heading48,
     lineHeight: "56px",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.green,
     textAlign: "center",
   },
-  CTAImgInner : {
+  CTAImgInner: {
     display: "flex",
     justifyContent: "end",
     alignItems: "center",
     margin: "100px 0",
-    paddingRight:{
+    paddingRight: {
       xs: "0px",
       sm: "0px",
       md: "100px",
@@ -59,13 +60,13 @@ background: `url(${CTABG}) no-repeat center center`,
       objectFit: "contain",
     },
   },
-  CTAList : {
+  CTAList: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     gap: "20px",
     position: "relative",
-    marginTop:{
+    marginTop: {
       xs: "0px",
       sm: "0px",
       md: "200px",
@@ -81,7 +82,7 @@ background: `url(${CTABG}) no-repeat center center`,
       xl: "row",
     },
   },
-  CTAListDivider : {
+  CTAListDivider: {
     width: {
       xs: "5px",
       sm: "5px",
@@ -89,7 +90,7 @@ background: `url(${CTABG}) no-repeat center center`,
       lg: "120px",
       xl: "120px",
     },
-    height:{
+    height: {
       xs: "120px",
       sm: "120px",
       md: "5px",
@@ -99,14 +100,14 @@ background: `url(${CTABG}) no-repeat center center`,
     borderRadius: "20px",
     background: commonColor.green,
   },
-  CTAListItemHeading : {
+  CTAListItemHeading: {
     fontSize: FONT_SIZE.heading24,
     lineHeight: "32px",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.white,
   },
-  CTAListImg  : {
-    width:{
+  CTAListImg: {
+    width: {
       xs: "100px",
       sm: "100px",
       md: "120px",
@@ -128,7 +129,7 @@ background: `url(${CTABG}) no-repeat center center`,
       lg: "0deg",
       xl: "0deg",
     },
-  
+
   },
 
 
@@ -146,29 +147,29 @@ background: `url(${CTABG}) no-repeat center center`,
     position: "relative",
     gap: "10px",
     fontSize: {
-        xs: FONT_SIZE.text16,
-        sm: FONT_SIZE.text16,
-        md: FONT_SIZE.heading24,
-        lg: FONT_SIZE.heading24,
-        xl: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text16,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading24,
     },
     textTransform: "capitalize",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     lineHeight: "32px",
     transition: "all 0.8s ease",
     "&:hover": {
-        boxShadow: "none",
-        color: commonColor.black,
+      boxShadow: "none",
+      color: commonColor.black,
     },
-   "&:hover .BannerBtnIcon": {
-    transform: "translateX(10px)",
+    "&:hover .BannerBtnIcon": {
+      transform: "translateX(10px)",
     },
     "&:hover .BannerBtnBG": {
-        width: "100%",
-        
+      width: "100%",
+
     },
-},
-BannerBtnBG: {
+  },
+  BannerBtnBG: {
     position: "absolute",
     top: "0",
     left: "0",
@@ -178,11 +179,11 @@ BannerBtnBG: {
     transition: "all 0.8s ease",
     zIndex: "-1",
     borderRadius: "99px",
-},
-BannerBtnIcon: {
+  },
+  BannerBtnIcon: {
     fontSize: FONT_SIZE.heading28,
-    height:"60px",
-    width:"60px",
+    height: "60px",
+    width: "60px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -190,7 +191,12 @@ BannerBtnIcon: {
     background: commonColor.green,
     color: commonColor.black,
     transition: "all 0.8s ease",
-},
+  },
+  CTAImgFlex: {
+    display: 'flex',
+    position: 'absolute',
+    top: '0',
+    height: '100%',
+  }
 
- 
 };

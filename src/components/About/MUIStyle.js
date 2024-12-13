@@ -11,18 +11,18 @@ export const MUIStyle = {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         width: "100%",
-    padding: {
-        xs: "100px 0",
-        sm: "100px 0",
-        md: "100px 0",
-        lg: "132px 0",
-        xl: "132px 0",
-    },
+        padding: {
+            xs: "100px 0",
+            sm: "100px 0",
+            md: "100px 0",
+            lg: "132px 0",
+            xl: "132px 0",
+        },
 
     },
- 
+
     AboutDashBoardImg: {
-        order:{
+        order: {
             xs: "3",
             sm: "3",
             md: "3",
@@ -37,15 +37,16 @@ export const MUIStyle = {
         padding: "0",
         marginTop: "100px",
         position: "relative",
+        zIndex: "1",
         "& img": {
             width: "100%",
             height: "100%",
             objectFit: "contain",
         },
     },
-    
+
     AboutSecOuterBox: {
-        order:{
+        order: {
             xs: "1",
             sm: "1",
             md: "2",
@@ -81,14 +82,14 @@ export const MUIStyle = {
         color: commonColor.grey,
         fontSize: FONT_SIZE.text18,
         fontWeight: FONT_WEIGHT.MEDIUM,
-        lineHeight:FONT_SIZE.heading28,
+        lineHeight: FONT_SIZE.heading28,
         textAlign: "center",
-    marginBottom: "24px",
+        marginBottom: "24px",
     },
     AboutSecHeading: {
         color: commonColor.white,
         fontSize: FONT_SIZE.heading32,
-        lineHeight:FONT_SIZE.heading40,
+        lineHeight: FONT_SIZE.heading40,
         fontWeight: FONT_WEIGHT.REGULAR,
         textTransform: "uppercase",
         textAlign: "center",
@@ -101,11 +102,11 @@ export const MUIStyle = {
             lg: "absolute",
             xl: "absolute",
         },
-        top:"75px",
-        display:"grid",
+        top: "75px",
+        display: "grid",
         gridTemplateColumns: "repeat(2, 1fr)",
         gap: "20px 0",
-        order:{
+        order: {
             xs: "2",
             sm: "2",
             md: "1",
@@ -113,7 +114,7 @@ export const MUIStyle = {
             xl: "1",
 
         },
-        left:"0",
+        left: "0",
         minHeight: "450px",
         width: "100%",
     },
@@ -125,18 +126,18 @@ export const MUIStyle = {
         fontWeight: FONT_WEIGHT.SEMI_BOLD,
         padding: "14px 16px",
         zIndex: "1",
-    "&::before": {
-        content: '""',
-        position: "absolute",
-        top: "0",
-        left: "0",
-        width: "71px",
-        height: "100%",
-        zIndex: "-1",
-        borderBottom:`2px solid ${commonColor.green}`,
-        boxShadow:"50px 1px 50px 0px rgb(223 255 96 / 19%)",
-        background: commonColor.black,
-    },
+        "&::before": {
+            content: '""',
+            position: "absolute",
+            top: "0",
+            left: "0",
+            width: "71px",
+            height: "100%",
+            zIndex: "-1",
+            borderBottom: `2px solid ${commonColor.green}`,
+            boxShadow: "50px 1px 50px 0px rgb(223 255 96 / 19%)",
+            background: commonColor.black,
+        },
     },
 
     Btn1: {
@@ -188,7 +189,7 @@ export const MUIStyle = {
             lg: "30%",
             xl: "30%",
         },
-        left:{
+        left: {
             xs: "0%",
             sm: "0%",
             md: "6%",
@@ -257,7 +258,7 @@ export const MUIStyle = {
             lg: "63%",
             xl: "63%",
         },
-        right:{
+        right: {
             xs: "0%",
             sm: "0%",
             md: "18%",
@@ -273,14 +274,14 @@ export const MUIStyle = {
             lg: "absolute",
             xl: "absolute",
         },
-        top:{
+        top: {
             xs: "0%",
             sm: "0%",
             md: "67%",
             lg: "67%",
             xl: "67%",
         },
-        left:{
+        left: {
             xs: "0%",
             sm: "0%",
             md: "35%",
@@ -311,7 +312,7 @@ export const MUIStyle = {
             xl: "35%",
         },
     },
-    Btn9 : {
+    Btn9: {
         position: {
             xs: "relative",
             sm: "relative",
@@ -319,14 +320,14 @@ export const MUIStyle = {
             lg: "absolute",
             xl: "absolute",
         },
-        top:{
+        top: {
             xs: "0%",
             sm: "0%",
             md: "67%",
             lg: "67%",
             xl: "67%",
         },
-        right:{
+        right: {
             xs: "0%",
             sm: "0%",
             md: "5%",
@@ -342,14 +343,14 @@ export const MUIStyle = {
             lg: "absolute",
             xl: "absolute",
         },
-        top:{
+        top: {
             xs: "0%",
             sm: "0%",
             md: "90%",
             lg: "90%",
             xl: "90%",
         },
-        left:{
+        left: {
             xs: "0%",
             sm: "0%",
             md: "5%",
@@ -372,7 +373,7 @@ export const MUIStyle = {
             lg: "95%",
             xl: "95%",
         },
-        left:{
+        left: {
             xs: "0%",
             sm: "0%",
             md: "45%",
@@ -395,7 +396,7 @@ export const MUIStyle = {
             lg: "85%",
             xl: "85%",
         },
-        right:{
+        right: {
             xs: "0%",
             sm: "0%",
             md: "15%",
@@ -418,7 +419,7 @@ export const MUIStyle = {
             lg: "90%",
             xl: "90%",
         },
-        left:{
+        left: {
             xs: "0%",
             sm: "0%",
             md: "25%",
@@ -441,7 +442,7 @@ export const MUIStyle = {
             lg: "100%",
             xl: "100%",
         },
-        right:{
+        right: {
             xs: "0%",
             sm: "0%",
             md: "30%",

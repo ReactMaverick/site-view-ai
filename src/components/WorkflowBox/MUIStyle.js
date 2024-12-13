@@ -2,7 +2,7 @@ import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 
 export const MUIStyle = {
-    
+
   WorkflowBoxOuter: {
     display: "flex",
     justifyContent: "center",
@@ -11,7 +11,6 @@ export const MUIStyle = {
     padding: "0px 25px",
     maxWidth: "400px",
     minHeight: "474px",
-    background: commonColor.white,
     boxShadow: `0px 0px 32px ${commonColor.boxShadowColor}`,
     borderRadius: "32px",
     overflow: "hidden",

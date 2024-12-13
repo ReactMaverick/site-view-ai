@@ -6,11 +6,46 @@ import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import { compareProcess, noBlindSpot, timeTravel, visualDocumentation, virtualSiteMeets } from "@/values/Constants/ImageConstants";
+import { commonColor } from "@/values/Colors/CommonColor";
 
 export default function Project() {
   const projectBoxes = Array(5).fill(null); // Adjust the number of ProjectBox components as needed
 
   const projectSecRef = useRef(null);
+
+  const cardContents = [
+    {
+      title: "Virtual Site Meets",
+      image: virtualSiteMeets,
+      backgroundColor: commonColor.white,
+      description: "Experience immersive site visits remotely. SiteView.ai enables 360° virtual views, real-time collaboration, and precise issue resolution with your team—all within dynamic virtual meetings. Connect without boundaries.",
+    },
+    {
+      title: "Time Travel",
+      image: timeTravel,
+      backgroundColor: commonColor.greenFade3,
+      description: "Travel your site back in time. SiteView records the visuals from Day-1 and stores it for years even after completion of the project. Select the date of your walk, as if you are there on that day. This forms an important tool to avoid disputes and serve as an evidence during disputes.",
+    },
+    {
+      title: "No Blind Spot",
+      image: noBlindSpot,
+      backgroundColor: commonColor.white,
+      description: "Walk through any floor or room with a few clicks. With SiteView.ai’s secure cloud storage, access your entire project from any device, anywhere with an internet connection. Never miss a detail, whether you’re in the office or on the go.",
+    },
+    {
+      title: "Visual Documentation",
+      image: visualDocumentation,
+      backgroundColor: commonColor.greenFade3,
+      description: "Capture photos or screenshots during virtual walkthroughs with a click. Save them to your computer or share instantly with your team. Keep critical visuals handy for discussions or reports, whenever you need them.",
+    },
+    {
+      title: "Compare Process",
+      image: compareProcess,
+      backgroundColor: commonColor.white,
+      description: "Monitor progress effortlessly by comparing site views from two different dates. Uncover hidden details, create as-built drawings, and ensure nothing is left unnoticed beneath finishes like plaster or paint.",
+    },
+  ]
 
   // Runs before the first render
   useLayoutEffect(() => {
@@ -32,7 +67,7 @@ export default function Project() {
         pin: true, // Pin the trigger element while it is in view
         // pinType: "transform", // Use transforms for pinning instead of fixed positioning
         pinSpacing: false, // Don't reserve the pin element's space in the document
-        markers: true, // Show markers for testing purposes
+        // markers: true, // Show markers for testing purposes
         // scrub: 1, // Smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         // anticipatePin: 0.5, // Wait for 0.5 second before pinning the element
         onEnter: () => {
@@ -83,6 +118,10 @@ export default function Project() {
             {projectBoxes.map((_, index) => (
               <ProjectBox
                 key={index}
+                title={cardContents[index].title}
+                image={cardContents[index].image}
+                backgroundColor={cardContents[index].backgroundColor}
+                content={cardContents[index].description}
               />
             ))}
           </Box>

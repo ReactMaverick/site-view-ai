@@ -6,12 +6,41 @@ import ButtonTooltip from "../ButtonTooltip/ButtonTooltip";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { industryContents } from "./IndustryContents";
 
 export default function Industries() {
   const [hoveredButton, setHoveredButton] = useState(null);
   const industriesRef = useRef(null);
 
-  const handleMouseEnter = (industry) => {
+  const handleMouseEnter = (e, industry) => {
+    // console.log("Event target", e.target);
+
+    if (e.target.tagName === "BUTTON") {
+      // console.log("Button hovered", industry);
+
+      if (e.target.style.filter === "blur(5px)") {
+        setHoveredButton(null);
+        e.target.classList.remove("hovered");
+        return;
+      } else {
+        e.target.style.filter = "blur(0px)";
+        e.target.style.opacity = 1;
+
+        e.target.classList.add("hovered");
+      }
+    } else {
+      // console.log("Parent element hovered", industry);
+      if (e.target.children[0].style.filter === "blur(5px)") {
+        setHoveredButton(null);
+        e.target.children[0].classList.remove("hovered");
+        return;
+      } else {
+        e.target.children[0].style.filter = "blur(0px)";
+        e.target.children[0].style.opacity = 1;
+        e.target.children[0].classList.add("hovered");
+      }
+    }
+
     setHoveredButton(industry);
   };
 
@@ -44,7 +73,7 @@ export default function Industries() {
           end: "+=2000", // Adjust this value based on the height of your section and desired animation duration
           scrub: true,
           pin: true,
-          markers: true,  // Set to true to see the trigger area
+          // markers: true,  // Set to true to see the trigger area
         },
       }
     );
@@ -74,31 +103,10 @@ export default function Industries() {
         </Box>
 
         <Box sx={MUIStyle.IndustriesSec} ref={industriesRef}>
-          {[
-            "Oil & Gas",
-            "Museums & Galleries",
-            "Manufacturing & Industrial",
-            "Facility Management",
-            "Forestry & Agriculture",
-            "Construction & Engineering",
-            "Data Centre",
-            "Hospitals & Clinics",
-            "Telecommunications & IT",
-            "Renewable Energy",
-            "Infrastructure Projects",
-            "Event Venues",
-            "Government & Public Services",
-            "Retail Stores",
-            "Disaster Relief & Restoration",
-            "Insurance & Risk Management",
-            "Hotels & Resorts",
-            "Real Estate",
-            "Mining & Resources",
-            "Universities & Schools",
-          ].map((industry) => (
+          {industryContents.map((industry, index) => (
             <Box
-              key={industry}
-              onMouseEnter={() => handleMouseEnter(industry)}
+              key={index}
+              onMouseEnter={(e) => handleMouseEnter(e, industry)}
               onMouseLeave={handleMouseLeave}
               sx={{ position: "relative", display: "inline-block" }}
             >
@@ -106,11 +114,15 @@ export default function Industries() {
                 className="IndustriesButton"
                 sx={MUIStyle.IndustriesButton}
               >
-                {industry}
+                {industry?.title}
               </Button>
-              {hoveredButton === industry && (
+              {hoveredButton?.title === industry?.title && (
                 <Box sx={MUIStyle.CustomTooltip}>
-                  <ButtonTooltip industry={industry} />
+                  <ButtonTooltip
+                    title={industry.title}
+                    content={industry.content}
+                    image={industry.image}
+                  />
                 </Box>
               )}
             </Box>

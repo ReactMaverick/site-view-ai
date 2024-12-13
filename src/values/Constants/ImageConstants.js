@@ -1,7 +1,7 @@
 // Image Constants
 
 const URL = (url) => {
-    return  url;
+    return url;
 }
 export const LOGO = URL('/images/logo.png');
 export const LOGOFTR = URL('/images/logoFTR.png');
@@ -49,3 +49,12 @@ export const BLOG1 = URL('/images/Blog1.png');
 export const BLOG2 = URL('/images/Blog2.png');
 export const EXTRABG = URL('/images/extrabg.png');
 export const MAP = URL('/images/map.png');
+
+// Card Images
+export const compareProcess = URL('/images/compare-process.gif');
+export const visualDocumentation = URL('/images/visual-documentation.png');
+export const virtualSiteMeets = URL('/images/virtual-site-meets.png');
+export const timeTravel = URL('/images/time-travel.png');
+export const noBlindSpot = URL('/images/no-blind-spot.gif');
+
+export const helmetCamera = URL('/images/helmet-camera.gif');

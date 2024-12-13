@@ -11,16 +11,16 @@ import TabBarSec from "@/components/TabBarSec/TabBarSec";
 import DigitalConstruction from "@/components/DigitalConstruction/DigitalConstruction";
 import FAQSec from "@/components/FAQSec/FAQSec";
 
-export default function () {
+export default function OutTech() {
   return (
     <Box className={styles.OurTechSec}>
       <BannerNew />
       <Vision />
-      <ConstructionProject/>
+      <ConstructionProject />
       <Vision2 />
       <OnsiteSection />
       <Vision />
-      <TabBarSec/>
+      <TabBarSec />
       <Vision2 />
       <DigitalConstruction />
       <FAQSec />

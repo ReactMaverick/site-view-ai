@@ -6,7 +6,7 @@ import React from "react";
 import SingleBlogContent from "@/components/SingleBlogContent/SingleBlogContent";
 import BlogGrid from "@/components/BlogGrid/BlogGrid";
 
-export default function () {
+export default function Blogs() {
   return (
     <Box className={styles.BlogSec}>
       <BannerNew />

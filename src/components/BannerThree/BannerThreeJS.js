@@ -334,7 +334,7 @@ export function animateAndHideTopLayer({
 
 
     if (scene.children.find(child => child.material.opacity <= 0.01)) {
-        console.log('Stopping animation');
+        // console.log('Stopping animation');
 
         stopAnimation({
             scene,

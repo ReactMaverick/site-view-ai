@@ -6,10 +6,9 @@ import WorkflowBox from "../WorkflowBox/WorkflowBox";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { backgroundColors, workflowContents } from "./WorkflowContents";
 
 export default function Workflow() {
-
-  const workflowBoxes = Array(10).fill(null);
 
   // Runs before the first render
   useLayoutEffect(() => {
@@ -17,39 +16,50 @@ export default function Workflow() {
   }, []);
 
   useGSAP(() => {
-    let cards = gsap.utils.toArray(".card-wrapper");
+    const cards = gsap.utils.toArray(".card-wrapper");
 
     gsap.to(cards, {
       xPercent: -80 * (cards.length - 1),
       ease: "none",
       scrollTrigger: {
         trigger: ".workflowSec",
-        markers: true,  // Set to true to see the trigger area
+        // markers: true,  // Set to true to see the trigger area
         pin: true,
         scrub: 1,
         snap: 1 / (cards.length - 2),
-        end: () => "+=" + document.querySelector(".workflowSec").offsetWidth
-      }
+        end: () => "+=" + document.querySelector(".workflowSec").offsetWidth,
+        onUpdate: self => {
+          const direction = self.direction > 0 ? 1 : -1;
+          cards.forEach((card, index) => {
+            const rotation = index % 2 === 0 ? -7 : 5;
+            gsap.to(card, {
+              rotation: rotation * direction,
+              ease: "none",
+            });
+          });
+        }
+      },
+
     });
 
-    cards.forEach((card, index) => {
-      gsap.fromTo(card,
-        {
-          rotation: index % 2 === 0 ? -7 : 5,
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          scrollTrigger: {
-            trigger: card,
-            start: "left center",
-            end: "right center",
-            scrub: true,
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
-    });
+    // cards.forEach((card, index) => {
+    //   gsap.fromTo(card,
+    //     {
+    //       rotation: index % 2 === 0 ? -7 : 5,
+    //       // opacity: 0,
+    //     },
+    //     {
+    //       // opacity: 1,
+    //       scrollTrigger: {
+    //         trigger: card,
+    //         start: "left center",
+    //         end: "right center",
+    //         scrub: true,
+    //         toggleActions: "play none none reverse",
+    //       }
+    //     }
+    //   );
+    // });
   });
 
   return (
@@ -67,9 +77,13 @@ export default function Workflow() {
         </Box>
       </Container>
       <Box sx={MUIStyle.SliderOuter}>
-        {workflowBoxes.map((_, index) => (
+        {workflowContents.map((workflow, index) => (
           <Box key={index} className="card-wrapper" sx={MUIStyle.SliderInner} style={{ minWidth: '400px', margin: '80px 10px', scrollSnapAlign: 'center' }}>
-            <WorkflowBox />
+            <WorkflowBox
+              backgroundColor={backgroundColors[index % backgroundColors.length]}
+              title={workflow.title}
+              content={workflow.content}
+            />
           </Box>
         ))}
       </Box>

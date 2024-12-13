@@ -25,7 +25,6 @@ export default function HomePage() {
       <BannerThree
         setIsThreeJSLoading={setIsThreeJSLoading}
       />
-      {/* <div className='homeContent'> */}
       <About />
       <Partners />
       <Project />

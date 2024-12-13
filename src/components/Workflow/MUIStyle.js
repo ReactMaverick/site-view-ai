@@ -32,7 +32,7 @@ export const MUIStyle = {
       md: "50%",
       lg: "50%",
       xl: "50%",
-  },
+    },
     marginBottom: {
       xs: "30px",
       sm: "30px",

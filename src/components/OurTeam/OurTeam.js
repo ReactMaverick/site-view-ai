@@ -1,7 +1,7 @@
 "use client";
 import { Box, Container, Paper, styled, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import Grid from "@mui/material/Grid2";
 import {
   TEAM,
@@ -14,7 +14,42 @@ import {
   WAVY,
 } from "@/values/Constants/ImageConstants";
 import { commonColor } from "@/values/Colors/CommonColor";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 export default function OurTeam() {
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+  }, []);
+
+  useGSAP(() => {
+    const teamGrids = gsap.utils.toArray(".ourTeamGrid");
+
+    const xPercentValues = [20, -20, 20, 0, -20, 20, -20];
+    const yPercentValues = [20, 20, 0, 0, 0, -20, -20];
+    const rotateZValues = [-10, 10, 0, 0, 0, 10, -10];
+
+    teamGrids.forEach((grid, i) => {
+      gsap.to(grid, {
+        scrollTrigger: {
+          trigger: ".ourTeamGrids",
+          start: "top 200px",
+          end: "+=200",
+          scrub: 2,
+          // markers: true,
+          id: `grid-${i}`,
+        },
+        xPercent: () => i !== 3 && xPercentValues[i],
+        yPercent: () => i !== 3 && yPercentValues[i],
+        rotateZ: () => i !== 3 && rotateZValues[i],
+        duration: 3,
+      });
+    });
+
+  });
+
   return (
     <Box sx={MUIStyle.BuildForMain}>
       <Container maxWidth="xl">
@@ -29,7 +64,7 @@ export default function OurTeam() {
           </Box>
         </Box>
         <Box sx={MUIStyle.OurTeamSec}>
-          <Grid container spacing={3}>
+          <Grid container spacing={3} className="ourTeamGrids">
             <Grid
               size={{
                 xs: 12,
@@ -38,6 +73,7 @@ export default function OurTeam() {
                 lg: 6,
                 xl: 6,
               }}
+              className="ourTeamGrid"
             >
               <Box
                 sx={{
@@ -65,12 +101,14 @@ export default function OurTeam() {
               </Box>
             </Grid>
             <Grid size={{
-                xs: 12,
-                sm: 6,
-                md: 6,
-                lg: 6,
-                xl: 6,
-              }}>
+              xs: 12,
+              sm: 6,
+              md: 6,
+              lg: 6,
+              xl: 6,
+            }}
+              className="ourTeamGrid"
+            >
               <Box
                 sx={{
                   ...MUIStyle.OurTeamBox,
@@ -97,12 +135,14 @@ export default function OurTeam() {
               </Box>
             </Grid>
             <Grid size={{
-                xs: 12,
-                sm:  6,
-                md: 4.3,
-                lg: 4.3,
-                xl: 4.3,
-              }}>
+              xs: 12,
+              sm: 6,
+              md: 4.3,
+              lg: 4.3,
+              xl: 4.3,
+            }}
+              className="ourTeamGrid"
+            >
               <Box
                 sx={{
                   ...MUIStyle.OurTeamBox,
@@ -129,16 +169,20 @@ export default function OurTeam() {
               </Box>
             </Grid>
             <Grid size={{
-                xs: 12,
-                sm:  6,
-                md: 3.2,
-                lg: 3.2,
-                xl: 3.2,
-              }}>
+              xs: 12,
+              sm: 6,
+              md: 3.2,
+              lg: 3.2,
+              xl: 3.2,
+            }}
+              className="ourTeamGrid"
+            >
               <Box
                 sx={{
                   ...MUIStyle.OurTeamBox,
                   background: commonColor.greenFade1,
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
                 <Box sx={MUIStyle.OurTeamBoxHeader}>
@@ -161,12 +205,14 @@ export default function OurTeam() {
               </Box>
             </Grid>
             <Grid size={{
-                xs: 12,
-                sm: 6,
-                md: 4.5,
-                lg: 4.5,
-                xl: 4.5,
-              }}>
+              xs: 12,
+              sm: 6,
+              md: 4.5,
+              lg: 4.5,
+              xl: 4.5,
+            }}
+              className="ourTeamGrid"
+            >
               <Box
                 sx={{
                   ...MUIStyle.OurTeamBox,
@@ -192,13 +238,15 @@ export default function OurTeam() {
                 />
               </Box>
             </Grid>
-            <Grid  size={{
-                xs: 12,
-                sm: 6,
-                md: 5.5,
-                lg: 5.5,
-                xl: 5.5,
-              }}>
+            <Grid size={{
+              xs: 12,
+              sm: 6,
+              md: 5.5,
+              lg: 5.5,
+              xl: 5.5,
+            }}
+              className="ourTeamGrid"
+            >
               <Box
                 sx={{
                   ...MUIStyle.OurTeamBox,
@@ -225,12 +273,14 @@ export default function OurTeam() {
               </Box>
             </Grid>
             <Grid size={{
-                xs: 12,
-                sm: 6,
-                md: 6.5,
-                lg: 6.5,
-                xl: 6.5,
-              }}>
+              xs: 12,
+              sm: 6,
+              md: 6.5,
+              lg: 6.5,
+              xl: 6.5,
+            }}
+              className="ourTeamGrid"
+            >
               <Box
                 sx={{
                   ...MUIStyle.OurTeamBox,
