@@ -17,33 +17,23 @@ export default function About() {
   }, []);
 
   useGSAP(() => {
-    const boxes = gsap.utils.toArray('.boxes');
+    const boxes = gsap.utils.toArray('.animBox');
 
     // console.log("cards", cards);
 
     boxes.forEach((box, i) => {
 
-      ScrollTrigger.create({
-        trigger: box, // The element that ScrollTrigger will "trigger" when it comes into view
-        start: "top top", // When the top of the trigger hits the top of the viewport
-        end: "bottom center", // When the bottom of the trigger hits the center of the viewport
-        // endTrigger: ".workflowSec", // The element that ScrollTrigger will use as the end of the trigger.
-        markers: true, // Show markers for testing purposes
-        onEnter: () => {
-          // console.log("onEnter", i);
-
-          gsap.to(box, {
-            motionPath: {
-              path: path,
-              align: box,
-              autoRotate: true,
-              alignOrigin: [0.5, 0.5]
-            },
-            duration: 2,
-            ease: "power1.inOut"
-          });
+      gsap.to(box, {
+        scrollTrigger: {
+          trigger: box,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: 1,
+          // markers: true,
         },
-
+        y: 200,
+        duration: 1,
+        ease: "power1.out",
       });
     });
   });
@@ -54,49 +44,49 @@ export default function About() {
         display: "flex",
         flexDirection: "column",
       }}>
-        <Box sx={MUIStyle.AboutAllBtns} className="boxes">
+        <Box sx={MUIStyle.AboutAllBtns}>
 
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn1]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn1]} variant="contained" className="animBox">
             Save Cost
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn2]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn2]} variant="contained" className="animBox">
             Save Time
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn3]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn3]} variant="contained" className="animBox">
             Reduce Rework
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn4]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn4]} variant="contained" className="animBox">
             Sustainable Practices
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn5]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn5]} variant="contained" className="animBox">
             Save Resources
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn6]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn6]} variant="contained" className="animBox">
             Safety Management
           </Box>
 
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn7]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn7]} variant="contained" className="animBox">
             Remote Collaboration
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn8]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn8]} variant="contained" className="animBox">
             Visual Progress
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn9]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn9]} variant="contained" className="animBox">
             No Blind Spot
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn10]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn10]} variant="contained" className="animBox">
             Increased Efficiency
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn11]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn11]} variant="contained" className="animBox">
             Visual Progress1
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn12]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn12]} variant="contained" className="animBox">
             No Blind Spot
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn13]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn13]} variant="contained" className="animBox">
             Historical Records
           </Box>
-          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn14]} variant="contained">
+          <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn14]} variant="contained" className="animBox">
             Data Management
           </Box>
         </Box>
