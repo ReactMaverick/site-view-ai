@@ -17,7 +17,10 @@ export default function VideoSec() {
   };
 
   return (
-    <Box sx={MUIStyle.VideoSecMain} className="videoSection">
+    <Box
+      sx={MUIStyle.VideoSecMain}
+      className="videoSection"
+    >
       <Container maxWidth="xL" sx={{
         display: "flex",
         justifyContent: "center",

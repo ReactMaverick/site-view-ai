@@ -22,7 +22,7 @@ export const MUIStyle = {
       xl: "1024px",
     },
   },
-  VideoBox : {
+  VideoBox: {
     width: "55%",
     height: "55%",
     position: "relative",
@@ -40,10 +40,10 @@ export const MUIStyle = {
     height: "100%",
     borderRadius: "20px",
     "& img": {
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        },
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    },
   },
   CustomButton: {
     position: "absolute",
@@ -52,10 +52,10 @@ export const MUIStyle = {
     transform: "translate(-50%, -50%)",
     borderRadius: "50%",
     "& img": {
-        width: "100px",
-        height: "100px",
-        objectFit: "cover",
-        borderRadius: "50%",
+      width: "100px",
+      height: "100px",
+      objectFit: "cover",
+      borderRadius: "50%",
     },
   },
 

@@ -21,7 +21,7 @@ export const MUIStyle = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    marginBottom: "200px",
+    marginBottom: "220px",
   },
   CTAHeading: {
     fontSize: FONT_SIZE.heading48,
@@ -66,12 +66,26 @@ export const MUIStyle = {
     alignItems: "center",
     gap: "20px",
     position: "relative",
+    marginLeft: {
+      xs: "0px",
+      sm: "0px",
+      md: "50px",
+      lg: "50px",
+      xl: "50px",
+    },
+    marginRight: {
+      xs: "0px",
+      sm: "0px",
+      md: "50px",
+      lg: "50px",
+      xl: "50px",
+    },
     marginTop: {
       xs: "0px",
       sm: "0px",
-      md: "200px",
-      lg: "200px",
-      xl: "200px",
+      md: "180px",
+      lg: "180px",
+      xl: "180px",
 
     },
     flexDirection: {
@@ -159,7 +173,7 @@ export const MUIStyle = {
     transition: "all 0.8s ease",
     "&:hover": {
       boxShadow: "none",
-      color: commonColor.black,
+      color: commonColor.black + " !important",
     },
     "&:hover .BannerBtnIcon": {
       transform: "translateX(10px)",
@@ -197,6 +211,11 @@ export const MUIStyle = {
     position: 'absolute',
     top: '0',
     height: '100%',
+    backgroundColor: commonColor.black,
+  },
+  CTAImg: {
+    width: '100vw',
+    objectFit: 'cover',
   }
 
 };

@@ -58,3 +58,6 @@ export const timeTravel = URL('/images/time-travel.png');
 export const noBlindSpot = URL('/images/no-blind-spot.gif');
 
 export const helmetCamera = URL('/images/helmet-camera.gif');
+
+export const PLANNING = URL('/images/planning.png');
+export const EXECUTION = URL('/images/execution.png');

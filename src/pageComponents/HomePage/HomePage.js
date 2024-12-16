@@ -13,6 +13,7 @@ import CTA from "@/components/CTA/CTA";
 import BannerThree from "@/components/BannerThree/BannerThree";
 import { useState } from "react";
 import FullPageLoader from "@/components/FullPageLoader/FullPageLoader";
+import VideoSecNew from "@/components/VideoSec/VideoSecNew";
 
 
 export default function HomePage() {

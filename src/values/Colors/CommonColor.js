@@ -11,8 +11,8 @@ export const commonColor = {
     white: "#fff",
     green: "#C9F625",
     greenLight: "#F7FFC7",
-    trans:"#00000000",
-    boderColor:"#BEBEBE",
+    trans: "#00000000",
+    boderColor: "#BEBEBE",
     grey: "#6B7280",
     whitetrans: "rgba(255, 255, 255, 0.2)",
     blacktrans: "rgba(0, 0, 0, 0.05)",
@@ -30,4 +30,5 @@ export const commonColor = {
     white5: "rgba(255, 255, 255, 0.05)",
     grey3: "#D1D5DB",
     grey4: "#F3F4F6",
+    lightGrey: '#ccc'
 };  
