@@ -1,36 +1,37 @@
 import { commonColor } from "@/values/Colors/CommonColor";
-import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
-import { VIDEOBG } from "@/values/Constants/ImageConstants";
 
 export const MUIStyle = {
   VideoSecMain: {
-    background: `url(${VIDEOBG})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    width: "100%",
-    position: "relative",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-    minHeight: {
-      xs: "100vh",
-      sm: "100vh",
-      md: "1024px",
-      lg: "1024px",
-      xl: "1024px",
-    },
-  },
-  VideoBox: {
-    width: "55%",
-    height: "55%",
-    position: "relative",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: "20px",
     overflow: "hidden",
+    backgroundColor: commonColor.black,
+    position: "relative",
+    width: "100vw",
+    height: "100vh",
+  },
+  VideoSecImages: {
+    transform: "scale(0.5)",
+    width: "100%",
+    height: "100%",
+  },
+  VideoSecImageOuter: {
+    width: "100%",
+    height: "100%",
+    borderRadius: "40px",
+    overflow: "hidden",
+  },
+  VideoSecImage: {
+    width: "100%",
+    height: "100%",
+    overflow: "hidden",
+  },
+  VideoSecVideo: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    position: "absolute",
+    top: "0",
+    left: "0",
+    zIndex: "1",
   },
   VideoOverlay: {
     position: "absolute",
@@ -52,14 +53,10 @@ export const MUIStyle = {
     transform: "translate(-50%, -50%)",
     borderRadius: "50%",
     "& img": {
-      width: "100px",
-      height: "100px",
+      width: "150px",
+      height: "150px",
       objectFit: "cover",
       borderRadius: "50%",
     },
   },
-
-
-
-
 };

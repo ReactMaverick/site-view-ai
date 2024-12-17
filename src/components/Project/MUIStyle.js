@@ -62,10 +62,17 @@ export const MUIStyle = {
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
+        padding: {
+            xs: "100px 0",
+            sm: "100px 0",
+            md: "100px 0",
+            lg: "100px 0",
+            xl: "100px 0",
+        },
     },
 
     ProjectSec: {
-        margin: "180px 0",
+        // margin: "180px 0",
     },
 
 };

@@ -75,4 +75,15 @@ export const MUIStyle = {
     scrollbarWidth: "none",
     msOverflowStyle: "none",
   },
+  SliderInner: {
+    minWidth: {
+      xs: "300px",
+      sm: "300px",
+      md: "400px",
+      lg: "400px",
+      xl: "400px",
+    },
+    margin: '80px 10px',
+    scrollSnapAlign: 'center'
+  }
 };

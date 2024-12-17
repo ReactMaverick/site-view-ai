@@ -6,14 +6,13 @@ import About from "@/components/About/About";
 import Partners from "@/components/Partners/Partners";
 import Project from "@/components/Project/Project";
 import Workflow from "@/components/Workflow/Workflow";
-import VideoSec from "@/components/VideoSec/VideoSec";
 import Industries from "@/components/Industries/Industries";
 import OurTeam from "@/components/OurTeam/OurTeam";
 import CTA from "@/components/CTA/CTA";
 import BannerThree from "@/components/BannerThree/BannerThree";
 import { useState } from "react";
 import FullPageLoader from "@/components/FullPageLoader/FullPageLoader";
-import VideoSecNew from "@/components/VideoSec/VideoSecNew";
+import VideoSec from "@/components/VideoSec/VideoSec";
 
 
 export default function HomePage() {
@@ -34,7 +33,6 @@ export default function HomePage() {
       <Industries />
       <OurTeam />
       <CTA />
-      {/* </div> */}
     </Box>
   );
 }

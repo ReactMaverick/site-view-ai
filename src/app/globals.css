@@ -61,7 +61,7 @@ html {
 
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-Fellix-sans) !important;
@@ -308,4 +308,12 @@ p.BlogContent {
   to {
     opacity: 0;
   }
+}
+
+.videoSecImageOuter:not(:first-child) {
+  position: absolute;
+}
+
+.videoSecImageOuter:first-child {
+  position: relative;
 }

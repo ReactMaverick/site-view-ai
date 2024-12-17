@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import ScrollToPlugin from "gsap/ScrollToPlugin";
-import { compareProcess, noBlindSpot, timeTravel, visualDocumentation, virtualSiteMeets } from "@/values/Constants/ImageConstants";
+import { COMPAREPROCESS, NOBLINDSPOT, TIMETRAVEL, VISUALDOCUMENTATION, VIRTUALSITEMEETS } from "@/values/Constants/ImageConstants";
 import { commonColor } from "@/values/Colors/CommonColor";
 
 export default function Project() {
@@ -17,31 +17,31 @@ export default function Project() {
   const cardContents = [
     {
       title: "Virtual Site Meets",
-      image: virtualSiteMeets,
+      image: VIRTUALSITEMEETS,
       backgroundColor: commonColor.white,
       description: "Experience immersive site visits remotely. SiteView.ai enables 360° virtual views, real-time collaboration, and precise issue resolution with your team—all within dynamic virtual meetings. Connect without boundaries.",
     },
     {
       title: "Time Travel",
-      image: timeTravel,
+      image: TIMETRAVEL,
       backgroundColor: commonColor.greenFade3,
       description: "Travel your site back in time. SiteView records the visuals from Day-1 and stores it for years even after completion of the project. Select the date of your walk, as if you are there on that day. This forms an important tool to avoid disputes and serve as an evidence during disputes.",
     },
     {
       title: "No Blind Spot",
-      image: noBlindSpot,
+      image: NOBLINDSPOT,
       backgroundColor: commonColor.white,
       description: "Walk through any floor or room with a few clicks. With SiteView.ai’s secure cloud storage, access your entire project from any device, anywhere with an internet connection. Never miss a detail, whether you’re in the office or on the go.",
     },
     {
       title: "Visual Documentation",
-      image: visualDocumentation,
+      image: VISUALDOCUMENTATION,
       backgroundColor: commonColor.greenFade3,
       description: "Capture photos or screenshots during virtual walkthroughs with a click. Save them to your computer or share instantly with your team. Keep critical visuals handy for discussions or reports, whenever you need them.",
     },
     {
       title: "Compare Process",
-      image: compareProcess,
+      image: COMPAREPROCESS,
       backgroundColor: commonColor.white,
       description: "Monitor progress effortlessly by comparing site views from two different dates. Uncover hidden details, create as-built drawings, and ensure nothing is left unnoticed beneath finishes like plaster or paint.",
     },
@@ -74,33 +74,19 @@ export default function Project() {
           // console.log("onEnter", i);
 
           gsap.to(card, {
-            x: `${-((window.innerWidth - card.offsetWidth) / 2 - 200) + i * (window.innerWidth / 8)}`, // Move the card to the left
+            x: `${-((window.innerWidth - card.offsetWidth) / 2 - window.innerWidth * 0.15) + i * (window.innerWidth / 8)}`, // Move the card to the left
             y: i * 30 - 150, // Move the card dynamically
             rotate: i - 2, // Rotate the card
             duration: 1, // Animation duration
             // ease: "power1.out", // Animation easing
           });
         },
-
-
-
-        // onLeaveBack: () => {
-        //   console.log("onLeaveBack", i);
-
-        //   // gsap.to(card, {
-        //   //   x: 0, // Move the card to the left
-        //   //   y: 0, // Move the card down
-        //   //   rotate: 0, // Rotate the card
-        //   //   duration: 1, // Animation duration
-        //   //   // ease: "power1.out", // Animation easing
-        //   // });
-        // },
       });
     });
   });
 
   return (
-    <Box sx={MUIStyle.PartnersMain}>
+    <Box sx={MUIStyle.PartnersMain} className="projectMain">
       <Container maxWidth="xl">
         <Box sx={MUIStyle.PartnersHeadingBoxOuter}>
           <Box sx={MUIStyle.PartnersHeadingBoxInner}>

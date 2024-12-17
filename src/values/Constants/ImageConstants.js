@@ -31,7 +31,7 @@ export const TEAM5 = URL('/images/team5.png');
 export const TEAM6 = URL('/images/team6.png');
 export const TEAM7 = URL('/images/team7.png');
 export const CTABG = URL('/images/CTASection.png');
-export const HELMATE = URL('/images/helmetcamera.png');
+export const HELMATE = URL('/images/HELMETCAMERA.png');
 export const LINEARROW = URL('/images/Linearrow.png');
 export const VIDEOINNER = URL('/images/Video.png');
 export const DOWN = URL('/images/down.png');
@@ -51,13 +51,46 @@ export const EXTRABG = URL('/images/extrabg.png');
 export const MAP = URL('/images/map.png');
 
 // Card Images
-export const compareProcess = URL('/images/compare-process.gif');
-export const visualDocumentation = URL('/images/visual-documentation.png');
-export const virtualSiteMeets = URL('/images/virtual-site-meets.png');
-export const timeTravel = URL('/images/time-travel.png');
-export const noBlindSpot = URL('/images/no-blind-spot.gif');
+export const COMPAREPROCESS = URL('http://194.163.131.163/site-view-ai-assets/images/compare-process.gif');
+// export const COMPAREPROCESS = URL('/images/compare-process.gif'); // UNCOMMENT ON PRODUCTION
+export const VISUALDOCUMENTATION = URL('/images/visual-documentation.png');
+export const VIRTUALSITEMEETS = URL('/images/virtual-site-meets.png');
+export const TIMETRAVEL = URL('/images/time-travel.png');
+export const NOBLINDSPOT = URL('http://194.163.131.163/site-view-ai-assets/images/no-blind-spot.gif');
+// export const NOBLINDSPOT = URL('/images/no-blind-spot.gif'); // UNCOMMENT ON PRODUCTION
 
-export const helmetCamera = URL('/images/helmet-camera.gif');
+export const HELMETCAMERA = URL('http://194.163.131.163/site-view-ai-assets/images/helmet-camera.gif');
+// export const HELMETCAMERA = URL('/images/helmet-camera.gif'); // UNCOMMENT ON PRODUCTION
 
 export const PLANNING = URL('/images/planning.png');
 export const EXECUTION = URL('/images/execution.png');
+
+// Video Section Images
+export const TOPIMAGE = URL('/images/top-image.png');
+export const BOTTOMIMAGE = URL('/images/bottom-image.png');
+export const MIDDLEIMAGE = URL('/images/lt-image.png');
+export const LBIMAGE = URL('/images/lb-image.png');
+export const LTIMAGE = URL('/images/lt-image.png');
+export const RBIMAGE = URL('/images/rb-image.png');
+export const RTIMAGE = URL('/images/rt-image.png');
+
+// Industry Section Images
+export const INFRAENGG = URL('/images/infra-engg.png');
+export const MANUFIND = URL('/images/manuf-ind.jpg');
+export const REALSTATE = URL('/images/real-estate.jpg');
+export const HOTELSREST = URL('/images/hotels-rest.jpg');
+export const RETAILSTORES = URL('/images/retail-stores.jpg');
+export const UNISCHOOL = URL('/images/uni-school.jpg');
+export const HOSPITALSCLINIC = URL('/images/hospitals-clinic.png');
+export const EVENTVENUE = URL('/images/event-venue.jpg');
+export const MUSEUMGALLERIES = URL('/images/museum-galleries.jpg');
+export const OILGAS = URL('/images/oil-gas.jpg');
+export const RENEWABLEENERGY = URL('/images/renewable-energy.jpg');
+export const ARCHPRESERV = URL('/images/arch-preserv.jpg');
+export const INSRISK = URL('/images/ins-risk.jpg');
+export const DISASTERRELIEF = URL('/images/disaster-relief.jpg');
+export const MININGRES = URL('/images/mining-res.jpg');
+export const FORESTRYAGRI = URL('/images/forestry-agri.jpg');
+export const TELEIT = URL('/images/tele-it.png');
+export const DATACENTRE = URL('/images/data-centre.jpg');
+export const GOVPRIVSERVICES = URL('/images/gov-priv-services.jpg');

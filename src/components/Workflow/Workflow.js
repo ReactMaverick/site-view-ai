@@ -41,25 +41,6 @@ export default function Workflow() {
       },
 
     });
-
-    // cards.forEach((card, index) => {
-    //   gsap.fromTo(card,
-    //     {
-    //       rotation: index % 2 === 0 ? -7 : 5,
-    //       // opacity: 0,
-    //     },
-    //     {
-    //       // opacity: 1,
-    //       scrollTrigger: {
-    //         trigger: card,
-    //         start: "left center",
-    //         end: "right center",
-    //         scrub: true,
-    //         toggleActions: "play none none reverse",
-    //       }
-    //     }
-    //   );
-    // });
   });
 
   return (
@@ -78,7 +59,8 @@ export default function Workflow() {
       </Container>
       <Box sx={MUIStyle.SliderOuter}>
         {workflowContents.map((workflow, index) => (
-          <Box key={index} className="card-wrapper" sx={MUIStyle.SliderInner} style={{ minWidth: '400px', margin: '80px 10px', scrollSnapAlign: 'center' }}>
+          <Box key={index} className="card-wrapper" sx={MUIStyle.SliderInner}
+          >
             <WorkflowBox
               backgroundColor={backgroundColors[index % backgroundColors.length]}
               title={workflow.title}

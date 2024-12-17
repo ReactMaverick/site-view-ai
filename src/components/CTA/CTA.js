@@ -2,7 +2,7 @@
 import { Box, Button, Container, LinearProgress, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import React, { Fragment, useLayoutEffect, useState } from "react";
-import { CTABG, EXECUTION, HELMATE, helmetCamera, LINEARROW, PLANNING } from "@/values/Constants/ImageConstants";
+import { CTABG, EXECUTION, HELMATE, HELMETCAMERA, LINEARROW, PLANNING } from "@/values/Constants/ImageConstants";
 import { Icon } from "@iconify/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -52,10 +52,11 @@ export default function CTA() {
 
     // For each ctaImage, create a progress bar that fills as the image scrolls into view
     ctaImages.forEach((ctaImage, index) => {
-      const progress = document.querySelectorAll('progress-' + index);
+      const progressBar = $('.progress-' + index);
 
-      gsap.to(progress, {
-        value: 100,
+      // console.log("progressBar", progressBar);
+
+      gsap.to(progressBar, {
         ease: 'none',
         scrollTrigger: {
           trigger: ctaImage,
@@ -121,7 +122,7 @@ export default function CTA() {
           </Typography>
         </Box>
         <Box sx={MUIStyle.CTAImgInner}>
-          <Box component={"img"} src={helmetCamera} alt="CTA" sx={MUIStyle.CTAImg} />
+          <Box component={"img"} src={HELMETCAMERA} alt="CTA" sx={MUIStyle.CTAImg} />
         </Box>
         <Box component={"ul"} sx={MUIStyle.CTAList}>
           {progress.map((item, index) => (
