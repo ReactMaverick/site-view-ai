@@ -98,4 +98,21 @@ export const gsapAnimation = ({
         },
     });
 
+    // Text Rotation Animation
+    const newTL = gsap.timeline({ repeat: -1, repeatDelay: 2 }); // This will repeat the whole timeline infinitely
+
+    newTL.to('.bannerHeading1', {
+        duration: 0.5,
+        delay: 3,
+        stagger: 0.02, // This will animate each letter with a delay of 0.02s
+        rotateY: 360,
+    })
+
+    newTL.to('.bannerHeading2', {
+        duration: 0.5,
+        delay: 0.2,
+        stagger: 0.02, // This will animate each letter with a delay of 0.02s
+        rotateY: 360,
+    })
+
 }

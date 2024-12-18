@@ -44,12 +44,12 @@ export default function Header({ theme = "light" }) {
       ref={headerRef}
       className={isSticky ? styles.stickyHeader : ""}
       sx={[MUIStyle.HeaderMain,
-       { borderColor: theme === "light" ? "#D6D6D6" : commonColor.white10,}
+      { borderColor: theme === "light" ? "#D6D6D6" : commonColor.white10, }
       ]}
     >
       <Container maxWidth="xl">
         <Box sx={MUIStyle.HeaderInner}>
-          <Box sx={MUIStyle.HeaderLogoBox}>
+          <Box sx={[MUIStyle.HeaderLogoBox, { opacity: isSticky ? 0 : 1 }]}>
             <Link href="/">
               <Box
                 sx={MUIStyle.logoImage}
@@ -59,7 +59,7 @@ export default function Header({ theme = "light" }) {
               />
             </Link>
           </Box>
-          <Box sx={MUIStyle.menuBox}>
+          <Box sx={MUIStyle.menuBox} className="headerInner">
             <Box
               sx={MUIStyle.menuBtn}
               onClick={() => setIsActiveMenuVisible(!isActiveMenuVisible)}
@@ -102,7 +102,7 @@ export default function Header({ theme = "light" }) {
                     },
                   ]}
                 >
-                  {menuItems.map(({ label, path }) => (
+                  {menuItems.map(({ label, path }, index) => (
                     <Box component="li" key={path} sx={MUIStyle.HEaderMenuLi}>
                       <Link
                         className={
@@ -115,17 +115,20 @@ export default function Header({ theme = "light" }) {
                           sx={[
                             MUIStyle.HeaderMenuBtn,
                             {
-                             color:{
-                                    xs: "white",
-                                    sm:  "white",
-                                    md:  theme === "light"
-                                    ? commonColor.black
-                                    : commonColor.white,
-                                    lg:  theme === "light"
+                              color: {
+                                xs: "white",
+                                sm: "white",
+                                md: theme === "light"
                                   ? commonColor.black
                                   : commonColor.white,
-                                  },
-                                },
+                                lg: theme === "light"
+                                  ? commonColor.black
+                                  : commonColor.white,
+                              },
+                            },
+                            (index === 0 || index === menuItems.length - 1) && {
+                              padding: "15px 24px",
+                            },
                           ]}
                         >
                           {label}
@@ -164,6 +167,7 @@ export default function Header({ theme = "light" }) {
                   md: "block",
                   lg: "block",
                 },
+                opacity: isSticky ? 0 : 1,
               },
             ]}
           >

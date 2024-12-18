@@ -26,8 +26,9 @@ export default function Workflow() {
         // markers: true,  // Set to true to see the trigger area
         pin: true,
         scrub: 1,
-        snap: 1 / (cards.length - 2),
+        // snap: 1 / (cards.length - 2),
         end: () => "+=" + document.querySelector(".workflowSec").offsetWidth,
+        endTrigger: ".videoSecMain",
         onUpdate: self => {
           const direction = self.direction > 0 ? 1 : -1;
           cards.forEach((card, index) => {

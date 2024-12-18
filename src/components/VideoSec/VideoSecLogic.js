@@ -19,7 +19,10 @@ export const gsapAnimation = ({
 
     gsap.to(videoSecImagesElement, {
         scrollTrigger: scrollTriggerConfig,
-        scale: 1, // Scale the element (VideoSecImages) to 1
+        // scale: 1, // Scale the element (VideoSecImages) to 1
+        keyframes: {
+            scale: [0.5, 1, 0.5], // Scale the element (VideoSecImages) to 0.5, 1, 0.5
+        }
     });
 
     gsap.to('.videoSecImage', {
@@ -37,7 +40,9 @@ export const gsapAnimation = ({
             id: "videoSecImagesOuter",
             pin: false, // Unpin the trigger element while active
         },
-        borderRadius: 0, // Remove the border radius
+        keyframes: {
+            borderRadius: ["40px", "0px", "40px"], // Change the border radius of the element (VideoSecImageOuter) to 40px, 0px, 40px
+        }
     });
 
 }

@@ -5,12 +5,19 @@ import { BANNER } from "@/values/Constants/ImageConstants";
 export const MUIStyle = {
   workflowMain: {
     width: "100%",
+    height: {
+      xs: "100vh",
+      sm: "100vh",
+      md: "100vh",
+      lg: "100vh",
+      xl: "100vh",
+    },
     padding: {
       xs: "100px 0",
       sm: "100px 0",
-      md: "100px 0",
-      lg: "132px 0",
-      xl: "132px 0",
+      md: "0",
+      lg: "0",
+      xl: "0",
     },
     display: "flex",
     justifyContent: "center",

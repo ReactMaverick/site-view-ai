@@ -1,10 +1,8 @@
 import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
-import { FOOTERBG } from "@/values/Constants/ImageConstants";
-import { commonStyle } from "@/values/Styles/CommonStyle";
 
 export const MUIStyle = {
-    HeaderMain: {
+  HeaderMain: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -14,7 +12,8 @@ export const MUIStyle = {
     top: "0",
     left: "0",
     padding: "26px 0",
-    borderBottom: "1px solid",
+    zIndex: "999",
+    // borderBottom: "1px solid",
   },
 
   HeaderInner: {
@@ -22,7 +21,7 @@ export const MUIStyle = {
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-    padding: "0px 0",
+    padding: "0px 10px",
     gap: {
       xs: "10px",
       sm: "20px",
@@ -48,8 +47,8 @@ export const MUIStyle = {
       xs: "96px",
       sm: "96px",
       md: "120px",
-      lg: "150px",
-      xl: "150px",
+      lg: "120px",
+      xl: "120px",
     },
   },
 
@@ -62,10 +61,10 @@ export const MUIStyle = {
     borderRadius: "100px",
     textTransform: "capitalize",
     fontSize: {
-      xs: FONT_SIZE.text18,
-      sm: FONT_SIZE.text18,
-      md: FONT_SIZE.text18,
-      lg: FONT_SIZE.text20,
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text16,
+      md: FONT_SIZE.text16,
+      lg: FONT_SIZE.text16,
     },
     lineHeight: "1.8",
     fontWeight: FONT_WEIGHT.MEDIUM,
@@ -126,6 +125,10 @@ export const MUIStyle = {
       sm: "0px",
     },
     zIndex: "999",
+    backgroundColor: "#ffffff55 !important",
+    borderRadius: '10px',
+    boxShadow: '0px 5px 10px rgba(129, 129, 129, 0.5)',
+    backdropFilter: 'blur(5px)',
     "&:after": {
       content: '""',
       position: "absolute",
@@ -162,7 +165,7 @@ export const MUIStyle = {
       xs: "auto",
       sm: "auto",
       md: "auto",
-      lg: "20px",
+      lg: "auto",
     },
   },
 
@@ -232,12 +235,12 @@ export const MUIStyle = {
     },
     gap: {
       xs: "10px",
-      sm: "20px",
-      md: "20px",
-      lg: "20px",
+      sm: "10px",
+      md: "10px",
+      lg: "10px",
     },
     listStyle: "none",
-    padding:"5px 8px",
+    padding: "0",
     margin: 0,
     background: commonColor.trans,
   },
@@ -256,14 +259,16 @@ export const MUIStyle = {
     },
   },
   HeaderMenuBtn: {
-    fontSize: FONT_SIZE.text18,
+    fontSize: FONT_SIZE.text16,
     fontWeight: FONT_WEIGHT.MEDIUM,
     cursor: "pointer",
-    padding: "10px 16px",
+    padding: "15px 16px",
     transition: "all 0.3s",
     "&:hover": {
-      color: commonColor.green,
+      color: commonColor.white,
       boxShadow: "none",
+      background: 'linear-gradient(180deg, #030712b0 0%, #03071269 50%, rgba(255, 255, 255, 0) 100%)',
+      transition: "all 0.3s",
     },
   },
 };

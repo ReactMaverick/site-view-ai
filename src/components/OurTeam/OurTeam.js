@@ -31,6 +31,14 @@ export default function OurTeam() {
     const yPercentValues = [20, 20, 0, 0, 0, -20, -20];
     const rotateZValues = [-10, 10, 0, 0, 0, 10, -10];
 
+    gsap.set(teamGrids, {
+      // set initial position for each grid dynamically
+      xPercent: (i) => i !== 3 && xPercentValues[i],
+      yPercent: (i) => i !== 3 && yPercentValues[i],
+      rotateZ: (i) => i !== 3 && rotateZValues[i],
+    });
+
+
     teamGrids.forEach((grid, i) => {
       gsap.to(grid, {
         scrollTrigger: {
@@ -41,9 +49,9 @@ export default function OurTeam() {
           // markers: true,
           id: `grid-${i}`,
         },
-        xPercent: () => i !== 3 && xPercentValues[i],
-        yPercent: () => i !== 3 && yPercentValues[i],
-        rotateZ: () => i !== 3 && rotateZValues[i],
+        xPercent: 0,
+        yPercent: 0,
+        rotateZ: 0,
         duration: 3,
       });
     });

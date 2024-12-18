@@ -3,8 +3,8 @@
 const URL = (url) => {
     return url;
 }
-export const LOGO = URL('/images/logo.png');
-export const LOGOFTR = URL('/images/logoFTR.png');
+export const LOGO = URL('/images/logo.svg');
+export const LOGOFTR = URL('/images/logoFTR.svg');
 export const FTRMARK = URL('/images/footermark.png');
 export const BANNER = URL('/images/Hero-section.png');
 export const BANNER1 = URL('/images/next1sec.png');
@@ -53,8 +53,8 @@ export const MAP = URL('/images/map.png');
 // Card Images
 export const COMPAREPROCESS = URL('http://194.163.131.163/site-view-ai-assets/images/compare-process.gif');
 // export const COMPAREPROCESS = URL('/images/compare-process.gif'); // UNCOMMENT ON PRODUCTION
-export const VISUALDOCUMENTATION = URL('/images/visual-documentation.png');
-export const VIRTUALSITEMEETS = URL('/images/virtual-site-meets.png');
+export const VISUALDOCUMENTATION = URL('/images/visual-documentation.jpeg');
+export const VIRTUALSITEMEETS = URL('/images/virtual-site-meets.svg');
 export const TIMETRAVEL = URL('/images/time-travel.png');
 export const NOBLINDSPOT = URL('http://194.163.131.163/site-view-ai-assets/images/no-blind-spot.gif');
 // export const NOBLINDSPOT = URL('/images/no-blind-spot.gif'); // UNCOMMENT ON PRODUCTION

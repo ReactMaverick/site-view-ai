@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import { VIDEOBG1, VIDEOICON } from "@/values/Constants/ImageConstants";
 import { useLayoutEffect, useRef, useState } from "react";
@@ -62,7 +62,7 @@ export default function VideoSec() {
                   height={"100%"}
                   src={item.video}
                   controls
-                  muted
+                  // muted
                   ref={video}
                   style={{ objectFit: "cover" }}
                 // onPause={() => setIsOverlayVisible(true)}
@@ -82,6 +82,9 @@ export default function VideoSec() {
                       onClick={handlePlayVideo}
                     >
                       <Box component={"img"} src={VIDEOICON} alt="" />
+                      <Typography variant="body1" sx={MUIStyle.CustomButtonText}>
+                        Click to Play
+                      </Typography>
                     </Button>
                   </>
                 )}

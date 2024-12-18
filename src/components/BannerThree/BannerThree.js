@@ -69,7 +69,35 @@ export default function BannerThree({
                 <Box className="topLayer-first hide" ref={topLayerFirstRef}>
                     <Box sx={MUIStyle.BannerContentInner}>
                         <Typography variant="span" sx={MUIStyle.BannerTopHeading}>New revolution for construction</Typography>
-                        <Typography variant="h1" sx={MUIStyle.BannerHeading}> Connected Construction </Typography>
+                        {/* <Typography variant="h1" sx={MUIStyle.BannerHeading}>
+                            
+                        </Typography> */}
+                        <Box sx={MUIStyle.BannerHeading}>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">C</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">o</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">n</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">n</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">n</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">e</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">c</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">t</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">e</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">d</Box>
+                        </Box>
+                        <Box sx={MUIStyle.BannerHeading}>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">C</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">o</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">n</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">s</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">t</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">r</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">u</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">c</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">t</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">i</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">o</Box>
+                            <Box sx={{ display: "inline-block" }} className="bannerHeading2">n</Box>
+                        </Box>
                         <Typography variant="body1" sx={MUIStyle.BannerText}>
                             See Further, Save More. Autopilot your project.
                         </Typography>

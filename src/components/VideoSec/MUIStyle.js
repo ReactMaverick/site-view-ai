@@ -1,4 +1,5 @@
 import { commonColor } from "@/values/Colors/CommonColor";
+import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 
 export const MUIStyle = {
   VideoSecMain: {
@@ -52,6 +53,8 @@ export const MUIStyle = {
     left: "50%",
     transform: "translate(-50%, -50%)",
     borderRadius: "50%",
+    display: "flex",
+    flexDirection: "column",
     "& img": {
       width: "150px",
       height: "150px",
@@ -59,4 +62,15 @@ export const MUIStyle = {
       borderRadius: "50%",
     },
   },
+  CustomButtonText: {
+    fontSize: {
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text16,
+      md: FONT_SIZE.heading36,
+      lg: FONT_SIZE.heading36,
+      xl: FONT_SIZE.heading36,
+    },
+    color: commonColor.white,
+    fontWeight: FONT_WEIGHT.MEDIUM,
+  }
 };
