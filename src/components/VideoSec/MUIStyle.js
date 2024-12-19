@@ -63,14 +63,11 @@ export const MUIStyle = {
     },
   },
   CustomButtonText: {
-    fontSize: {
-      xs: FONT_SIZE.text16,
-      sm: FONT_SIZE.text16,
-      md: FONT_SIZE.heading36,
-      lg: FONT_SIZE.heading36,
-      xl: FONT_SIZE.heading36,
-    },
-    color: commonColor.white,
+    fontSize: FONT_SIZE.heading40,
+    lineHeight: "34px",
     fontWeight: FONT_WEIGHT.MEDIUM,
+    color: commonColor.white,
+    textTransform: 'none',
+    textShadow: "4px 4px 5px #000000"
   }
 };

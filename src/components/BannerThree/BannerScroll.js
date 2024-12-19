@@ -12,17 +12,6 @@ export const gsapAnimation = ({
 
     let previousScroll = 0;
 
-    const clearScrollTrigger = () => {
-        // console.log('Scroll Triggers ==> ', ScrollTrigger.getAll());
-
-        ScrollTrigger.getAll().forEach(trigger => {
-            // console.log("trigger", trigger.trigger);
-            // trigger.kill();
-        });
-    };
-
-    let isScrolledToTopSection = false;
-
     ScrollTrigger.create({
         trigger: topLayerFirstRef.current,
         start: "top center", // When the top of the trigger hits the center of the viewport

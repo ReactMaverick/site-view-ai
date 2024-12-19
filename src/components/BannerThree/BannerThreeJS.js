@@ -223,10 +223,6 @@ export const setupThreeJS = ({
     // Set the hollow cube position
     hollowCube.position.z = 100;
 
-    // Variable to track scroll speed
-    let isScrollingDown = false;
-    let isScrollingUp = false;
-
     // Make all the materials transparent
     scene?.children?.forEach((child) => {
         child.material.transparent = true;

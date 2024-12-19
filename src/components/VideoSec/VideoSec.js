@@ -82,7 +82,7 @@ export default function VideoSec() {
                       onClick={handlePlayVideo}
                     >
                       <Box component={"img"} src={VIDEOICON} alt="" />
-                      <Typography variant="body1" sx={MUIStyle.CustomButtonText}>
+                      <Typography variant="h4" sx={MUIStyle.CustomButtonText}>
                         Click to Play
                       </Typography>
                     </Button>
