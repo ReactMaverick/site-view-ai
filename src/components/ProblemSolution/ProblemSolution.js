@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { Box, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import Problem from "../Problem/Problem";
@@ -7,8 +7,8 @@ import Grid from "@mui/material/Grid2";
 import Solution from "../Solution/Solution";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useGSAP } from "@gsap/react";
+import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
 
 export default function ProblemSolution() {
   const problemSolutionPairs = [
@@ -18,45 +18,65 @@ export default function ProblemSolution() {
     { problem: <Problem />, solution: <Solution />, key: "pair4" },
   ];
 
-  useEffect(() => {
-    const sections = document.querySelectorAll(".problem-solution-pair");
-
-    sections.forEach((section) => {
-      const [problem, solution] = section.querySelectorAll(".box");
-
-      // Animation for Problem (move left)
-      gsap.fromTo(
-        problem,
-        { x: 0,},
-        {
-          x: 0,
-          scrollTrigger: {
-            trigger: section,
-            start: "top center",
-            end: "bottom center",
-            scrub: true,
-          },
-        }
-      );
-
-      gsap.fromTo(
-        solution,
-        { x: 0,},
-        {
-          x: 200,
-          scrollTrigger: {
-            trigger: section,
-            start: "top center",
-            end: "bottom center",
-            scrub: true,
-          },
-        }
-      );
-    });
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
   }, []);
 
+  useGSAP(() => {
+    // Set Problem Cards
+    gsap.set(".problem-main", {
+      xPercent: 52
+    });
+
+    // Set Solution Cards
+    gsap.set(".solution-main", {
+      xPercent: -52
+    });
+
+    const problemCards = gsap.utils.toArray(".problem-main");
+    const solutionCards = gsap.utils.toArray(".solution-main");
+
+    problemCards.forEach((card, i) => {
+      gsap.to(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+          end: "bottom center",
+          scrub: true,
+          // markers: true,
+          id: `problem-card-${i}`,
+          snap: 1 / 3,
+        },
+        xPercent: 0,
+        ease: "power1.inOut",
+      });
+    });
+
+    solutionCards.forEach((card, i) => {
+      gsap.to(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+          end: "bottom center",
+          scrub: true,
+          // markers: true,
+          id: `solution-card-${i}`,
+          snap: 1 / 3,
+        },
+        xPercent: 0,
+        ease: "power1.inOut",
+      });
+    });
+
+  })
+
   return (
-    <Box sx={MUIStyle.ProblemSolutionMain}>
+    <Box sx={MUIStyle.ProblemSolutionMain} className="problem-solution-main">
+      <Box sx={MUIStyle.BannerSVGContainer}>
+        <SiteViewSVG
+          fillOpacity={0.05}
+        />
+      </Box>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.AboutSecOuterBox}>
           <Box sx={MUIStyle.AboutSecHeadingBox}>
@@ -71,23 +91,27 @@ export default function ProblemSolution() {
         <Box sx={MUIStyle.ProblemSolutionBox}>
           <Grid container columnSpacing={5} rowSpacing={3}>
             {problemSolutionPairs.map(({ problem, solution, key }) => (
-              <Grid
-                container
-                spacing={2}
-                key={key}
-                className="problem-solution-pair"
-              >
-                <Grid xs={6} md={6} lg={6} xl={6}sx={MUIStyle.BoxOuter} >
-                  <Box sx={MUIStyle.BoxOuterLeft} className="box">
-                    {problem}
-                  </Box>
-                </Grid>
-                <Grid xs={6} md={6} lg={6} xl={6}>
-                  <Box sx={MUIStyle.BoxOuterRight} className="box">
-                    {solution}
-                  </Box>
-                </Grid>
-              </Grid>
+              // <Grid
+              //   container
+              //   spacing={2}
+              //   key={key}
+              //   className="problem-solution-pair"
+              // >
+              //   <Grid xs={6} md={6} lg={6} xl={6} sx={MUIStyle.BoxOuter} >
+              //     <Box sx={MUIStyle.BoxOuterLeft} className="box">
+              //       {problem}
+              //     </Box>
+              //   </Grid>
+              //   <Grid xs={6} md={6} lg={6} xl={6}>
+              //     <Box sx={MUIStyle.BoxOuterRight} className="box">
+              //       {solution}
+              //     </Box>
+              //   </Grid>
+              // </Grid>
+              <Box sx={MUIStyle.ProblemSolutionPair} key={key}>
+                {problem}
+                {solution}
+              </Box>
             ))}
           </Grid>
         </Box>

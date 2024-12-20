@@ -276,7 +276,9 @@ a {
 }
 
 a.headerMenu.active p {
-  color: #c9f625;
+  /* color: #c9f625; */
+  font-weight: 600;
+  scale: 1.2;
 }
 
 p.BlogContent {

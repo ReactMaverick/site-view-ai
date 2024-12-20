@@ -2,7 +2,7 @@ import { commonColor } from "@/values/Colors/CommonColor";
 
 export const MUIStyle = {
     VideoInnerSecMain: {
-        background:commonColor.black,
+        background: commonColor.black,
         position: "relative",
         width: "100%",
         minHeight: {
@@ -20,39 +20,39 @@ export const MUIStyle = {
             xl: "100px",
         },
     },
- 
+
     VideoInnerSecInner: {
         position: "relative",
         display: "flex",
         justifyContent: "center",
         "& img": {
-            background:"rgba(255, 255, 255, 0.2)",
+            background: "rgba(255, 255, 255, 0.2)",
             width: {
                 xs: "100%",
                 sm: "100%",
-                md: "1000px",
-                lg: "1000px",
-                xl: "1000px",
+                md: "90%",
+                lg: "90%",
+                xl: "90%",
             },
             height: {
                 xs: "auto",
                 sm: "auto",
-                md: "580px",
-                lg: "580px",
-                xl: "580px",
+                md: "90%",
+                lg: "90%",
+                xl: "90%",
             },
             marginTop: {
                 xs: "-80px",
                 sm: "-80px",
-                md: "-170px",
-                lg: "-170px",
-                xl: "-170px",
+                md: "-20vh",
+                lg: "-20vh",
+                xl: "-20vh",
             },
             padding: "12px",
             borderRadius: "24px",
             objectFit: "contain",
         },
     },
-    
-   
+
+
 };

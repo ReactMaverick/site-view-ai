@@ -2,12 +2,16 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import { Icon } from "@iconify/react";
 import { commonColor } from "@/values/Colors/CommonColor";
+import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
 
-export default function BannerNew( {theme="light"} ) {
+export default function BannerNew({ theme = "light" }) {
   return (
     <Box sx={[MUIStyle.BannerMain, {
       background: theme === "light" ? commonColor.white : commonColor.black,
     }]}>
+      <Box sx={MUIStyle.BannerSVGContainer}>
+        <SiteViewSVG />
+      </Box>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.BannerRow}>
           <Box sx={MUIStyle.BannerContent}>
@@ -26,7 +30,7 @@ export default function BannerNew( {theme="light"} ) {
               </Typography>
               <Button sx={[MUIStyle.BannerBtn, {
                 color: theme === "light" ? commonColor.black : commonColor.white,
-             }]} variant="contained" size="large">
+              }]} variant="contained" size="large">
                 <Box
                   component={"span"}
                   className="BannerBtnIcon"

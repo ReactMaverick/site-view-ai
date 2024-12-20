@@ -94,3 +94,9 @@ export const FORESTRYAGRI = URL('/images/forestry-agri.jpg');
 export const TELEIT = URL('/images/tele-it.png');
 export const DATACENTRE = URL('/images/data-centre.jpg');
 export const GOVPRIVSERVICES = URL('/images/gov-priv-services.jpg');
+
+// Tab Images
+export const TABIMAGE1 = URL('/images/tab-image-1.png');
+export const TABIMAGE2 = URL('/images/tab-image-2.png');
+export const TABIMAGE3 = URL('/images/tab-image-3.png');
+export const TABIMAGE4 = URL('/images/tab-image-4.png');

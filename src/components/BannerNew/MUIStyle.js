@@ -24,6 +24,7 @@ export const MUIStyle = {
             lg: "100vh",
             xl: "100vh",
         },
+        position: "relative",
     },
     BannerRow: {
         display: "flex",
@@ -126,12 +127,12 @@ export const MUIStyle = {
         "&:hover": {
             boxShadow: "none",
         },
-       "&:hover .BannerBtnIcon": {
-        transform: "translateX(10px)",
+        "&:hover .BannerBtnIcon": {
+            transform: "translateX(10px)",
         },
         "&:hover .BannerBtnBG": {
             width: "100%",
-            
+
         },
     },
     BannerBtnBG: {
@@ -147,8 +148,8 @@ export const MUIStyle = {
     },
     BannerBtnIcon: {
         fontSize: FONT_SIZE.heading24,
-        height:"60px",
-        width:"60px",
+        height: "60px",
+        width: "60px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -158,7 +159,7 @@ export const MUIStyle = {
         transition: "all 0.8s ease",
     },
 
-    ScrollDownBtn : {
+    ScrollDownBtn: {
         position: "absolute",
         bottom: "30px",
         left: "50%",
@@ -182,15 +183,12 @@ export const MUIStyle = {
         fontSize: FONT_SIZE.heading24,
         color: commonColor.black,
     },
-
-
-
-
-
-
-
-
-
-
-
+    BannerSVGContainer: {
+        position: "absolute",
+        top: "0",
+        left: "0",
+        width: "100%",
+        height: "100%",
+        // zIndex: "-1",
+    }
 };

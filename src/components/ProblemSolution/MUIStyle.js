@@ -3,7 +3,7 @@ import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 
 export const MUIStyle = {
     ProblemSolutionMain: {
-        background:commonColor.black,
+        background: commonColor.black,
         position: "relative",
         width: "100%",
         padding: {
@@ -14,7 +14,7 @@ export const MUIStyle = {
             xl: "175px 0",
         },
         overflow: "hidden",
-
+        position: "relative",
     },
     AboutSecOuterBox: {
         display: "flex",
@@ -46,19 +46,19 @@ export const MUIStyle = {
         color: commonColor.grey,
         fontSize: FONT_SIZE.text18,
         fontWeight: FONT_WEIGHT.MEDIUM,
-        lineHeight:FONT_SIZE.heading28,
+        lineHeight: FONT_SIZE.heading28,
         textAlign: "center",
-    marginBottom: "24px",
+        marginBottom: "24px",
     },
     AboutSecHeading: {
         color: commonColor.white,
         fontSize: FONT_SIZE.heading32,
-        lineHeight:FONT_SIZE.heading40,
+        lineHeight: FONT_SIZE.heading40,
         fontWeight: FONT_WEIGHT.REGULAR,
         textTransform: "uppercase",
         textAlign: "center",
     },
-    ProblemSolutionBox: {   
+    ProblemSolutionBox: {
         width: {
             xs: "100%",
             sm: "100%",
@@ -66,10 +66,22 @@ export const MUIStyle = {
             lg: "70%",
             xl: "70%",
         },
-        margin:"0 auto",
+        margin: "0 auto",
     },
-    BoxOuter :{
+    BoxOuter: {
         position: "relative",
-    }
-    
+    },
+    ProblemSolutionPair: {
+        display: "flex",
+        flexDirection: "row",
+        gap: '2rem',
+    },
+    BannerSVGContainer: {
+        position: "absolute",
+        top: "0",
+        left: "0",
+        width: "100%",
+        height: "100%",
+    },
+
 };

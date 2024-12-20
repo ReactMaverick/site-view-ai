@@ -77,7 +77,6 @@ export default function BannerThree({
                             <Box sx={{ display: "inline-block" }} className="bannerHeading1">o</Box>
                             <Box sx={{ display: "inline-block" }} className="bannerHeading1">n</Box>
                             <Box sx={{ display: "inline-block" }} className="bannerHeading1">n</Box>
-                            <Box sx={{ display: "inline-block" }} className="bannerHeading1">n</Box>
                             <Box sx={{ display: "inline-block" }} className="bannerHeading1">e</Box>
                             <Box sx={{ display: "inline-block" }} className="bannerHeading1">c</Box>
                             <Box sx={{ display: "inline-block" }} className="bannerHeading1">t</Box>

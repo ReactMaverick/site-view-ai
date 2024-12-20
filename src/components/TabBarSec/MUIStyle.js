@@ -13,6 +13,7 @@ export const MUIStyle = {
       lg: "175px 0",
       xl: "175px 0",
     },
+    position: "relative",
   },
   AboutSecOuterBox: {
     display: "flex",
@@ -58,6 +59,7 @@ export const MUIStyle = {
   },
   TabBarSecImageBox: {
     width: "100%",
+    position: "relative",
   },
   TabBarSecImage: {
     width: "100%",
@@ -71,10 +73,10 @@ export const MUIStyle = {
     padding: "0",
     position: "relative",
   },
-  TabBarSecButton:{
+  TabBarSecButton: {
     display: "flex",
     justifyContent: "center",
-    alignItems:{
+    alignItems: {
       xs: "stretch",
       sm: "stretch",
       md: "stretch",
@@ -106,7 +108,7 @@ export const MUIStyle = {
     borderRadius: "32px",
     cursor: "pointer",
     textAlign: "center",
- 
+
   },
   TabBarSecButtonBody: {
     background: commonColor.greenFade3,
@@ -117,18 +119,19 @@ export const MUIStyle = {
       lg: "100%",
       xl: "556px",
     },
-    minHeight: "275px",
+    minHeight: 0,
+    height: 0,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "24px",
+    padding: 0,
     borderRadius: "32px",
     textAlign: "center",
     boxShadow: "0px 0px 32px rgba(0, 0, 0, 0.12)",
-
+    overflow: "hidden",
   },
-  TabBarSecButtonBodyTop :{
+  TabBarSecButtonBodyTop: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -141,72 +144,89 @@ export const MUIStyle = {
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     textAlign: "center",
   },
-    TabBarSecButtonBodyTopText: {
-        color: commonColor.grey,
-        fontSize: FONT_SIZE.text18,
-        lineHeight: FONT_SIZE.heading26,
-        fontWeight: FONT_WEIGHT.REGULAR,
-        display: "block",
-        textAlign: "center",
-        paddingTop: "10px",
+  TabBarSecButtonBodyTopText: {
+    color: commonColor.grey,
+    fontSize: FONT_SIZE.text18,
+    lineHeight: FONT_SIZE.heading26,
+    fontWeight: FONT_WEIGHT.REGULAR,
+    display: "block",
+    textAlign: "center",
+    paddingTop: "10px",
+  },
+  TabBarSecButtonBodyText: {
+    color: commonColor.grey,
+    fontSize: FONT_SIZE.text18,
+    lineHeight: FONT_SIZE.heading32,
+    fontWeight: FONT_WEIGHT.REGULAR,
+    textAlign: "center",
+    paddingTop: "10px",
+  },
+  TabBarSecMyRow: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: {
+      xs: "column",
+      sm: "column",
+      md: "row",
+      lg: "row",
+      xl: "row",
     },
-    TabBarSecButtonBodyText:{
-        color: commonColor.grey,
-        fontSize: FONT_SIZE.text18,
-        lineHeight: FONT_SIZE.heading32,
-        fontWeight: FONT_WEIGHT.REGULAR,
-        textAlign: "center",
-        paddingTop: "10px",
+    gap: "20px",
+  },
+  TabBarSecMyColLeft: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    gap: "20px",
+    width: {
+      xs: "100%",
+      sm: "100%",
+      md: "60%",
+      lg: "60%",
+      xl: "70%",
     },
-    TabBarSecMyRow:{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexDirection: {
-        xs: "column",
-        sm: "column",
-        md: "row",
-        lg: "row",
-        xl: "row",
-      },
-      gap: "20px",
+  },
+  TabBarSecMyColRight: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    gap: "20px",
+    width: {
+      xs: "100%",
+      sm: "100%",
+      md: "40%",
+      lg: "40%",
+      xl: "30%",
     },
-    TabBarSecMyColLeft :{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexDirection: "column",
-      gap: "20px",
-      width: {
-        xs: "100%",
-        sm: "100%",
-        md: "60%",
-        lg: "60%",
-        xl: "70%",
-      },
-    },
-    TabBarSecMyColRight :{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexDirection: "column",
-      gap: "20px",
-      width: {
-        xs: "100%",
-        sm: "100%",
-        md: "40%",
-        lg: "40%",
-        xl: "30%",
-      },
-    },
+  },
 
-    TestImage :{
-      width:{
-        xs: "100%",
-        sm: "100%",
-        md: "500px",
-        lg: "600px",
-        xl: "600px",
-      }, 
+  TestImage: {
+    width: {
+      xs: "100%",
+      sm: "100%",
+      md: "504px",
+      lg: "504px",
+      xl: "504px",
     },
+    height: {
+      xs: "auto",
+      sm: "auto",
+      md: "560px",
+      lg: "560px",
+      xl: "560px",
+    },
+    objectFit: "cover",
+    borderRadius: "32px",
+    filter: 'drop-shadow(4px 5px 32px rgba(0, 0, 0, 0.3))'
+  },
+  BannerSVGContainer: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+  }
 };

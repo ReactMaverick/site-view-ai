@@ -12,8 +12,8 @@ export default function WhySiteView() {
     <Box className={styles.WhySiteView}>
       <BannerNew />
       <VideoInnerSec />
-      <ProblemSolution/>
-      <TabBarSec/>
+      <ProblemSolution />
+      <TabBarSec />
     </Box>
   );
 }
