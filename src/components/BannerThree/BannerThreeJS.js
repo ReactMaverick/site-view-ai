@@ -18,6 +18,16 @@ export const setupThreeJS = ({
     // Store the aspect ratio of the window
     let aspectRatio = window.innerWidth / window.innerHeight;
 
+    console.log('Aspect Ratio:', aspectRatio);
+    console.log('Window Width:', window.innerWidth * window.devicePixelRatio);
+    console.log('Window Height:', window.innerHeight * window.devicePixelRatio);
+
+    console.log('Document Width:', document.documentElement.clientWidth);
+    console.log('Document Height:', document.documentElement.clientHeight);
+
+
+
+
     // Set the size of the box based on the aspect ratio
     let boxWidth = 5 * aspectRatio;
     let boxHeight = 5;
@@ -35,8 +45,20 @@ export const setupThreeJS = ({
     const renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setClearColor(0xffffff); // Set the background color to white
 
-    // Set the size of the renderer (Parameters: Width, Height)
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    // Set the size of the renderer based on the container's dimensions
+    const setRendererSize = () => {
+        const width = canvasWrapperRef.current.clientWidth;
+        const height = canvasWrapperRef.current.clientHeight;
+        renderer.setSize(width, height);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+    };
+
+    // Set the renderer size initially
+    setRendererSize();
+
+
     // Append the renderer to the div with the class canvasWrapper
     canvasWrapperRef.current && canvasWrapperRef.current.appendChild(renderer.domElement);
     // document.querySelector(".canvasWrapper").appendChild(renderer.domElement);
@@ -83,7 +105,9 @@ export const setupThreeJS = ({
         textureLoader.load('assets/images/26.jpg'),
         textureLoader.load('assets/images/27.jpg'),
         textureLoader.load('assets/images/28.jpg'),
-        textureLoader.load('assets/images/29.jpg')
+        textureLoader.load('assets/images/29.jpg'),
+        textureLoader.load('assets/images/30.jpg'),
+        textureLoader.load('assets/images/31.jpg'),
     ];
 
     // Function to create a plane with a random texture
@@ -241,15 +265,7 @@ export const setupThreeJS = ({
     //Resizing
     window.addEventListener("resize", () => {
 
-        aspectRatio = window.innerWidth / window.innerHeight;
-
-        //New Aspect Ratio
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-
-        //New RendererSize
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        setRendererSize();
 
     });
 

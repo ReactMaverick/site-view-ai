@@ -46,9 +46,9 @@ export const MUIStyle = {
     width: {
       xs: "96px",
       sm: "96px",
-      md: "120px",
-      lg: "120px",
-      xl: "120px",
+      md: "130px",
+      lg: "130px",
+      xl: "130px",
     },
   },
 
@@ -57,7 +57,7 @@ export const MUIStyle = {
     border: "2px solid",
     borderColor: commonColor.green,
     boxShadow: "none",
-    padding: "7px 42px",
+    padding: "10px 42px",
     borderRadius: "100px",
     textTransform: "capitalize",
     fontSize: {

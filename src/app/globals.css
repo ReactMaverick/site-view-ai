@@ -151,6 +151,12 @@ a {
   font-weight: 600;
 }
 
+.canvasWrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
 .topLayer-first .description {
   color: #5f5f5f;
   font-size: 1.5rem;

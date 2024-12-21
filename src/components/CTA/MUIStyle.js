@@ -15,6 +15,7 @@ export const MUIStyle = {
     // background: `url(${CTABG}) no-repeat center center`,
     backgroundSize: "cover",
     position: "relative",
+    height: "100vh",
   },
   CTAInner: {
     display: "flex",
@@ -80,14 +81,14 @@ export const MUIStyle = {
       lg: "50px",
       xl: "50px",
     },
-    marginTop: {
-      xs: "0px",
-      sm: "0px",
-      md: "180px",
-      lg: "180px",
-      xl: "180px",
+    // marginTop: {
+    //   xs: "0px",
+    //   sm: "0px",
+    //   md: "180px",
+    //   lg: "180px",
+    //   xl: "180px",
 
-    },
+    // },
     flexDirection: {
       xs: "column",
       sm: "column",

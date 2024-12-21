@@ -7,9 +7,10 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { LOGO, LOGOFTR } from "@/values/Constants/ImageConstants";
 import { commonColor } from "@/values/Colors/CommonColor";
+import { usePathname } from "next/navigation";
 
 const menuItems = [
-  { label: "Home", path: "/" },
+  { label: "Home", path: "/home" },
   { label: "Why SiteView", path: "/why-site-view" },
   { label: "Our Tech", path: "/our-tech" },
   { label: "Blogs", path: "/blogs" },
@@ -17,10 +18,13 @@ const menuItems = [
   { label: "Contact Us", path: "/contact-us" },
 ];
 export default function Header({ theme = "light" }) {
+
+  const pathName = usePathname();
+
   const headerRef = useRef(null); // Create a ref for the header element
   const [isSticky, setIsSticky] = useState(false); // State to track sticky behavior
   const [isActiveMenuVisible, setIsActiveMenuVisible] = useState(false);
-  const [pathName, setPathName] = useState("");
+  // const [pathName, setPathName] = useState("");
   /* global window */
   useEffect(() => {
     const handleScroll = () => {
@@ -32,12 +36,9 @@ export default function Header({ theme = "light" }) {
 
     return () => window.removeEventListener("scroll", debounceScroll);
   }, []);
-  /* global window */
-  useEffect(() => {
-    setPathName(window.location.pathname);
-  }, []);
 
   // console.log("pathName", pathName);
+
 
   return (
     <Box

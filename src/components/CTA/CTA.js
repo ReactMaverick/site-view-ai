@@ -2,7 +2,7 @@
 import { Box, Button, Container, LinearProgress, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import React, { Fragment, useLayoutEffect, useState } from "react";
-import { CTABG, EXECUTION, HELMATE, HELMETCAMERA, LINEARROW, PLANNING } from "@/values/Constants/ImageConstants";
+import { CTABG, EXECUTION, HELMATE, HELMETCAMERA, LINEARROW, PLANNING, TRYNOW } from "@/values/Constants/ImageConstants";
 import { Icon } from "@iconify/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -75,9 +75,9 @@ export default function CTA() {
               // Update the progress bar width
               newProgress[index].value = progress;
               // Update the color of the progress bar with arrow (Only arrow portion)
-              if (index === 3) {
-                newProgress[index].arrowColor = progress >= 90 ? commonColor.green : commonColor.lightGrey;
-              }
+              // if (index === 3) {
+              newProgress[index].arrowColor = progress >= 90 ? commonColor.green : commonColor.lightGrey;
+              // }
 
               // Update the color of the progress bar without arrow portions
               if (progress === 100) {
@@ -100,11 +100,11 @@ export default function CTA() {
       ease: "none",
       scrollTrigger: {
         trigger: ".CTASection",
-        start: "top -300px",
+        start: "top top",
         // markers: true,  // Set to true to see the trigger area
         pin: true,
         scrub: 1,
-        // snap: 1 / 3,
+        snap: 1 / (ctaImages.length - 1),
         id: 'ctaImages',
         end: () => "+=" + $('.ctaImageFlex').width(),
       },
@@ -127,52 +127,43 @@ export default function CTA() {
         <Box component={"ul"} sx={MUIStyle.CTAList}>
           {progress.map((item, index) => (
             <Fragment key={index}>
+              <CustomProgressArrow
+                progressValue={item.value}
+                progressClass={"progress-" + index}
+                progressColor={item.color}
+                arrowColor={item.arrowColor}
+                opacity={item.value === 0 ? 0 : 1}
+              />
               {index !== progress.length - 1 ?
-                <>
-                  <CustomProgress
-                    progressValue={item.value}
-                    progressClass={"progress-" + index}
-                    progressColor={item.color}
-                    opacity={item.value === 0 ? 0 : 1}
-                  />
-                  <Typography
-                    variant="h4"
-                    sx={[MUIStyle.CTAListItemHeading,
-                    {
-                      color: item.titleColor,
-                      opacity: item.value === 0 ? 0 : 1,
-                      animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
-                    }
-                    ]}
-                  >
-                    {item.title}
-                  </Typography>
-                </> :
-                <>
-                  <CustomProgressArrow
-                    progressValue={item.value}
-                    progressClass={"progress-" + index}
-                    progressColor={item.color}
-                    arrowColor={item.arrowColor}
-                    opacity={item.value === 0 ? 0 : 1}
-                  />
-                  <Button
-                    sx={[MUIStyle.BannerBtn,
-                    {
-                      color: item.titleColor,
-                      opacity: item.value === 0 ? 0 : 1,
-                      animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
-                    }
-                    ]}
-                    variant="contained" size="large"
-                  >
-                    <Box component={"span"} className="BannerBtnIcon" sx={MUIStyle.BannerBtnIcon}>
-                      <Icon icon="flowbite:arrow-right-outline" />
-                    </Box>
-                    {item.title}
-                    <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG} />
-                  </Button>
-                </>
+                <Typography
+                  variant="h4"
+                  sx={[MUIStyle.CTAListItemHeading,
+                  {
+                    color: item.titleColor,
+                    opacity: item.value === 0 ? 0 : 1,
+                    animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
+                  }
+                  ]}
+                >
+                  {item.title}
+                </Typography>
+                :
+                <Button
+                  sx={[MUIStyle.BannerBtn,
+                  {
+                    color: item.titleColor,
+                    opacity: item.value === 0 ? 0 : 1,
+                    animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
+                  }
+                  ]}
+                  variant="contained" size="large"
+                >
+                  <Box component={"span"} className="BannerBtnIcon" sx={MUIStyle.BannerBtnIcon}>
+                    <Icon icon="flowbite:arrow-right-outline" />
+                  </Box>
+                  {item.title}
+                  <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG} />
+                </Button>
               }
             </Fragment>
           ))}
@@ -180,7 +171,7 @@ export default function CTA() {
         </Box>
       </Container>
       <Box sx={MUIStyle.CTAImgFlex} className="ctaImageFlex">
-        {[PLANNING, EXECUTION, CTABG, CTABG].map((image, index) => (
+        {[PLANNING, EXECUTION, CTABG, TRYNOW].map((image, index) => (
           <Box component={"img"} src={image} alt="CTA" sx={MUIStyle.CTAImg} className="ctaImage" key={index} />
         ))}
       </Box>

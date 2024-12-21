@@ -64,6 +64,7 @@ export const HELMETCAMERA = URL('http://194.163.131.163/site-view-ai-assets/imag
 
 export const PLANNING = URL('/images/planning.png');
 export const EXECUTION = URL('/images/execution.png');
+export const TRYNOW = URL('/images/try-now.png');
 
 // Video Section Images
 export const TOPIMAGE = URL('/images/top-image.png');
