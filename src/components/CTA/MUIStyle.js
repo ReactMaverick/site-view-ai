@@ -8,9 +8,9 @@ export const MUIStyle = {
     padding: {
       xs: "100px 0",
       sm: "100px 0",
-      md: "150px 0 100px",
-      lg: "150px 0 100px",
-      xl: "150px 0 100px",
+      md: "130px 0 60px",
+      lg: "130px 0 60px",
+      xl: "130px 0 60px",
     },
     // background: `url(${CTABG}) no-repeat center center`,
     backgroundSize: "cover",
@@ -22,7 +22,7 @@ export const MUIStyle = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    marginBottom: "220px",
+    // marginBottom: "220px",
   },
   CTAHeading: {
     fontSize: FONT_SIZE.heading48,
@@ -35,7 +35,7 @@ export const MUIStyle = {
     display: "flex",
     justifyContent: "end",
     alignItems: "center",
-    margin: "100px 0",
+    // margin: "100px 0",
     paddingRight: {
       xs: "0px",
       sm: "0px",
@@ -217,6 +217,14 @@ export const MUIStyle = {
   CTAImg: {
     width: '100vw',
     objectFit: 'cover',
+  },
+  CTAContainer: {
+    position: 'relative',
+    zIndex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: '100%',
   }
 
 };

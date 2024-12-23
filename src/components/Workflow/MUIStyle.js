@@ -78,7 +78,7 @@ export const MUIStyle = {
     display: "flex",
     overflowX: "hidden",
     width: "100%",
-    scrollSnapType: "x mandatory",
+    // scrollSnapType: "x mandatory",
     scrollbarWidth: "none",
     msOverflowStyle: "none",
   },

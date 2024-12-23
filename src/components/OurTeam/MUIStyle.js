@@ -12,7 +12,7 @@ export const MUIStyle = {
       lg: "132px 0",
       xl: "132px 0",
     },
-    background:commonColor.black,
+    background: commonColor.black,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -27,11 +27,11 @@ export const MUIStyle = {
   },
   BuildForHeadingBoxInner: {
     maxWidth: {
-        xs: "100%",
-        sm: "100%",
-        md: "45%",
-        lg: "45%",
-        xl: "45%",
+      xs: "100%",
+      sm: "100%",
+      md: "45%",
+      lg: "45%",
+      xl: "45%",
     },
     marginBottom: {
       xs: "30px",

@@ -39,10 +39,10 @@ export const MUIStyle = {
     BannerContent: {
         width: {
             xs: "100%",
-            sm: "50%",
-            md: "40%",
-            lg: "40%",
-            xl: "40%",
+            sm: "80%",
+            md: "50%",
+            lg: "48%",
+            xl: "48%",
         },
 
     },

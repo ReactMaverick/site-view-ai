@@ -334,3 +334,18 @@ p.BlogContent {
   -webkit-mask-image: linear-gradient(#fff, #fff);
   padding: 5rem;
 }
+
+.ourTeamGridsOuter {
+  transform: scale(0.75);
+}
+
+@media screen and (max-height: 800px) {
+
+  .CTASection {
+    padding: 5px 0 !important;
+  }
+
+  .construction-project-grid {
+    transform: scale(0.8);
+  }
+}

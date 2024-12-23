@@ -10,12 +10,12 @@ import { commonColor } from "@/values/Colors/CommonColor";
 import { usePathname } from "next/navigation";
 
 const menuItems = [
-  { label: "Home", path: "/home" },
-  { label: "Why SiteView", path: "/why-site-view" },
-  { label: "Our Tech", path: "/our-tech" },
-  { label: "Blogs", path: "/blogs" },
-  { label: "FAQ", path: "/faq" },
-  { label: "Contact Us", path: "/contact-us" },
+  { label: "Home", path: "/home", theme: 'light' },
+  { label: "Why SiteView", path: "/why-site-view", theme: 'light' },
+  { label: "Our Tech", path: "/our-tech", theme: 'dark' },
+  { label: "Blogs", path: "/blogs", theme: 'light' },
+  { label: "FAQ", path: "/faq", theme: 'light' },
+  { label: "Contact Us", path: "/contact-us", theme: 'light' },
 ];
 export default function Header({ theme = "light" }) {
 
@@ -24,6 +24,7 @@ export default function Header({ theme = "light" }) {
   const headerRef = useRef(null); // Create a ref for the header element
   const [isSticky, setIsSticky] = useState(false); // State to track sticky behavior
   const [isActiveMenuVisible, setIsActiveMenuVisible] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
   // const [pathName, setPathName] = useState("");
   /* global window */
   useEffect(() => {
@@ -38,6 +39,12 @@ export default function Header({ theme = "light" }) {
   }, []);
 
   // console.log("pathName", pathName);
+
+  useEffect(() => {
+    const activeMenu = menuItems.find(item => item.path === pathName);
+
+    setActiveMenu(activeMenu);
+  }, [pathName])
 
 
   return (
@@ -55,7 +62,7 @@ export default function Header({ theme = "light" }) {
               <Box
                 sx={MUIStyle.logoImage}
                 component={"img"}
-                src={theme === "light" ? LOGO : LOGOFTR}
+                src={activeMenu?.theme === "light" ? LOGO : LOGOFTR}
                 alt="Logo"
               />
             </Link>

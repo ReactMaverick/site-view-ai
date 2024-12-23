@@ -14,7 +14,12 @@ import FAQSec from "@/components/FAQSec/FAQSec";
 export default function OutTech() {
   return (
     <Box className={styles.OurTechSec}>
-      <BannerNew />
+      <BannerNew
+        theme="dark"
+        headerButtonText="Tech Unleashed"
+        title="Revolutionizing site management with cutting-edge technology"
+        subtitle="Harness advanced technology to streamline planning, improve communication, and maximize project efficiency like never before."
+      />
       <Vision />
       <ConstructionProject />
       <Vision2 />

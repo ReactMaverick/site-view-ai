@@ -17,7 +17,8 @@ export const MUIStyle = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-backgroundColor: commonColor.black,
+    backgroundColor: commonColor.black,
+    position: "relative"
   },
 
   VisionRow: {
@@ -31,7 +32,7 @@ backgroundColor: commonColor.black,
       lg: "row",
       xl: "row",
     },
-    gap:{
+    gap: {
       xs: "30px",
       sm: "30px",
       md: "30px",
@@ -48,13 +49,13 @@ backgroundColor: commonColor.black,
   },
   VisionColLeft: {
     maxWidth: {
-        xs: "100%",
-        sm: "100%",
-        md: "50%",
-        lg: "45%",
-        xl: "45%",
+      xs: "100%",
+      sm: "100%",
+      md: "50%",
+      lg: "45%",
+      xl: "45%",
     },
-  
+
   },
   Heading: {
     fontSize: FONT_SIZE.heading32,
@@ -62,15 +63,15 @@ backgroundColor: commonColor.black,
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.white,
     marginBottom: "20px",
-    paddingRight:{
+    paddingRight: {
       xs: "0",
       sm: "0",
       md: "40px",
       lg: "40px",
-      xl: "40px", 
+      xl: "40px",
     }
   },
-  smallTitle  : {
+  smallTitle: {
     fontSize: FONT_SIZE.text16,
     lineHeight: "24px",
     fontWeight: FONT_WEIGHT.REGULAR,
@@ -87,11 +88,11 @@ backgroundColor: commonColor.black,
   },
   VisionColRight: {
     maxWidth: {
-        xs: "100%",
-        sm: "100%",
-        md: "50%",
-        lg: "55%",
-        xl: "55%",
+      xs: "100%",
+      sm: "100%",
+      md: "50%",
+      lg: "55%",
+      xl: "55%",
     },
     display: "flex",
     justifyContent: "center",
@@ -103,4 +104,11 @@ backgroundColor: commonColor.black,
       objectFit: "cover",
     },
   },
+  VisionSVGContainer: {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+  }
 };

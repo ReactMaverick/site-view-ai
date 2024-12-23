@@ -58,29 +58,37 @@ export default function Project() {
 
     // console.log("cards", cards);
 
+    gsap.set(cards, {
+      x: (i) => `${-((window.innerWidth - cards[i].offsetWidth) / 2 - window.innerWidth * 0.1) + i * (window.innerWidth / 8)}`,
+      rotate: (i) => i - 2,
+    });
+
+    const endLocation = window.innerHeight <= 800 ? 200 : 100;
+
     cards.forEach((card, i) => {
       ScrollTrigger.create({
         trigger: card, // The element that ScrollTrigger will "trigger" when it comes into view
-        start: "top 300px", // When the top of the trigger hits 300px above the bottom of the viewport
-        end: "bottom bottom", // When the top of the trigger hits the bottom of the viewport
+        start: `top-=${i * 30}px ${window.innerHeight * 0.2}px`, // When the top of the trigger hits 300px above the bottom of the viewport
+        end: `-${endLocation}px bottom`, // When the top of the trigger hits the bottom of the viewport
         endTrigger: ".workflowSec", // The element that ScrollTrigger will use as the end of the trigger.
         pin: true, // Pin the trigger element while it is in view
         // pinType: "transform", // Use transforms for pinning instead of fixed positioning
         pinSpacing: false, // Don't reserve the pin element's space in the document
         // markers: true, // Show markers for testing purposes
-        // scrub: 1, // Smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        // anticipatePin: 0.5, // Wait for 0.5 second before pinning the element
-        onEnter: () => {
-          // console.log("onEnter", i);
+        scrub: 1, // Smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        anticipatePin: 0.8, // Wait for 0.5 second before pinning the element
+        // onEnter: () => {
+        //   // console.log("onEnter", i);
 
-          gsap.to(card, {
-            x: `${-((window.innerWidth - card.offsetWidth) / 2 - window.innerWidth * 0.15) + i * (window.innerWidth / 8)}`, // Move the card to the left
-            y: i * 30 - 150, // Move the card dynamically
-            rotate: i - 2, // Rotate the card
-            duration: 1, // Animation duration
-            // ease: "power1.out", // Animation easing
-          });
-        },
+        //   gsap.to(card, {
+        //     // x: `${-((window.innerWidth - card.offsetWidth) / 2 - window.innerWidth * 0.15) + i * (window.innerWidth / 8)}`, // Move the card to the left
+        //     // y: i * 30 - 150, // Move the card dynamically
+        //     // rotate: i - 2, // Rotate the card
+        //     // duration: 1, // Animation duration
+        //     // ease: "power1.out", // Animation easing
+        //   });
+        // },
+
       });
     });
   });

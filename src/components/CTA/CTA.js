@@ -115,7 +115,7 @@ export default function CTA() {
 
   return (
     <Box sx={MUIStyle.CTAMain} className="CTASection">
-      <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
+      <Container maxWidth="xl" sx={MUIStyle.CTAContainer}>
         <Box sx={MUIStyle.CTAInner}>
           <Typography variant="h2" sx={MUIStyle.CTAHeading}>
             “SiteView.ai for every stage of construction”
