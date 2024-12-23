@@ -27,7 +27,7 @@ export default function Workflow() {
       scrollTrigger: {
         trigger: ".workflowSec",
         start: "top top",
-        markers: true,  // Set to true to see the trigger area
+        // markers: true,  // Set to true to see the trigger area
         pin: true,
         scrub: 1,
         // snap: 1 / (cards.length - 2),

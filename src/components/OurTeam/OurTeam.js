@@ -46,7 +46,7 @@ export default function OurTeam() {
           start: "top 200px",
           end: "+=200",
           scrub: 2,
-          markers: true,
+          // markers: true,
           id: `grid-${i}`,
         },
         xPercent: 0,
