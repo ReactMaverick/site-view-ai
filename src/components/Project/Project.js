@@ -58,17 +58,28 @@ export default function Project() {
 
     // console.log("cards", cards);
 
+    // gsap.set(cards, {
+    //   x: (i) => `${-((window.innerWidth - cards[i].offsetWidth) / 2 - window.innerWidth * 0.1) + i * (window.innerWidth / 8)}`,
+    //   rotate: (i) => i - 2,
+    // });
+
+    const gapFromSides = window.innerWidth >= 900 ? 100 : 40;
+
     gsap.set(cards, {
-      x: (i) => `${-((window.innerWidth - cards[i].offsetWidth) / 2 - window.innerWidth * 0.1) + i * (window.innerWidth / 8)}`,
+      x: (i) => {
+        const baseValue = window.innerWidth / 2 - cards[i].offsetWidth / 2 - gapFromSides;
+        const spacing = (baseValue * 2) / (cards.length - 1); // Total range divided by number of gaps
+        return `${-baseValue + i * spacing}px`;
+      },
       rotate: (i) => i - 2,
     });
 
-    const endLocation = window.innerHeight <= 800 ? 200 : 100;
+    const endLocation = window.innerHeight <= 800 ? 50 : 100;
 
     cards.forEach((card, i) => {
       ScrollTrigger.create({
         trigger: card, // The element that ScrollTrigger will "trigger" when it comes into view
-        start: `top-=${i * 30}px ${window.innerHeight * 0.2}px`, // When the top of the trigger hits 300px above the bottom of the viewport
+        start: `top-=${i * window.innerHeight * 0.03}px ${window.innerHeight * 0.08}px`, // When the top of the trigger - 30px * i hits 5% of the viewport from the top
         end: `-${endLocation}px bottom`, // When the top of the trigger hits the bottom of the viewport
         endTrigger: ".workflowSec", // The element that ScrollTrigger will use as the end of the trigger.
         pin: true, // Pin the trigger element while it is in view

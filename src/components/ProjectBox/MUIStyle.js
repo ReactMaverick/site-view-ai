@@ -7,12 +7,18 @@ export const MUIStyle = {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        gap: "24px",
+        gap: {
+            xs: "12px",
+            sm: "12px",
+            md: "12px",
+            lg: "12px",
+            xl: "24px",
+        },
         maxWidth: {
-            xs: "100%",
-            sm: "100%",
-            md: "400px",
-            lg: "400px",
+            xs: "300px",
+            sm: "300px",
+            md: "320px",
+            lg: "320px",
             xl: "400px",
         },
         boxShadow: "0px 0px 32px rgba(0, 0, 0, 0.12)",
@@ -21,7 +27,13 @@ export const MUIStyle = {
     },
     ProjectBoxImgBox: {
         position: "relative",
-        maxHeight: "280px",
+        height: {
+            xs: "220px",
+            sm: "220px",
+            md: "220px",
+            lg: "220px",
+            xl: "280px",
+        },
         width: "100%",
         "&::after": {
             content: '""',
@@ -29,7 +41,13 @@ export const MUIStyle = {
             top: "0",
             left: "0",
             width: "100%",
-            height: "100%",
+            height: {
+                xs: "220px",
+                sm: "220px",
+                md: "220px",
+                lg: "220px",
+                xl: "280px",
+            },
             background: commonColor.blackGredient,
             zIndex: "0",
         },
@@ -37,11 +55,23 @@ export const MUIStyle = {
     },
     ProjectBoxContent: {
         padding: "0px 24px",
-        minHeight: "300px",
+        minHeight: {
+            xs: "220px",
+            sm: "220px",
+            md: "220px",
+            lg: "220px",
+            xl: "300px",
+        },
     },
 
     ProjectTitle: {
-        fontSize: FONT_SIZE.heading32,
+        fontSize: {
+            xs: FONT_SIZE.heading28,
+            sm: FONT_SIZE.heading28,
+            md: FONT_SIZE.heading28,
+            lg: FONT_SIZE.heading28,
+            xl: FONT_SIZE.heading32,
+        },
         lineHeight: "40px",
         fontWeight: FONT_WEIGHT.MEDIUM,
         color: commonColor.white,
@@ -52,15 +82,32 @@ export const MUIStyle = {
         zIndex: "1",
     },
     ProjectContent: {
-        fontSize: FONT_SIZE.text20,
+        fontSize: {
+            xs: FONT_SIZE.text12,
+            sm: FONT_SIZE.text12,
+            md: FONT_SIZE.text14,
+            lg: FONT_SIZE.text14,
+            xl: FONT_SIZE.text20,
+        },
         lineHeight: "28px",
         fontWeight: FONT_WEIGHT.REGULAR,
         color: commonColor.grey,
         textAlign: "center",
     },
     ProjectImg: {
-        width: "400px",
-        height: "280px",
+        width: {
+            xs: "100%",
+            sm: "100%",
+            md: "100%",
+            lg: "100%",
+            xl: "100%",
+        },
+        height: {
+            xs: "100%",
+            sm: "100%",
+            md: "100%",
+            lg: "100%",
+        },
         objectFit: "cover",
     }
 

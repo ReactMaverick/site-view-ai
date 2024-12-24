@@ -52,7 +52,7 @@ export default function Header({ theme = "light" }) {
       ref={headerRef}
       className={isSticky ? styles.stickyHeader : ""}
       sx={[MUIStyle.HeaderMain,
-      { borderColor: theme === "light" ? "#D6D6D6" : commonColor.white10, }
+        // { borderColor: theme === "light" ? "#D6D6D6" : commonColor.white10, }
       ]}
     >
       <Container maxWidth="xl">
@@ -111,7 +111,7 @@ export default function Header({ theme = "light" }) {
                   ]}
                 >
                   {menuItems.map(({ label, path }, index) => (
-                    <Box component="li" key={path} sx={MUIStyle.HEaderMenuLi}>
+                    <Box component="li" key={path} sx={MUIStyle.HeaderMenuLi}>
                       <Link
                         className={
                           "headerMenu" + (pathName === path ? " active" : "")

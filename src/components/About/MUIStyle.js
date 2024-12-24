@@ -39,8 +39,20 @@ export const MUIStyle = {
         position: "relative",
         zIndex: "1",
         "& img": {
-            width: "80%",
-            height: "80%",
+            width: {
+                xs: "60%",
+                sm: "60%",
+                md: "60%",
+                lg: "60%",
+                xl: "80%",
+            },
+            height: {
+                xs: "60%",
+                sm: "60%",
+                md: "60%",
+                lg: "60%",
+                xl: "80%",
+            },
             objectFit: "contain",
         },
     },
@@ -80,7 +92,13 @@ export const MUIStyle = {
     },
     AboutSecText: {
         color: commonColor.grey,
-        fontSize: FONT_SIZE.text18,
+        fontSize: {
+            xs: FONT_SIZE.text14,
+            sm: FONT_SIZE.text14,
+            md: FONT_SIZE.text14,
+            lg: FONT_SIZE.text14,
+            xl: FONT_SIZE.text16,
+        },
         fontWeight: FONT_WEIGHT.MEDIUM,
         lineHeight: FONT_SIZE.heading28,
         textAlign: "center",
@@ -88,7 +106,13 @@ export const MUIStyle = {
     },
     AboutSecHeading: {
         color: commonColor.white,
-        fontSize: FONT_SIZE.heading32,
+        fontSize: {
+            xs: FONT_SIZE.heading28,
+            sm: FONT_SIZE.heading28,
+            md: FONT_SIZE.heading28,
+            lg: FONT_SIZE.heading28,
+            xl: FONT_SIZE.heading32,
+        },
         lineHeight: FONT_SIZE.heading40,
         fontWeight: FONT_WEIGHT.REGULAR,
         textTransform: "uppercase",
@@ -121,7 +145,13 @@ export const MUIStyle = {
     Btn: {
         background: commonColor.trans,
         color: commonColor.white,
-        fontSize: FONT_SIZE.text16,
+        fontSize: {
+            xs: FONT_SIZE.text14,
+            sm: FONT_SIZE.text14,
+            md: FONT_SIZE.text14,
+            lg: FONT_SIZE.text14,
+            xl: FONT_SIZE.text16,
+        },
         letterSpacing: "0.7px",
         fontWeight: FONT_WEIGHT.SEMI_BOLD,
         padding: "14px 16px",

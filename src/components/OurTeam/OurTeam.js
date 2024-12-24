@@ -38,13 +38,14 @@ export default function OurTeam() {
       rotateZ: (i) => i !== 3 && rotateZValues[i],
     });
 
+    const endLocation = window.innerHeight <= 800 ? 200 : 100;
 
     teamGrids.forEach((grid, i) => {
       gsap.to(grid, {
         scrollTrigger: {
           trigger: ".ourTeamGrids",
           start: "top 200px",
-          end: "+=200",
+          end: "+=" + endLocation,
           scrub: 2,
           // markers: true,
           id: `grid-${i}`,
@@ -71,8 +72,18 @@ export default function OurTeam() {
             </Typography>
           </Box>
         </Box>
-        <Box className="ourTeamGridsOuter">
-          <Grid container spacing={3} className="ourTeamGrids">
+        <Box className="ourTeamGridsOuter" sx={MUIStyle.OurTeamGridsOuter}>
+          <Grid
+            container
+            spacing={{
+              xs: 2,
+              sm: 2,
+              md: 2,
+              lg: 2,
+              xl: 2,
+            }}
+            className="ourTeamGrids"
+          >
             <Grid
               size={{
                 xs: 12,

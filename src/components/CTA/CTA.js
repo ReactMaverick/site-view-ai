@@ -122,7 +122,11 @@ export default function CTA() {
           </Typography>
         </Box>
         <Box sx={MUIStyle.CTAImgInner}>
-          <Box component={"img"} src={HELMETCAMERA} alt="CTA" sx={MUIStyle.CTAImg} />
+          <Box
+            component={"img"}
+            src={HELMETCAMERA}
+            alt="CTA"
+          />
         </Box>
         <Box component={"ul"} sx={MUIStyle.CTAList}>
           {progress.map((item, index) => (

@@ -17,7 +17,7 @@ export const MUIStyle = {
         alignItems: "center",
         flexDirection: "column",
     },
-   
+
     PartnersHeadingBoxOuter: {
         display: "flex",
         justifyContent: "start",
@@ -41,7 +41,13 @@ export const MUIStyle = {
         },
     },
     Heading: {
-        fontSize: FONT_SIZE.heading32,
+        fontSize: {
+            xs: FONT_SIZE.heading28,
+            sm: FONT_SIZE.heading28,
+            md: FONT_SIZE.heading28,
+            lg: FONT_SIZE.heading28,
+            xl: FONT_SIZE.heading32,
+        },
         lineHeight: "40px",
         fontWeight: FONT_WEIGHT.REGULAR,
         textTransform: "uppercase",
@@ -49,7 +55,13 @@ export const MUIStyle = {
         margin: "0",
     },
     SubHeading: {
-        fontSize: FONT_SIZE.text18,
+        fontSize: {
+            xs: FONT_SIZE.text16,
+            sm: FONT_SIZE.text16,
+            md: FONT_SIZE.text16,
+            lg: FONT_SIZE.text16,
+            xl: FONT_SIZE.text18,
+        },
         lineHeight: "26px",
         fontWeight: FONT_WEIGHT.MEDIUM,
         color: commonColor.grey,
@@ -63,30 +75,30 @@ export const MUIStyle = {
             lg: "48px 0",
             xl: "48px 0",
         },
-position: "relative",
-"&::after": {
-    content: "''",
-    position: "absolute",
-    top: "0",
-    left: "0",
-    width: "290px",
-    height: "100%",
-    background:commonColor.gredientBGWLTR,
-    zIndex: "1",
-},
-"&::before": {
-    content: "''",
-    position: "absolute",
-    top: "0",
-    right: "0",
-    width: "290px",
-    height: "100%",
-    background:commonColor.gredientBGWRTR,
-    zIndex: "2",
-},
+        position: "relative",
+        "&::after": {
+            content: "''",
+            position: "absolute",
+            top: "0",
+            left: "0",
+            width: "290px",
+            height: "100%",
+            background: commonColor.gredientBGWLTR,
+            zIndex: "1",
+        },
+        "&::before": {
+            content: "''",
+            position: "absolute",
+            top: "0",
+            right: "0",
+            width: "290px",
+            height: "100%",
+            background: commonColor.gredientBGWRTR,
+            zIndex: "2",
+        },
 
-},
-    partnersLogo : {
+    },
+    partnersLogo: {
         width: "120px",
         height: "100%",
         objectFit: "contain",

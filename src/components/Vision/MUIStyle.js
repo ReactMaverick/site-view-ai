@@ -107,7 +107,7 @@ export const MUIStyle = {
   VisionSVGContainer: {
     position: "absolute",
     top: "0",
-    left: "0",
+    left: "5%",
     width: "100%",
     height: "100%",
   }

@@ -44,9 +44,9 @@ export const MUIStyle = {
             marginTop: {
                 xs: "-80px",
                 sm: "-80px",
-                md: "-20vh",
-                lg: "-20vh",
-                xl: "-20vh",
+                md: "-30vh",
+                lg: "-30vh",
+                xl: "-30vh",
             },
             padding: "12px",
             borderRadius: "24px",

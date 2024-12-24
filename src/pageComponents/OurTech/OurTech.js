@@ -10,6 +10,7 @@ import OnsiteSection from "@/components/OnsiteSection/OnsiteSection";
 import TabBarSec from "@/components/TabBarSec/TabBarSec";
 import DigitalConstruction from "@/components/DigitalConstruction/DigitalConstruction";
 import FAQSec from "@/components/FAQSec/FAQSec";
+import { tabBarSecContentOurTech } from "@/components/TabBarSec/TabBarSecContent";
 
 export default function OutTech() {
   return (
@@ -25,7 +26,12 @@ export default function OutTech() {
       <Vision2 />
       <OnsiteSection />
       <Vision />
-      <TabBarSec />
+      <TabBarSec
+        theme="dark"
+        caption="Building Tomorrow with Tech"
+        title="Empowering construction with cutting edge tools and innovation"
+        tabBarContents={tabBarSecContentOurTech}
+      />
       <Vision2 />
       <DigitalConstruction />
       <FAQSec />

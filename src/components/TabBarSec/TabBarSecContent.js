@@ -1,6 +1,6 @@
 import { TABIMAGE1, TABIMAGE2, TABIMAGE3, TABIMAGE4 } from "@/values/Constants/ImageConstants";
 
-export const tabBarSecContent = [
+export const tabBarSecContentWhySiteView = [
     {
         title: "On-site Management",
         subtitle: "Control at Your Fingertips",
@@ -11,13 +11,13 @@ export const tabBarSecContent = [
         title: "Remote Collaboration",
         subtitle: "Teamwork Without Boundaries",
         content: "Facilitate seamless remote collaboration with virtual walkthroughs and real-time data sharing. Annotate directly on images to provide clear feedback and keep teams aligned.",
-        images: [TABIMAGE1, TABIMAGE2, TABIMAGE3, TABIMAGE4]
+        images: [TABIMAGE2, TABIMAGE1, TABIMAGE3, TABIMAGE4]
     },
     {
         title: "Quality Control",
         subtitle: "Defects? Detect, Correct!",
         content: "Improve quality assurance with detailed 360° images that help identify defects early. Monitor and document compliance with standards throughout the construction lifecycle.",
-        images: [TABIMAGE1, TABIMAGE2, TABIMAGE3, TABIMAGE4]
+        images: [TABIMAGE3, TABIMAGE2, TABIMAGE1, TABIMAGE4]
     },
     {
         title: "Planning & Monitoring",
@@ -50,3 +50,36 @@ export const tabBarSecContent = [
         images: [TABIMAGE1, TABIMAGE2, TABIMAGE3, TABIMAGE4]
     }
 ]
+
+export const tabBarSecContentOurTech = [
+    {
+        title: "Computer Vision",
+        subtitle: "Immersion Redefined",
+        content: "Leverage cutting-edge computer vision to transform 360° images into detailed, immersive virtual tours with pinpoint accuracy.",
+        images: [TABIMAGE1, TABIMAGE2, TABIMAGE3, TABIMAGE4]
+    },
+    {
+        title: "Real-Time Collaboration",
+        subtitle: "Collaboration Without Delays",
+        content: "Enable teams to collaborate seamlessly with virtual tours, field notes, and instant updates for efficient project management.",
+        images: [TABIMAGE1, TABIMAGE2, TABIMAGE3, TABIMAGE4]
+    },
+    {
+        title: "Progress Tracking",
+        subtitle: "Monitor and Achieve",
+        content: "Track milestones effortlessly with time-stamped virtual tours and real-time progress updates, ensuring projects stay on schedule.",
+        images: [TABIMAGE1, TABIMAGE2, TABIMAGE3, TABIMAGE4]
+    },
+    {
+        title: "Cloud-based Platform",
+        subtitle: "Access Anywhere, Anytime",
+        content: "Access secure, centralized data storage to manage and share project visuals, notes, and reports anytime, anywhere.",
+        images: [TABIMAGE1, TABIMAGE2, TABIMAGE3, TABIMAGE4]
+    },
+    {
+        title: "Scalability",
+        subtitle: "Scaling Beyond Limits",
+        content: "Scale effortlessly across projects of any size, enabling consistent monitoring and management for teams locally or globally.",
+        images: [TABIMAGE1, TABIMAGE2, TABIMAGE3, TABIMAGE4]
+    }
+];

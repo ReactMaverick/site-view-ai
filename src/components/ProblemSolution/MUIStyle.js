@@ -44,7 +44,13 @@ export const MUIStyle = {
     },
     AboutSecText: {
         color: commonColor.grey,
-        fontSize: FONT_SIZE.text18,
+        fontSize: {
+            xs: FONT_SIZE.text16,
+            sm: FONT_SIZE.text16,
+            md: FONT_SIZE.text16,
+            lg: FONT_SIZE.text16,
+            xl: FONT_SIZE.text18,
+        },
         fontWeight: FONT_WEIGHT.MEDIUM,
         lineHeight: FONT_SIZE.heading28,
         textAlign: "center",
@@ -52,7 +58,13 @@ export const MUIStyle = {
     },
     AboutSecHeading: {
         color: commonColor.white,
-        fontSize: FONT_SIZE.heading32,
+        fontSize: {
+            xs: FONT_SIZE.heading24,
+            sm: FONT_SIZE.heading24,
+            md: FONT_SIZE.heading24,
+            lg: FONT_SIZE.heading28,
+            xl: FONT_SIZE.heading32,
+        },
         lineHeight: FONT_SIZE.heading40,
         fontWeight: FONT_WEIGHT.REGULAR,
         textTransform: "uppercase",

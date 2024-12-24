@@ -326,20 +326,20 @@ p.BlogContent {
   position: relative;
 }
 
-.headerInner {
+/* .headerInner {
   backdrop-filter: blur(10px);
   background-color: transparent;
   border-radius: 6.5rem;
   -webkit-mask-clip: content-box;
   -webkit-mask-image: linear-gradient(#fff, #fff);
   padding: 5rem;
-}
+} */
 
-.ourTeamGridsOuter {
+/* .ourTeamGridsOuter {
   transform: scale(0.75);
-}
+} */
 
-@media screen and (max-height: 800px) {
+/* @media screen and (max-height: 800px) {
 
   .CTASection {
     padding: 5px 0 !important;
@@ -348,4 +348,4 @@ p.BlogContent {
   .construction-project-grid {
     transform: scale(0.8);
   }
-}
+} */

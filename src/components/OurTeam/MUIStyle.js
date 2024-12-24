@@ -42,7 +42,13 @@ export const MUIStyle = {
     },
   },
   Heading: {
-    fontSize: FONT_SIZE.heading32,
+    fontSize: {
+      xs: FONT_SIZE.heading28,
+      sm: FONT_SIZE.heading28,
+      md: FONT_SIZE.heading28,
+      lg: FONT_SIZE.heading28,
+      xl: FONT_SIZE.heading32,
+    },
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.white,
@@ -51,7 +57,13 @@ export const MUIStyle = {
     margin: "0",
   },
   SubHeading: {
-    fontSize: FONT_SIZE.text18,
+    fontSize: {
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text16,
+      md: FONT_SIZE.text16,
+      lg: FONT_SIZE.text16,
+      xl: FONT_SIZE.text18,
+    },
     lineHeight: "26px",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.grey,
@@ -63,12 +75,24 @@ export const MUIStyle = {
   OurTeamBox: {
     width: "100%",
     height: "100%",
-    minHeight: "300px",
+    minHeight: {
+      xs: "300px",
+      sm: "300px",
+      md: "140px",
+      lg: "140px",
+      xl: "230px",
+    },
     display: "flex",
     justifyContent: "center",
     alignItems: "start",
     flexDirection: "column",
-    padding: "20px",
+    padding: {
+      xs: "12px",
+      sm: "12px",
+      md: "12px",
+      lg: "12px",
+      xl: "20px",
+    },
     borderRadius: "20px",
     overflow: "hidden",
   },
@@ -76,25 +100,64 @@ export const MUIStyle = {
     display: "flex",
     justifyContent: "start",
     alignItems: "center",
-    marginBottom: "20px",
+    marginBottom: {
+      xs: "5px",
+      sm: "5px",
+      md: "5px",
+      lg: "5px",
+      xl: "10px",
+    },
     gap: "16px",
   },
   OurTeamIcon: {
-    width: "37px",
-    height: "37px",
+    width: {
+      xs: "24px",
+      sm: "24px",
+      md: "30px",
+      lg: "30px",
+      xl: "32px",
+    },
+    height: {
+      xs: "24px",
+      sm: "24px",
+      md: "24px",
+      lg: "24px",
+      xl: "32px",
+    },
     objectFit: "contain",
   },
   TeamRole: {
-    fontSize: FONT_SIZE.heading24,
+    fontSize: {
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text16,
+      md: FONT_SIZE.text16,
+      lg: FONT_SIZE.text16,
+      xl: FONT_SIZE.text20,
+    },
     lineHeight: "34px",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.lime,
   },
   OurTeamImg: {
     width: "100%",
-    height: "200px",
+    height: {
+      xs: "150px",
+      sm: "150px",
+      md: "150px",
+      lg: "100px",
+      xl: "130px",
+    },
     objectFit: "cover",
     borderRadius: "20px",
   },
+  OurTeamGridsOuter: {
+    margin: {
+      xs: "0",
+      sm: "0",
+      md: "0 120px",
+      lg: "0 120px",
+      xl: "0 120px",
+    }
+  }
 
 };

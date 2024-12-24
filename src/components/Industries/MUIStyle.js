@@ -27,13 +27,13 @@ export const MUIStyle = {
   },
   IndustriesHeadingBoxInner: {
     maxWidth: {
-        xs: "100%",
-        sm: "100%",
-        md: "45%",
-        lg: "45%",
-        xl: "45%",
+      xs: "100%",
+      sm: "100%",
+      md: "45%",
+      lg: "45%",
+      xl: "45%",
     },
-  
+
   },
   Heading: {
     fontSize: FONT_SIZE.heading32,
@@ -72,11 +72,11 @@ export const MUIStyle = {
     backgroundColor: commonColor.trans,
     color: commonColor.black,
     fontSize: {
-        xs: FONT_SIZE.heading24,
-        sm: FONT_SIZE.heading24,
-        md: FONT_SIZE.heading32,
-        lg: FONT_SIZE.heading32,
-        xl: FONT_SIZE.heading32,
+      xs: FONT_SIZE.heading24,
+      sm: FONT_SIZE.heading24,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading32,
     },
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.REGULAR,

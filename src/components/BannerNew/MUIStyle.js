@@ -6,13 +6,13 @@ import zIndex from "@mui/material/styles/zIndex";
 export const MUIStyle = {
     BannerMain: {
         width: "100%",
-        padding: {
-            xs: "100px 0",
-            sm: "100px 0",
-            md: "100px 0",
-            lg: "175px 0",
-            xl: "175px 0",
-        },
+        // padding: {
+        //     xs: "100px 0",
+        //     sm: "100px 0",
+        //     md: "100px 0",
+        //     lg: "175px 0",
+        //     xl: "175px 0",
+        // },
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -55,10 +55,10 @@ export const MUIStyle = {
     },
     BannerTopHeading: {
         fontSize: {
-            xs: FONT_SIZE.text16,
-            sm: FONT_SIZE.text16,
-            md: FONT_SIZE.text16,
-            lg: FONT_SIZE.text16,
+            xs: FONT_SIZE.text14,
+            sm: FONT_SIZE.text14,
+            md: FONT_SIZE.text14,
+            lg: FONT_SIZE.text14,
             xl: FONT_SIZE.text16,
         },
         color: commonColor.black,
@@ -72,8 +72,8 @@ export const MUIStyle = {
         fontSize: {
             xs: FONT_SIZE.heading40,
             sm: FONT_SIZE.heading40,
-            md: FONT_SIZE.heading48,
-            lg: FONT_SIZE.heading48,
+            md: FONT_SIZE.heading42,
+            lg: FONT_SIZE.heading42,
             xl: FONT_SIZE.heading48,
         },
         textAlign: 'center',
@@ -83,7 +83,7 @@ export const MUIStyle = {
             xs: "48px",
             sm: "48px",
             md: "48px",
-            lg: "72px",
+            lg: "52px",
             xl: "72px",
         },
 
@@ -93,7 +93,7 @@ export const MUIStyle = {
             xs: FONT_SIZE.text16,
             sm: FONT_SIZE.text16,
             md: FONT_SIZE.text16,
-            lg: FONT_SIZE.text20,
+            lg: FONT_SIZE.text16,
             xl: FONT_SIZE.text20,
         },
         color: commonColor.grey,

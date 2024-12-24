@@ -54,7 +54,13 @@ export const MUIStyle = {
         justifyContent: "center",
         alignItems: 'center',
         flexDirection: "column",
-        gap: "10px",
+        gap: {
+            xs: '0',
+            sm: '0',
+            md: '0',
+            lg: '0',
+            xl: '10px',
+        },
     },
     BannerTopHeading: {
         fontSize: {
@@ -76,7 +82,7 @@ export const MUIStyle = {
             xs: FONT_SIZE.heading40,
             sm: FONT_SIZE.heading40,
             md: FONT_SIZE.heading40,
-            lg: FONT_SIZE.heading64,
+            lg: FONT_SIZE.heading42,
             xl: FONT_SIZE.heading64,
         },
         textAlign: 'center',
@@ -97,7 +103,7 @@ export const MUIStyle = {
             xs: FONT_SIZE.text16,
             sm: FONT_SIZE.text16,
             md: FONT_SIZE.text16,
-            lg: FONT_SIZE.text20,
+            lg: FONT_SIZE.text18,
             xl: FONT_SIZE.text20,
         },
         color: commonColor.grey,
@@ -132,12 +138,12 @@ export const MUIStyle = {
         "&:hover": {
             boxShadow: "none",
         },
-       "&:hover .BannerBtnIcon": {
-        transform: "translateX(10px)",
+        "&:hover .BannerBtnIcon": {
+            transform: "translateX(10px)",
         },
         "&:hover .BannerBtnBG": {
             width: "100%",
-            
+
         },
     },
     BannerBtnBG: {
@@ -153,8 +159,20 @@ export const MUIStyle = {
     },
     BannerBtnIcon: {
         fontSize: FONT_SIZE.heading24,
-        height:"60px",
-        width:"60px",
+        height: {
+            xs: '50px',
+            sm: '50px',
+            md: '50px',
+            lg: '50px',
+            xl: '60px',
+        },
+        width: {
+            xs: '50px',
+            sm: '50px',
+            md: '50px',
+            lg: '50px',
+            xl: '60px',
+        },
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -164,7 +182,7 @@ export const MUIStyle = {
         transition: "all 0.8s ease",
     },
 
-    ScrollDownBtn : {
+    ScrollDownBtn: {
         position: "absolute",
         bottom: "30px",
         left: "50%",

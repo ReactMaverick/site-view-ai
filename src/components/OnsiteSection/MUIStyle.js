@@ -16,6 +16,7 @@ export const MUIStyle = {
     alignItems: "center",
     flexDirection: "column",
     backgroundColor: commonColor.black,
+    position: 'relative'
   },
 
   OnsiteSectionHeadingBoxOuter: {
@@ -74,7 +75,7 @@ export const MUIStyle = {
       lg: "135px",
       xl: "135px",
     },
-   
+
     display: "flex",
     justifyContent: "center",
     // alignItems: "center",
@@ -195,4 +196,11 @@ export const MUIStyle = {
     textAlign: "center",
     transition: "all 0.5s ease-in-out",
   },
+  VisionSVGContainer: {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+  }
 };

@@ -5,15 +5,22 @@ import { MUIStyle } from "./MUIStyle";
 import gsap from "gsap";
 import { VIDEOINNER } from "@/values/Constants/ImageConstants";
 import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
-import { tabBarSecContent } from "./TabBarSecContent";
+import { tabBarSecContentWhySiteView } from "./TabBarSecContent";
 import { useGSAP } from "@gsap/react";
+import { commonColor } from "@/values/Colors/CommonColor";
 
-export default function TabBarSec() {
+export default function TabBarSec({
+  theme = "light",
+  caption = "The Full Picture, Every Time",
+  title = "Complete site visibility means fewer surprises and better decisions, every single day",
+  tabBarContents = tabBarSecContentWhySiteView
+}) {
   const buttonRefs = useRef([]);
   const bodyRefs = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const container = useRef(null);
+  const imagesRef = useRef(null);
 
   useGSAP(
     (context, contextSafe) => {
@@ -38,18 +45,29 @@ export default function TabBarSec() {
           });
         });
 
-        setActiveIndex(isCollapsed ? index : null);
-
         if (isCollapsed) {
+
+          setActiveIndex(index);
+
           // Expand the element
           gsap.to(element, {
             marginTop: 30,
             height: "auto",
             padding: 24,
-            minHeight: 275, // Adjust minHeight as needed
+            minHeight: 250, // Adjust minHeight as needed
             opacity: 1,
             duration: 0.5
           });
+
+          gsap.fromTo(imagesRef.current, {
+            opacity: 0,
+            scale: 0.5
+          }, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.5,
+          }
+          );
         } else {
           // Collapse the element
           gsap.to(element, {
@@ -59,6 +77,18 @@ export default function TabBarSec() {
             minHeight: 0,
             opacity: 0,
             duration: 0.5
+          });
+
+          gsap.fromTo(imagesRef.current, {
+            opacity: 1,
+            scale: 1
+          }, {
+            opacity: 0,
+            scale: 0.5,
+            duration: 0.5,
+            onComplete: () => {
+              setActiveIndex(null);
+            }
           });
         }
       });
@@ -78,29 +108,32 @@ export default function TabBarSec() {
   );
 
   return (
-    <Box sx={MUIStyle.TabBarSec}>
+    <Box sx={[MUIStyle.TabBarSec,
+    { background: theme === "light" ? commonColor.white : commonColor.black }
+    ]}>
       <Box sx={MUIStyle.BannerSVGContainer}>
         <SiteViewSVG
-          fillOpacity={0.5}
+          fillOpacity={theme === "light" ? 0.5 : 0.05}
         />
       </Box>
       <Container maxWidth="xl" sx={{ position: "relative", zIndex: 1 }}>
         <Box sx={MUIStyle.AboutSecOuterBox}>
           <Box sx={MUIStyle.AboutSecHeadingBox}>
             <Typography variant="body1" sx={MUIStyle.AboutSecText}>
-              The Full Picture, Every Time
+              {caption}
             </Typography>
-            <Typography variant="h2" sx={MUIStyle.AboutSecHeading}>
-              Complete site visibility means fewer surprises and better
-              decisions, every single day
+            <Typography variant="h2" sx={[MUIStyle.AboutSecHeading, {
+              color: theme === "light" ? commonColor.black : commonColor.white
+            }]}>
+              {title}
             </Typography>
           </Box>
         </Box>
         <Box sx={MUIStyle.TabBarSecMyRow}>
           <Box sx={MUIStyle.TabBarSecMyColLeft}>
-            <Box sx={MUIStyle.TabBarSecImageBox}>
-              {activeIndex !== null && tabBarSecContent[activeIndex].images && (
-                tabBarSecContent[activeIndex].images.map((image, index) => (
+            <Box sx={MUIStyle.TabBarSecImageBox} ref={imagesRef}>
+              {activeIndex !== null && tabBarContents[activeIndex].images && (
+                tabBarContents[activeIndex].images.map((image, index) => (
                   <Box
                     key={index}
                     component={"img"}
@@ -128,30 +161,22 @@ export default function TabBarSec() {
           </Box>
           <Box sx={MUIStyle.TabBarSecMyColRight}>
             <Box sx={MUIStyle.TabBarSecInnerBox} ref={container}>
-              {tabBarSecContent.map((tabBar, index) => (
+              {tabBarContents.map((tabBar, index) => (
                 <Box
                   key={index}
                   sx={MUIStyle.TabBarSecButton}
                 >
                   <Box
-                    sx={{
-                      ...MUIStyle.TabBarSecButtonHead,
-                      // height: activeIndex === index ? 0 : "auto",
-                      // display: activeIndex === index ? "none" : "block",
-                      // transition: "all 0.5s ease",
-                    }}
+                    sx={[MUIStyle.TabBarSecButtonHead, {
+                      background: theme === "light" ? commonColor.black5 : commonColor.white10,
+                      color: theme === "light" ? commonColor.black : commonColor.white
+                    }]}
                     ref={(el) => (buttonRefs.current[index] = el)}
                   >
                     {tabBar.title}
                   </Box>
                   <Box
-                    sx={{
-                      ...MUIStyle.TabBarSecButtonBody,
-                      // height: activeIndex === index ? "auto" : 0,
-                      // display: activeIndex === index ? "block" : "none",
-                      // overflow: activeIndex === index ? "visible" : "hidden",
-                      // transition: "all 0.5s ease",
-                    }}
+                    sx={MUIStyle.TabBarSecButtonBody}
                     ref={(el) => (bodyRefs.current[index] = el)}
                   >
                     <Box sx={MUIStyle.TabBarSecButtonBodyTop}>

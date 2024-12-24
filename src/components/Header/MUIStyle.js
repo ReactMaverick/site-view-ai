@@ -11,11 +11,31 @@ export const MUIStyle = {
     position: "absolute",
     top: "0",
     left: "0",
-    padding: "26px 0",
+    padding: {
+      xs: "0",
+      sm: "0",
+      md: "0",
+      lg: "0",
+      xl: "26px 0px",
+    },
     zIndex: "999",
     // borderBottom: "1px solid",
   },
 
+  menuBox: {
+    backdropFilter: "blur(10px)",
+    backgroundColor: commonColor.trans,
+    borderRadius: "6.5rem",
+    WebkitMaskClip: "content-box",
+    WebkitMaskImage: "linear-gradient(#fff, #fff)",
+    padding: {
+      xs: "2rem",
+      sm: "2rem",
+      md: "2rem",
+      lg: "2rem",
+      xl: "5rem",
+    }
+  },
   HeaderInner: {
     display: "flex",
     justifyContent: "space-between",
@@ -46,8 +66,8 @@ export const MUIStyle = {
     width: {
       xs: "96px",
       sm: "96px",
-      md: "130px",
-      lg: "130px",
+      md: "110px",
+      lg: "110px",
       xl: "130px",
     },
   },
@@ -57,7 +77,13 @@ export const MUIStyle = {
     border: "2px solid",
     borderColor: commonColor.green,
     boxShadow: "none",
-    padding: "10px 42px",
+    padding: {
+      xs: "6px 20px",
+      sm: "6px 20px",
+      md: "6px 20px",
+      lg: "6px 20px",
+      xl: "10px 42px",
+    },
     borderRadius: "100px",
     textTransform: "capitalize",
     fontSize: {
@@ -244,7 +270,7 @@ export const MUIStyle = {
     margin: 0,
     background: commonColor.trans,
   },
-  HEaderMenuLi: {
+  HeaderMenuLi: {
     display: {
       xs: "block",
       sm: "block",
@@ -259,7 +285,13 @@ export const MUIStyle = {
     },
   },
   HeaderMenuBtn: {
-    fontSize: FONT_SIZE.text16,
+    fontSize: {
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text14,
+      lg: FONT_SIZE.text14,
+      xl: FONT_SIZE.text16,
+    },
     fontWeight: FONT_WEIGHT.MEDIUM,
     cursor: "pointer",
     padding: "15px 16px",

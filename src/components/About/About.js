@@ -35,6 +35,7 @@ export default function About() {
         x: `+=${50 - i * 8}vw`,
         y: 800,
         duration: 3,
+        opacity: 0,
         delay: 2,
       });
     });
@@ -53,6 +54,7 @@ export default function About() {
         x: `+=${i * 8 - 50}vw`,
         y: 800,
         duration: 3,
+        opacity: 0,
         delay: 2,
       });
     });
@@ -67,10 +69,12 @@ export default function About() {
           scrub: 1,
           // markers: true,
           id: `box-${i}`,
+          snap: 1,
         },
         // y: 1000,
         x: 0,
         y: 800,
+        opacity: 0,
         duration: 3,
         delay: 2,
       });

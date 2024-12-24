@@ -2,7 +2,7 @@
 import React, { useEffect, useLayoutEffect } from "react";
 import { Box, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
-import Problem from "../Problem/Problem";
+import ProblemSolutionBox from "../Problem/Problem";
 import Grid from "@mui/material/Grid2";
 import Solution from "../Solution/Solution";
 import { gsap } from "gsap";
@@ -12,10 +12,10 @@ import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
 
 export default function ProblemSolution() {
   const problemSolutionPairs = [
-    { problem: <Problem />, solution: <Solution />, key: "pair1" },
-    { problem: <Problem />, solution: <Solution />, key: "pair2" },
-    { problem: <Problem />, solution: <Solution />, key: "pair3" },
-    { problem: <Problem />, solution: <Solution />, key: "pair4" },
+    { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair1" },
+    { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair2" },
+    { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair3" },
+    { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair4" },
   ];
 
   useLayoutEffect(() => {
@@ -91,23 +91,6 @@ export default function ProblemSolution() {
         <Box sx={MUIStyle.ProblemSolutionBox}>
           <Grid container columnSpacing={5} rowSpacing={3}>
             {problemSolutionPairs.map(({ problem, solution, key }) => (
-              // <Grid
-              //   container
-              //   spacing={2}
-              //   key={key}
-              //   className="problem-solution-pair"
-              // >
-              //   <Grid xs={6} md={6} lg={6} xl={6} sx={MUIStyle.BoxOuter} >
-              //     <Box sx={MUIStyle.BoxOuterLeft} className="box">
-              //       {problem}
-              //     </Box>
-              //   </Grid>
-              //   <Grid xs={6} md={6} lg={6} xl={6}>
-              //     <Box sx={MUIStyle.BoxOuterRight} className="box">
-              //       {solution}
-              //     </Box>
-              //   </Grid>
-              // </Grid>
               <Box sx={MUIStyle.ProblemSolutionPair} key={key}>
                 {problem}
                 {solution}

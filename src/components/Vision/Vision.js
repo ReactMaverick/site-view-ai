@@ -4,6 +4,7 @@ import { MUIStyle } from "./MUIStyle";
 import React, { useState, useEffect, useRef } from "react";
 import { VISION } from "@/values/Constants/ImageConstants";
 import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
+import OurTechSVGBG1 from "../OurTechSVGBG1/OurTechSVGBG1";
 
 
 export default function Vision() {
@@ -11,9 +12,10 @@ export default function Vision() {
   return (
     <Box sx={MUIStyle.VisionMain}>
       <Box sx={MUIStyle.VisionSVGContainer}>
-        <SiteViewSVG
+        {/* <SiteViewSVG
           fillOpacity="0.05"
-        />
+        /> */}
+        {/* <OurTechSVGBG1 /> */}
       </Box>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.VisionRow}>
