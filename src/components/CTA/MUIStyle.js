@@ -16,6 +16,7 @@ export const MUIStyle = {
     backgroundSize: "cover",
     position: "relative",
     height: "100vh",
+    overflow: "hidden",
   },
   CTAInner: {
     display: "flex",
@@ -26,11 +27,11 @@ export const MUIStyle = {
   },
   CTAHeading: {
     fontSize: {
-      xs: FONT_SIZE.heading28,
-      sm: FONT_SIZE.heading28,
-      lg: FONT_SIZE.heading36,
-      md: FONT_SIZE.heading36,
-      xl: FONT_SIZE.heading48,
+      xs: FONT_SIZE.heading24,
+      sm: FONT_SIZE.heading24,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading28,
     },
     lineHeight: "56px",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,

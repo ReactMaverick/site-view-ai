@@ -1,7 +1,7 @@
 "use client";
 import { Box, Container, Paper, styled, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import Grid from "@mui/material/Grid2";
 import {
   TEAM,
@@ -20,47 +20,62 @@ import { useGSAP } from "@gsap/react";
 
 export default function OurTeam() {
 
+  const teamGridsSec = useRef(null);
+
   useLayoutEffect(() => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
   }, []);
 
-  // useGSAP(() => {
-  //   const teamGrids = gsap.utils.toArray(".ourTeamGrid");
+  useGSAP(() => {
+    const teamGrids = gsap.utils.toArray(".ourTeamGrid");
 
-  //   const xPercentValues = [20, -20, 20, 0, -20, 20, -20];
-  //   const yPercentValues = [20, 20, 0, 0, 0, -20, -20];
-  //   const rotateZValues = [-10, 10, 0, 0, 0, 10, -10];
+    const xPercentValues = [20, -20, 20, 0, -20, 20, -20];
+    const yPercentValues = [20, 20, 0, 0, 0, -20, -20];
+    const rotateZValues = [-10, 10, 0, 0, 0, 10, -10];
 
-  //   gsap.set(teamGrids, {
-  //     // set initial position for each grid dynamically
-  //     xPercent: (i) => i !== 3 && xPercentValues[i],
-  //     yPercent: (i) => i !== 3 && yPercentValues[i],
-  //     rotateZ: (i) => i !== 3 && rotateZValues[i],
-  //   });
+    gsap.set(teamGrids, {
+      // set initial position for each grid dynamically
+      xPercent: (i) => i !== 3 && xPercentValues[i],
+      yPercent: (i) => i !== 3 && yPercentValues[i],
+      rotateZ: (i) => i !== 3 && rotateZValues[i],
+    });
 
-  //   const endLocation = window.innerHeight <= 800 ? 200 : 100;
+    const endLocation = window.innerHeight <= 800 ? 200 : 100;
 
-  //   teamGrids.forEach((grid, i) => {
-  //     gsap.to(grid, {
-  //       scrollTrigger: {
-  //         trigger: ".ourTeamGrids",
-  //         start: "top 200px",
-  //         end: "+=" + endLocation,
-  //         scrub: 2,
-  //         // markers: true,
-  //         id: `grid-${i}`,
-  //       },
-  //       xPercent: 0,
-  //       yPercent: 0,
-  //       rotateZ: 0,
-  //       duration: 3,
-  //     });
-  //   });
+    gsap.to(teamGridsSec.current, {
+      scrollTrigger: {
+        trigger: teamGridsSec.current,
+        start: "top top",
+        end: "+=2000",
+        // endTrigger: '.CTASection',
+        scrub: true,
+        // markers: true,
+        id: `gridOuter`,
+        pin: true,
+      },
+    });
 
-  // });
+    teamGrids.forEach((grid, i) => {
+      gsap.to(grid, {
+        scrollTrigger: {
+          trigger: ".ourTeamGrids",
+          start: "top top",
+          end: "+=1500",
+          scrub: 2,
+          // markers: true,
+          id: `grid-${i}`,
+        },
+        xPercent: 0,
+        yPercent: 0,
+        rotateZ: 0,
+        // duration: 3,
+      });
+    });
+
+  });
 
   return (
-    <Box sx={MUIStyle.BuildForMain}>
+    <Box sx={MUIStyle.BuildForMain} ref={teamGridsSec}>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.BuildForHeadingBoxOuter}>
           <Box sx={MUIStyle.BuildForHeadingBoxInner}>

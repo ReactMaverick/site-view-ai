@@ -19,7 +19,7 @@ export default function Workflow() {
   useGSAP(() => {
     const cards = gsap.utils.toArray(".card-wrapper");
 
-    console.log(document.querySelector(".workflowSec").offsetWidth, document.querySelector(".sliderOuter").offsetWidth);
+    // console.log(document.querySelector(".workflowSec").offsetWidth, document.querySelector(".sliderOuter").offsetWidth);
 
     gsap.to(cards, {
       xPercent: -100 * (cards.length - 1),

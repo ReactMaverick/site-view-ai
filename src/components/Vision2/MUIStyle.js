@@ -80,7 +80,13 @@ export const MUIStyle = {
     marginBottom: "16px",
   },
   SubHeading: {
-    fontSize: FONT_SIZE.text18,
+    fontSize: {
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text14,
+      lg: FONT_SIZE.text14,
+      xl: FONT_SIZE.text16,
+    },
     lineHeight: "26px",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.white,

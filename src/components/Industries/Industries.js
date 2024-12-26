@@ -117,7 +117,9 @@ export default function Industries() {
                 {industry?.title}
               </Button>
               {hoveredButton?.title === industry?.title && (
-                <Box sx={MUIStyle.CustomTooltip}>
+                <Box sx={[MUIStyle.CustomTooltip,
+                index <= 3 ? { top: "110%" } : { bottom: "110%" }
+                ]}>
                   <ButtonTooltip
                     title={industry.title}
                     content={industry.content}

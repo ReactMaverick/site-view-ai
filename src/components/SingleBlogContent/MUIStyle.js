@@ -28,7 +28,7 @@ export const MUIStyle = {
       lg: "row",
       xl: "row",
     },
-    gap:{
+    gap: {
       xs: "30px",
       sm: "30px",
       md: "30px",
@@ -45,30 +45,42 @@ export const MUIStyle = {
   },
   SingleBlogColLeft: {
     maxWidth: {
-        xs: "100%",
-        sm: "100%",
-        md: "50%",
-        lg: "45%",
-        xl: "45%",
+      xs: "100%",
+      sm: "100%",
+      md: "50%",
+      lg: "45%",
+      xl: "45%",
     },
-  
+
   },
   Heading: {
-    fontSize: FONT_SIZE.heading32,
+    fontSize: {
+      xs: FONT_SIZE.heading24,
+      sm: FONT_SIZE.heading24,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading28,
+    },
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.black,
     marginBottom: "20px",
-    paddingRight:{
+    paddingRight: {
       xs: "0",
       sm: "0",
       md: "40px",
       lg: "40px",
-      xl: "40px", 
+      xl: "40px",
     }
   },
   SubHeading: {
-    fontSize: FONT_SIZE.heading24,
+    fontSize: {
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text14,
+      lg: FONT_SIZE.text14,
+      xl: FONT_SIZE.text16,
+    },
     lineHeight: "32px",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.grey,
@@ -76,11 +88,11 @@ export const MUIStyle = {
   },
   SingleBlogColRight: {
     maxWidth: {
-        xs: "100%",
-        sm: "100%",
-        md: "50%",
-        lg: "55%",
-        xl: "55%",
+      xs: "100%",
+      sm: "100%",
+      md: "50%",
+      lg: "55%",
+      xl: "55%",
     },
     display: "flex",
     justifyContent: "center",
@@ -92,7 +104,7 @@ export const MUIStyle = {
       objectFit: "cover",
     },
   },
-  SingleBlogContent   : {
+  SingleBlogContent: {
     marginBottom: "30px",
   },
   CustomBtn: {

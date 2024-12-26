@@ -21,7 +21,7 @@ export default function HomePage() {
 
   return (
     <Box className={styles.homePage}>
-      {/* {isThreeJSLoading && <FullPageLoader />}
+      {isThreeJSLoading && <FullPageLoader />}
       <BannerThree
         setIsThreeJSLoading={setIsThreeJSLoading}
       />
@@ -29,7 +29,7 @@ export default function HomePage() {
       <Partners />
       <Project />
       <Workflow />
-      <VideoSec /> */}
+      <VideoSec />
       <Industries />
       <OurTeam />
       <CTA />

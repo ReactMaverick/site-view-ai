@@ -107,11 +107,11 @@ export const MUIStyle = {
     AboutSecHeading: {
         color: commonColor.white,
         fontSize: {
-            xs: FONT_SIZE.heading28,
-            sm: FONT_SIZE.heading28,
-            md: FONT_SIZE.heading28,
-            lg: FONT_SIZE.heading28,
-            xl: FONT_SIZE.heading32,
+            xs: FONT_SIZE.heading24,
+            sm: FONT_SIZE.heading24,
+            md: FONT_SIZE.heading24,
+            lg: FONT_SIZE.heading24,
+            xl: FONT_SIZE.heading28,
         },
         lineHeight: FONT_SIZE.heading40,
         fontWeight: FONT_WEIGHT.REGULAR,

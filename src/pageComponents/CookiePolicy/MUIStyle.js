@@ -25,12 +25,12 @@ export const MUIStyle = {
     paddingBottom: "150px",
   },
   Heading: {
-    fontSize:{
-      xs: FONT_SIZE.heading32,
-      sm: FONT_SIZE.heading32,
-      md: FONT_SIZE.heading48,
-      lg: FONT_SIZE.heading48,
-      xl: FONT_SIZE.heading48,
+    fontSize: {
+      xs: FONT_SIZE.heading24,
+      sm: FONT_SIZE.heading24,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading28,
     },
     lineHeight: {
       xs: "40px",
@@ -49,7 +49,13 @@ export const MUIStyle = {
     padding: "40px 0",
   },
   SubHeading: {
-    fontSize: FONT_SIZE.heading32,
+    fontSize: {
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text14,
+      lg: FONT_SIZE.text14,
+      xl: FONT_SIZE.text16,
+    },
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.black,
@@ -98,7 +104,7 @@ export const MUIStyle = {
     color: commonColor.black,
     transition: "all 0.5s ease-in-out",
   },
-  SubTitle:{
+  SubTitle: {
     fontSize: FONT_SIZE.text20,
     lineHeight: "26px",
     fontWeight: FONT_WEIGHT.MEDIUM,
@@ -111,10 +117,10 @@ export const MUIStyle = {
     paddingTop: "24px",
   },
   SubLi: {
-display: "flex",
-alignItems: "center",
-gap: "10px",
-padding: "5px 0",
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    padding: "5px 0",
   },
   Textgrey: {
     fontSize: FONT_SIZE.text20,

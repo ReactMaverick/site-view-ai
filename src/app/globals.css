@@ -349,3 +349,7 @@ p.BlogContent {
     transform: scale(0.8);
   }
 } */
+
+.partnersLogoSlider .swiper-wrapper {
+  transition-timing-function: linear;
+}

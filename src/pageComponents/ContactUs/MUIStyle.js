@@ -45,7 +45,13 @@ export const MUIStyle = {
     },
   },
   SubHeading: {
-    fontSize: FONT_SIZE.text18,
+    fontSize: {
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text14,
+      lg: FONT_SIZE.text14,
+      xl: FONT_SIZE.text16,
+    },
     lineHeight: "32px",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
@@ -54,7 +60,13 @@ export const MUIStyle = {
     marginBottom: "24px",
   },
   Heading: {
-    fontSize: FONT_SIZE.heading32,
+    fontSize: {
+      xs: FONT_SIZE.heading24,
+      sm: FONT_SIZE.heading24,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading28,
+    },
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.white,
@@ -82,7 +94,7 @@ export const MUIStyle = {
   ContactBox: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems:{
+    alignItems: {
       xs: "center",
       sm: "center",
       md: "start",
@@ -117,7 +129,7 @@ export const MUIStyle = {
   ContactBoxContent: {
     display: "flex",
     justifyContent: "center",
-    alignItems:{
+    alignItems: {
       xs: "center",
       sm: "center",
       md: "start",
@@ -141,7 +153,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.heading36,
       xl: FONT_SIZE.heading36,
     },
-    lineHeight:{
+    lineHeight: {
       xs: "30px",
       sm: "28px",
       md: "30px",
@@ -174,9 +186,9 @@ export const MUIStyle = {
     },
     transition: "all 0.5s ease-in-out",
   },
-  ContactSecMap : {
+  ContactSecMap: {
     width: "100%",
-    minHeight:{
+    minHeight: {
       xs: "100%",
       sm: "100%",
       md: "600px",
@@ -204,7 +216,7 @@ export const MUIStyle = {
     alignItems: "center",
     flexDirection: "column",
   },
-  FAQSecOuter:{
+  FAQSecOuter: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -227,7 +239,7 @@ export const MUIStyle = {
       xl: "60%",
     },
   },
-  FAQSecAccrodinBox : {
+  FAQSecAccrodinBox: {
     "&.MuiAccordion-root": {
       boxShadow: "none",
       borderRadius: "50px",
@@ -240,7 +252,7 @@ export const MUIStyle = {
     "&.MuiAccordion-root:before": {
       display: "none",
     },
- 
+
 
   },
 
@@ -269,48 +281,48 @@ export const MUIStyle = {
     textAlign: "center",
     transition: "all 0.5s ease-in-out",
     paddingBottom: "80px",
-},
-BtnRow:{
-  display: "flex",
-  justifyContent: "flex-start",
-  alignItems: "center",
-  width: "100%",
-  marginTop : "80px",
-},
-CustomBtn: {
-  background: commonColor.green,
-  border: "2px solid",
-  borderColor: commonColor.green,
-  boxShadow: "none",
-  padding: "12px 42px",
-  borderRadius: "100px",
-  textTransform: "capitalize",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  gap: "10px",
-  transition: "all 0.3s ease-in-out",
-  fontSize: {
-    xs: FONT_SIZE.text18,
-    sm: FONT_SIZE.text18,
-    md: FONT_SIZE.text18,
-    lg: FONT_SIZE.text20,
   },
-  lineHeight: "1.8",
-  fontWeight: FONT_WEIGHT.MEDIUM,
-  color: commonColor.black,
-  "&:hover": {
-    background: commonColor.trans,
+  BtnRow: {
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    width: "100%",
+    marginTop: "80px",
+  },
+  CustomBtn: {
+    background: commonColor.green,
+    border: "2px solid",
+    borderColor: commonColor.green,
     boxShadow: "none",
-    color: commonColor.green,
-  },
-  "& span": {
-    fontSize: FONT_SIZE.heading24,
-    lineHeight: FONT_SIZE.heading24,
+    padding: "12px 42px",
+    borderRadius: "100px",
+    textTransform: "capitalize",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
     transition: "all 0.3s ease-in-out",
+    fontSize: {
+      xs: FONT_SIZE.text18,
+      sm: FONT_SIZE.text18,
+      md: FONT_SIZE.text18,
+      lg: FONT_SIZE.text20,
+    },
+    lineHeight: "1.8",
+    fontWeight: FONT_WEIGHT.MEDIUM,
+    color: commonColor.black,
+    "&:hover": {
+      background: commonColor.trans,
+      boxShadow: "none",
+      color: commonColor.green,
+    },
+    "& span": {
+      fontSize: FONT_SIZE.heading24,
+      lineHeight: FONT_SIZE.heading24,
+      transition: "all 0.3s ease-in-out",
+    },
+    "&:hover span": {
+      color: commonColor.green,
+    },
   },
-  "&:hover span": {
-    color: commonColor.green,
-  },
-},
 };

@@ -59,7 +59,7 @@ export const MUIStyle = {
             sm: FONT_SIZE.heading24,
             md: FONT_SIZE.heading24,
             lg: FONT_SIZE.heading24,
-            xl: FONT_SIZE.heading26,
+            xl: FONT_SIZE.heading28,
         },
         lineHeight: "30px",
         fontWeight: FONT_WEIGHT.SEMI_BOLD,

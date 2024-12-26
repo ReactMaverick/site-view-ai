@@ -17,7 +17,7 @@ export const MUIStyle = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-backgroundColor: commonColor.black,
+    backgroundColor: commonColor.black,
   },
   FAQSecBoxOuter: {
     display: "flex",
@@ -42,7 +42,13 @@ backgroundColor: commonColor.black,
     },
   },
   Heading: {
-    fontSize: FONT_SIZE.heading32,
+    fontSize: {
+      xs: FONT_SIZE.heading24,
+      sm: FONT_SIZE.heading24,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading28,
+    },
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.white,
@@ -50,7 +56,7 @@ backgroundColor: commonColor.black,
     textAlign: "center",
     transition: "all 0.5s ease-in-out",
   },
-  FAQSecOuter:{
+  FAQSecOuter: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -72,7 +78,7 @@ backgroundColor: commonColor.black,
       xl: "60%",
     },
   },
-  FAQSecAccrodinBox : {
+  FAQSecAccrodinBox: {
     "&.MuiAccordion-root": {
       boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
       borderRadius: "50px",
@@ -85,7 +91,7 @@ backgroundColor: commonColor.black,
     "&.MuiAccordion-root:before": {
       display: "none",
     },
- 
+
 
   },
 
@@ -105,12 +111,12 @@ backgroundColor: commonColor.black,
     textAlign: "left",
     transition: "all 0.5s ease-in-out",
   },
-  BtnRow:{
+  BtnRow: {
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
     width: "100%",
-    marginTop : "80px",
+    marginTop: "80px",
   },
   CustomBtn: {
     background: commonColor.green,

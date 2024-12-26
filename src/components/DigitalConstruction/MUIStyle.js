@@ -41,7 +41,13 @@ export const MUIStyle = {
     },
   },
   SubHeading: {
-    fontSize: FONT_SIZE.text18,
+    fontSize: {
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text14,
+      lg: FONT_SIZE.text14,
+      xl: FONT_SIZE.text16,
+    },
     lineHeight: "32px",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
@@ -50,7 +56,13 @@ export const MUIStyle = {
     marginBottom: "24px",
   },
   Heading: {
-    fontSize: FONT_SIZE.heading32,
+    fontSize: {
+      xs: FONT_SIZE.heading24,
+      sm: FONT_SIZE.heading24,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading28,
+    },
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.white,

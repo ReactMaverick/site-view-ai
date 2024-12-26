@@ -15,7 +15,7 @@ export const MUIStyle = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-backgroundColor: commonColor.black,
+    backgroundColor: commonColor.black,
   },
 
   workflowHeadingBoxOuter: {
@@ -31,7 +31,7 @@ backgroundColor: commonColor.black,
       md: "45%",
       lg: "45%",
       xl: "45%",
-  },
+    },
     marginBottom: {
       xs: "80px",
       sm: "80px",
@@ -40,8 +40,14 @@ backgroundColor: commonColor.black,
       xl: "48px",
     },
   },
-  SubHeading : {
-    fontSize: FONT_SIZE.text18,
+  SubHeading: {
+    fontSize: {
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text14,
+      lg: FONT_SIZE.text14,
+      xl: FONT_SIZE.text16,
+    },
     lineHeight: "32px",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
@@ -50,7 +56,13 @@ backgroundColor: commonColor.black,
     marginBottom: "24px",
   },
   Heading: {
-    fontSize: FONT_SIZE.heading32,
+    fontSize: {
+      xs: FONT_SIZE.heading24,
+      sm: FONT_SIZE.heading24,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading28,
+    },
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.white,
@@ -66,8 +78,8 @@ backgroundColor: commonColor.black,
     textAlign: "center",
     transition: "all 0.5s ease-in-out",
   },
-  ConstructionProjectGrid:{
-    padding:{
+  ConstructionProjectGrid: {
+    padding: {
       xs: "0",
       sm: "0",
       md: "148px 0",
@@ -95,7 +107,7 @@ backgroundColor: commonColor.black,
     width: "100%",
     height: "200px",
     margin: "0 auto",
-    display:{
+    display: {
       xs: "block",
       sm: "block",
       md: "none",
@@ -104,7 +116,7 @@ backgroundColor: commonColor.black,
     }
   },
 
-  ConstructionProjectImg : {
+  ConstructionProjectImg: {
     maxWidth: {
       xs: "100%",
       sm: "100%",
@@ -128,7 +140,7 @@ backgroundColor: commonColor.black,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    gap:"24px",
+    gap: "24px",
     transition: "all 0.5s ease-in-out",
     "&:hover": {
       backgroundColor: commonColor.green,

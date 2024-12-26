@@ -51,14 +51,15 @@ export default function Partners() {
         </Box>
         <Box sx={MUIStyle.partnersLogoSec} className={"partnersLogoSec"}>
           <Swiper
-            className={styles.logoSlider}
+            className={`${styles.logoSlider} partnersLogoSlider`}
             spaceBetween={0}
             slidesPerView={7}
             loop={true}
-            speed={1000}
+            speed={2000}
+            // loopAdditionalSlides={7}
             modules={[Autoplay]}
             autoplay={{
-              delay: 3000,
+              delay: 0,
               disableOnInteraction: false,
             }}
             breakpoints={{

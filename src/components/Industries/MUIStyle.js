@@ -36,11 +36,11 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading28,
-      sm: FONT_SIZE.heading28,
-      md: FONT_SIZE.heading28,
-      lg: FONT_SIZE.heading28,
-      xl: FONT_SIZE.heading32,
+      xs: FONT_SIZE.heading24,
+      sm: FONT_SIZE.heading24,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading28,
     },
     lineHeight: "40px",
     fontWeight: FONT_WEIGHT.REGULAR,
@@ -51,11 +51,11 @@ export const MUIStyle = {
   },
   SubHeading: {
     fontSize: {
-      xs: FONT_SIZE.text16,
-      sm: FONT_SIZE.text16,
-      md: FONT_SIZE.text16,
-      lg: FONT_SIZE.text16,
-      xl: FONT_SIZE.text18,
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text14,
+      lg: FONT_SIZE.text14,
+      xl: FONT_SIZE.text16,
     },
     lineHeight: "26px",
     fontWeight: FONT_WEIGHT.MEDIUM,
@@ -114,7 +114,7 @@ export const MUIStyle = {
   },
   CustomTooltip: {
     position: "absolute",
-    bottom: "115%",
+    // bottom: "115%",
     left: "50%",
     transform: "translateX(-50%)",
     zIndex: 2,
