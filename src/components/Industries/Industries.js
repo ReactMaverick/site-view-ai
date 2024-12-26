@@ -70,7 +70,7 @@ export default function Industries() {
         scrollTrigger: {
           trigger: industriesRef.current,
           start: "top top",
-          end: "+=2000", // Adjust this value based on the height of your section and desired animation duration
+          end: "+=5000", // Adjust this value based on the height of your section and desired animation duration
           scrub: true,
           pin: true,
           // markers: true,  // Set to true to see the trigger area
@@ -89,7 +89,7 @@ export default function Industries() {
   });
 
   return (
-    <Box sx={MUIStyle.IndustriesMain}>
+    <Box sx={MUIStyle.IndustriesMain} ref={industriesRef}>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.IndustriesHeadingBoxOuter}>
           <Box sx={MUIStyle.IndustriesHeadingBoxInner}>
@@ -102,7 +102,7 @@ export default function Industries() {
           </Box>
         </Box>
 
-        <Box sx={MUIStyle.IndustriesSec} ref={industriesRef}>
+        <Box sx={MUIStyle.IndustriesSec}>
           {industryContents.map((industry, index) => (
             <Box
               key={index}

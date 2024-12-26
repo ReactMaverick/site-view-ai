@@ -6,17 +6,18 @@ export const MUIStyle = {
   BuildForMain: {
     width: "100%",
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
-      md: "100px 0",
-      lg: "132px 0",
-      xl: "132px 0",
+      xs: "50px 0",
+      sm: "50px 0",
+      md: "50px 0",
+      lg: "50px 0",
+      xl: "100px 0",
     },
     background: commonColor.black,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
+    height: '100vh',
   },
 
   BuildForHeadingBoxOuter: {
@@ -34,11 +35,11 @@ export const MUIStyle = {
       xl: "45%",
     },
     marginBottom: {
-      xs: "30px",
-      sm: "30px",
-      md: "80px",
-      lg: "80px",
-      xl: "80px",
+      xs: "20px",
+      sm: "20px",
+      md: "20px",
+      lg: "20px",
+      xl: "30px",
     },
   },
   Heading: {
@@ -78,9 +79,9 @@ export const MUIStyle = {
     minHeight: {
       xs: "300px",
       sm: "300px",
-      md: "140px",
-      lg: "140px",
-      xl: "230px",
+      md: "120px",
+      lg: "120px",
+      xl: "150px",
     },
     display: "flex",
     justifyContent: "center",
@@ -143,9 +144,9 @@ export const MUIStyle = {
     height: {
       xs: "150px",
       sm: "150px",
-      md: "150px",
-      lg: "100px",
-      xl: "130px",
+      md: "100px",
+      lg: "80px",
+      xl: "120px",
     },
     objectFit: "cover",
     borderRadius: "20px",
@@ -154,9 +155,9 @@ export const MUIStyle = {
     margin: {
       xs: "0",
       sm: "0",
-      md: "0 120px",
-      lg: "0 120px",
-      xl: "0 120px",
+      md: "0 150px",
+      lg: "0 150px",
+      xl: "0 150px",
     }
   }
 

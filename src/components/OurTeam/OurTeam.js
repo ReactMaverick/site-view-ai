@@ -24,40 +24,40 @@ export default function OurTeam() {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
   }, []);
 
-  useGSAP(() => {
-    const teamGrids = gsap.utils.toArray(".ourTeamGrid");
+  // useGSAP(() => {
+  //   const teamGrids = gsap.utils.toArray(".ourTeamGrid");
 
-    const xPercentValues = [20, -20, 20, 0, -20, 20, -20];
-    const yPercentValues = [20, 20, 0, 0, 0, -20, -20];
-    const rotateZValues = [-10, 10, 0, 0, 0, 10, -10];
+  //   const xPercentValues = [20, -20, 20, 0, -20, 20, -20];
+  //   const yPercentValues = [20, 20, 0, 0, 0, -20, -20];
+  //   const rotateZValues = [-10, 10, 0, 0, 0, 10, -10];
 
-    gsap.set(teamGrids, {
-      // set initial position for each grid dynamically
-      xPercent: (i) => i !== 3 && xPercentValues[i],
-      yPercent: (i) => i !== 3 && yPercentValues[i],
-      rotateZ: (i) => i !== 3 && rotateZValues[i],
-    });
+  //   gsap.set(teamGrids, {
+  //     // set initial position for each grid dynamically
+  //     xPercent: (i) => i !== 3 && xPercentValues[i],
+  //     yPercent: (i) => i !== 3 && yPercentValues[i],
+  //     rotateZ: (i) => i !== 3 && rotateZValues[i],
+  //   });
 
-    const endLocation = window.innerHeight <= 800 ? 200 : 100;
+  //   const endLocation = window.innerHeight <= 800 ? 200 : 100;
 
-    teamGrids.forEach((grid, i) => {
-      gsap.to(grid, {
-        scrollTrigger: {
-          trigger: ".ourTeamGrids",
-          start: "top 200px",
-          end: "+=" + endLocation,
-          scrub: 2,
-          // markers: true,
-          id: `grid-${i}`,
-        },
-        xPercent: 0,
-        yPercent: 0,
-        rotateZ: 0,
-        duration: 3,
-      });
-    });
+  //   teamGrids.forEach((grid, i) => {
+  //     gsap.to(grid, {
+  //       scrollTrigger: {
+  //         trigger: ".ourTeamGrids",
+  //         start: "top 200px",
+  //         end: "+=" + endLocation,
+  //         scrub: 2,
+  //         // markers: true,
+  //         id: `grid-${i}`,
+  //       },
+  //       xPercent: 0,
+  //       yPercent: 0,
+  //       rotateZ: 0,
+  //       duration: 3,
+  //     });
+  //   });
 
-  });
+  // });
 
   return (
     <Box sx={MUIStyle.BuildForMain}>
