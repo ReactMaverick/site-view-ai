@@ -10,12 +10,15 @@ import { commonColor } from "@/values/Colors/CommonColor";
 import { usePathname } from "next/navigation";
 
 const menuItems = [
-  { label: "Home", path: "/home", theme: 'light' },
-  { label: "Why SiteView", path: "/why-site-view", theme: 'light' },
-  { label: "Our Tech", path: "/our-tech", theme: 'dark' },
-  { label: "Blogs", path: "/blogs", theme: 'light' },
-  { label: "FAQ", path: "/faq", theme: 'light' },
-  { label: "Contact Us", path: "/contact-us", theme: 'light' },
+  { label: "Home", path: "/home", theme: 'light', shouldRender: true },
+  { label: "Why SiteView", path: "/why-site-view", theme: 'light', shouldRender: true },
+  { label: "Our Tech", path: "/our-tech", theme: 'dark', shouldRender: true },
+  { label: "Blogs", path: "/blogs", theme: 'light', shouldRender: true },
+  { label: "FAQ", path: "/faq", theme: 'light', shouldRender: true },
+  { label: "Contact Us", path: "/contact-us", theme: 'light', shouldRender: true },
+  { label: "Privacy Policy", path: "/privacy-policy", theme: 'light', shouldRender: false },
+  { label: "Terms & Conditions", path: "/terms-conditions", theme: 'light', shouldRender: false },
+  { label: "Cookie Policy", path: "/cookie-policy", theme: 'light', shouldRender: false },
 ];
 export default function Header({ theme = "light" }) {
 
@@ -110,7 +113,7 @@ export default function Header({ theme = "light" }) {
                     },
                   ]}
                 >
-                  {menuItems.map(({ label, path }, index) => (
+                  {menuItems.map(({ label, path, shouldRender }, index) => shouldRender && (
                     <Box component="li" key={path} sx={MUIStyle.HeaderMenuLi}>
                       <Link
                         className={
@@ -158,6 +161,7 @@ export default function Header({ theme = "light" }) {
                         marginTop: "20px",
                       },
                     ]}
+                    className={styles.loginButton}
                   >
                     Login
                   </Button>
@@ -178,6 +182,7 @@ export default function Header({ theme = "light" }) {
                 opacity: isSticky ? 0 : 1,
               },
             ]}
+            className={activeMenu?.theme === "light" ? styles.loginButtonLight : styles.loginButtonDark}
           >
             Login{" "}
           </Button>

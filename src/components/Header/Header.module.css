@@ -36,3 +36,15 @@
     transform: none;
   }
 }
+
+.loginButtonLight:hover {
+  background: transparent;
+  color: #030712;
+  box-shadow: none;
+}
+
+.loginButtonDark:hover {
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+}

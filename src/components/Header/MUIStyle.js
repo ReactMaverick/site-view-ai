@@ -11,13 +11,6 @@ export const MUIStyle = {
     position: "absolute",
     top: "0",
     left: "0",
-    padding: {
-      xs: "0",
-      sm: "0",
-      md: "0",
-      lg: "0",
-      xl: "26px 0px",
-    },
     zIndex: "999",
     // borderBottom: "1px solid",
   },
@@ -95,11 +88,11 @@ export const MUIStyle = {
     lineHeight: "1.8",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
-    "&:hover": {
-      background: commonColor.trans,
-      boxShadow: "none",
-      color: commonColor.black,
-    },
+    // "&:hover": {
+    //   background: commonColor.trans,
+    //   boxShadow: "none",
+    //   color: commonColor.black,
+    // },
   },
 
   MAinMenuBox: {

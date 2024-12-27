@@ -18,86 +18,86 @@ export default function OnsiteSection() {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
   }, []);
 
-  // useGSAP(() => {
+  useGSAP(() => {
 
-  //   const onSiteContent = gsap.utils.toArray(".onsite-content");
+    const onSiteContent = gsap.utils.toArray(".onsite-content");
 
-  //   gsap.set(onSiteContent, {
-  //     xPercent: (i) => i === 0 ? 50 : -65,
-  //     scale: 1.2,
-  //   });
+    gsap.set(onSiteContent, {
+      xPercent: (i) => i === 0 ? 50 : -65,
+      scale: 1.2,
+    });
 
-  //   gsap.set('.onsite-heading', {
-  //     y: -100,
-  //     opacity: 0,
-  //   });
+    gsap.set('.onsite-heading', {
+      y: -100,
+      opacity: 0,
+    });
 
-  //   gsap.set('.onsite-content-text', {
-  //     opacity: 0,
-  //   });
+    gsap.set('.onsite-content-text', {
+      opacity: 0,
+    });
 
-  //   gsap.to(onSiteSec.current, {
-  //     scrollTrigger: {
-  //       trigger: onSiteSec.current,
-  //       start: "top top",
-  //       end: "+=5000",
-  //       scrub: 1,
-  //       pin: true,
-  //       markers: true,
-  //       id: "onsiteSection",
-  //     }
-  //   });
+    gsap.to(onSiteSec.current, {
+      scrollTrigger: {
+        trigger: onSiteSec.current,
+        start: "top top",
+        end: "+=5000",
+        scrub: 1,
+        pin: true,
+        markers: true,
+        id: "onsiteSection",
+      }
+    });
 
-  //   gsap.to(onSiteContent, {
-  //     xPercent: 0,
-  //     scale: 1,
-  //     scrollTrigger: {
-  //       trigger: onSiteSec.current,
-  //       start: "top top",
-  //       end: "+=5000",
-  //       scrub: 1,
-  //       markers: true,
-  //       id: "onsiteContent",
-  //     }
-  //   });
+    gsap.to(onSiteContent, {
+      xPercent: 0,
+      scale: 1,
+      scrollTrigger: {
+        trigger: onSiteSec.current,
+        start: "top top",
+        end: "+=5000",
+        scrub: 1,
+        markers: true,
+        id: "onsiteContent",
+      }
+    });
 
-  //   gsap.to('.onsite-heading', {
-  //     y: 0,
-  //     opacity: 1,
-  //     scrollTrigger: {
-  //       trigger: onSiteSec.current,
-  //       start: "top top",
-  //       end: "+=1000",
-  //       scrub: 1,
-  //       markers: true,
-  //       id: "onsiteHeading",
-  //     }
-  //   });
+    gsap.to('.onsite-heading', {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: onSiteSec.current,
+        start: "top top",
+        end: "+=1000",
+        scrub: 1,
+        markers: true,
+        id: "onsiteHeading",
+      }
+    });
 
-  //   gsap.to('.onsite-content-text', {
-  //     // opacity: 1,
-  //     scrollTrigger: {
-  //       trigger: onSiteSec.current,
-  //       start: "top top",
-  //       end: "+=3000",
-  //       scrub: 1,
-  //       markers: true,
-  //       id: "onsiteHeading",
-  //     },
-  //     keyframes: {
-  //       "0%": {
-  //         opacity: 0,
-  //       },
-  //       "75%": {
-  //         opacity: 0,
-  //       },
-  //       "100%": {
-  //         opacity: 1,
-  //       }
-  //     }
-  //   });
+    gsap.to('.onsite-content-text', {
+      // opacity: 1,
+      scrollTrigger: {
+        trigger: onSiteSec.current,
+        start: "top top",
+        end: "+=3000",
+        scrub: 1,
+        markers: true,
+        id: "onsiteHeading",
+      },
+      keyframes: {
+        "0%": {
+          opacity: 0,
+        },
+        "75%": {
+          opacity: 0,
+        },
+        "100%": {
+          opacity: 1,
+        }
+      }
+    });
 
-  // });
+  });
 
   return (
     <Box sx={MUIStyle.OnsiteSectionMain} ref={onSiteSec}>
