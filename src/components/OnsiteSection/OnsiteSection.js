@@ -43,7 +43,7 @@ export default function OnsiteSection() {
         end: "+=5000",
         scrub: 1,
         pin: true,
-        markers: true,
+        // markers: true,
         id: "onsiteSection",
       }
     });
@@ -56,7 +56,7 @@ export default function OnsiteSection() {
         start: "top top",
         end: "+=5000",
         scrub: 1,
-        markers: true,
+        // markers: true,
         id: "onsiteContent",
       }
     });
@@ -69,7 +69,7 @@ export default function OnsiteSection() {
         start: "top top",
         end: "+=1000",
         scrub: 1,
-        markers: true,
+        // markers: true,
         id: "onsiteHeading",
       }
     });
@@ -81,7 +81,7 @@ export default function OnsiteSection() {
         start: "top top",
         end: "+=3000",
         scrub: 1,
-        markers: true,
+        // markers: true,
         id: "onsiteHeading",
       },
       keyframes: {

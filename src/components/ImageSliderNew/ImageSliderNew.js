@@ -10,10 +10,7 @@ import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 
 export default function ImageSlider({
-    slideComponents = [
-        <div>Hello</div>,
-        <div>World</div>,
-    ],
+    slideComponents = [],
     className = "image-slider-container",
 }) {
     return (

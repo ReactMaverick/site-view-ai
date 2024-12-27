@@ -33,7 +33,7 @@ export default function ConstructionProject() {
         end: "+=5000",
         scrub: 1,
         pin: true,
-        markers: true,
+        // markers: true,
         id: "constructionProjectBoxes",
         onUpdate: self => {
           const progress = self.progress;
