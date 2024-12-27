@@ -18,7 +18,8 @@ export const MUIStyle = {
     alignItems: "center",
     flexDirection: "column",
     backgroundColor: commonColor.black,
-    position: 'relative'
+    position: 'relative',
+    overflow: 'hidden',
   },
 
   VisionRow: {

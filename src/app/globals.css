@@ -378,6 +378,15 @@ p.BlogContent {
     margin-left: auto !important;
   }
 
+
+}
+@media (min-width: 900px) {
+  .construction-project-box:nth-child(odd) {
+    margin-left: auto !important;
+  }
+  .construction-project-box:nth-child(even) {
+    margin-right: auto !important;
+  }
 }
 
 @media screen and (max-width: 600px) and (min-width: 0px) {

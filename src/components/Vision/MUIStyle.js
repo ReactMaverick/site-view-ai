@@ -7,9 +7,9 @@ export const MUIStyle = {
   VisionMain: {
     width: "100%",
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
-      md: "100px 0",
+      xs: "6  0px 0",
+      sm: "60px 0",
+      md: "60px 0",
       lg: "284px 0",
       xl: "284px 0",
     },
@@ -18,7 +18,8 @@ export const MUIStyle = {
     alignItems: "center",
     flexDirection: "column",
     backgroundColor: commonColor.black,
-    position: "relative"
+    position: "relative",
+    overflow: "hidden",
   },
 
   VisionRow: {
@@ -59,13 +60,13 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
-      md: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text20,
+      md: FONT_SIZE.text22,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
     },
-    lineHeight: "40px",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.white,
     marginBottom: "20px",
@@ -79,7 +80,7 @@ export const MUIStyle = {
   },
   smallTitle: {
     fontSize: FONT_SIZE.text16,
-    lineHeight: "24px",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
     display: "block",
@@ -93,7 +94,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.text14,
       xl: FONT_SIZE.text16,
     },
-    lineHeight: "26px",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.white,
     marginBottom: "16px",
@@ -102,7 +103,7 @@ export const MUIStyle = {
     maxWidth: {
       xs: "100%",
       sm: "100%",
-      md: "50%",
+      md: "40%",
       lg: "55%",
       xl: "55%",
     },
