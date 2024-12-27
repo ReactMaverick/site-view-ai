@@ -8,6 +8,7 @@ import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
 import { tabBarSecContentWhySiteView } from "./TabBarSecContent";
 import { useGSAP } from "@gsap/react";
 import { commonColor } from "@/values/Colors/CommonColor";
+import ImageSlider from "../ImageSliderNew/ImageSliderNew";
 
 export default function TabBarSec({
   theme = "light",
@@ -133,23 +134,38 @@ export default function TabBarSec({
           <Box sx={MUIStyle.TabBarSecMyColLeft}>
             <Box sx={MUIStyle.TabBarSecImageBox} ref={imagesRef}>
               {activeIndex !== null && tabBarContents[activeIndex].images && (
-                tabBarContents[activeIndex].images.map((image, index) => (
-                  <Box
-                    key={index}
-                    component={"img"}
-                    src={image}
-                    alt="TabBarSec"
-                    sx={[MUIStyle.TestImage,
-                    index !== 0 ? {
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      zIndex: 10 - index,
-                      transform: `translateX(${index * 6}%) scale(${100 - index * 5}%)`,
-                    } : { position: "relative", zIndex: 10 }
-                    ]}
-                  />
-                ))
+                <ImageSlider
+                  // key={index}
+                  slideComponents={tabBarContents[activeIndex].images.map((image, index) => (
+                    <Box
+                      key={index}
+                      component={"img"}
+                      src={image}
+                      alt="TabBarSec"
+                      sx={MUIStyle.TestImage}
+                    />
+                  ))
+                  }
+
+                />
+                // tabBarContents[activeIndex].images.map((image, index) => (
+                //   // <Box
+                //   //   key={index}
+                //   //   component={"img"}
+                //   //   src={image}
+                //   //   alt="TabBarSec"
+                //   //   sx={[MUIStyle.TestImage,
+                //   //   index !== 0 ? {
+                //   //     position: "absolute",
+                //   //     top: 0,
+                //   //     left: 0,
+                //   //     zIndex: 10 - index,
+                //   //     transform: `translateX(${index * 6}%) scale(${100 - index * 5}%)`,
+                //   //   } : { position: "relative", zIndex: 10 }
+                //   //   ]}
+                //   // />
+
+                // ))
               )}
               {/* <Box
                 component={"img"}

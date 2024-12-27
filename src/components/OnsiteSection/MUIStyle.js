@@ -5,18 +5,20 @@ export const MUIStyle = {
   OnsiteSectionMain: {
     width: "100%",
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
-      md: "100px 10px",
-      lg: "284px 10px",
-      xl: "284px 130px",
+      xs: "50px 0",
+      sm: "50px 0",
+      md: "50px 0",
+      lg: "50px 0",
+      xl: "100px 0",
     },
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     backgroundColor: commonColor.black,
-    position: 'relative'
+    position: 'relative',
+    height: '100vh',
+    overflow: 'hidden',
   },
 
   OnsiteSectionHeadingBoxOuter: {
@@ -36,9 +38,9 @@ export const MUIStyle = {
     marginBottom: {
       xs: "80px",
       sm: "80px",
-      md: "96px",
-      lg: "96px",
-      xl: "96px",
+      md: "48px",
+      lg: "48px",
+      xl: "48px",
     },
   },
   SubHeading: {
@@ -83,9 +85,9 @@ export const MUIStyle = {
     paddingTop: {
       xs: "0",
       sm: "0",
-      md: "135px",
-      lg: "135px",
-      xl: "135px",
+      md: "0",
+      lg: "0",
+      xl: "0",
     },
 
     display: "flex",
@@ -108,15 +110,15 @@ export const MUIStyle = {
   },
   ColLeft: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
     flexDirection: "column",
     width: {
       xs: "100%",
       sm: "100%",
-      md: "70%",
-      lg: "70%",
-      xl: "70%",
+      md: "50%",
+      lg: "50%",
+      xl: "50%",
     },
     "& img": {
       width: {
@@ -146,15 +148,15 @@ export const MUIStyle = {
 
   ColRight: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
     flexDirection: "column",
     width: {
       xs: "100%",
       sm: "100%",
-      md: "30%",
-      lg: "30%",
-      xl: "30%",
+      md: "50%",
+      lg: "50%",
+      xl: "50%",
     },
     "& img": {
       width: {
@@ -185,9 +187,9 @@ export const MUIStyle = {
     padding: {
       xs: "0",
       sm: "0",
-      md: "0 140px",
-      lg: "0 140px",
-      xl: "0 140px",
+      md: "0 50px",
+      lg: "0 50px",
+      xl: "0 50px",
     },
   },
   ContentHeading: {

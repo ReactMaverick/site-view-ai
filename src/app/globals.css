@@ -353,3 +353,37 @@ p.BlogContent {
 .partnersLogoSlider .swiper-wrapper {
   transition-timing-function: linear;
 }
+
+.image-slider-container {
+  width: 504px;
+  height: 560px;
+  margin-left: 0 !important;
+}
+
+.swiper-3d .swiper-slide-shadow {
+  background: transparent !important;
+}
+
+@media screen and (max-width: 1536px) and (min-width: 600px) {
+  .image-slider-container {
+    width: 405px;
+    height: 450px;
+    /* margin-left: 0 !important; */
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .image-slider-container {
+    margin-left: auto !important;
+  }
+
+}
+
+@media screen and (max-width: 600px) and (min-width: 0px) {
+  .image-slider-container {
+    width: 297px;
+    height: 320px;
+  }
+
+}

@@ -5,17 +5,18 @@ export const MUIStyle = {
   ConstructionProjectMain: {
     width: "100%",
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
-      md: "100px 130px",
-      lg: "284px 130px",
-      xl: "284px 130px",
+      xs: "50px 0",
+      sm: "50px 0",
+      md: "50px 0",
+      lg: "50px 0",
+      xl: "100px 0",
     },
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     backgroundColor: commonColor.black,
+    height: '100vh',
   },
 
   workflowHeadingBoxOuter: {
@@ -79,13 +80,6 @@ export const MUIStyle = {
     transition: "all 0.5s ease-in-out",
   },
   ConstructionProjectGrid: {
-    padding: {
-      xs: "0",
-      sm: "0",
-      md: "148px 0",
-      lg: "148px 100px",
-      xl: "148px 100px",
-    },
     display: "grid",
     gridTemplateColumns: {
       xs: "1fr",
