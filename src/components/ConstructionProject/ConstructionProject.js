@@ -41,17 +41,17 @@ export default function ConstructionProject() {
           // Determining the current box based on the progress
           let currentIndex = -1;
           if (progress > 0 && progress <= 0.25) {
-            currentIndex = 0;
-            gsap.to(pointer, { rotate: 75, duration: 0.5 });
-          } else if (progress > 0.25 && progress <= 0.5) {
             currentIndex = 1;
             gsap.to(pointer, { rotate: 165, duration: 0.5 });
-          } else if (progress > 0.5 && progress <= 0.75) {
+          } else if (progress > 0.25 && progress <= 0.5) {
             currentIndex = 3;
             gsap.to(pointer, { rotate: 255, duration: 0.5 });
-          } else if (progress > 0.75 && progress < 1) {
+          } else if (progress > 0.5 && progress <= 0.75) {
             currentIndex = 2;
             gsap.to(pointer, { rotate: 345, duration: 0.5 });
+          } else if (progress > 0.75 && progress < 1) {
+            currentIndex = 0;
+            gsap.to(pointer, { rotate: 345 + 90, duration: 0.5 });
           }
 
           // Resetting the background color of all boxes

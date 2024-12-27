@@ -8,11 +8,12 @@ export const constructionContent = [
         content: "Connect the 360-camera to SiteView’s app, mount it on your helmet, and effortlessly capture complete site visuals with no blind spots or missed areas."
     },
     {
+        title: "3. MONITOR",
+        content: "Your project is fully documented, enabling progress verification, condition reviews, and side-by-side comparisons across dates anytime, anywhere."
+    },
+    {
         title: "2. VIEW",
         content: "SiteView automatically organizes 360° photos by floor plan and date, allowing you to navigate the site remotely anytime."
     },
-    {
-        title: "3. MONITOR",
-        content: "Your project is fully documented, enabling progress verification, condition reviews, and side-by-side comparisons across dates anytime, anywhere."
-    }
+
 ]
