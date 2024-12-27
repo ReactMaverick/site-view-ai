@@ -52,7 +52,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.text14,
       xl: FONT_SIZE.text16,
     },
-    lineHeight: "32px",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
     textAlign: "center",
@@ -67,7 +67,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
     },
-    lineHeight: "40px",
+   lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.white,
     textTransform: "uppercase",
@@ -174,7 +174,7 @@ export const MUIStyle = {
 
   ContactBoxText: {
     fontSize: FONT_SIZE.heading24,
-    lineHeight: "32px",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey3,
     textAlign: {
@@ -258,7 +258,7 @@ export const MUIStyle = {
 
   FAQSecAccrodinHeading: {
     fontSize: FONT_SIZE.heading24,
-    lineHeight: "32px",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
     textAlign: "left",
@@ -266,7 +266,7 @@ export const MUIStyle = {
   },
   FAQSecAccrodiontext: {
     fontSize: FONT_SIZE.text20,
-    lineHeight: "28px",
+ lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
     textAlign: "left",
@@ -274,7 +274,7 @@ export const MUIStyle = {
   },
   FaqHeading: {
     fontSize: FONT_SIZE.heading32,
-    lineHeight: "40px",
+   lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.black,
     textTransform: "uppercase",
@@ -308,7 +308,7 @@ export const MUIStyle = {
       md: FONT_SIZE.text18,
       lg: FONT_SIZE.text20,
     },
-    lineHeight: "1.8",
+  lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
     "&:hover": {

@@ -56,7 +56,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
     },
-    lineHeight: "40px",
+   lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.white,
     textTransform: "uppercase",

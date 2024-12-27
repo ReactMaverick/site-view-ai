@@ -10,13 +10,13 @@ import OurTechSVGBG1 from "../OurTechSVGBG1/OurTechSVGBG1";
 export default function Vision() {
 
   return (
-    <Box sx={MUIStyle.VisionMain}>
-      <Box sx={MUIStyle.VisionSVGContainer}>
-        {/* <SiteViewSVG
+    <Box sx={MUIStyle.VisionMain} id="vision">
+      {/* <Box sx={MUIStyle.VisionSVGContainer}>
+        <SiteViewSVG
           fillOpacity="0.05"
-        /> */}
-        {/* <OurTechSVGBG1 /> */}
-      </Box>
+        />
+         <OurTechSVGBG1 /> 
+      </Box> */}
       <Container maxWidth="xl">
         <Box sx={MUIStyle.VisionRow}>
           <Box sx={MUIStyle.VisionColLeft}>

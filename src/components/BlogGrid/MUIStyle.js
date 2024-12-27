@@ -6,10 +6,10 @@ export const MUIStyle = {
   SingleBlogMain: {
     width: "100%",
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
-      md: "132px 0",
-      lg: "132px 0",
+      xs: "60px 0",
+      sm: "60px 0",
+      md: "60px 0",
+      lg: "60px 0",
       xl: "132px 0",
     },
     background: `url(${CONTAINSBLOG})`,

@@ -41,7 +41,7 @@ export const MUIStyle = {
             xs: "100%",
             sm: "80%",
             md: "50%",
-            lg: "48%",
+            lg: "60%",
             xl: "48%",
         },
 

@@ -52,7 +52,7 @@ export const MUIStyle = {
         fontSize: FONT_SIZE.text20,
         color: commonColor.grey,
         fontWeight: FONT_WEIGHT.MEDIUM,
-        lineHeight: "28px",
+     lineHeight: "1.5em",
         marginBottom: "30px",
         "& strong":{
             fontWeight: FONT_WEIGHT.BOLD,
@@ -63,7 +63,7 @@ export const MUIStyle = {
         fontSize: FONT_SIZE.heading24,
         color: commonColor.black,
         fontWeight: FONT_WEIGHT.SEMI_BOLD,
-        lineHeight: "32px",
+        lineHeight: "1.5em",
         marginBottom: "30px",
     },
     BlogDetailsUl:{
