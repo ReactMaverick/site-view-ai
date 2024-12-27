@@ -85,7 +85,7 @@ export const MUIStyle = {
       md: FONT_SIZE.text16,
       lg: FONT_SIZE.text16,
     },
-    lineHeight: "1.8",
+  lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
     // "&:hover": {

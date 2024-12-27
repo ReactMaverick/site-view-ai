@@ -56,7 +56,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.text14,
       xl: FONT_SIZE.text16,
     },
-    lineHeight: "40px",
+   lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.black,
     transition: "all 0.5s ease-in-out",
@@ -64,7 +64,7 @@ export const MUIStyle = {
   },
   ContactContentText: {
     fontSize: FONT_SIZE.heading24,
-    lineHeight: "32px",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.black,
     transition: "all 0.5s ease-in-out",
@@ -86,7 +86,7 @@ export const MUIStyle = {
   },
   ContactContenttitle: {
     fontSize: FONT_SIZE.heading24,
-    lineHeight: "32px",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.black,
     transition: "all 0.5s ease-in-out",
@@ -99,7 +99,7 @@ export const MUIStyle = {
   },
   Text: {
     fontSize: FONT_SIZE.text20,
-    lineHeight: "28px",
+ lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.black,
     transition: "all 0.5s ease-in-out",
@@ -124,7 +124,7 @@ export const MUIStyle = {
   },
   Textgrey: {
     fontSize: FONT_SIZE.text20,
-    lineHeight: "28px",
+ lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
     transition: "all 0.5s ease-in-out",

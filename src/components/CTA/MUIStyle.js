@@ -130,7 +130,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.text22,
       xl: FONT_SIZE.heading24,
     },
-    lineHeight: "32px",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.white,
   },
@@ -183,7 +183,7 @@ export const MUIStyle = {
     },
     textTransform: "capitalize",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
-    lineHeight: "32px",
+    lineHeight: "1.5em",
     transition: "all 0.8s ease",
     "&:hover": {
       boxShadow: "none",
