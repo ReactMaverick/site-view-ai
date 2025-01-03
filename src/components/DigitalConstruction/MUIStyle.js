@@ -5,17 +5,18 @@ export const MUIStyle = {
   DigitalConstructionMain: {
     width: "100%",
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
-      md: "100px 0",
-      lg: "60px 0 0",
-      xl: "284px 0 0",
+      xs: "50px 0",
+      sm: "50px 0",
+      md: "50px 0",
+      lg: "50px 0",
+      xl: "100px 0",
     },
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     backgroundColor: commonColor.black,
+    height: '100vh'
   },
 
   DigitalConstructionHeadingBoxOuter: {
@@ -35,9 +36,9 @@ export const MUIStyle = {
     marginBottom: {
       xs: "30px",
       sm: "30px",
-      md: "96px",
-      lg: "96px",
-      xl: "96px",
+      md: "30px",
+      lg: "30px",
+      xl: "40px",
     },
   },
   SubHeading: {
@@ -53,7 +54,13 @@ export const MUIStyle = {
     color: commonColor.grey,
     textAlign: "center",
     transition: "all 0.5s ease-in-out",
-    marginBottom: "24px",
+    marginBottom: {
+      xs: "10px",
+      sm: "10px",
+      md: "10px",
+      lg: "10px",
+      xl: "20px",
+    },
   },
   Heading: {
     fontSize: {
@@ -63,7 +70,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
     },
-   lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.white,
     textTransform: "uppercase",
@@ -93,15 +100,15 @@ export const MUIStyle = {
       width: {
         xs: "100%",
         sm: "100%",
-        md: "450px",
-        lg: "485px",
-        xl: "485px",
+        md: "400px",
+        lg: "400px",
+        xl: "500px",
       },
       height: {
         xs: "100%",
         sm: "100%",
         md: "400px",
-        lg: "500px",
+        lg: "400px",
         xl: "500px",
       },
       objectFit: "contain",
@@ -187,7 +194,7 @@ export const MUIStyle = {
   },
   ContentHeading: {
     fontSize: FONT_SIZE.text20,
- lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.black,
     textAlign: "center",

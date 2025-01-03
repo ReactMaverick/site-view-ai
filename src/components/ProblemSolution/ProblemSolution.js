@@ -36,36 +36,45 @@ export default function ProblemSolution() {
     const problemCards = gsap.utils.toArray(".problem-main");
     const solutionCards = gsap.utils.toArray(".solution-main");
 
-    problemCards.forEach((card, i) => {
-      gsap.to(card, {
-        scrollTrigger: {
-          trigger: card,
-          start: "top 80%",
-          end: "bottom center",
-          scrub: true,
-          // markers: true,
-          id: `problem-card-${i}`,
-          snap: 1 / 3,
-        },
-        xPercent: 0,
-        ease: "power1.inOut",
-      });
+    gsap.to('.problem-solution-main', {
+      scrollTrigger: {
+        trigger: '.problem-solution-main',
+        start: "top top",
+        end: "+=3000px",
+        scrub: true,
+        // markers: true,
+        pin: true,
+      },
     });
 
-    solutionCards.forEach((card, i) => {
-      gsap.to(card, {
-        scrollTrigger: {
-          trigger: card,
-          start: "top 80%",
-          end: "bottom center",
-          scrub: true,
-          // markers: true,
-          id: `solution-card-${i}`,
-          snap: 1 / 3,
-        },
-        xPercent: 0,
-        ease: "power1.inOut",
-      });
+    gsap.to(problemCards, {
+      scrollTrigger: {
+        trigger: '.problem-solution-main',
+        start: "top top",
+        end: "+=2500px",
+        scrub: true,
+        // markers: true,
+        id: `solution-card`,
+        snap: 1 / 2,
+      },
+      xPercent: 0,
+      ease: "power1.inOut",
+      stagger: 0.05,
+    });
+
+    gsap.to(solutionCards, {
+      scrollTrigger: {
+        trigger: '.problem-solution-main',
+        start: "top top",
+        end: "+=2500px",
+        scrub: true,
+        // markers: true,
+        id: `solution-card`,
+        snap: 1 / 2,
+      },
+      xPercent: 0,
+      ease: "power1.inOut",
+      stagger: 0.05,
     });
 
   })
@@ -89,7 +98,23 @@ export default function ProblemSolution() {
           </Box>
         </Box>
         <Box sx={MUIStyle.ProblemSolutionBox}>
-          <Grid container columnSpacing={5} rowSpacing={3}>
+          <Grid
+            container
+            columnSpacing={{
+              xs: 1,
+              sm: 1,
+              md: 1,
+              lg: 1,
+              xl: 3,
+            }}
+            rowSpacing={{
+              xs: 1,
+              sm: 1,
+              md: 1,
+              lg: 1,
+              xl: 3,
+            }}
+          >
             {problemSolutionPairs.map(({ problem, solution, key }) => (
               <Box sx={MUIStyle.ProblemSolutionPair} key={key}>
                 {problem}

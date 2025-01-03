@@ -24,11 +24,11 @@ export const MUIStyle = {
     padding: "0",
     position: "relative",
     paddingBottom: {
-      xs: "30px",
-      sm: "30px",
-      md: "30px",
-      lg: "30px",
-      xl: "50px",
+      xs: "10px",
+      sm: "10px",
+      md: "15px",
+      lg: "15px",
+      xl: "20px",
     },
   },
   AboutSecHeadingBox: {
@@ -52,7 +52,13 @@ export const MUIStyle = {
     fontWeight: FONT_WEIGHT.MEDIUM,
     lineHeight: FONT_SIZE.heading28,
     textAlign: "center",
-    marginBottom: "24px",
+    marginBottom: {
+      xs: "10px",
+      sm: "10px",
+      md: "10px",
+      lg: "10px",
+      xl: "20px",
+    },
   },
   AboutSecHeading: {
     // color: commonColor.black,
@@ -214,6 +220,7 @@ export const MUIStyle = {
       xl: "row",
     },
     gap: "20px",
+    position: "relative",
   },
   TabBarSecMyColLeft: {
     display: "flex",
@@ -229,6 +236,8 @@ export const MUIStyle = {
       lg: "50%",
       xl: "70%",
     },
+    position: 'sticky',
+    top: '2vh'
   },
   TabBarSecMyColRight: {
     display: "flex",

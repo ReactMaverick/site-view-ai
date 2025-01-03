@@ -61,7 +61,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
     },
-   lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.black,
     marginBottom: "20px",
@@ -90,8 +90,8 @@ export const MUIStyle = {
     maxWidth: {
       xs: "100%",
       sm: "100%",
-      md: "50%",
-      lg: "55%",
+      md: "35%",
+      lg: "35%",
       xl: "55%",
     },
     display: "flex",
@@ -126,7 +126,7 @@ export const MUIStyle = {
       md: FONT_SIZE.text18,
       lg: FONT_SIZE.text20,
     },
-  lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
     "&:hover": {

@@ -7,14 +7,15 @@ export const MUIStyle = {
         position: "relative",
         width: "100%",
         padding: {
-            xs: "100px 0",
-            sm: "100px 0",
-            md: "100px 0",
-            lg: "175px 0",
-            xl: "175px 0",
+            xs: "0 0 50px 0",
+            sm: "0 0 50px 0",
+            md: "0 0 50px 0",
+            lg: "0 0 50px 0",
+            xl: "100px 0",
         },
         overflow: "hidden",
         position: "relative",
+        height: "100vh",
     },
     AboutSecOuterBox: {
         display: "flex",
@@ -24,21 +25,20 @@ export const MUIStyle = {
         gap: "20px",
         padding: "0",
         position: "relative",
-        paddingTop: "30px",
-        paddingBottom: {
-            xs: "100px",
-            sm: "100px",
-            md: "168px",
-            lg: "168px",
-            xl: "168px",
-        }
+        padding: {
+            xs: "10px 10px",
+            sm: "10px 10px",
+            md: "10px 10px",
+            lg: "10px 10px",
+            xl: "20px 20px",
+        },
     },
     AboutSecHeadingBox: {
         width: {
             xs: "100%",
-            sm: "40%",
-            md: "40%",
-            lg: "40%",
+            sm: "60%",
+            md: "60%",
+            lg: "60%",
             xl: "40%",
         },
     },
@@ -54,7 +54,13 @@ export const MUIStyle = {
         fontWeight: FONT_WEIGHT.MEDIUM,
         lineHeight: FONT_SIZE.heading28,
         textAlign: "center",
-        marginBottom: "24px",
+        marginBottom: {
+            xs: "10px",
+            sm: "10px",
+            md: "0",
+            lg: "0",
+            xl: "20px",
+        },
     },
     AboutSecHeading: {
         color: commonColor.white,
@@ -74,8 +80,8 @@ export const MUIStyle = {
         width: {
             xs: "100%",
             sm: "100%",
-            md: "80%",
-            lg: "70%",
+            md: "90%",
+            lg: "90%",
             xl: "70%",
         },
         margin: "0 auto",
@@ -86,7 +92,13 @@ export const MUIStyle = {
     ProblemSolutionPair: {
         display: "flex",
         flexDirection: "row",
-        gap: '2rem',
+        gap: {
+            xs: "10px",
+            sm: "10px",
+            md: "10px",
+            lg: "10px",
+            xl: "20px",
+        },
     },
     BannerSVGContainer: {
         position: "absolute",

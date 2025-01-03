@@ -19,6 +19,7 @@ const menuItems = [
   { label: "Privacy Policy", path: "/privacy-policy", theme: 'light', shouldRender: false },
   { label: "Terms & Conditions", path: "/terms-conditions", theme: 'light', shouldRender: false },
   { label: "Cookie Policy", path: "/cookie-policy", theme: 'light', shouldRender: false },
+  { label: "Blog Details", path: "/blog-details", theme: 'light', shouldRender: false },
 ];
 export default function Header({ theme = "light" }) {
 
@@ -44,7 +45,7 @@ export default function Header({ theme = "light" }) {
   // console.log("pathName", pathName);
 
   useEffect(() => {
-    const activeMenu = menuItems.find(item => item.path === pathName);
+    const activeMenu = menuItems.find(item => pathName.includes(item.path));
 
     setActiveMenu(activeMenu);
   }, [pathName])

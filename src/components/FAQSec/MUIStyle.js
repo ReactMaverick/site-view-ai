@@ -7,11 +7,11 @@ export const MUIStyle = {
   FAQSecMain: {
     width: "100%",
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
-      md: "100px 0",
-      lg: "80px 0",
-      xl: "280px 0 100px",
+      xs: "50px 0",
+      sm: "50px 0",
+      md: "50px 0",
+      lg: "50px 0",
+      xl: "100px 0",
     },
     display: "flex",
     justifyContent: "center",
@@ -34,11 +34,11 @@ export const MUIStyle = {
       xl: "45%",
     },
     marginBottom: {
-      xs: "30px",
-      sm: "30px",
-      md: "30px",
-      lg: "30px",
-      xl: "96px",
+      xs: "20px",
+      sm: "20px",
+      md: "20px",
+      lg: "20px",
+      xl: "40px",
     },
   },
   Heading: {
@@ -49,7 +49,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
     },
-   lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.white,
     textTransform: "uppercase",
@@ -70,17 +70,17 @@ export const MUIStyle = {
     flexDirection: "column",
     width: "100%",
     gap: {
-      xs: "20px",
-      sm: "20px",
-      md: "20px",
-      lg: "20px",
-      xl: "30px",
+      xs: "15px",
+      sm: "15px",
+      md: "15px",
+      lg: "15px",
+      xl: "20px",
     },
     width: {
       xs: "100%",
       sm: "100%",
-      md: "60%",
-      lg: "60%",
+      md: "70%",
+      lg: "70%",
       xl: "60%",
     },
   },
@@ -89,7 +89,13 @@ export const MUIStyle = {
       boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
       borderRadius: "50px",
       backgroundColor: commonColor.white,
-      padding: "15px 20px",
+      padding: {
+        xs: "5px 15px",
+        sm: "5px 15px",
+        md: "5px 15px",
+        lg: "5px 15px",
+        xl: "15px 20px",
+      },
       "&.Mui-expanded": {
         margin: "0px",
       },
@@ -100,7 +106,7 @@ export const MUIStyle = {
   },
 
   FAQSecAccrodinHeading: {
-    fontSize:{
+    fontSize: {
       xs: FONT_SIZE.text20,
       sm: FONT_SIZE.text20,
       md: FONT_SIZE.text20,
@@ -121,7 +127,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.text16,
       xl: FONT_SIZE.text20,
     },
- lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
     textAlign: "left",
@@ -137,7 +143,7 @@ export const MUIStyle = {
       sm: "30px",
       md: "30px",
       lg: "30px",
-      xl: "80px",
+      xl: "40px",
     },
   },
   CustomBtn: {
@@ -160,7 +166,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.text16,
       xl: FONT_SIZE.text20,
     },
-  lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
     "&:hover": {

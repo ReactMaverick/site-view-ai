@@ -45,10 +45,10 @@ export default function DigitalConstruction() {
               ]}
             >
               <Typography variant="h2" sx={MUIStyle.ContentHeading}>
-              360° Site Capture
+                360° Site Capture
               </Typography>
               <Typography variant="body1" sx={MUIStyle.ContentText}>
-              Document every angle with immersive 360° visuals
+                Document every angle with immersive 360° visuals
               </Typography>
             </Box>
           </Box>
@@ -60,7 +60,7 @@ export default function DigitalConstruction() {
             />
           </Box>
           <Box sx={MUIStyle.DigitalColRight}>
-          <Box
+            <Box
               sx={[
                 MUIStyle.DigitalContentBox,
                 {
@@ -69,10 +69,10 @@ export default function DigitalConstruction() {
               ]}
             >
               <Typography variant="h2" sx={MUIStyle.ContentHeading}>
-              Floorplan Management
+                Floorplan Management
               </Typography>
               <Typography variant="body1" sx={MUIStyle.ContentText}>
-              Upload, annotate, and organize floorplans with ease
+                Upload, annotate, and organize floorplans with ease
               </Typography>
             </Box>
             <Box
@@ -84,10 +84,10 @@ export default function DigitalConstruction() {
               ]}
             >
               <Typography variant="h2" sx={MUIStyle.ContentHeading}>
-              Real-Time Uploads
+                Real-Time Uploads
               </Typography>
               <Typography variant="body1" sx={MUIStyle.ContentText}>
-              Sync captured data instantly to the cloud
+                Sync captured data instantly to the cloud
               </Typography>
             </Box>
           </Box>

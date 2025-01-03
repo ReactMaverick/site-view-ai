@@ -29,14 +29,14 @@ export default function SingleBlogContent() {
                 integration approach to construction data so to capture a
                 present status of construction activities (i.e., the project).
               </Typography>
-             
+
             </Box>
             <Button sx={MUIStyle.CustomBtn}>
-                Read More
-                <Box component={"span"} sx={MUIStyle.BtnIcon}>
-                  <Icon icon="solar:arrow-right-up-outline" />
-                </Box>
-              </Button>
+              Read More
+              <Box component={"span"} sx={MUIStyle.BtnIcon}>
+                <Icon icon="solar:arrow-right-up-outline" />
+              </Box>
+            </Button>
           </Box>
         </Box>
       </Container>

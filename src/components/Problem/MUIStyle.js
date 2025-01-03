@@ -4,10 +4,10 @@ import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 export const MUIStyle = {
   ProblemMain: {
     padding: {
-      xs: "12px",
-      sm: "12px",
-      md: "12px",
-      lg: "12px",
+      xs: "10px 12px",
+      sm: "10px 12px",
+      md: "10px 12px",
+      lg: "10px 12px",
       xl: "16px",
     },
     // background: commonColor.white10,
@@ -23,11 +23,11 @@ export const MUIStyle = {
     justifyContent: "center",
     alignItems: "start",
     gap: {
-      xs: "10px",
-      sm: "10px",
-      md: "10px",
-      lg: "10px",
-      xl: "24px",
+      xs: "0",
+      sm: "0",
+      md: "0",
+      lg: "0",
+      xl: "10px",
     },
     borderRadius: "32px",
   },
@@ -35,7 +35,13 @@ export const MUIStyle = {
     display: "flex",
     justifyContent: "start",
     alignItems: "center",
-    gap: "10px",
+    gap: {
+      xs: "10px",
+      sm: "10px",
+      md: "10px",
+      lg: "10px",
+      xl: "24px",
+    },
   },
   Problemicon: {
     width: {
@@ -69,11 +75,11 @@ export const MUIStyle = {
   ProblemText: {
     // color: commonColor.white,
     fontSize: {
-      xs: FONT_SIZE.text16,
-      sm: FONT_SIZE.text16,
-      md: FONT_SIZE.text16,
-      lg: FONT_SIZE.text16,
-      xl: FONT_SIZE.text18,
+      xs: FONT_SIZE.text12,
+      sm: FONT_SIZE.text12,
+      md: FONT_SIZE.text12,
+      lg: FONT_SIZE.text12,
+      xl: FONT_SIZE.text14,
     },
     lineHeight: FONT_SIZE.heading28,
     fontWeight: FONT_WEIGHT.MEDIUM,
