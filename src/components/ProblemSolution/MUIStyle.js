@@ -11,7 +11,7 @@ export const MUIStyle = {
             sm: "0 0 50px 0",
             md: "0 0 50px 0",
             lg: "0 0 50px 0",
-            xl: "100px 0",
+            xl: "0 0 100px 0",
         },
         overflow: "hidden",
         position: "relative",

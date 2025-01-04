@@ -139,7 +139,7 @@ export const MUIStyle = {
         sm: "100%",
         md: "200px",
         lg: "200px",
-        xl: "440px",
+        xl: "250px",
       },
       marginBottom: {
         xs: "25px",
@@ -177,7 +177,7 @@ export const MUIStyle = {
         sm: "100%",
         md: "440px",
         lg: "200px",
-        xl: "440px",
+        xl: "250px",
       },
       marginBottom: {
         xs: "25px",

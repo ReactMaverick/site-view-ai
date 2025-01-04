@@ -8,7 +8,7 @@ export const MUIStyle = {
       sm: "10px 12px",
       md: "10px 12px",
       lg: "10px 12px",
-      xl: "16px",
+      xl: "10px 12px",
     },
     // background: commonColor.white10,
     maxWidth: {
