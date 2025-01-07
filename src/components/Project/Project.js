@@ -63,7 +63,7 @@ export default function Project() {
     //   rotate: (i) => i - 2,
     // });
 
-    const gapFromSides = window.innerWidth >= 900 ? 100 : 40;
+    const gapFromSides = window.innerWidth >= 900 ? 200 : 50;
 
     gsap.set(cards, {
       x: (i) => {
@@ -74,7 +74,9 @@ export default function Project() {
       rotate: (i) => i - 2,
     });
 
-    const endLocation = window.innerHeight <= 800 ? 50 : 100;
+    const endLocation = window.innerHeight <= 800 ? 50 : 0;
+
+    // const endLocation = 0;
 
     cards.forEach((card, i) => {
       ScrollTrigger.create({
