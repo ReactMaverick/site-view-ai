@@ -39,3 +39,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 public/videos/connected-construction.mp4
+
+# zip files
+*.zip
