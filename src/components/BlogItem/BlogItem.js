@@ -18,12 +18,14 @@ export default function BlogItem({
         <Box sx={MUIStyle.BlogImg} component={"img"} src={img} />
       </Box>
       <Box sx={MUIStyle.BlogContent}>
-        <Typography variant="h4" sx={MUIStyle.BlogTitle}>
-          {title}
-        </Typography>
-        <Typography variant="body1" sx={MUIStyle.BlogDesc} className="BlogContent">
-          {desc}
-        </Typography>
+        <Box>
+          <Typography variant="h4" sx={MUIStyle.BlogTitle}>
+            {title}
+          </Typography>
+          <Typography variant="body1" sx={MUIStyle.BlogDesc} className="BlogContent">
+            {desc}
+          </Typography>
+        </Box>
         <Button
           href={"/blog-details/" + slug}
           sx={MUIStyle.CustomBtn}

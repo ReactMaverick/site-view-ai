@@ -2,9 +2,9 @@ import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 
 export const MUIStyle = {
-  BlogItemMain : {
+  BlogItemMain: {
     // maxWidth: "480px",
-    minHeight:"550px",
+    // minHeight: "550px",
     padding: {
       xs: "16px",
       sm: "16px",
@@ -12,13 +12,19 @@ export const MUIStyle = {
       lg: "16px",
       xl: "16px",
     },
-    background: commonColor.white10 ,
+    background: commonColor.white10,
     borderRadius: "16px",
     backdropFilter: "blur(20px)",
   },
   BlogImgItem: {
     width: "100%",
-    height: "230px",
+    height: {
+      xs: "100px",
+      sm: "150px",
+      md: "150px",
+      lg: "150px",
+      xl: "230px",
+    },
     borderRadius: "24px",
     overflow: "hidden",
     "& img": {
@@ -28,33 +34,43 @@ export const MUIStyle = {
     },
   },
   BlogContent: {
-   marginTop: {
+    paddingTop: {
       xs: "16px",
       sm: "16px",
       md: "16px",
       lg: "20px",
       xl: "40px",
     },
+    display: "flex",
+    flexDirection: "column",
+    height: {
+      xs: "calc(100% - 100px)",
+      sm: "calc(100% - 150px)",
+      md: "calc(100% - 150px)",
+      lg: "calc(100% - 150px)",
+      xl: "calc(100% - 230px)",
+    },
+    justifyContent: "space-between",
   },
-  BlogTitle : {
+  BlogTitle: {
     fontSize: {
       xs: FONT_SIZE.heading24,
       sm: FONT_SIZE.heading24,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
-        xl: FONT_SIZE.heading32,
+      xl: FONT_SIZE.heading28,
     },
-   lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.white,
   },
-  BlogDesc : {
+  BlogDesc: {
     fontSize: {
       xs: FONT_SIZE.text14,
       sm: FONT_SIZE.text14,
       md: FONT_SIZE.text14,
-      lg: FONT_SIZE.text16,
-      xl: FONT_SIZE.text20,
+      lg: FONT_SIZE.text14,
+      xl: FONT_SIZE.text18,
     },
     lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
@@ -68,7 +84,7 @@ export const MUIStyle = {
     },
   },
   CustomBtn: {
-    width:"fit-content",
+    width: "fit-content",
     background: commonColor.green,
     border: "2px solid",
     borderColor: commonColor.green,
@@ -82,12 +98,12 @@ export const MUIStyle = {
     gap: "10px",
     transition: "all 0.3s ease-in-out",
     fontSize: {
-      xs: FONT_SIZE.text18,
-      sm: FONT_SIZE.text18,
-      md: FONT_SIZE.text18,
-      lg: FONT_SIZE.text20,
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text16,
+      md: FONT_SIZE.text16,
+      lg: FONT_SIZE.text18,
     },
-  lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
     "&:hover": {
@@ -104,5 +120,5 @@ export const MUIStyle = {
       color: commonColor.green,
     },
   },
- 
+
 };
