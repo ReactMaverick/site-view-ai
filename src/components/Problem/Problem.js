@@ -12,7 +12,8 @@ export default function ProblemSolutionBox({
   return (
     <Box
       sx={[MUIStyle.ProblemMain, {
-        background: type === "problem" ? commonColor.white10 : commonColor.greenFade3
+        background: type === "problem" ? commonColor.white10 : commonColor.greenFade3,
+        zIndex: type === "solution" ? 1 : 0,
       }]}
       className={type === "problem" ? "problem-main" : "solution-main"}
     >

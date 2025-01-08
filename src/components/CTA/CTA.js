@@ -94,6 +94,8 @@ export default function CTA() {
       });
     });
 
+    const numScrolls = ctaImages.length;
+
     // Create a horizontal slider for the ctaImages
     gsap.to(ctaImages, {
       xPercent: -100 * (ctaImages.length - 1),
@@ -104,7 +106,14 @@ export default function CTA() {
         // markers: true,  // Set to true to see the trigger area
         pin: true,
         scrub: 1,
-        snap: 1 / (ctaImages.length - 1),
+        snap: {
+          snapTo: 1 / (numScrolls - 1),
+          duration: 0.3,
+          delay: 0,  // No delay in snapping
+          ease: "power2.inOut",
+          inertia: false  // Disable inertia-based scrolling
+        },
+
         id: 'ctaImages',
         end: () => "+=" + $('.ctaImageFlex').width(),
       },

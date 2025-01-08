@@ -41,9 +41,9 @@ export default function Partners() {
       <Container maxWidth="xl">
         <Box sx={MUIStyle.PartnersHeadingBoxOuter}>
           <Box sx={MUIStyle.PartnersHeadingBoxInner}>
-            <Typography variant="h4" sx={MUIStyle.SubHeading}>
+            {/* <Typography variant="h4" sx={MUIStyle.SubHeading}>
               Supported By
-            </Typography>
+            </Typography> */}
             <Typography variant="h2" sx={MUIStyle.Heading}>
               Powered by a Network of Global Investors and growth partners
             </Typography>

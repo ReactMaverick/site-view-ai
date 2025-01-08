@@ -95,9 +95,9 @@ export const MUIStyle = {
         fontSize: {
             xs: FONT_SIZE.text14,
             sm: FONT_SIZE.text14,
-            md: FONT_SIZE.text14,
-            lg: FONT_SIZE.text14,
-            xl: FONT_SIZE.text16,
+            md: FONT_SIZE.text16,
+            lg: FONT_SIZE.text16,
+            xl: FONT_SIZE.text20,
         },
         fontWeight: FONT_WEIGHT.MEDIUM,
         lineHeight: FONT_SIZE.heading28,

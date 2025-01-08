@@ -9,14 +9,24 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
+import { ProblemSolutionContent } from "./ProblemSolutionContent";
 
 export default function ProblemSolution() {
-  const problemSolutionPairs = [
-    { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair1" },
-    { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair2" },
-    { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair3" },
-    { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair4" },
-  ];
+  // const problemSolutionPairs = [
+  //   { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair1" },
+  //   { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair2" },
+  //   { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair3" },
+  //   { problem: <ProblemSolutionBox />, solution: <ProblemSolutionBox type="solution" heading="Solution" />, key: "pair4" },
+  // ];
+
+  const problemSolutionPairs = ProblemSolutionContent.map(({ problem, solution, key }) => ({
+    problem: <ProblemSolutionBox {...problem} />,
+    solution: <ProblemSolutionBox {...solution} />,
+    key,
+  }));
+
+  console.log("problemSolutionPairs", problemSolutionPairs);
+
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
