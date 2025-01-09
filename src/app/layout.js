@@ -45,6 +45,20 @@ const Fellix = localFont({
 export const metadata = {
   title: "SiteView AI",
   description: "Created by Websadroit",
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: '/images/favicon-light.png',
+        href: '/images/favicon-light.png',
+      },
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: '/images/favicon-dark.png',
+        href: '/images/favicon-dark.png',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -26,15 +26,26 @@ export default function ConstructionProject() {
 
     gsap.set(pointer, { transformOrigin: "center" });
 
+    // Number of scrolls
+    const numScrolls = boxes.length;
+
     gsap.to(pointer, {
       scrollTrigger: {
         trigger: constructionSec.current,
         start: "top top",
-        end: "+=5000",
+        end: "+=" + window.innerHeight * 3,
         scrub: 1,
         pin: true,
         // markers: true,
         id: "constructionProjectBoxes",
+        snap: {
+          snapTo: 1 / (numScrolls - 1),
+          duration: 0.05,
+          delay: 0,  // No delay in snapping
+          ease: "power2.inOut",
+          inertia: false  // Disable inertia-based scrolling
+        },
+        snap: 1 / (boxes.length - 1),
         onUpdate: self => {
           const progress = self.progress;
 
@@ -60,10 +71,22 @@ export default function ConstructionProject() {
             duration: 0
           });
 
+          // Resetting the color of the heading
+          gsap.to(boxes.map(box => box.querySelector("h2")), {
+            color: "#fff",
+            duration: 0
+          });
+
           // Highlighting the current box
           if (currentIndex !== -1) {
             gsap.to(boxes[currentIndex], {
               backgroundColor: "#C9F625",
+              duration: 0
+            });
+
+            // Changing the color of the heading
+            gsap.to(boxes[currentIndex].querySelector("h2"), {
+              color: "#000",
               duration: 0
             });
           }

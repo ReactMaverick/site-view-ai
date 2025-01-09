@@ -9,6 +9,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import { commonColor } from "@/values/Colors/CommonColor";
+import SiteViewSVG from "@/components/SiteViewSVG/SiteViewSVG";
 
 const faqItems = [
   {
@@ -42,8 +43,19 @@ export default function ContactUs() {
 
   return (
     <Box sx={MUIStyle.BlogDetailsSec}>
-      <BannerNew />
+      <BannerNew
+        headerButtonText="Talk to Us"
+        title="Let’s Connect Anytime"
+        subtitle="For queries, support, or feedback, connect with us anytime. Let’s build smarter together"
+        button={false}
+        contactButtons={true}
+      />
       <Box sx={MUIStyle.ContactSec}>
+        <Box sx={MUIStyle.ContactSecSVGContainer}>
+          <SiteViewSVG
+            fillOpacity={0.05}
+          />
+        </Box>
         <Container maxWidth="xl">
           <Box sx={MUIStyle.ContactSecOuter}>
             <Box sx={MUIStyle.ContactSecInner}>
@@ -107,13 +119,13 @@ export default function ContactUs() {
           <Box sx={MUIStyle.FAQSecOuter}>
             <Box sx={MUIStyle.FAQSecAccrodin}>
               <Typography variant="h2" sx={MUIStyle.FaqHeading}>
-              frequently asked questions
+                frequently asked questions
               </Typography>
               {faqItems.map((item) => (
                 <Accordion
                   key={item.id}
                   sx={[MUIStyle.FAQSecAccrodinBox,
-                    { backgroundColor: expanded === item.id ? commonColor.green : commonColor.grey4 },
+                  { backgroundColor: expanded === item.id ? commonColor.green : commonColor.grey4 },
                   ]}
                   expanded={expanded === item.id}
                   onChange={handleChange(item.id)}
@@ -138,13 +150,13 @@ export default function ContactUs() {
                 </Accordion>
               ))}
               <Box sx={MUIStyle.BtnRow}>
-              <Button sx={MUIStyle.CustomBtn}>
-                View All FAQ
-                <Box component={"span"} sx={MUIStyle.BtnIcon}>
-                  <Icon icon="radix-icons:arrow-right" />
-                </Box>
-              </Button>
-            </Box>
+                <Button sx={MUIStyle.CustomBtn}>
+                  View All FAQ
+                  <Box component={"span"} sx={MUIStyle.BtnIcon}>
+                    <Icon icon="radix-icons:arrow-right" />
+                  </Box>
+                </Button>
+              </Box>
             </Box>
           </Box>
         </Container>

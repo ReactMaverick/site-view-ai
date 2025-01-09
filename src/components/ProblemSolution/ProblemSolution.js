@@ -25,7 +25,7 @@ export default function ProblemSolution() {
     key,
   }));
 
-  console.log("problemSolutionPairs", problemSolutionPairs);
+  // console.log("problemSolutionPairs", problemSolutionPairs);
 
 
   useLayoutEffect(() => {

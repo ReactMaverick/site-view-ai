@@ -3,14 +3,20 @@ import { MUIStyle } from "./MUIStyle";
 import { Icon } from "@iconify/react";
 import { commonColor } from "@/values/Colors/CommonColor";
 import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
+import { useState } from "react";
 
 export default function BannerNew({
   theme = "light",
   headerButtonText = "Simplify Construction",
   title = "Fixing the Gaps in Construction Monitoring",
   subtitle = "From missed inspections to rework costs, SiteView.ai bridges the gaps with visual clarity and actionable insights.",
-  buttonText = "Try Now"
+  button = true,
+  buttonText = "Try Now",
+  contactButtons = false
 }) {
+
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
+
   return (
     <Box sx={[MUIStyle.BannerMain, {
       background: theme === "light" ? commonColor.white : commonColor.black,
@@ -35,19 +41,52 @@ export default function BannerNew({
               <Typography variant="body1" sx={MUIStyle.BannerText}>
                 {subtitle}
               </Typography>
-              <Button sx={[MUIStyle.BannerBtn, {
-                color: theme === "light" ? commonColor.black : commonColor.white,
-              }]} variant="contained" size="large">
-                <Box
-                  component={"span"}
-                  className="BannerBtnIcon"
-                  sx={MUIStyle.BannerBtnIcon}
+              {button && (
+                <Button sx={[MUIStyle.BannerBtn, {
+                  color: theme === "light" ? commonColor.black : isButtonHovered ? commonColor.black : commonColor.white,
+                }]} variant="contained" size="large"
+                  onMouseEnter={() => setTimeout(() => {
+                    setIsButtonHovered(true)
+                  }, 200)}
+                  onMouseLeave={() => setTimeout(() => {
+                    setIsButtonHovered(false)
+                  }, 200)}
                 >
-                  <Icon icon="flowbite:arrow-right-outline" />
+                  <Box
+                    component={"span"}
+                    className="BannerBtnIcon"
+                    sx={MUIStyle.BannerBtnIcon}
+                  >
+                    <Icon icon="flowbite:arrow-right-outline" />
+                  </Box>
+                  {buttonText}
+                  <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG} />
+                </Button>
+              )}
+              {contactButtons && (
+                <Box
+                  sx={MUIStyle.BannerContactBtns}
+                >
+                  <Button
+                    sx={[
+                      MUIStyle.ContactBtn,
+                      {
+                        backgroundColor: commonColor.grey4,
+                        borderColor: commonColor.grey4,
+                      }
+                    ]}
+                  >
+                    Contact Us
+                  </Button>
+                  <Button
+                    sx={[
+                      MUIStyle.ContactBtn
+                    ]}
+                  >
+                    Book A Demo
+                  </Button>
                 </Box>
-                {buttonText}
-                <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG} />
-              </Button>
+              )}
             </Box>
           </Box>
         </Box>

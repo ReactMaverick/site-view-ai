@@ -105,3 +105,12 @@ export const TABIMAGE1 = URL('/images/tab-image-1.png');
 export const TABIMAGE2 = URL('/images/tab-image-2.png');
 export const TABIMAGE3 = URL('/images/tab-image-3.png');
 export const TABIMAGE4 = URL('/images/tab-image-4.png');
+
+export const QUALITYCONTROL = URL('/images/quality-control.jpg');
+export const SUSTAINIBILITY = URL('/images/sustainibility.jpg');
+export const DOCDATA = URL('/images/doc-data.png');
+export const SAFETYMANAGEMENT = URL('/images/safety-management.png');
+export const PROGRESSTRACKING = URL('/images/progress-tracking.png');
+export const ONSITEMANAGEMENT = URL('/images/on-site-management.png');
+export const PLANNINGMONITORING = URL('/images/planning-monitoring.png');
+export const REMOTECOLLABORATION = URL('/images/remote-collaboration.png');

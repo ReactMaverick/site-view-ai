@@ -5,22 +5,25 @@ import { EXTRABG } from "@/values/Constants/ImageConstants";
 export const MUIStyle = {
   ContactSec: {
     width: "100%",
-    padding: {
-      xs: "100px 0",
-      sm: "100px 0",
-      md: "100px 0 100px",
-      lg: "284px 0 100px",
-      xl: "284px 0 130px",
-    },
+    // padding: {
+    //   xs: "100px 0",
+    //   sm: "100px 0",
+    //   md: "100px 0 100px",
+    //   lg: "284px 0 100px",
+    //   xl: "284px 0 130px",
+    // },
+    minHeight: '100vh',
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    background: `url(${EXTRABG})`,
+    // background: `url(${EXTRABG})`,
+    background: commonColor.black,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     // backgroundColor: commonColor.black,
+    position: "relative",
   },
   ContactSecOuter: {
     display: "flex",
@@ -67,7 +70,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
     },
-   lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.white,
     textTransform: "uppercase",
@@ -266,7 +269,7 @@ export const MUIStyle = {
   },
   FAQSecAccrodiontext: {
     fontSize: FONT_SIZE.text20,
- lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
     textAlign: "left",
@@ -274,7 +277,7 @@ export const MUIStyle = {
   },
   FaqHeading: {
     fontSize: FONT_SIZE.heading32,
-   lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.black,
     textTransform: "uppercase",
@@ -308,7 +311,7 @@ export const MUIStyle = {
       md: FONT_SIZE.text18,
       lg: FONT_SIZE.text20,
     },
-  lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
     "&:hover": {
@@ -325,4 +328,11 @@ export const MUIStyle = {
       color: commonColor.green,
     },
   },
+  ContactSecSVGContainer: {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+  }
 };

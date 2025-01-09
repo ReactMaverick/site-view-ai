@@ -65,7 +65,12 @@ export default function FAQ() {
 
   return (
     <Box sx={MUIStyle.BlogDetailsSec}>
-      <BannerNew />
+      <BannerNew
+        headerButtonText="FAQs Simplified"
+        title="Your Questions, Answered Clearly"
+        subtitle="Find quick, straightforward answers to everything about SiteView.ai’s features and benefits"
+        button={false}
+      />
       <Box sx={MUIStyle.FAQSec}>
         <Container maxWidth="xl">
           <Box sx={MUIStyle.FAQSecOuter}>
@@ -77,7 +82,7 @@ export default function FAQ() {
                 <Accordion
                   key={item.id}
                   sx={[MUIStyle.FAQSecAccrodinBox,
-                    { backgroundColor: expanded === item.id ? commonColor.green : commonColor.grey4 },
+                  { backgroundColor: expanded === item.id ? commonColor.green : commonColor.grey4 },
                   ]}
                   expanded={expanded === item.id}
                   onChange={handleChange(item.id)}

@@ -3,7 +3,8 @@ import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 
 export const MUIStyle = {
   BlogDetailsSec: {
-    padding: "200px 0 100px",
+    padding: "0",
+    minHeight: "100vh",
   },
   Heading: {
     fontSize: {
@@ -13,7 +14,7 @@ export const MUIStyle = {
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
     },
-   lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.black,
     textTransform: "uppercase",
@@ -71,7 +72,7 @@ export const MUIStyle = {
   },
   FAQSecAccrodiontext: {
     fontSize: FONT_SIZE.text20,
- lineHeight: "1.5em",
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
     textAlign: "left",

@@ -42,7 +42,7 @@ export const MUIStyle = {
             sm: "80%",
             md: "50%",
             lg: "60%",
-            xl: "48%",
+            xl: "50%",
         },
 
     },
@@ -190,5 +190,38 @@ export const MUIStyle = {
         width: "100%",
         height: "100%",
         // zIndex: "-1",
+    },
+    BannerContactBtns: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "20px",
+    },
+    ContactBtn: {
+        background: commonColor.green,
+        border: "2px solid",
+        borderColor: commonColor.green,
+        boxShadow: "none",
+        padding: {
+            xs: "8px 20px",
+            sm: "8px 20px",
+            md: "8px 20px",
+            lg: "16px 30px",
+            xl: "16px 30px",
+        },
+        borderRadius: "100px",
+        textTransform: "capitalize",
+        fontSize: {
+            xs: FONT_SIZE.text16,
+            sm: FONT_SIZE.text16,
+            md: FONT_SIZE.text16,
+            lg: FONT_SIZE.text16,
+        },
+        lineHeight: "1.5em",
+        fontWeight: FONT_WEIGHT.MEDIUM,
+        color: commonColor.black,
+        "&:hover": {
+            background: commonColor.trans,
+        },
     }
 };

@@ -40,7 +40,7 @@ export default function OnsiteSection() {
       scrollTrigger: {
         trigger: onSiteSec.current,
         start: "top top",
-        end: "+=5000",
+        end: "+=" + window.innerHeight * 2,
         scrub: 1,
         pin: true,
         // markers: true,
@@ -54,7 +54,7 @@ export default function OnsiteSection() {
       scrollTrigger: {
         trigger: onSiteSec.current,
         start: "top top",
-        end: "+=5000",
+        end: "+=" + window.innerHeight * 2,
         scrub: 1,
         // markers: true,
         id: "onsiteContent",
@@ -67,7 +67,7 @@ export default function OnsiteSection() {
       scrollTrigger: {
         trigger: onSiteSec.current,
         start: "top top",
-        end: "+=1000",
+        end: "+=" + window.innerHeight * 2 / 5,
         scrub: 1,
         // markers: true,
         id: "onsiteHeading",
@@ -79,7 +79,7 @@ export default function OnsiteSection() {
       scrollTrigger: {
         trigger: onSiteSec.current,
         start: "top top",
-        end: "+=3000",
+        end: "+=" + window.innerHeight * 1.5,
         scrub: 1,
         // markers: true,
         id: "onsiteHeading",
