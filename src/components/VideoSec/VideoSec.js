@@ -1,3 +1,4 @@
+'use client';
 import { Box, Button, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import { VIDEOBG1, VIDEOICON } from "@/values/Constants/ImageConstants";
