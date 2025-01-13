@@ -105,6 +105,7 @@ export const TABIMAGE1 = URL('/images/tab-image-1.png');
 export const TABIMAGE2 = URL('/images/tab-image-2.png');
 export const TABIMAGE3 = URL('/images/tab-image-3.png');
 export const TABIMAGE4 = URL('/images/tab-image-4.png');
+export const TABIMAGE5 = URL('/images/tab-image-5.png');
 
 export const QUALITYCONTROL = URL('/images/quality-control.jpg');
 export const SUSTAINIBILITY = URL('/images/sustainibility.jpg');

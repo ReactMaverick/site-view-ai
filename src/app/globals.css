@@ -365,8 +365,8 @@ p.BlogContent {
 
 @media screen and (max-width: 1536px) and (min-width: 600px) {
   .image-slider-container {
-    width: 405px;
-    height: 450px;
+    width: 342px;
+    height: 380px;
     /* margin-left: 0 !important; */
   }
 
@@ -379,10 +379,12 @@ p.BlogContent {
 
 
 }
+
 @media (min-width: 900px) {
   .construction-project-box:nth-child(odd) {
     margin-left: auto !important;
   }
+
   .construction-project-box:nth-child(even) {
     margin-right: auto !important;
   }

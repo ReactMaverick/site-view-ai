@@ -13,7 +13,9 @@ export default function WhySiteView() {
       <BannerNew />
       <VideoInnerSec />
       <ProblemSolution />
-      <TabBarSec />
+      <TabBarSec
+        page="WhySiteView"
+      />
     </Box>
   );
 }

@@ -31,6 +31,7 @@ export default function OutTech() {
         caption="Building Tomorrow with Tech"
         title="Empowering construction with cutting edge tools and innovation"
         tabBarContents={tabBarSecContentOurTech}
+        page="OurTech"
       />
       <Vision2 />
       <DigitalConstruction />
