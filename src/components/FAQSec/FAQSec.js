@@ -11,31 +11,31 @@ import { Icon } from "@iconify/react";
 const faqItems = [
   {
     id: "panel1",
-    question: "What types of 360° cameras are compatible with SiteView.ai?",
+    question: "What types of 360° cameras are compatible with SitePace.ai?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
   },
   {
     id: "panel2",
-    question: "Can I use my smartphone to capture 360° images for SiteView.ai?",
+    question: "Can I use my smartphone to capture 360° images for SitePace.ai?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
   },
   {
     id: "panel3",
-    question: "How does SiteView.ai handle large files (360° videos)?",
+    question: "How does SitePace.ai handle large files (360° videos)?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
   },
   {
     id: "panel4",
-    question: "Does SiteView.ai comply with data privacy regulations?",
+    question: "Does SitePace.ai comply with data privacy regulations?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
   },
   {
     id: "panel5",
-    question: "How accurate are the AI features in SiteView.ai?",
+    question: "How accurate are the AI features in SitePace.ai?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
   },

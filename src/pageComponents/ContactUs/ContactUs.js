@@ -26,7 +26,7 @@ const faqItems = [
   },
   {
     id: "panel3",
-    question: "Are AI features available on all SiteView.ai plans?",
+    question: "Are AI features available on all SitePace.ai plans?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
   }
@@ -91,7 +91,7 @@ export default function ContactUs() {
                   Email
                 </Typography>
                 <Typography variant="body1" sx={MUIStyle.ContactBoxText}>
-                  sales@siteview.ai
+                  sales@SitePace.ai
                 </Typography>
               </Box>
             </Box>

@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 
 const menuItems = [
   { label: "Home", path: "/home", theme: 'light', shouldRender: true },
-  { label: "Why SiteView", path: "/why-site-view", theme: 'light', shouldRender: true },
+  { label: "Why SitePace", path: "/why-site-pace", theme: 'light', shouldRender: true },
   { label: "Our Tech", path: "/our-tech", theme: 'dark', shouldRender: true },
   { label: "Blogs", path: "/blogs", theme: 'light', shouldRender: true },
   { label: "FAQ", path: "/faq", theme: 'light', shouldRender: true },

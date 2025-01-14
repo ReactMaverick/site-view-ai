@@ -33,13 +33,13 @@ export default function Vision2() {
                 Visual - IPS for seamless navigation
               </Typography>
               <Typography variant="body1" sx={MUIStyle.SubHeading}>
-                Explore your virtual site effortlessly. SiteView.ai’s innovative platform utilizes Visual Indoor Positioning System (Visual-IPS) technology and advanced tools for a seamless, automated virtual tour experience{" "}
+                Explore your virtual site effortlessly. SitePace.ai’s innovative platform utilizes Visual Indoor Positioning System (Visual-IPS) technology and advanced tools for a seamless, automated virtual tour experience{" "}
               </Typography>
               <Typography variant="body1" sx={MUIStyle.SubHeading}>
-                Visual-IPS works like a robot mapping its surroundings. It enables SiteView.ai to capture 360° panoramic views, offering complete, detailed visual representations of your construction site’s progress.
+                Visual-IPS works like a robot mapping its surroundings. It enables SitePace.ai to capture 360° panoramic views, offering complete, detailed visual representations of your construction site’s progress.
               </Typography>
               <Typography variant="body1" sx={MUIStyle.SubHeading}>
-                With Visual-IPS, SiteView.ai navigates autonomously along pre-defined paths and builds dynamic 3D site models over time, revealing progress and identifying potential issues.{" "}
+                With Visual-IPS, SitePace.ai navigates autonomously along pre-defined paths and builds dynamic 3D site models over time, revealing progress and identifying potential issues.{" "}
               </Typography>
             </Box>
           </Box>

@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
               Introduction
             </Typography>
             <Typography variant="body1" sx={MUIStyle.ContactContentText}>
-              At SiteView.ai, your privacy is of utmost importance. We are
+              At SitePace.ai, your privacy is of utmost importance. We are
               committed to safeguarding your personal data in compliance with
               global privacy regulations, including the General Data Protection
               Regulation (GDPR), California Consumer Privacy Act (CCPA),
@@ -88,7 +88,7 @@ export default function PrivacyPolicy() {
                     <Box component={"span"} sx={MUIStyle.DotGrey} />
                     <Typography variant="body1" sx={MUIStyle.Textgrey}>
                       <strong>Geolocation Data: </strong>With your consent,
-                      approximate location for personalized services. 
+                      approximate location for personalized services.
                     </Typography>
                   </Box>
                 </Box>
@@ -110,68 +110,68 @@ export default function PrivacyPolicy() {
           </Box>
           <Box sx={MUIStyle.ContactContentBox}>
             <Typography variant="h3" sx={MUIStyle.SubHeading}>
-            How We Use Your Data
+              How We Use Your Data
             </Typography>
             <Box component={"ul"} sx={MUIStyle.ContactContentList}>
               <Box component={"li"} sx={MUIStyle.ContactContentListItem}>
-                  <Typography variant="h5" sx={[MUIStyle.ContactContenttitle,{marginBottom:"24px",}]}>
-                  Your data is used for the following purposes: 
-                  </Typography>
+                <Typography variant="h5" sx={[MUIStyle.ContactContenttitle, { marginBottom: "24px", }]}>
+                  Your data is used for the following purposes:
+                </Typography>
                 <Box component={"ul"} sx={MUIStyle.SubUL}>
                   <Box component={"li"} sx={MUIStyle.SubLi}>
                     <Box component={"span"} sx={MUIStyle.DotGrey} />
                     <Typography variant="body1" sx={MUIStyle.Textgrey}>
-                    To provide and maintain SiteView.ai services.
+                      To provide and maintain SitePace.ai services.
                     </Typography>
                   </Box>
                   <Box component={"li"} sx={MUIStyle.SubLi}>
                     <Box component={"span"} sx={MUIStyle.DotGrey} />
                     <Typography variant="body1" sx={MUIStyle.Textgrey}>
-                    To improve platform functionality and user experience.
+                      To improve platform functionality and user experience.
                     </Typography>
                   </Box>
                   <Box component={"li"} sx={MUIStyle.SubLi}>
                     <Box component={"span"} sx={MUIStyle.DotGrey} />
                     <Typography variant="body1" sx={MUIStyle.Textgrey}>
-                    To send service-related communications (e.g., system updates, feature announcements).
+                      To send service-related communications (e.g., system updates, feature announcements).
                     </Typography>
                   </Box>
                   <Box component={"li"} sx={MUIStyle.SubLi}>
                     <Box component={"span"} sx={MUIStyle.DotGrey} />
                     <Typography variant="body1" sx={MUIStyle.Textgrey}>
-                    To process payments, verify accounts, and ensure security.
+                      To process payments, verify accounts, and ensure security.
                     </Typography>
                   </Box>
                   <Box component={"li"} sx={MUIStyle.SubLi}>
                     <Box component={"span"} sx={MUIStyle.DotGrey} />
                     <Typography variant="body1" sx={MUIStyle.Textgrey}>
-                    To comply with legal obligations or respond to regulatory requests.
+                      To comply with legal obligations or respond to regulatory requests.
                     </Typography>
                   </Box>
                 </Box>
               </Box>
               <Typography variant="body1" sx={MUIStyle.SubTitle}>
-                  We may receive data from third-party services such as
-                  integrations with other tools, marketing partners, or public
-                  sources.
-                </Typography>
+                We may receive data from third-party services such as
+                integrations with other tools, marketing partners, or public
+                sources.
+              </Typography>
             </Box>
           </Box>
           <Box sx={MUIStyle.ContactContentBox}>
             <Typography variant="h3" sx={MUIStyle.SubHeading}>
-            Sharing Your Information
+              Sharing Your Information
             </Typography>
             <Box component={"ul"} sx={MUIStyle.ContactContentList}>
-            <Typography variant="h5" sx={[MUIStyle.ContactContenttitle,{marginBottom:"0px",}]}>
-            We do not sell your personal information. Data may be shared only with:
-                  </Typography>
-            <Box component={"li"}  sx={[
-                  MUIStyle.ContactContentListItem,
-                  {
-                    marginBottom: "20px",
-                    padding: "0px",
-                  },
-                ]}>
+              <Typography variant="h5" sx={[MUIStyle.ContactContenttitle, { marginBottom: "0px", }]}>
+                We do not sell your personal information. Data may be shared only with:
+              </Typography>
+              <Box component={"li"} sx={[
+                MUIStyle.ContactContentListItem,
+                {
+                  marginBottom: "20px",
+                  padding: "0px",
+                },
+              ]}>
                 <Box component={"ul"} sx={MUIStyle.SubUL}>
                   <Box component={"li"} sx={MUIStyle.SubLi}>
                     <Box component={"span"} sx={MUIStyle.DotGrey} />
@@ -191,7 +191,7 @@ export default function PrivacyPolicy() {
                     <Box component={"span"} sx={MUIStyle.DotGrey} />
                     <Typography variant="body1" sx={MUIStyle.Textgrey}>
                       <strong>Geolocation Data: </strong>With your consent,
-                      approximate location for personalized services. 
+                      approximate location for personalized services.
                     </Typography>
                   </Box>
                 </Box>
@@ -200,19 +200,19 @@ export default function PrivacyPolicy() {
           </Box>
           <Box sx={MUIStyle.ContactContentBox}>
             <Typography variant="h3" sx={MUIStyle.SubHeading}>
-            Your Rights
+              Your Rights
             </Typography>
             <Box component={"ul"} sx={MUIStyle.ContactContentList}>
-            <Typography variant="h5" sx={[MUIStyle.ContactContenttitle,{marginBottom:"0px",}]}>
-            Under global privacy laws, you may:
-                  </Typography>
-            <Box component={"li"}  sx={[
-                  MUIStyle.ContactContentListItem,
-                  {
-                    marginBottom: "20px",
-                    padding: "0px",
-                  },
-                ]}>
+              <Typography variant="h5" sx={[MUIStyle.ContactContenttitle, { marginBottom: "0px", }]}>
+                Under global privacy laws, you may:
+              </Typography>
+              <Box component={"li"} sx={[
+                MUIStyle.ContactContentListItem,
+                {
+                  marginBottom: "20px",
+                  padding: "0px",
+                },
+              ]}>
                 <Box component={"ul"} sx={MUIStyle.SubUL}>
                   <Box component={"li"} sx={MUIStyle.SubLi}>
                     <Box component={"span"} sx={MUIStyle.DotGrey} />
@@ -242,40 +242,40 @@ export default function PrivacyPolicy() {
                 </Box>
               </Box>
               <Typography variant="body1" sx={MUIStyle.SubTitle}>
-              To exercise these rights, email us at [email address]. Verification may be required.
-                </Typography>
+                To exercise these rights, email us at [email address]. Verification may be required.
+              </Typography>
             </Box>
           </Box>
           <Box sx={MUIStyle.ContactContentBox}>
             <Typography variant="h3" sx={MUIStyle.SubHeading}>
-            Data Retention
+              Data Retention
             </Typography>
             <Typography variant="body1" sx={MUIStyle.ContactContentText}>
-            We retain personal data only as long as necessary for legitimate purposes or as required by law.
+              We retain personal data only as long as necessary for legitimate purposes or as required by law.
             </Typography>
           </Box>
           <Box sx={MUIStyle.ContactContentBox}>
             <Typography variant="h3" sx={MUIStyle.SubHeading}>
-            Data Security
+              Data Security
             </Typography>
             <Typography variant="body1" sx={MUIStyle.ContactContentText}>
-            We employ industry-standard encryption, access controls, and secure infrastructure to protect your data from unauthorized access or disclosure. 
+              We employ industry-standard encryption, access controls, and secure infrastructure to protect your data from unauthorized access or disclosure.
             </Typography>
           </Box>
           <Box sx={MUIStyle.ContactContentBox}>
             <Typography variant="h3" sx={MUIStyle.SubHeading}>
-            International Data Transfers
+              International Data Transfers
             </Typography>
             <Typography variant="body1" sx={MUIStyle.ContactContentText}>
-            If your data is transferred outside your jurisdiction, we ensure it is protected under equivalent standards through mechanisms like Standard Contractual Clauses (SCCs). 
+              If your data is transferred outside your jurisdiction, we ensure it is protected under equivalent standards through mechanisms like Standard Contractual Clauses (SCCs).
             </Typography>
           </Box>
           <Box sx={MUIStyle.ContactContentBox}>
             <Typography variant="h3" sx={MUIStyle.SubHeading}>
-            Updates to This Policy
+              Updates to This Policy
             </Typography>
             <Typography variant="body1" sx={MUIStyle.ContactContentText}>
-            This Privacy Policy may be updated periodically. Significant changes will be notified via email or platform notices.
+              This Privacy Policy may be updated periodically. Significant changes will be notified via email or platform notices.
             </Typography>
           </Box>
         </Box>

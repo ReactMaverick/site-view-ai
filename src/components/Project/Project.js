@@ -19,19 +19,19 @@ export default function Project() {
       title: "Virtual Site Meets",
       image: VIRTUALSITEMEETS,
       backgroundColor: commonColor.white,
-      description: "Experience immersive site visits remotely. SiteView.ai enables 360° virtual views, real-time collaboration, and precise issue resolution with your team—all within dynamic virtual meetings. Connect without boundaries.",
+      description: "Experience immersive site visits remotely. SitePace.ai enables 360° virtual views, real-time collaboration, and precise issue resolution with your team—all within dynamic virtual meetings. Connect without boundaries.",
     },
     {
       title: "Time Travel",
       image: TIMETRAVEL,
       backgroundColor: commonColor.greenFade3,
-      description: "Travel your site back in time. SiteView records the visuals from Day-1 and stores it for years even after completion of the project. Select the date of your walk, as if you are there on that day. This forms an important tool to avoid disputes and serve as an evidence during disputes.",
+      description: "Travel your site back in time. SitePace records the visuals from Day-1 and stores it for years even after completion of the project. Select the date of your walk, as if you are there on that day. This forms an important tool to avoid disputes and serve as an evidence during disputes.",
     },
     {
       title: "No Blind Spot",
       image: NOBLINDSPOT,
       backgroundColor: commonColor.white,
-      description: "Walk through any floor or room with a few clicks. With SiteView.ai’s secure cloud storage, access your entire project from any device, anywhere with an internet connection. Never miss a detail, whether you’re in the office or on the go.",
+      description: "Walk through any floor or room with a few clicks. With SitePace.ai’s secure cloud storage, access your entire project from any device, anywhere with an internet connection. Never miss a detail, whether you’re in the office or on the go.",
     },
     {
       title: "Visual Documentation",

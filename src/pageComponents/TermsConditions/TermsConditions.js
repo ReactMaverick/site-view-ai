@@ -18,7 +18,7 @@ export default function TermsConditions() {
               Introduction
             </Typography>
             <Typography variant="body1" sx={MUIStyle.ContactContentText}>
-              These Terms & Conditions (`&quot;`Terms`&quot;`) govern your use of SiteView.ai.
+              These Terms & Conditions (`&quot;`Terms`&quot;`) govern your use of SitePace.ai.
               By accessing our services, you agree to comply with these Terms.
             </Typography>
           </Box>
@@ -48,7 +48,7 @@ export default function TermsConditions() {
                 >
                   <Box component={"span"} sx={MUIStyle.Dot} />
                   <Typography variant="h5" sx={MUIStyle.ContactContenttitle}>
-                    You may use SiteView.ai for lawful purposes only.
+                    You may use SitePace.ai for lawful purposes only.
                   </Typography>
                 </Box>
               </Box>
@@ -143,7 +143,7 @@ export default function TermsConditions() {
               Intellectual Property
             </Typography>
             <Typography variant="body1" sx={MUIStyle.ContactContentText}>
-              All content, features, and technology on SiteView.ai are the exclusive property of SiteView.ai. Unauthorized use, reproduction, or distribution is prohibited.
+              All content, features, and technology on SitePace.ai are the exclusive property of SitePace.ai. Unauthorized use, reproduction, or distribution is prohibited.
             </Typography>
           </Box>
           <Box sx={MUIStyle.ContactContentBox}>

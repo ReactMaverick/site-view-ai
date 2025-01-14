@@ -43,7 +43,7 @@ const Fellix = localFont({
 });
 
 export const metadata = {
-  title: "SiteView AI",
+  title: "SitePace AI",
   description: "Created by Websadroit",
   icons: {
     icon: [

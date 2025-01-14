@@ -4,7 +4,7 @@ export const tabBarSecContentWhySiteView = [
     {
         title: "On-site Management",
         subtitle: "Control at Your Fingertips",
-        content: "Streamline on-site operations with 360° visibility, enhancing communication and efficiency. Quickly access all project data and updates through SiteView.ai's mobile platform."
+        content: "Streamline on-site operations with 360° visibility, enhancing communication and efficiency. Quickly access all project data and updates through SitePace.ai's mobile platform."
     },
     {
         title: "Remote Collaboration",

@@ -9,7 +9,7 @@ export default function BannerNew({
   theme = "light",
   headerButtonText = "Simplify Construction",
   title = "Fixing the Gaps in Construction Monitoring",
-  subtitle = "From missed inspections to rework costs, SiteView.ai bridges the gaps with visual clarity and actionable insights.",
+  subtitle = "From missed inspections to rework costs, SitePace.ai bridges the gaps with visual clarity and actionable insights.",
   button = true,
   buttonText = "Try Now",
   contactButtons = false

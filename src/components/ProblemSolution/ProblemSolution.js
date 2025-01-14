@@ -103,7 +103,7 @@ export default function ProblemSolution() {
               Construction Chaos? We’ve Got Solutions to Fix the Mess
             </Typography>
             <Typography variant="h2" sx={MUIStyle.AboutSecHeading}>
-              From blind spots to bottlenecks, see how SiteView.ai saves the day
+              From blind spots to bottlenecks, see how SitePace.ai saves the day
             </Typography>
           </Box>
         </Box>

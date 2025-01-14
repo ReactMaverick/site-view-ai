@@ -127,7 +127,7 @@ export default function CTA() {
       <Container maxWidth="xl" sx={MUIStyle.CTAContainer}>
         <Box sx={MUIStyle.CTAInner}>
           <Typography variant="h2" sx={MUIStyle.CTAHeading}>
-            “SiteView.ai for every stage of construction”
+            “SitePace.ai for every stage of construction”
           </Typography>
         </Box>
         <Box sx={MUIStyle.CTAImgInner}>

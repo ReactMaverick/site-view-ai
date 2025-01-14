@@ -12,7 +12,7 @@ export default function DigitalConstruction() {
         <Box sx={MUIStyle.DigitalConstructionHeadingBoxOuter}>
           <Box sx={MUIStyle.DigitalConstructionHeadingBoxInner}>
             <Typography variant="h4" sx={MUIStyle.SubHeading}>
-              Revolutionize your projects with SiteView.ai
+              Revolutionize your projects with SitePace.ai
             </Typography>
             <Typography variant="h2" sx={MUIStyle.Heading}>
               Your Digital Construction Assistant

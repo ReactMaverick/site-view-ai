@@ -40,7 +40,7 @@ export default function FooterSec() {
                                     </Box>
                                     <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
                                         <Link href="/why-site-view">
-                                            <Typography sx={MUIStyle.FooterMenuText}>Why SiteView</Typography>
+                                            <Typography sx={MUIStyle.FooterMenuText}>Why SitePace</Typography>
                                         </Link>
                                     </Box>
                                     <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
@@ -76,7 +76,7 @@ export default function FooterSec() {
                     </Box>
                     <Box sx={MUIStyle.FooterCopyRightRow}>
                         <Typography variant="p" sx={MUIStyle.FooterCopyRightText}>
-                            © All Right Reserved by SiteView.AI 2024.
+                            © All Right Reserved by SitePace.ai 2024.
                         </Typography>
                         <Box sx={MUIStyle.FooterPolicyBox}>
                             <Link href="/privacy-policy">

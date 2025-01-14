@@ -8,7 +8,7 @@ export const ProblemSolutionContent = [{
   solution: {
     type: "solution",
     heading: "Solution",
-    text: "SiteView.ai’s 360° helmet-mounted cameras capture every corner, offering complete coverage without blind spots.",
+    text: "SitePace.ai’s 360° helmet-mounted cameras capture every corner, offering complete coverage without blind spots.",
   },
 },
 {
@@ -21,7 +21,7 @@ export const ProblemSolutionContent = [{
   solution: {
     type: "solution",
     heading: "Solution",
-    text: "SiteView.ai captures 100% of the project area, organized by date, allowing revisits to any day of the project. Yes, travel back in time.",
+    text: "SitePace.ai captures 100% of the project area, organized by date, allowing revisits to any day of the project. Yes, travel back in time.",
   },
 },
 {
@@ -34,7 +34,7 @@ export const ProblemSolutionContent = [{
   solution: {
     type: "solution",
     heading: "Solution",
-    text: "SiteView.ai’s sticky notes allow precise tagging of work objects on screen, fostering seamless collaboration across teams.",
+    text: "SitePace.ai’s sticky notes allow precise tagging of work objects on screen, fostering seamless collaboration across teams.",
   },
 },
 {
@@ -47,7 +47,7 @@ export const ProblemSolutionContent = [{
   solution: {
     type: "solution",
     heading: "Solution",
-    text: "With SiteView.ai, virtual walkthroughs eliminate travel, delivering real-time updates and faster decision-making.",
+    text: "With SitePace.ai, virtual walkthroughs eliminate travel, delivering real-time updates and faster decision-making.",
   },
 },
 {
@@ -60,7 +60,7 @@ export const ProblemSolutionContent = [{
   solution: {
     type: "solution",
     heading: "Solution",
-    text: "Virtually walk through any room or floor with SiteView.ai, gaining access to complete, real-time project visuals.",
+    text: "Virtually walk through any room or floor with SitePace.ai, gaining access to complete, real-time project visuals.",
   },
 },
 ]
