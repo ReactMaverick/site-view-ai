@@ -104,15 +104,15 @@ export default function TabBarSec({
         }
       });
 
-      buttonElements.forEach((button, index) => {
-        button.addEventListener("click", () => handleClick(index));
-      });
+      // buttonElements.forEach((button, index) => {
+      //   button.addEventListener("click", () => handleClick(index));
+      // });
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=" + buttonElements.length * 1500 + "px",
+          end: "+=" + buttonElements.length * 750 + "px",
           // end: "bottom bottom",
           scrub: 1,
           // markers: true,
@@ -120,7 +120,7 @@ export default function TabBarSec({
           id: "tabBarSec",
           snap: {
             snapTo: 1 / ((tabBarContents.length) * 2),
-            duration: 0.1,
+            duration: 0.2,
             delay: 0,  // No delay in snapping
             ease: "power3.inOut",
           }
@@ -136,6 +136,8 @@ export default function TabBarSec({
           padding: window.innerHeight * 0.02,
           minHeight: window.innerHeight * 0.15, // Adjust minHeight as needed
           opacity: 1,
+          duration: 0.8,
+          ease: "power4.out", // Slower easing for expand
           onComplete: () => {
             swiper?.slideTo(index);
           },
@@ -147,6 +149,8 @@ export default function TabBarSec({
           padding: 0,
           minHeight: 0,
           opacity: 0,
+          duration: 0.1,
+          ease: "power4.in", // Faster easing for collapse
           onReverseComplete: () => {
             swiper?.slideTo(index);
           },
@@ -239,12 +243,12 @@ export default function TabBarSec({
                     ref={(el) => (bodyRefs.current[index] = el)}
                   >
                     <Box sx={MUIStyle.TabBarSecButtonBodyTop}>
-                      <Typography
+                      {/* <Typography
                         variant="h4"
                         sx={MUIStyle.TabBarSecButtonBodyTopHeading}
                       >
                         {tabBar.title}
-                      </Typography>
+                      </Typography> */}
                       <Typography
                         component={"span"}
                         sx={MUIStyle.TabBarSecButtonBodyTopText}

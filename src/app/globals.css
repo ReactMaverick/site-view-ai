@@ -397,3 +397,9 @@ p.BlogContent {
   }
 
 }
+
+@media screen and (max-height: 600px) {
+  #ourTeamContainer {
+      transform: scale(0.75);
+    }
+}

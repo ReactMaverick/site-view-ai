@@ -76,7 +76,7 @@ export default function OurTeam() {
 
   return (
     <Box sx={MUIStyle.BuildForMain} ref={teamGridsSec}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" id="ourTeamContainer">
         <Box sx={MUIStyle.BuildForHeadingBoxOuter}>
           <Box sx={MUIStyle.BuildForHeadingBoxInner}>
             <Typography variant="h4" sx={MUIStyle.SubHeading}>
@@ -130,6 +130,7 @@ export default function OurTeam() {
                   component={"img"}
                   src={TEAM}
                   alt="Our Team"
+                  className="ourTeamImg"
                   sx={MUIStyle.OurTeamImg}
                 />
               </Box>

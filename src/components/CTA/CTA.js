@@ -105,7 +105,41 @@ export default function CTA() {
         start: "top top",
         // markers: true,  // Set to true to see the trigger area
         pin: true,
-        scrub: 1,
+        scrub: 0.5,
+        onEnter: () => {
+          // console.log("Enter");
+
+          gsap.to('.headerInner', {
+            yPercent: -100,
+          })
+        },
+        onEnterBack: () => {
+          // console.log("Enter");
+
+          gsap.to('.headerInner', {
+            yPercent: -100,
+          })
+        },
+        onLeave: () => {
+          // console.log("Leave");
+
+          setTimeout(() => {
+            
+            gsap.to('.headerInner', {
+              yPercent: 0,
+            })
+          }, 2000);
+        },
+        onLeaveBack: () => {
+          // console.log("Leave");
+
+          setTimeout(() => {
+
+            gsap.to('.headerInner', {
+              yPercent: 0,
+            })
+          }, 2000);
+        },
         snap: {
           snapTo: 1 / (numScrolls - 1),
           duration: 0.3,
@@ -113,7 +147,6 @@ export default function CTA() {
           ease: "power2.inOut",
           inertia: false  // Disable inertia-based scrolling
         },
-
         id: 'ctaImages',
         end: () => "+=" + $('.ctaImageFlex').width(),
       },

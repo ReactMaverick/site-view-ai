@@ -148,7 +148,7 @@ export const MUIStyle = {
       xl: "10px 14px",
     },
     borderRadius: "32px",
-    cursor: "pointer",
+    cursor: "default",
     textAlign: "center",
 
   },

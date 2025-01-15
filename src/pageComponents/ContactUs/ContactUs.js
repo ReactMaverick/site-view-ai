@@ -91,7 +91,7 @@ export default function ContactUs() {
                   Email
                 </Typography>
                 <Typography variant="body1" sx={MUIStyle.ContactBoxText}>
-                  sales@SitePace.ai
+                  connect@SitePace.ai
                 </Typography>
               </Box>
             </Box>
