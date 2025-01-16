@@ -14,21 +14,43 @@ import SiteViewSVG from "@/components/SiteViewSVG/SiteViewSVG";
 const faqItems = [
   {
     id: "panel1",
-    question: "What are your pricing plans?",
-    answer:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    question: "Is there a free trial available?",
+    answer: "Yes, SitePace.ai offers a free trial to explore its features firsthand.",
   },
   {
     id: "panel2",
-    question: "What payment methods do you accept?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+    question: "How do I request a demo?",
+    answer: "Schedule a demo through our website to learn how SitePace.ai can transform your project management.",
   },
   {
     id: "panel3",
-    question: "Are AI features available on all SitePace.ai plans?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+    question: "What kind of support does SitePace.ai offer?",
+    answer: "We provide support through email, live chat, and phone. Contact us at connect@sitepace.ai for assistance.",
+  },
+  {
+    id: "panel4",
+    question: "What onboarding resources are available?",
+    answer: "SitePace.ai offers video tutorials, detailed user guides, and live webinars to ensure an easy onboarding process.",
+  },
+  {
+    id: "panel5",
+    question: "How do I contact SitePace.ai for help?",
+    answer: "You can reach us via the connect@sitepace.ai email or our website's support page.",
+  },
+  {
+    id: "panel6",
+    question: "What are the pricing plans for SitePace.ai?",
+    answer: "SitePace.ai offers flexible subscription plans with monthly and annual billing options. Visit our website for detailed pricing.",
+  },
+  {
+    id: "panel7",
+    question: "How does SitePace.ai monetize its services?",
+    answer: "We operate on a subscription-based SaaS model, offering tiered plans tailored to meet different needs.",
+  },
+  {
+    id: "panel8",
+    question: "Are there any additional costs for using SitePace.ai?",
+    answer: "No hidden fees. Pricing is transparent and based on the selected subscription plan.",
   }
 ];
 
@@ -47,8 +69,8 @@ export default function ContactUs() {
         headerButtonText="Talk to Us"
         title="Let’s Connect Anytime"
         subtitle="For queries, support, or feedback, connect with us anytime. Let’s build smarter together"
-        button={false}
-        contactButtons={true}
+        // button={false}
+        // contactButtons={true}
       />
       <Box sx={MUIStyle.ContactSec}>
         <Box sx={MUIStyle.ContactSecSVGContainer}>

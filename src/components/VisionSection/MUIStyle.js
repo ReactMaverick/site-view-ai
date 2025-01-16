@@ -10,8 +10,8 @@ export const MUIStyle = {
       xs: "100px 0",
       sm: "100px 0",
       md: "100px 0",
-      lg: "60px 0 30px",
-      xl: "284px 0 0px",
+      lg: "60px 50px 30px",
+      xl: "284px 50px 0px",
     },
     display: "flex",
     justifyContent: "center",
@@ -22,16 +22,16 @@ export const MUIStyle = {
     overflow: 'hidden',
   },
 
-  VisionRow: {
+  VisionRow: (orientation) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: {
-      xs: "column",
-      sm: "column",
-      md: "row",
-      lg: "row",
-      xl: "row",
+      xs: orientation === "image-left" ? "column" : "column-reverse",
+      sm: orientation === "image-left" ? "column" : "column-reverse",
+      md: orientation === "image-left" ? "row" : "row-reverse",
+      lg: orientation === "image-left" ? "row" : "row-reverse",
+      xl: orientation === "image-left" ? "row" : "row-reverse",
     },
     gap: {
       xs: "30px",
@@ -47,7 +47,7 @@ export const MUIStyle = {
       lg: "0 0px",
       xl: "0 130px",
     },
-  },
+  }),
   VisionColLeft: {
     maxWidth: {
       xs: "100%",
@@ -106,8 +106,15 @@ export const MUIStyle = {
     alignItems: "center",
     borderRadius: "10px",
     "& img": {
-      width: "100%",
-      height: "100%",
+      width: {
+        xs: "100%",
+        sm: "100%",
+        md: "100%",
+        lg: "80%",
+        xl: "80%",
+      },
+      height: "auto",
+      borderRadius: "16px",
       objectFit: "cover",
     },
   },

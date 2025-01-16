@@ -10,8 +10,8 @@ import TabBarSec from "@/components/TabBarSec/TabBarSec";
 export default function WhySiteView() {
   return (
     <Box className={styles.WhySiteView}>
-      {/* <BannerNew />
-      <VideoInnerSec /> */}
+      <BannerNew />
+      <VideoInnerSec />
       <ProblemSolution />
       <TabBarSec
         page="WhySiteView"

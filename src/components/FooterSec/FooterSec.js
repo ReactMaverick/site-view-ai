@@ -39,7 +39,7 @@ export default function FooterSec() {
                                         </Link>
                                     </Box>
                                     <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
-                                        <Link href="/why-site-view">
+                                        <Link href="/why-site-pace">
                                             <Typography sx={MUIStyle.FooterMenuText}>Why SitePace</Typography>
                                         </Link>
                                     </Box>

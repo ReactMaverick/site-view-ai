@@ -11,33 +11,75 @@ import { Icon } from "@iconify/react";
 const faqItems = [
   {
     id: "panel1",
-    question: "What types of 360° cameras are compatible with SitePace.ai?",
+    question: "What is SitePace.ai?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "SitePace.ai is a construction management platform that uses 360° imaging and computer vision to streamline site monitoring and collaboration.",
   },
   {
     id: "panel2",
-    question: "Can I use my smartphone to capture 360° images for SitePace.ai?",
+    question: "How does SitePace.ai capture 360° visuals?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "SitePace.ai works with industry-standard 360° cameras to capture high-quality images, ensuring every detail of your site is recorded.",
   },
   {
     id: "panel3",
-    question: "How does SitePace.ai handle large files (360° videos)?",
+    question: "How does SitePace.ai handle indoor positioning without GPS?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "SitePace.ai uses a Visual Indoor Positioning System (VIPS) to map locations accurately indoors without relying on GPS, Wi-Fi, or beacons.",
   },
   {
     id: "panel4",
-    question: "Does SitePace.ai comply with data privacy regulations?",
+    question: "What is an automated virtual tour in SitePace.ai?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "Our system stitches 360° images into immersive virtual tours, allowing users to navigate projects remotely and monitor progress effortlessly.",
   },
   {
     id: "panel5",
-    question: "How accurate are the AI features in SitePace.ai?",
+    question: "Does SitePace.ai recognize the location of 360° captures automatically?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "Yes, SitePace.ai uses advanced computer vision to automatically determine and organize the location of each capture for precise documentation.",
+  },
+  {
+    id: "panel6",
+    question: "What types of 360° cameras are compatible with SitePace.ai?",
+    answer:
+      "SitePace.ai supports a range of industry-standard 360° cameras. Visit our Help Center for the recommended devices.",
+  },
+  {
+    id: "panel7",
+    question: "Can I collaborate with others in real-time on SitePace.ai?",
+    answer:
+      "Absolutely! Our platform supports real-time collaboration, annotations, and sharing within virtual tours for seamless teamwork.",
+  },
+  {
+    id: "panel8",
+    question: "Does the mobile app require an internet connection?",
+    answer:
+      "The mobile app works offline for capturing images and syncs data to the cloud when reconnected to the internet.",
+  },
+  {
+    id: "panel9",
+    question: "What AI features does SitePace.ai offer?",
+    answer:
+      "Currently, SitePace.ai is an AI-based virtual tour creator. We are working on updates for AI-powered defect detection, progress tracking, and location-based data organization.",
+  },
+  {
+    id: "panel10",
+    question: "How secure is my project data on SitePace.ai?",
+    answer:
+      "SitePace.ai employs advanced encryption, secure cloud storage, and access controls to ensure your data is always protected.",
+  },
+  {
+    id: "panel11",
+    question: "How long does SitePace.ai store my data?",
+    answer:
+      "SitePace.ai stores all project data, including visuals and reports, from Day 1 to five years post-project completion.",
+  },
+  {
+    id: "panel12",
+    question: "How many cameras are required for a multistory building?",
+    answer:
+      "Typically, one or two cameras are sufficient to capture the entire site, even for large multistory buildings.",
   },
 ];
 

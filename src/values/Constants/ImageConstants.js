@@ -37,8 +37,10 @@ export const VIDEOINNER = URL('/images/Video.png');
 export const DOWN = URL('/images/down.png');
 export const UP = URL('/images/up.png');
 export const VISION = URL('/images/vision.png');
+export const VISIONMEETSPRECISION = URL('http://194.163.131.163/site-view-ai-assets/images/vision-meets-precision.gif');
 export const PROJECTLOGO = URL('/images/Projectlogo.png');
 export const IMAGE2 = URL('/images/Iamge2.png');
+export const VISIONBASED = URL('http://194.163.131.163/site-view-ai-assets/images/vision-based.gif');
 export const MACBOOKPRO = URL('/images/MacBookPro.png');
 export const IPHONE = URL('/images/Mobile.png');
 export const DEVICE1 = URL('/images/Device1.png');
@@ -63,8 +65,8 @@ export const TIMETRAVEL = URL('/images/time-travel.png');
 export const NOBLINDSPOT = URL('http://194.163.131.163/site-view-ai-assets/images/no-blind-spot.gif');
 // export const NOBLINDSPOT = URL('/images/no-blind-spot.gif'); // UNCOMMENT ON PRODUCTION
 
-export const HELMETCAMERA = URL('http://194.163.131.163/site-view-ai-assets/images/helmet-camera.gif');
-// export const HELMETCAMERA = URL('/images/helmet-camera.gif'); // UNCOMMENT ON PRODUCTION
+// export const HELMETCAMERA = URL('http://194.163.131.163/site-view-ai-assets/images/helmet-camera.gif');
+export const HELMETCAMERA = URL('/images/helmet-camera.png'); // UNCOMMENT ON PRODUCTION
 
 export const PLANNING = URL('/images/planning.png');
 export const EXECUTION = URL('/images/execution.png');

@@ -62,13 +62,15 @@ export default function VideoSec() {
                   width={"100%"}
                   height={"100%"}
                   src={item.video}
-                  controls
-                  // muted
+                  // controls
+                  muted
                   ref={video}
                   style={{ objectFit: "cover" }}
+                  autoPlay
+                  loop
                 // onPause={() => setIsOverlayVisible(true)}
                 />
-                {isOverlayVisible && (
+                {/* {isOverlayVisible && (
                   <>
                     <Box
                       sx={MUIStyle.VideoOverlay}
@@ -88,7 +90,7 @@ export default function VideoSec() {
                       </Typography>
                     </Button>
                   </>
-                )}
+                )} */}
 
               </Box>
             )}

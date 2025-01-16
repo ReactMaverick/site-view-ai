@@ -14,10 +14,11 @@ export const MUIStyle = {
             xl: "132px",
         },
         position: "relative",
+        overflow: "hidden",
     },
     ftrwaternark: {
         position: "absolute",
-        bottom: "0",
+        bottom: "-3.5rem",
         left: "50%",
         transform: "translateX(-50%)",
         width: "95%",
