@@ -2,7 +2,7 @@
 import { Box, Button, Container, LinearProgress, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import React, { Fragment, useLayoutEffect, useState } from "react";
-import { CTABG, EXECUTION, HELMATE, HELMETCAMERA, LINEARROW, PLANNING, TRYNOW } from "@/values/Constants/ImageConstants";
+import { CTABG, EXECUTION, HELMETCAMERA, LINEARROW, PLANNING, TRYNOW } from "@/values/Constants/ImageConstants";
 import { Icon } from "@iconify/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -72,6 +72,16 @@ export default function CTA() {
       }
     ]);
   }
+
+  const updateProgress = (index) => {
+    setProgress((prev) => {
+      const newProgress = [...prev];
+      newProgress[index].value = 100;
+      newProgress[index].titleColor = commonColor.green;
+      newProgress[index].arrowColor = commonColor.green;
+      return newProgress;
+    });
+  };
 
   useLayoutEffect(() => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -185,131 +195,44 @@ export default function CTA() {
     // });
 
     const tl = gsap.timeline({
-      // repeat: -1, // Loop infinitely
-      // repeatDelay: 2, // No delay between loops
+      repeat: -1, // Loop infinitely
+      repeatDelay: 0.5, // No delay between loops
+      // yoyo: true, // Reverse the animation at the end of each loop
     });
 
-    gsap.to('.ctaImageFlex', {
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".CTASection",
-        start: "top top",
-        // markers: true,  // Set to true to see the trigger area
-        onEnter: () => {
-          // console.log("Enter");
+    // Initial position
+    tl.to('.ctaImageFlex', {
+      x: 0,
+      duration: 0.1,
+      onStart: () => updateProgress(0),
+    });
 
-          gsap.to('.headerInner', {
-            yPercent: -100,
-          })
+    // Loop through each scroll step
+    for (let i = 1; i < numScrolls; i++) {
+      tl.to('.ctaImageFlex', {
+        xPercent: -(100 / numScrolls) * i,
+        onStart: () => updateProgress(i),
+      }, '+=1');
+    }
 
-          tl.to('.ctaImageFlex', {
-            x: 0,
-            duration: 0.5,
-            onStart: () => {
-              setProgress((prev) => {
-                const newProgress = [...prev];
-                newProgress[0].value = 100;
-                newProgress[0].titleColor = commonColor.green;
-                newProgress[0].arrowColor = commonColor.green;
-                return newProgress;
-              });
-            }
-          })
+    // Reset position
+    tl.to('.ctaImageFlex', {
+      xPercent: 0,
+      onStart: () => resetProgress(),
+    }, '+=1');
 
 
-          tl.to('.ctaImageFlex', {
-            xPercent: -(100 / numScrolls),
-            duration: 0.5,
-            onStart: () => {
-              setProgress((prev) => {
-                const newProgress = [...prev];
-                newProgress[1].value = 100;
-                newProgress[1].titleColor = commonColor.green;
-                newProgress[1].arrowColor = commonColor.green;
-                return newProgress;
-              });
-            }
-          }, '+=1')
-
-          tl.to('.ctaImageFlex', {
-            xPercent: -(100 / numScrolls) * 2,
-            duration: 0.5,
-            onStart: () => {
-              setProgress((prev) => {
-                const newProgress = [...prev];
-                newProgress[2].value = 100;
-                newProgress[2].titleColor = commonColor.green;
-                newProgress[2].arrowColor = commonColor.green;
-                return newProgress;
-              });
-            }
-          }, '+=1')
-
-          tl.to('.ctaImageFlex', {
-            xPercent: -(100 / numScrolls) * 3,
-            duration: 0.5,
-            onStart: () => {
-              setProgress((prev) => {
-                const newProgress = [...prev];
-                newProgress[3].value = 100;
-                newProgress[3].titleColor = commonColor.green;
-                newProgress[3].arrowColor = commonColor.green
-                return newProgress;
-              });
-            }
-          }, '+=1')
-          
-
-          tl.to('.ctaImageFlex', {
-            xPercent: 0,
-            duration: 1.5,
-            onStart: () => {
-              resetProgress();
-            }
-          }, '+=2')
-
-        },
-        onEnterBack: () => {
-          // console.log("Enter");
-
-          gsap.to('.headerInner', {
-            yPercent: -100,
-          })
-        },
-        onLeave: () => {
-          // console.log("Leave");
-
-          setTimeout(() => {
-
-            gsap.to('.headerInner', {
-              yPercent: 0,
-            })
-          }, 2000);
-        },
-        onLeaveBack: () => {
-          // console.log("Leave");
-
-          setTimeout(() => {
-
-            gsap.to('.headerInner', {
-              yPercent: 0,
-            })
-          }, 2000);
-        },
-      },
-
-    })
-
+    // Pin the CTASection (up to 2000px)
     gsap.to('.CTASection', {
       scrollTrigger: {
         trigger: ".CTASection",
         start: "top top",
-        end: "+=2000px",
+        end: "+=2000",
         // markers: true,  // Set to true to see the trigger area
         pin: true,
         scrub: 1,
       }
-  });
+    });
 
 
 

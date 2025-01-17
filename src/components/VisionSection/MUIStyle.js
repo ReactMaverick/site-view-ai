@@ -106,13 +106,7 @@ export const MUIStyle = {
     alignItems: "center",
     borderRadius: "10px",
     "& img": {
-      width: {
-        xs: "100%",
-        sm: "100%",
-        md: "100%",
-        lg: "80%",
-        xl: "80%",
-      },
+      width: '100%',
       height: "auto",
       borderRadius: "16px",
       objectFit: "cover",
