@@ -32,11 +32,13 @@ export const setupThreeJS = ({
     let boxWidth = 5 * aspectRatio;
     let boxHeight = 5;
 
-    let xPlateWidth = boxWidth / 5; // There will be 5 divisions on the top plate
+    let numberOfDivisions = 5; // Number of divisions on the top and side plates
+
+    let xPlateWidth = boxWidth / numberOfDivisions; // There will be 5 divisions on the top plate
     let xPlateHeight = 1; // The height of the top plate will be 1 unit
 
-    let yPlateWidth = boxHeight / 5; // There will be 5 divisions on the side plate
-    let yPlateHeight = boxHeight / 5; // The height of the side plate will be 1 unit
+    let yPlateWidth = boxHeight / numberOfDivisions; // There will be 5 divisions on the side plate
+    let yPlateHeight = boxHeight / numberOfDivisions; // The height of the side plate will be 1 unit
 
     // Create the camera (Parameters: Field of view, aspect ratio, near clipping plane, far clipping plane)
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10);
@@ -136,6 +138,9 @@ export const setupThreeJS = ({
     let minY = -(boxHeight - yPlateHeight) / 2;
     let maxY = (boxHeight - yPlateHeight) / 2;
 
+    // Length of the scene to position the planes
+    const sceneLength = 200;
+
     // Function to generate a random whole number within the specified range with a minimum gap
     function getRandomXPosition(min, max, gap) {
         const range = Math.floor((max - min) / gap);
@@ -144,8 +149,8 @@ export const setupThreeJS = ({
     }
 
     // Function to position planes randomly on a face of the cube
-    function positionRandomPlanes(face, count) {
-        for (let i = 0; i < count; i++) {
+    function positionRandomPlanes(face, length) {
+        for (let i = 0; i < length; i++) {
             const plane = createRandomPlane();
             switch (face) {
                 case 'top':
@@ -154,7 +159,7 @@ export const setupThreeJS = ({
                     plane.position.set(
                         getRandomXPosition(minX, maxX, xPlateWidth), // x position with minimum gap
                         2.5, // y
-                        Math.floor(Math.random() * 200) + 0.5 // z: 0 to 200
+                        Math.floor(Math.random() * length) + 0.5 // z: 0 to length
                     );
                     plane.rotation.x = Math.PI / 2;
                     break;
@@ -164,7 +169,7 @@ export const setupThreeJS = ({
                     plane.position.set(
                         getRandomXPosition(minX, maxX, xPlateWidth), // x position with minimum gap
                         -2.5, // y
-                        Math.floor(Math.random() * 200) + 0.5 // z: 0 to 200
+                        Math.floor(Math.random() * length) + 0.5 // z: 0 to length
                     );
                     plane.rotation.x = -Math.PI / 2;
                     break;
@@ -174,7 +179,7 @@ export const setupThreeJS = ({
                     plane.position.set(
                         -(boxWidth / 2), // x
                         getRandomXPosition(minY, maxY, yPlateHeight), // y position with minimum gap
-                        Math.floor(Math.random() * 200) + 0.5 // z: 0 to 200
+                        Math.floor(Math.random() * length) + 0.5 // z: 0 to length
                     );
                     plane.rotation.y = Math.PI / 2;
                     break;
@@ -184,7 +189,7 @@ export const setupThreeJS = ({
                     plane.position.set(
                         (boxWidth / 2), // x
                         getRandomXPosition(minY, maxY, yPlateHeight), // y position with minimum gap
-                        Math.floor(Math.random() * 200) + 0.5 // z: 0 to 200
+                        Math.floor(Math.random() * length) + 0.5 // z: 0 to length
                     );
                     plane.rotation.y = -Math.PI / 2;
                     break;
@@ -194,14 +199,14 @@ export const setupThreeJS = ({
     }
 
     // Position random planes on each face of the hollow cube
-    positionRandomPlanes('top', 200);
-    positionRandomPlanes('bottom', 200);
-    positionRandomPlanes('left', 200);
-    positionRandomPlanes('right', 200);
+    positionRandomPlanes('top', sceneLength);
+    positionRandomPlanes('bottom', sceneLength);
+    positionRandomPlanes('left', sceneLength);
+    positionRandomPlanes('right', sceneLength);
 
 
     // Function to create rectangular grid lines on a face of the cube
-    function createRectangularGrid(width, height, divisionsWidth, divisionsHeight, position, rotation, plane) {
+    function createRectangularGrid(totalWidth, totalHeight, position, rotation, plane) {
         // (5, 35, 5, 35, { x: -2.5, y: 0, z: 0 }, { x: 0, y: Math.PI / 2, z: 0 }
         const gridGeometry = new THREE.BufferGeometry();
         const vertices = [];
@@ -210,32 +215,41 @@ export const setupThreeJS = ({
         const verticalDivision = plane === 'horizontal' ? xPlateHeight : yPlateWidth;
 
         // Create horizontal lines
-        for (let i = 0; i <= divisionsWidth; i += horizontalDivision) {
-            const x = (i / divisionsWidth) * width - width / 2;
-            vertices.push(x, -height / 2, 0, x, height / 2, 0);
+        for (let i = 0; i <= totalWidth; i += horizontalDivision) {
+            const x = i - totalWidth / 2;
+            vertices.push(x, -totalHeight / 2, 0, x, totalHeight / 2, 0);
         }
 
         // Create vertical lines
-        for (let j = 0; j <= divisionsHeight; j += verticalDivision) {
-            const y = (j / divisionsHeight) * height - height / 2;
+        for (let j = 0; j <= totalHeight; j += verticalDivision) {
+            const y = j - totalHeight / 2;
 
-            vertices.push(-width / 2, y, 0, width / 2, y, 0);
+            vertices.push(-totalWidth / 2, y, 0, totalWidth / 2, y, 0);
         }
 
+        console.log('Vertices:', vertices);        
 
         gridGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
         const gridLines = new THREE.LineSegments(gridGeometry, new THREE.LineBasicMaterial({ color: '#d4d4d4' }));
 
         gridLines.position.set(position.x, position.y, position.z);
         gridLines.rotation.set(rotation.x, rotation.y, rotation.z);
+        
+        console.log('Grid Lines:', gridLines);  
+        
         scene.add(gridLines);
     }
 
     // Create rectangular grid lines on each face of the hollow cube
-    createRectangularGrid(boxWidth, 200, boxWidth, 200, { x: 0, y: 2.5, z: 100 }, { x: Math.PI / 2, y: 0, z: 0 }, 'horizontal'); // Top
-    createRectangularGrid(boxWidth, 200, boxWidth, 200, { x: 0, y: -2.5, z: 100 }, { x: -Math.PI / 2, y: 0, z: 0 }, 'horizontal'); // Bottom
-    createRectangularGrid(5, 200, 5, 200, { x: -(boxWidth / 2), y: 0, z: 100 }, { x: Math.PI / 2, y: Math.PI / 2, z: 0 }, 'vertical'); // Left
-    createRectangularGrid(5, 200, 5, 200, { x: (boxWidth / 2), y: 0, z: 100 }, { x: - Math.PI / 2, y: -Math.PI / 2, z: 0 }, 'vertical'); // Right
+    createRectangularGrid(boxWidth, sceneLength, { x: 0, y: 2.5, z: sceneLength / 2 }, { x: Math.PI / 2, y: 0, z: 0 }, 'horizontal'); // Top
+    createRectangularGrid(boxWidth, sceneLength, { x: 0, y: -2.5, z: sceneLength / 2 }, { x: -Math.PI / 2, y: 0, z: 0 }, 'horizontal'); // Bottom
+    createRectangularGrid(boxHeight, sceneLength, { x: -(boxWidth / 2), y: 0, z: sceneLength / 2 }, { x: Math.PI / 2, y: Math.PI / 2, z: 0 }, 'vertical'); // Left
+    createRectangularGrid(boxHeight, sceneLength, { x: (boxWidth / 2), y: 0, z: sceneLength / 2 }, { x: - Math.PI / 2, y: -Math.PI / 2, z: 0 }, 'vertical'); // Right
+
+    // createRectangularGrid(boxWidth, sceneLength, { x: 0, y: 2.5, z: 3 * sceneLength / 2 }, { x: Math.PI / 2, y: 0, z: 0 }, 'horizontal'); // Top
+    // createRectangularGrid(boxWidth, sceneLength, { x: 0, y: -2.5, z: 3 * sceneLength / 2 }, { x: -Math.PI / 2, y: 0, z: 0 }, 'horizontal'); // Bottom
+    // createRectangularGrid(boxHeight, sceneLength, { x: -(boxWidth / 2), y: 0, z: 3 * sceneLength / 2 }, { x: Math.PI / 2, y: Math.PI / 2, z: 0 }, 'vertical'); // Left
+    // createRectangularGrid(boxHeight, sceneLength, { x: (boxWidth / 2), y: 0, z: 3 * sceneLength / 2 }, { x: - Math.PI / 2, y: -Math.PI / 2, z: 0 }, 'vertical'); // Right
 
     // Create an axes helper
     // const axesHelper = new THREE.AxesHelper();
