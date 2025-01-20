@@ -256,7 +256,7 @@ export const MUIStyle = {
       display: "none",
     },
 
-
+    width: "100%",
   },
 
   FAQSecAccrodinHeading: {

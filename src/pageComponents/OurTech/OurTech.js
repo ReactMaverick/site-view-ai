@@ -35,7 +35,7 @@ export default function OutTech() {
       <OnsiteSection />
       <VisionSection
         orientation="image-right"
-        title="Building a Future with Emerging Technologie"
+        title="Building a Future with Emerging Technologies"
         description={"Enhanced Collaboration with AR/ Mixed Reality : Imagine virtually walking through your construction site with colleagues, adding real-time annotations using AR features\n\nComputer Vision for Automated Tasks: We're constantly developing features that leverage computer vision to automate tasks, such as progress tracking and potentially even identifying safety hazards in the future"}
         showSubtitle={false}
       />

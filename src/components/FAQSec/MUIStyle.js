@@ -103,6 +103,7 @@ export const MUIStyle = {
     "&.MuiAccordion-root:before": {
       display: "none",
     },
+    width: "100%",
   },
 
   FAQSecAccrodinHeading: {
