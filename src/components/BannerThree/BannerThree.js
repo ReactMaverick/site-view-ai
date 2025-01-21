@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { gsapAnimation } from "./BannerScroll";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ContactFormModal from "../ContactFormModal/ContactFormModal";
 
 export default function BannerThree({
     setIsThreeJSLoading
@@ -19,6 +20,9 @@ export default function BannerThree({
     const [camera, setCamera] = useState(null);
     const [scene, setScene] = useState(null);
     const [renderer, setRenderer] = useState(null);
+
+    // Modal
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useLayoutEffect(() => {
         gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -101,7 +105,9 @@ export default function BannerThree({
                             See Further, Save More. Autopilot your project.
                         </Typography>
 
-                        <Button sx={MUIStyle.BannerBtn} variant="contained" size="large">
+                        <Button sx={MUIStyle.BannerBtn} variant="contained" size="large"
+                            onClick={() => setIsModalOpen(true)}
+                        >
 
                             <Box component={"span"} className="BannerBtnIcon" sx={MUIStyle.BannerBtnIcon}>
                                 <Icon icon="flowbite:arrow-right-outline" />
@@ -113,6 +119,12 @@ export default function BannerThree({
                 </Box>
                 {/* First Layer */}
             </Box>
+
+            <ContactFormModal
+                isModalOpen={isModalOpen}
+                setIsModalOpen={setIsModalOpen}
+                theme={'light'}
+            />
         </>
     );
 }

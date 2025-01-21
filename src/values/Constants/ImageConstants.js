@@ -118,3 +118,7 @@ export const PLANNINGMONITORING = URL('/images/planning-monitoring.jpg');
 export const REMOTECOLLABORATION = URL('/images/remote-collaboration.jpg');
 
 export const CONTACTUSFORMBG = URL('/images/contact-us-form-bg.jpg');
+
+// Contact Form
+export const CONTACTFORMBG = URL('/images/contact-form-bg.jpg');
+export const CLOSEICON = URL('/images/close.png');

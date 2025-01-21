@@ -10,6 +10,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import { commonColor } from "@/values/Colors/CommonColor";
 import SiteViewSVG from "@/components/SiteViewSVG/SiteViewSVG";
+import Link from "next/link";
 
 const faqItems = [
   {
@@ -69,8 +70,8 @@ export default function ContactUs() {
         headerButtonText="Talk to Us"
         title="Let’s Connect Anytime"
         subtitle="For queries, support, or feedback, connect with us anytime. Let’s build smarter together"
-        // button={false}
-        // contactButtons={true}
+      // button={false}
+      // contactButtons={true}
       />
       <Box sx={MUIStyle.ContactSec}>
         <Box sx={MUIStyle.ContactSecSVGContainer}>
@@ -173,10 +174,12 @@ export default function ContactUs() {
               ))}
               <Box sx={MUIStyle.BtnRow}>
                 <Button sx={MUIStyle.CustomBtn}>
-                  View All FAQ
-                  <Box component={"span"} sx={MUIStyle.BtnIcon}>
-                    <Icon icon="radix-icons:arrow-right" />
-                  </Box>
+                  <Link href={"/faq"}>
+                    View All FAQ
+                    <Box component={"span"} sx={MUIStyle.BtnIcon}>
+                      <Icon icon="radix-icons:arrow-right" />
+                    </Box>
+                  </Link>
                 </Button>
               </Box>
             </Box>

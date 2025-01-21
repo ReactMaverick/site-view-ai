@@ -7,6 +7,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import { BUTTONDOWN } from "@/values/Constants/ImageConstants";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 const faqItems = [
   {
@@ -119,10 +120,12 @@ export default function FAQSec() {
             ))}
             <Box sx={MUIStyle.BtnRow}>
               <Button sx={MUIStyle.CustomBtn}>
-                View All FAQ
-                <Box component={"span"} sx={MUIStyle.BtnIcon}>
-                  <Icon icon="radix-icons:arrow-right" />
-                </Box>
+                <Link href={"/faq"}>
+                  View All FAQ
+                  <Box component={"span"} sx={MUIStyle.BtnIcon}>
+                    <Icon icon="radix-icons:arrow-right" />
+                  </Box>
+                </Link>
               </Button>
             </Box>
           </Box>
