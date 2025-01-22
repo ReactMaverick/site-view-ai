@@ -11,7 +11,7 @@ import DigitalConstruction from "@/components/DigitalConstruction/DigitalConstru
 import FAQSec from "@/components/FAQSec/FAQSec";
 import { tabBarSecContentOurTech } from "@/components/TabBarSec/TabBarSecContent";
 import VisionSection from "@/components/VisionSection/VisionSection";
-import { VISION, VISIONMEETSPRECISION } from "@/values/Constants/ImageConstants";
+import { VISION, VISIONMEETSPRECISION, WHYSITEPACELASTVID } from "@/values/Constants/ImageConstants";
 
 export default function OutTech() {
   return (
@@ -50,6 +50,7 @@ export default function OutTech() {
         title="Beyond Visuals: A Powerful Data Management System"
         subtitle="Your Project’s Digital Brain"
         description={"Store all your project data—360° visuals, time-lapse recordings, and reports—securely in one cloud-based platform, ensuring easy access and robust data organization\n\nShare data instantly with stakeholders for seamless collaboration. Foster real-time teamwork with tools that connect on-site crews and remote decision-makers effortlessly\n\nGo paperless with a digital-first approach. Reduce waste, streamline documentation, and unlock cost savings through smarter workflows and early issue detection."}
+        image={WHYSITEPACELASTVID}
       />
       <DigitalConstruction />
       <FAQSec />

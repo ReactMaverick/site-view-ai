@@ -42,7 +42,6 @@ export const IMAGE2 = URL('/images/Iamge2.png');
 export const VISIONBASED = URL('http://194.163.131.163/site-view-ai-assets/images/vision-based.gif');
 export const MACBOOKPRO = URL('/images/MacBookPro.png');
 export const IPHONE = URL('/images/Mobile.png');
-export const DEVICE1 = URL('/images/Device1.png');
 export const BUTTONDOWN = URL('/images/Buttondown.png');
 export const BLOGIMG = URL('/images/Blogimage.jpg');
 export const CONTAINSBLOG = URL('/images/ContainsBlog.png');
@@ -101,18 +100,18 @@ export const TELEIT = URL('/images/tele-it.png');
 export const DATACENTRE = URL('/images/data-centre.jpg');
 export const GOVPRIVSERVICES = URL('/images/gov-priv-services.jpg');
 
-// Tab Images
-export const TABIMAGE1 = URL('/images/tab-image-1.png');
-export const TABIMAGE2 = URL('/images/tab-image-2.png');
-export const TABIMAGE3 = URL('/images/tab-image-3.png');
-export const TABIMAGE4 = URL('/images/tab-image-4.png');
-export const TABIMAGE5 = URL('/images/tab-image-5.png');
+// Our Tech Tab Images
+export const COMPUTERVISION = URL('/images/computer-vision.jpg');
+export const REALTIMECOLLABORATION = URL('/images/real-time-collaboration.jpg');
+export const PROGRESSTRACKINGTECH = URL('/images/progress-tracking-tech.jpg');
+export const CLOUDBASEDPLATFORM = URL('/images/cloud-based-platform.jpg');
+export const SCALABILITY = URL('/images/scalability.jpg');
 
 export const QUALITYCONTROL = URL('/images/quality-control.jpg');
 export const SUSTAINIBILITY = URL('/images/sustainibility.jpg');
 export const DOCDATA = URL('/images/doc-data.jpg');
-export const SAFETYMANAGEMENT = URL('/images/safety-management.png');
-export const PROGRESSTRACKING = URL('/images/progress-tracking.png');
+export const SAFETYMANAGEMENT = URL('/images/safety-management.jpg');
+export const PROGRESSTRACKING = URL('/images/progress-tracking.jpg');
 export const ONSITEMANAGEMENT = URL('/images/on-site-management.jpg');
 export const PLANNINGMONITORING = URL('/images/planning-monitoring.jpg');
 export const REMOTECOLLABORATION = URL('/images/remote-collaboration.jpg');
@@ -122,3 +121,10 @@ export const CONTACTUSFORMBG = URL('/images/contact-us-form-bg.jpg');
 // Contact Form
 export const CONTACTFORMBG = URL('/images/contact-form-bg.jpg');
 export const CLOSEICON = URL('/images/close.png');
+
+export const WHYSITEVIEW = URL('http://194.163.131.163/site-view-ai-assets/images/why-siteview.gif');
+export const OURTECHLAST = URL('/images/our-tech-last.png');
+
+export const WHYSITEPACELASTVID = URL('http://194.163.131.163/site-view-ai-assets/images/why-sitepace-last-vid.gif');
+
+export const CHECK = URL('/images/check.png');

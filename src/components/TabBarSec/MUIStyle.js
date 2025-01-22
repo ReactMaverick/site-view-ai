@@ -172,6 +172,7 @@ export const MUIStyle = {
     textAlign: "center",
     boxShadow: "0px 0px 32px rgba(0, 0, 0, 0.12)",
     overflow: "hidden",
+    position: "relative",
   },
   TabBarSecButtonBodyTop: {
     display: "flex",
@@ -199,7 +200,7 @@ export const MUIStyle = {
     textAlign: "center",
   },
   TabBarSecButtonBodyTopText: {
-    color: commonColor.grey,
+    color: commonColor.black,
     fontSize: {
       xs: FONT_SIZE.text14,
       sm: FONT_SIZE.text14,
@@ -220,7 +221,7 @@ export const MUIStyle = {
     paddingTop: "10px",
   },
   TabBarSecButtonBodyText: {
-    color: commonColor.grey,
+    color: commonColor.black,
     fontSize: {
       xs: FONT_SIZE.text12,
       sm: FONT_SIZE.text12,

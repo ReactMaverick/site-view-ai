@@ -26,7 +26,7 @@ export const MUIStyle = {
         display: "flex",
         justifyContent: "center",
         "& img": {
-            background: "rgba(255, 255, 255, 0.2)",
+            // background: "rgba(255, 255, 255, 0.2)",
             width: {
                 xs: "100%",
                 sm: "100%",

@@ -113,10 +113,11 @@
     width: 100%;
     /* background-color: red; */
     border: 1px solid #C9F625;
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     overflow: auto;
     box-shadow: 10px 10px 15px rgb(0 0 0 / 80%);
     max-height: 200px;
+    border-top: none;
 }
 
 .selectOption {
@@ -151,5 +152,24 @@
 }
 
 .searchInput {
-    position: absolute;
+    /* position: absolute; */
+    border-radius: 20px 20px 0 0 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.inputContainer input::-webkit-outer-spin-button,
+.inputContainer input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.inputContainer input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.flagIcon {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
 }

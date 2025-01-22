@@ -2,7 +2,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import React from "react";
-import { DEVICE1 } from "@/values/Constants/ImageConstants";
+import { OURTECHLAST } from "@/values/Constants/ImageConstants";
 import { commonColor } from "@/values/Colors/CommonColor";
 
 export default function DigitalConstruction() {
@@ -56,7 +56,7 @@ export default function DigitalConstruction() {
             <Box
               sx={MUIStyle.DigitalConstructionImg}
               component={"img"}
-              src={DEVICE1}
+              src={OURTECHLAST}
             />
           </Box>
           <Box sx={MUIStyle.DigitalColRight}>

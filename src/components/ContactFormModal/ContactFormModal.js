@@ -1,8 +1,8 @@
-import { Backdrop, Box, Button, Modal } from "@mui/material";
+import { Backdrop, Box, Button, Modal, Typography } from "@mui/material";
 // import Backdrop from "@mui/material/Backdrop";
 import Fade from "@mui/material/Fade";
 import { MUIStyle } from "./MUIStyle";
-import { CLOSEICON } from "@/values/Constants/ImageConstants";
+import { CHECK, CLOSEICON } from "@/values/Constants/ImageConstants";
 import CustomInput from "./CustomInput";
 import { useEffect, useState } from "react";
 import { countryList, countryNames } from "@/values/Constants/CountryCodes";
@@ -30,6 +30,7 @@ export default function ContactFormModal({
         email: "",
         message: "",
     });
+    const [isSuccess, setIsSuccess] = useState(false);
 
     const resetFormData = () => {
         setFormData({
@@ -46,11 +47,24 @@ export default function ContactFormModal({
         setIsModalOpen && setIsModalOpen(false);
 
         resetFormData();
+
+        setTimeout(() => {
+            setIsSuccess(false);
+        }, 500);
     }
 
     const handleTextChange = (key, value) => {
         // console.log(key, value);
-        
+
+        if (key === "country") {
+            setFormData({
+                ...formData,
+                country: value.label,
+                countryCode: value.value,
+            });
+            return;
+        }
+
         setFormData({
             ...formData,
             [key]: value,
@@ -59,12 +73,9 @@ export default function ContactFormModal({
 
     const handleFormSubmit = () => {
         console.log("Form Data: ", formData);
-    }
 
-    useEffect(() => {
-        console.log("Form Data: ", formData);
-    }, [formData]);
-        
+        setIsSuccess(true);
+    }
 
 
     return (
@@ -95,48 +106,69 @@ export default function ContactFormModal({
                             onClick={handleClose}
                         />
                         <Box sx={MUIStyle.modalContent}>
-                            <CustomInput
-                                label="Name"
-                                placeholder="Enter your name"
-                                value={formData.name}
-                                onTextChange={(value) => handleTextChange("name", value)}
-                            />
-                            <CustomInput
-                                label="Country"
-                                placeholder="Select your country"
-                                value={formData.country}
-                                onTextChange={({label, value}) => {
-                                    handleTextChange("country", label);
-                                    handleTextChange("countryCode", value);
-                                }}
-                                inputType="select"
-                                options={countryList}
-                            />
-                            <CustomInput
-                                label="Contact Number"
-                                placeholder="Enter your contact number"
-                                value={formData.contactNumber}
-                                onTextChange={(value) => handleTextChange("contactNumber", value)}
-                            />
-                            <CustomInput
-                                label="Email"
-                                placeholder="Enter your email"
-                                value={formData.email}
-                                onTextChange={(value) => handleTextChange("email", value)}
-                            />
-                            <CustomInput
-                                label="Please Add More"
-                                placeholder="Enter your message"
-                                multiline
-                                value={formData.message}
-                                onTextChange={(value) => handleTextChange("message", value)}
-                            />
-                            <Button
-                                sx={MUIStyle.letsTalkButton}
-                                onClick={handleFormSubmit}
-                            >
-                                Let's Connect
-                            </Button>
+                            {isSuccess ? (
+                                <Box sx={MUIStyle.successMessage}>
+                                    <Box
+                                        component={'img'}
+                                        src={CHECK}
+                                        alt="check"
+                                        sx={MUIStyle.successMessageIcon}
+                                    />
+                                    <Typography
+                                    sx={MUIStyle.successMessageText}
+                                    >
+                                        Thank you
+                                    </Typography>
+                                    <Typography
+                                        sx={MUIStyle.successMessageText}
+                                    >
+                                        Our team will get contact you soon
+                                    </Typography>
+                                </Box>) :
+                                (<>
+                                    <CustomInput
+                                        label="Name"
+                                        placeholder="Enter your name"
+                                        value={formData.name}
+                                        onTextChange={(value) => handleTextChange("name", value)}
+                                    />
+                                    <CustomInput
+                                        label="Country"
+                                        placeholder="Select your country"
+                                        value={formData.country}
+                                        onTextChange={({ label, value }) => {
+                                            handleTextChange("country", { label, value });
+                                        }}
+                                        inputType="select"
+                                        options={countryList}
+                                    />
+                                    <CustomInput
+                                        label="Contact Number"
+                                        placeholder="Enter your contact number"
+                                        type="number"
+                                        value={formData.contactNumber}
+                                        onTextChange={(value) => handleTextChange("contactNumber", value)}
+                                    />
+                                    <CustomInput
+                                        label="Email"
+                                        placeholder="Enter your email"
+                                        value={formData.email}
+                                        onTextChange={(value) => handleTextChange("email", value)}
+                                    />
+                                    <CustomInput
+                                        label="Please Add More"
+                                        placeholder="Enter your message"
+                                        multiline
+                                        value={formData.message}
+                                        onTextChange={(value) => handleTextChange("message", value)}
+                                    />
+                                    <Button
+                                        sx={MUIStyle.letsTalkButton}
+                                        onClick={handleFormSubmit}
+                                    >
+                                        Let`&apos;`s Connect
+                                    </Button>
+                                </>)}
                         </Box>
                     </Box>
                 </Box>

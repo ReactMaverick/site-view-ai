@@ -2,6 +2,7 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { Box, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
+import style from "./TabBarSec.module.css";
 import gsap from "gsap";
 import { VIDEOINNER } from "@/values/Constants/ImageConstants";
 import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
@@ -112,7 +113,7 @@ export default function TabBarSec({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=" + buttonElements.length * 750 + "px",
+          end: "+=" + buttonElements.length * 375 + "px",
           // end: "bottom bottom",
           scrub: 1,
           // markers: true,
@@ -131,14 +132,14 @@ export default function TabBarSec({
       buttonElements.forEach((button, index) => {
 
         tl.to(bodyRefs.current[index], {
-          marginTop: window.innerHeight * 0.02,
+          marginTop: '-' + buttonRefs.current[index].offsetHeight + 'px',
           height: "auto",
           padding: window.innerHeight * 0.02,
           minHeight: window.innerHeight * 0.15, // Adjust minHeight as needed
           opacity: 1,
           duration: 0.8,
           ease: "power4.out", // Slower easing for expand
-          onComplete: () => {
+          onStart: () => {
             swiper?.slideTo(index);
           },
         });
@@ -243,12 +244,12 @@ export default function TabBarSec({
                     ref={(el) => (bodyRefs.current[index] = el)}
                   >
                     <Box sx={MUIStyle.TabBarSecButtonBodyTop}>
-                      {/* <Typography
+                      <Typography
                         variant="h4"
                         sx={MUIStyle.TabBarSecButtonBodyTopHeading}
                       >
                         {tabBar.title}
-                      </Typography> */}
+                      </Typography>
                       <Typography
                         component={"span"}
                         sx={MUIStyle.TabBarSecButtonBodyTopText}

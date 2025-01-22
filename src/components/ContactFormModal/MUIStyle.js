@@ -12,20 +12,22 @@ export const MUIStyle = {
     modalBox: {
         background: 'url("/images/contact-form-bg.jpg")',
         width: {
-            xs: "80vw",
-            sm: "calc(80vh/0.75)",
+            xs: "90vw",
+            sm: "calc(60vh*0.75)",
             md: "calc(80vh/0.75)",
             lg: "calc(80vh/0.75)",
             xl: "calc(80vh/0.75)",
         },
         // Height should be 0.75 times the width
         height: {
-            xs: "60vw",
-            sm: "80vh",
+            xs: "calc(90vw/0.60)",
+            sm: "60vh",
             md: "80vh",
             lg: "80vh",
             xl: "80vh",
         },
+        maxWidth: "95vw",
+        maxHeight: "95vh",
         backgroundSize: "cover",
         zIndex: 1,
         position: 'relative',
@@ -35,8 +37,20 @@ export const MUIStyle = {
         position: "absolute",
         top: "0.5%",
         right: "0.5%",
-        width: "2vw",
-        height: "2vw",
+        width: {
+            xs: "5vw",
+            sm: "3vw",
+            md: "2vw",
+            lg: "2vw",
+            xl: "2vw",
+        },
+        height: {
+            xs: "5vw",
+            sm: "3vw",
+            md: "2vw",
+            lg: "2vw",
+            xl: "2vw",
+        },
         filter: 'drop-shadow(5px 5px 5px black)',
     },
     modalContent: {
@@ -45,7 +59,13 @@ export const MUIStyle = {
         alignItems: "center",
         justifyContent: "space-evenly",
         height: "100%",
-        width: "50%",
+        width: {
+            xs: "100%",
+            sm: "100%",
+            md: "50%",
+            lg: "50%",
+            xl: "50%",
+        },
         padding: "3rem",
     },
     letsTalkButton: {
@@ -78,4 +98,38 @@ export const MUIStyle = {
           color: commonColor.white,
         },
     },
+    successMessage: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    successMessageIcon: {
+        width: {
+            xs: "72px",
+            sm: "72px",
+            md: "72px",
+            lg: "72px",
+            xl: "72px",
+        },
+        height: {
+            xs: "72px",
+            sm: "72px",
+            md: "72px",
+            lg: "72px",
+            xl: "72px",
+        },
+        marginBottom: "1.5rem",
+    },
+    successMessageText: {
+        color: commonColor.white,
+        fontSize: {
+            xs: FONT_SIZE.text14,
+            sm: FONT_SIZE.text14,
+            md: FONT_SIZE.text16,
+            lg: FONT_SIZE.text16,
+        },
+        fontWeight: FONT_WEIGHT.MEDIUM,
+        textAlign: "center",
+    }
 }

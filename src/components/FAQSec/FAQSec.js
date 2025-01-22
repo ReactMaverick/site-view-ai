@@ -8,6 +8,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import { BUTTONDOWN } from "@/values/Constants/ImageConstants";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const faqItems = [
   {
@@ -85,6 +86,9 @@ const faqItems = [
 ];
 
 export default function FAQSec() {
+
+  const router = useRouter();
+
   return (
     <Box sx={MUIStyle.FAQSecMain}>
       <Container maxWidth="xl">
@@ -119,13 +123,13 @@ export default function FAQSec() {
               </Accordion>
             ))}
             <Box sx={MUIStyle.BtnRow}>
-              <Button sx={MUIStyle.CustomBtn}>
-                <Link href={"/faq"}>
+              <Button sx={MUIStyle.CustomBtn}
+                onClick={() => router.push("/faq")}
+              >
                   View All FAQ
                   <Box component={"span"} sx={MUIStyle.BtnIcon}>
                     <Icon icon="radix-icons:arrow-right" />
                   </Box>
-                </Link>
               </Button>
             </Box>
           </Box>

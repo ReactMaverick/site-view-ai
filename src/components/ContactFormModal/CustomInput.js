@@ -15,6 +15,8 @@ export default function CustomInput({
     error = false,
     helperText = "",
     inputType = "input",
+    inputProps = {},
+    textareaProps = {},
     options = [
         { label: "Option 1", value: "option1" },
         { label: "Option 2", value: "option2" },
@@ -98,6 +100,7 @@ export default function CustomInput({
                         disabled={disabled}
                         required={required}
                         rows={4}
+                        {...textareaProps}
                     />
                 ) : (
                     <input
@@ -107,6 +110,7 @@ export default function CustomInput({
                         onChange={onChange}
                         disabled={disabled}
                         required={required}
+                        {...inputProps}
                     />
                 ))}
                 {inputType === 'select' && (
@@ -131,7 +135,7 @@ export default function CustomInput({
                                     ref={selectSearchRef}
                                 />
                                 <div className={styles.selectOptions}>
-                                    {filteredOptions.map(({ label, value }, index) => (
+                                    {filteredOptions.map(({ label, value, flagIcon }, index) => (
                                         <div
                                             key={index}
                                             className={styles.selectOption}
@@ -139,7 +143,14 @@ export default function CustomInput({
                                                 handleSelectOption({ label, value });
                                             }}
                                         >
-                                            {label}
+                                            {flagIcon && (
+                                                <img
+                                                    src={flagIcon}
+                                                    alt="flag"
+                                                    className={styles.flagIcon}
+                                                />
+                                            )}
+                                            <span>{label}</span>
                                         </div>
                                     ))}
                                 </div>

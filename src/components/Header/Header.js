@@ -163,10 +163,11 @@ export default function Header({ theme = "light" }) {
                       },
                     ]}
                     className={styles.loginButton}
+                    onClick={() => {
+                      window.open("https://user.sitepace.ai", "_blank");
+                    }}
                   >
-                    <Link href="https://www.user.sitepace.ai" target="_blank">
                       Login
-                    </Link>
                   </Button>
                 </Box>
               </Box>
@@ -186,10 +187,11 @@ export default function Header({ theme = "light" }) {
               },
             ]}
             className={activeMenu?.theme === "light" ? styles.loginButtonLight : styles.loginButtonDark}
+            onClick={() => {
+              window.open("https://user.sitepace.ai", "_blank");
+            }}
           >
-            <Link href="https://www.user.sitepace.ai" target="_blank">
               Login
-            </Link>
           </Button>
         </Box>
       </Container>

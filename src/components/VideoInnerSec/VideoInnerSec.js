@@ -1,7 +1,7 @@
 "use client";
 import { Box, Container } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
-import { VIDEOINNER } from "@/values/Constants/ImageConstants";
+import { VIDEOINNER, WHYSITEVIEW } from "@/values/Constants/ImageConstants";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -35,7 +35,7 @@ export default function VideoInnerSec() {
         <Box sx={MUIStyle.VideoInnerSecInner}>
           <Box
             component={"img"}
-            src={VIDEOINNER}
+            src={WHYSITEVIEW}
             alt="Video"
             ref={videoRef}
           />

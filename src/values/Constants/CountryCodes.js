@@ -507,6 +507,7 @@ export const countryCodes = {
 export const countryList = Object.entries(countryNames).map(([key, value]) => {
     return {
         label: value,
-        value: countryCodes[key]
+        value: countryCodes[key],
+        flagIcon: `https://flagcdn.com/16x12/${key.toLowerCase()}.png`
     }
 }).sort((a, b) => a.label.localeCompare(b.label))

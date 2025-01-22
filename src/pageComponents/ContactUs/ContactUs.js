@@ -11,6 +11,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import { commonColor } from "@/values/Colors/CommonColor";
 import SiteViewSVG from "@/components/SiteViewSVG/SiteViewSVG";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const faqItems = [
   {
@@ -56,6 +57,9 @@ const faqItems = [
 ];
 
 export default function ContactUs() {
+
+  const router = useRouter();
+
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -173,13 +177,13 @@ export default function ContactUs() {
                 </Accordion>
               ))}
               <Box sx={MUIStyle.BtnRow}>
-                <Button sx={MUIStyle.CustomBtn}>
-                  <Link href={"/faq"}>
+                <Button sx={MUIStyle.CustomBtn}
+                  onClick={() => router.push("/faq")}
+                >
                     View All FAQ
                     <Box component={"span"} sx={MUIStyle.BtnIcon}>
                       <Icon icon="radix-icons:arrow-right" />
                     </Box>
-                  </Link>
                 </Button>
               </Box>
             </Box>
