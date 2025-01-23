@@ -15,7 +15,7 @@ export default function FooterSec() {
                         <Box sx={MUIStyle.FooterLogoBox}>
                             <Box component={"img"} src={LOGOFTR} alt="side Image" sx={MUIStyle.WorkImg} />
                             <Typography variant="h2" sx={MUIStyle.FooterLogoText}>
-                                “If the whole construction project can be shown digitally, and available at your fingertips. then the possibilities are immense”
+                                “If the whole construction project can be shown digitally, and available at your fingertips, then the possibilities are immense”
                             </Typography>
                             <Box sx={MUIStyle.FooterSocialBox}>
                                 <Button sx={MUIStyle.FooterSocialButton}>

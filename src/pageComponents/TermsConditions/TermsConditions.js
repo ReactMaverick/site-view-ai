@@ -18,7 +18,7 @@ export default function TermsConditions() {
               Introduction
             </Typography>
             <Typography variant="body1" sx={MUIStyle.ContactContentText}>
-              These Terms & Conditions (`&quot;`Terms`&quot;`) govern your use of SitePace.ai.
+              These Terms & Conditions (&quot;Terms&quot;) govern your use of SitePace.ai.
               By accessing our services, you agree to comply with these Terms.
             </Typography>
           </Box>

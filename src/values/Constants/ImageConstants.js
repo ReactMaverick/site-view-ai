@@ -36,10 +36,10 @@ export const VIDEOINNER = URL('/images/Video.jpg');
 export const DOWN = URL('/images/down.png');
 export const UP = URL('/images/up.png');
 export const VISION = URL('/images/vision.png');
-export const VISIONMEETSPRECISION = URL('http://194.163.131.163/site-view-ai-assets/images/vision-meets-precision.gif');
+export const VISIONMEETSPRECISION = URL('/images/vision-meets-precision.gif');
 export const PROJECTLOGO = URL('/images/Projectlogo.png');
 export const IMAGE2 = URL('/images/Iamge2.png');
-export const VISIONBASED = URL('http://194.163.131.163/site-view-ai-assets/images/vision-based.gif');
+export const VISIONBASED = URL('/images/vision-based.gif');
 export const MACBOOKPRO = URL('/images/MacBookPro.png');
 export const IPHONE = URL('/images/Mobile.png');
 export const BUTTONDOWN = URL('/images/Buttondown.png');
@@ -55,15 +55,15 @@ export const EXTRABG = URL('/images/extrabg.png');
 export const MAP = URL('/images/map.png');
 
 // Card Images
-export const COMPAREPROCESS = URL('http://194.163.131.163/site-view-ai-assets/images/compare-process.gif');
+export const COMPAREPROCESS = URL('/images/compare-process.gif');
 // export const COMPAREPROCESS = URL('/images/compare-process.gif'); // UNCOMMENT ON PRODUCTION
 export const VISUALDOCUMENTATION = URL('/images/visual-documentation.jpeg');
 export const VIRTUALSITEMEETS = URL('/images/virtual-site-meets.jpg');
 export const TIMETRAVEL = URL('/images/time-travel.jpg');
-export const NOBLINDSPOT = URL('http://194.163.131.163/site-view-ai-assets/images/no-blind-spot.gif');
+export const NOBLINDSPOT = URL('/images/no-blind-spot.gif');
 // export const NOBLINDSPOT = URL('/images/no-blind-spot.gif'); // UNCOMMENT ON PRODUCTION
 
-// export const HELMETCAMERA = URL('http://194.163.131.163/site-view-ai-assets/images/helmet-camera.gif');
+// export const HELMETCAMERA = URL('/images/helmet-camera.gif');
 export const HELMETCAMERA = URL('/images/helmet-camera.png'); // UNCOMMENT ON PRODUCTION
 
 export const PLANNING = URL('/images/planning.jpg');
@@ -122,9 +122,10 @@ export const CONTACTUSFORMBG = URL('/images/contact-us-form-bg.jpg');
 export const CONTACTFORMBG = URL('/images/contact-form-bg.jpg');
 export const CLOSEICON = URL('/images/close.png');
 
-export const WHYSITEVIEW = URL('http://194.163.131.163/site-view-ai-assets/images/why-siteview.gif');
+export const WHYSITEVIEW = URL('/images/why-siteview.gif');
 export const OURTECHLAST = URL('/images/our-tech-last.png');
 
-export const WHYSITEPACELASTVID = URL('http://194.163.131.163/site-view-ai-assets/images/why-sitepace-last-vid.gif');
+export const WHYSITEPACELASTVID = URL('/images/why-sitepace-last-vid.gif');
 
 export const CHECK = URL('/images/check.png');
+export const CROSS = URL('/images/cross.png');

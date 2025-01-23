@@ -15,6 +15,8 @@
     padding: 10px;
     border: 1px solid #C9F625;
     border-radius: 20px;
+    font-size: 1.35rem;
+    line-height: 2rem;
 }
 
 .inputContainer textarea {
@@ -73,10 +75,11 @@
 
 .errorText {
     color: red;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     padding: 0 5px;
     background-color: black;
     transition: 0.3s;
+    font-weight: 600;
 }
 
 .selectContainer {

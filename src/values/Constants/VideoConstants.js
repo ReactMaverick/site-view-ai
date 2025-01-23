@@ -1,7 +1,7 @@
 // Image Constants
 
 const URL = (url) => {
-    return 'http://194.163.131.163/site-view-ai-assets/videos/' + url;
+    return '/videos/' + url;
 }
 
 export const CONNECTEDCONSTRUCTION = URL('connected-construction.mp4');
