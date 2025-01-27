@@ -58,7 +58,7 @@ export default function BannerThree({
 
         // console.log("ThreeJS Scene Initialized");
 
-        setIsThreeJSLoading(false);
+        setIsThreeJSLoading && setIsThreeJSLoading(false);
 
 
     }, []);
