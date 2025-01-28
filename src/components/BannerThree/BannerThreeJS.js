@@ -18,12 +18,12 @@ export const setupThreeJS = ({
     // Store the aspect ratio of the window
     let aspectRatio = window.innerWidth / window.innerHeight;
 
-    console.log('Aspect Ratio:', aspectRatio);
-    console.log('Window Width:', window.innerWidth * window.devicePixelRatio);
-    console.log('Window Height:', window.innerHeight * window.devicePixelRatio);
+    // console.log('Aspect Ratio:', aspectRatio);
+    // console.log('Window Width:', window.innerWidth * window.devicePixelRatio);
+    // console.log('Window Height:', window.innerHeight * window.devicePixelRatio);
 
-    console.log('Document Width:', document.documentElement.clientWidth);
-    console.log('Document Height:', document.documentElement.clientHeight);
+    // console.log('Document Width:', document.documentElement.clientWidth);
+    // console.log('Document Height:', document.documentElement.clientHeight);
 
 
 
@@ -92,7 +92,6 @@ export const setupThreeJS = ({
         textureLoader.load('assets/images/11.jpg'),
         textureLoader.load('assets/images/12.jpg'),
         textureLoader.load('assets/images/13.jpg'),
-        textureLoader.load('assets/images/14.jpg'),
         textureLoader.load('assets/images/15.jpg'),
         textureLoader.load('assets/images/16.jpg'),
         textureLoader.load('assets/images/17.jpg'),
@@ -227,7 +226,7 @@ export const setupThreeJS = ({
             vertices.push(-totalWidth / 2, y, 0, totalWidth / 2, y, 0);
         }
 
-        console.log('Vertices:', vertices);        
+        // console.log('Vertices:', vertices);        
 
         gridGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
         const gridLines = new THREE.LineSegments(gridGeometry, new THREE.LineBasicMaterial({ color: '#d4d4d4' }));
@@ -235,7 +234,7 @@ export const setupThreeJS = ({
         gridLines.position.set(position.x, position.y, position.z);
         gridLines.rotation.set(rotation.x, rotation.y, rotation.z);
         
-        console.log('Grid Lines:', gridLines);  
+        // console.log('Grid Lines:', gridLines);  
         
         scene.add(gridLines);
     }

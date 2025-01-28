@@ -127,7 +127,7 @@ export default function ContactFormModal({
             });
             return;
         } else {
-            console.log("Form Submitted", formData);
+            // console.log("Form Submitted", formData);
 
             submitForm();
         }
@@ -153,11 +153,11 @@ export default function ContactFormModal({
                 body: newFormData,
             });
 
-            console.log("response", response);            
+            // console.log("response", response);            
 
             const data = await response.json();
 
-            console.log("data", data);
+            // console.log("data", data);
 
             if (data.success) {
                 setIsSuccess(true);
@@ -166,7 +166,7 @@ export default function ContactFormModal({
             }
 
         } catch (error) {
-            console.log("error", error);
+            // console.log("error", error);
             setIsError(true);
         }
     }

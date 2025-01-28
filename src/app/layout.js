@@ -43,8 +43,8 @@ const Fellix = localFont({
 });
 
 export const metadata = {
-  title: "SitePace AI",
-  description: "Created by Websadroit",
+  title: "SitePace.ai - Connected Construction",
+  description: "Autopilot your project. See More. Save More",
   icons: {
     icon: [
       {
@@ -59,7 +59,11 @@ export const metadata = {
       },
     ],
   },
+  openGraph: {
+    images: process.env.BASE_URL + '/images/og-image.jpeg',
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
