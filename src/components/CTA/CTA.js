@@ -11,6 +11,7 @@ import CustomProgress from "../CustomProgress/CustomProgress";
 import $ from "jquery";
 import { commonColor } from "@/values/Colors/CommonColor";
 import CustomProgressArrow from "../CustomProgress/CustomProgressArrow";
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function CTA() {
 
@@ -227,7 +228,7 @@ export default function CTA() {
       scrollTrigger: {
         trigger: ".CTASection",
         start: "top top",
-        end: "+=2000",
+        end: isSmallScreen() ? "+=5000" : "+=2000",
         // markers: true,  // Set to true to see the trigger area
         pin: true,
         scrub: 1,
@@ -280,7 +281,7 @@ export default function CTA() {
                 <Button
                   sx={[MUIStyle.BannerBtn,
                   {
-                    color: item.titleColor,
+                    // color: item.titleColor,
                     opacity: item.value === 0 ? 0 : 1,
                     animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
                   }

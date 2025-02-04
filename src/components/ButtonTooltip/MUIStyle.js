@@ -11,8 +11,8 @@ export const MUIStyle = {
         background: commonColor.green80,
         borderRadius: "24px",
         width: {
-            xs: "300px",
-            sm: "300px",
+            xs: "230px",
+            sm: "250px",
             md: "350px",
             lg: "350px",
             xl: "400px",
@@ -28,15 +28,15 @@ export const MUIStyle = {
     ButtonTooltipImg: {
         width: "100%",
         minHeight: {
-            xs: "150px",
-            sm: "150px",
+            xs: "100px",
+            sm: "100px",
             md: "150px",
             lg: "150px",
             xl: "220px",
         },
         maxHeight: {
-            xs: "150px",
-            sm: "150px",
+            xs: "100px",
+            sm: "100px",
             md: "150px",
             lg: "150px",
             xl: "220px",
@@ -55,8 +55,8 @@ export const MUIStyle = {
     },
     Heading: {
         fontSize: {
-            xs: FONT_SIZE.heading24,
-            sm: FONT_SIZE.heading24,
+            xs: FONT_SIZE.text18,
+            sm: FONT_SIZE.text20,
             md: FONT_SIZE.heading24,
             lg: FONT_SIZE.heading24,
             xl: FONT_SIZE.heading28,
@@ -65,8 +65,8 @@ export const MUIStyle = {
         fontWeight: FONT_WEIGHT.SEMI_BOLD,
         color: commonColor.black,
         marginBottom: {
-            xs: "8px",
-            sm: "8px",
+            xs: "5px",
+            sm: "5px",
             md: "8px",
             lg: "8px",
             xl: "16px",
@@ -74,7 +74,7 @@ export const MUIStyle = {
     },
     ToolTipText: {
         fontSize: {
-            xs: FONT_SIZE.text14,
+            xs: FONT_SIZE.text12,
             sm: FONT_SIZE.text14,
             md: FONT_SIZE.text14,
             lg: FONT_SIZE.text14,

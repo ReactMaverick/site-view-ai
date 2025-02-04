@@ -64,8 +64,8 @@ export const MUIStyle = {
     },
     BannerTopHeading: {
         fontSize: {
-            xs: FONT_SIZE.text16,
-            sm: FONT_SIZE.text16,
+            xs: FONT_SIZE.text12,
+            sm: FONT_SIZE.text14,
             md: FONT_SIZE.text16,
             lg: FONT_SIZE.text16,
             xl: FONT_SIZE.text16,
@@ -79,8 +79,8 @@ export const MUIStyle = {
 
     BannerHeading: {
         fontSize: {
-            xs: FONT_SIZE.heading40,
-            sm: FONT_SIZE.heading40,
+            xs: FONT_SIZE.heading32,
+            sm: FONT_SIZE.heading36,
             md: FONT_SIZE.heading40,
             lg: FONT_SIZE.heading42,
             xl: FONT_SIZE.heading64,
@@ -100,8 +100,8 @@ export const MUIStyle = {
     },
     BannerText: {
         fontSize: {
-            xs: FONT_SIZE.text16,
-            sm: FONT_SIZE.text16,
+            xs: FONT_SIZE.text12,
+            sm: FONT_SIZE.text14,
             md: FONT_SIZE.text16,
             lg: FONT_SIZE.text18,
             xl: FONT_SIZE.text20,
@@ -126,8 +126,8 @@ export const MUIStyle = {
         position: "relative",
         gap: "10px",
         fontSize: {
-            xs: FONT_SIZE.text16,
-            sm: FONT_SIZE.text16,
+            xs: FONT_SIZE.text12,
+            sm: FONT_SIZE.text14,
             md: FONT_SIZE.text16,
             lg: FONT_SIZE.text16,
             xl: FONT_SIZE.text16,
@@ -151,7 +151,13 @@ export const MUIStyle = {
         top: "0",
         left: "0",
         height: "100%",
-        width: "0%",
+        width: {
+            xs: "100%",
+            sm: "100%",
+            md: "0%",
+            lg: "0%",
+            xl: "0%",
+        },
         background: commonColor.green,
         transition: "all 0.8s ease",
         zIndex: "-1",
@@ -160,14 +166,14 @@ export const MUIStyle = {
     BannerBtnIcon: {
         fontSize: FONT_SIZE.heading24,
         height: {
-            xs: '50px',
+            xs: '40px',
             sm: '50px',
             md: '50px',
             lg: '50px',
             xl: '60px',
         },
         width: {
-            xs: '50px',
+            xs: '40px',
             sm: '50px',
             md: '50px',
             lg: '50px',

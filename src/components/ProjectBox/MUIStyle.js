@@ -15,7 +15,7 @@ export const MUIStyle = {
             xl: "16px",
         },
         maxWidth: {
-            xs: "300px",
+            xs: "250px",
             sm: "300px",
             md: "320px",
             lg: "320px",
@@ -35,7 +35,7 @@ export const MUIStyle = {
     ProjectBoxImgBox: {
         position: "relative",
         height: {
-            xs: "220px",
+            xs: "180px",
             sm: "220px",
             md: "220px",
             lg: "220px",
@@ -49,7 +49,7 @@ export const MUIStyle = {
             left: "0",
             width: "100%",
             height: {
-                xs: "220px",
+                xs: "180px",
                 sm: "220px",
                 md: "220px",
                 lg: "220px",
@@ -63,7 +63,7 @@ export const MUIStyle = {
     ProjectBoxContent: {
         padding: "0px 24px",
         minHeight: {
-            xs: "220px",
+            xs: "180px",
             sm: "220px",
             md: "220px",
             lg: "220px",
@@ -73,7 +73,7 @@ export const MUIStyle = {
 
     ProjectTitle: {
         fontSize: {
-            xs: FONT_SIZE.heading28,
+            xs: FONT_SIZE.heading24,
             sm: FONT_SIZE.heading28,
             md: FONT_SIZE.heading28,
             lg: FONT_SIZE.heading28,

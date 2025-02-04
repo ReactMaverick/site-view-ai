@@ -46,7 +46,13 @@ export default function BannerNew({
                 </Typography>
                 {button && (
                   <Button sx={[MUIStyle.BannerBtn, {
-                    color: theme === "light" ? commonColor.black : isButtonHovered ? commonColor.black : commonColor.white,
+                    color: {
+                      xs: commonColor.black,
+                      sm: commonColor.black,
+                      md: theme === "light" ? commonColor.black : isButtonHovered ? commonColor.black : commonColor.white,
+                      lg: theme === "light" ? commonColor.black : isButtonHovered ? commonColor.black : commonColor.white,
+                      xl: theme === "light" ? commonColor.black : isButtonHovered ? commonColor.black : commonColor.white,
+                    },
                   }]} variant="contained" size="large"
                     onMouseEnter={() => setTimeout(() => {
                       setIsButtonHovered(true)

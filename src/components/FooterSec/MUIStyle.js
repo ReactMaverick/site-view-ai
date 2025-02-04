@@ -18,7 +18,13 @@ export const MUIStyle = {
     },
     ftrwaternark: {
         position: "absolute",
-        bottom: "-3.5rem",
+        bottom: {
+            xs: "-1.5rem",
+            sm: "-1.5rem",
+            md: "-3.5rem",
+            lg: "-3.5rem",
+            xl: "-3.5rem",
+        },
         left: "50%",
         transform: "translateX(-50%)",
         width: "95%",
@@ -127,11 +133,23 @@ export const MUIStyle = {
             lg: "flex-end",
             xl: "flex-end",
         },
-        gap: "55px",
+        gap: {
+            xs: "20px",
+            sm: "20px",
+            md: "55px",
+            lg: "55px",
+            xl: "55px",
+        },
         width: "100%",
     },
     FooterLogoText: {
-        fontSize: FONT_SIZE.text18,
+        fontSize: {
+            xs: FONT_SIZE.text16,
+            sm: FONT_SIZE.text16,
+            md: FONT_SIZE.text18,
+            lg: FONT_SIZE.text18,
+            xl: FONT_SIZE.text18,
+        },
         fontWeight: FONT_WEIGHT.MEDIUM,
         color: commonColor.grey,
         lineHeight: "26px",
@@ -146,7 +164,13 @@ export const MUIStyle = {
     FooterMenuBox: {
         display: "flex",
         flexDirection: "column",
-        gap: "20px",
+        gap: {
+            xs: "10px",
+            sm: "10px",
+            md: "20px",
+            lg: "20px",
+            xl: "20px",
+        },
        width: {
             xs: "100%",
             sm: "100%",
@@ -163,7 +187,13 @@ export const MUIStyle = {
         alignItems: "center",
     },
     FooterMenuTitleText: {
-        fontSize: FONT_SIZE.heading24,
+        fontSize: {
+            xs: FONT_SIZE.text22,
+            sm: FONT_SIZE.text22,
+            md: FONT_SIZE.heading24,
+            lg: FONT_SIZE.heading24,
+            xl: FONT_SIZE.heading24,
+        },
         fontWeight: FONT_WEIGHT.MEDIUM,
         color: commonColor.white,
         lineHeight: "150%",
@@ -261,7 +291,13 @@ export const MUIStyle = {
         zIndex  : "1",
     },
     FooterCopyRightText : {
-        fontSize: FONT_SIZE.text16,
+        fontSize: {
+            xs: FONT_SIZE.text14,
+            sm: FONT_SIZE.text14,
+            md: FONT_SIZE.text16,
+            lg: FONT_SIZE.text16,
+            xl: FONT_SIZE.text16,
+        },
         fontWeight: FONT_WEIGHT.MEDIUM,
         color: commonColor.grey,
         lineHeight: "24px",
@@ -295,7 +331,7 @@ export const MUIStyle = {
     },
     FooterPolicyText : {
         fontSize: {
-            xs: FONT_SIZE.text14,
+            xs: FONT_SIZE.text12,
             sm: FONT_SIZE.text14,
             md: FONT_SIZE.text16,
             lg: FONT_SIZE.text16,

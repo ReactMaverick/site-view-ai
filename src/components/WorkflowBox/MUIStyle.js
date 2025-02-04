@@ -17,8 +17,8 @@ export const MUIStyle = {
       xl: "400px",
     },
     minHeight: {
-      xs: "350px",
-      sm: "350px",
+      xs: "300px",
+      sm: "300px",
       md: "350px",
       lg: "350px",
       xl: "450px",
@@ -36,7 +36,7 @@ export const MUIStyle = {
   },
   WorkflowBoxTitle: {
     fontSize: {
-      xs: FONT_SIZE.heading28,
+      xs: FONT_SIZE.heading24,
       sm: FONT_SIZE.heading28,
       md: FONT_SIZE.heading28,
       lg: FONT_SIZE.heading28,

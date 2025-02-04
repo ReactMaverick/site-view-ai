@@ -6,8 +6,8 @@ export const MUIStyle = {
     PartnersMain: {
         width: "100%",
         padding: {
-            xs: "100px 0",
-            sm: "100px 0",
+            xs: "50px 0",
+            sm: "50px 0",
             md: "100px 0",
             lg: "132px 0",
             xl: "132px 0",
@@ -42,8 +42,8 @@ export const MUIStyle = {
     },
     Heading: {
         fontSize: {
-            xs: FONT_SIZE.heading24,
-            sm: FONT_SIZE.heading24,
+            xs: FONT_SIZE.text20,
+            sm: FONT_SIZE.text22,
             md: FONT_SIZE.heading24,
             lg: FONT_SIZE.heading24,
             xl: FONT_SIZE.heading28,

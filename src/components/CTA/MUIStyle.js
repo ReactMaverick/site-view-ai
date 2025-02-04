@@ -6,8 +6,8 @@ export const MUIStyle = {
   CTAMain: {
     width: "100%",
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
+      xs: "50px 0",
+      sm: "50px 0",
       md: "50px 0 50px",
       lg: "50px 0 50px",
       xl: "130px 0 60px",
@@ -27,20 +27,32 @@ export const MUIStyle = {
   },
   CTAHeading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text22,
       sm: FONT_SIZE.heading24,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
     },
-    lineHeight: "56px",
+    lineHeight: {
+      xs: FONT_SIZE.heading28,
+      sm: FONT_SIZE.heading32,
+      md: FONT_SIZE.heading32,
+      lg: FONT_SIZE.heading32,
+      xl: FONT_SIZE.heading36,
+    },
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.green,
     textAlign: "center",
   },
   CTAImgInner: {
     display: "flex",
-    justifyContent: "end",
+    justifyContent: {
+      xs: "center",
+      sm: "center",
+      md: "flex-end",
+      lg: "flex-end",
+      xl: "flex-end",
+    },
     alignItems: "center",
     // margin: "100px 0",
     paddingRight: {
@@ -52,8 +64,8 @@ export const MUIStyle = {
     },
     "& img": {
       width: {
-        xs: "100%",
-        sm: "100%",
+        xs: "90%",
+        sm: "80%",
         lg: "70vh",
         md: "70vh",
         xl: "60vh",
@@ -72,7 +84,13 @@ export const MUIStyle = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    gap: "20px",
+    gap: {
+      xs: "0px",
+      sm: "0px",
+      md: "20px",
+      lg: "20px",
+      xl: "20px",
+    },
     position: "relative",
     marginLeft: {
       xs: "0px",
@@ -124,8 +142,8 @@ export const MUIStyle = {
   },
   CTAListItemHeading: {
     fontSize: {
-      xs: FONT_SIZE.text22,
-      sm: FONT_SIZE.text22,
+      xs: FONT_SIZE.text18,
+      sm: FONT_SIZE.text18,
       md: FONT_SIZE.text22,
       lg: FONT_SIZE.text22,
       xl: FONT_SIZE.heading24,
@@ -133,6 +151,13 @@ export const MUIStyle = {
     lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.white,
+    marginBottom: {
+      xs: "10px",
+      sm: "10px",
+      md: "0px",
+      lg: "0px",
+      xl: "0px",
+    }
   },
   CTAListImg: {
     width: {
@@ -163,7 +188,13 @@ export const MUIStyle = {
 
   BannerBtn: {
     background: commonColor.trans,
-    color: commonColor.white,
+    color: {
+      xs: commonColor.black,
+      sm: commonColor.black,
+      md: commonColor.green,
+      lg: commonColor.green,
+      xl: commonColor.green,
+    },
     borderRadius: "99px",
     padding: "0px 35px 0px 0px",
     boxShadow: "none",
@@ -196,13 +227,26 @@ export const MUIStyle = {
       width: "100%",
 
     },
+    marginTop: {
+      xs: "15px",
+      sm: "20px",
+      md: "0px",
+      lg: "0px",
+      xl: "0px",
+    }
   },
   BannerBtnBG: {
     position: "absolute",
     top: "0",
     left: "0",
     height: "100%",
-    width: "0%",
+    width: {
+      xs: "100%",
+      sm: "100%",
+      md: "0%",
+      lg: "0%",
+      xl: "0%",
+    },
     background: commonColor.green,
     transition: "all 0.8s ease",
     zIndex: "-1",
@@ -210,8 +254,20 @@ export const MUIStyle = {
   },
   BannerBtnIcon: {
     fontSize: FONT_SIZE.heading28,
-    height: "60px",
-    width: "60px",
+    height: {
+      xs: "40px",
+      sm: "40px",
+      md: "60px",
+      lg: "60px",
+      xl: "60px",
+    },
+    width: {
+      xs: "40px",
+      sm: "40px",
+      md: "60px",
+      lg: "60px",
+      xl: "60px",
+    },
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

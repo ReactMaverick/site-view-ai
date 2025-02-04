@@ -12,13 +12,13 @@ export const MUIStyle = {
         backgroundRepeat: "no-repeat",
         width: "100%",
         padding: {
-            xs: "100px 0",
-            sm: "100px 0",
+            xs: "50px 0",
+            sm: "50px 0",
             md: "100px 0",
             lg: "132px 0",
             xl: "132px 0",
         },
-
+        minHeight: "100vh",
     },
 
     AboutDashBoardImg: {
@@ -35,20 +35,26 @@ export const MUIStyle = {
         flexDirection: "column",
         gap: "20px",
         padding: "0",
-        marginTop: "50px",
+        marginTop: {
+            xs: "20px",
+            sm: "20px",
+            md: "50px",
+            lg: "50px",
+            xl: "50px",
+        },
         position: "relative",
         zIndex: "1",
         "& img": {
             width: {
-                xs: "60%",
-                sm: "60%",
+                xs: "90%",
+                sm: "80%",
                 md: "60%",
                 lg: "60%",
                 xl: "80%",
             },
             height: {
-                xs: "60%",
-                sm: "60%",
+                xs: "90%",
+                sm: "80%",
                 md: "60%",
                 lg: "60%",
                 xl: "80%",
@@ -74,8 +80,8 @@ export const MUIStyle = {
         position: "relative",
         paddingTop: "30px",
         paddingBottom: {
-            xs: "100px",
-            sm: "100px",
+            xs: "50px",
+            sm: "50px",
             md: "100px",
             lg: "264px",
             xl: "264px",
@@ -93,7 +99,7 @@ export const MUIStyle = {
     AboutSecText: {
         color: commonColor.grey,
         fontSize: {
-            xs: FONT_SIZE.text14,
+            xs: FONT_SIZE.text12,
             sm: FONT_SIZE.text14,
             md: FONT_SIZE.text16,
             lg: FONT_SIZE.text16,
@@ -107,8 +113,8 @@ export const MUIStyle = {
     AboutSecHeading: {
         color: commonColor.white,
         fontSize: {
-            xs: FONT_SIZE.heading24,
-            sm: FONT_SIZE.heading24,
+            xs: FONT_SIZE.text20,
+            sm: FONT_SIZE.text22,
             md: FONT_SIZE.heading24,
             lg: FONT_SIZE.heading24,
             xl: FONT_SIZE.heading28,
@@ -127,7 +133,6 @@ export const MUIStyle = {
             xl: "absolute",
         },
         top: "75px",
-        display: "grid",
         gridTemplateColumns: "repeat(2, 1fr)",
         gap: "20px 0",
         order: {
@@ -141,6 +146,13 @@ export const MUIStyle = {
         left: "0",
         minHeight: "450px",
         width: "100%",
+        display: {
+            xs: "none",
+            sm: "none",
+            md: "grid",
+            lg: "grid",
+            xl: "grid",
+        }
     },
     Btn: {
         background: commonColor.trans,

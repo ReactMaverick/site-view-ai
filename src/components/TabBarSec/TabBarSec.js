@@ -11,6 +11,7 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { commonColor } from "@/values/Colors/CommonColor";
 import ImageSlider from "../ImageSliderNew/ImageSliderNew";
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function TabBarSec({
   theme = "light",
@@ -108,6 +109,9 @@ export default function TabBarSec({
       // buttonElements.forEach((button, index) => {
       //   button.addEventListener("click", () => handleClick(index));
       // });
+
+      // Prevent animation on small screens
+      if (isSmallScreen()) return;
 
       const tl = gsap.timeline({
         scrollTrigger: {

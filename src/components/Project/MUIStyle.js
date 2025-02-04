@@ -42,7 +42,7 @@ export const MUIStyle = {
     },
     Heading: {
         fontSize: {
-            xs: FONT_SIZE.heading24,
+            xs: FONT_SIZE.text20,
             sm: FONT_SIZE.heading24,
             md: FONT_SIZE.heading24,
             lg: FONT_SIZE.heading24,
@@ -57,7 +57,7 @@ export const MUIStyle = {
     },
     SubHeading: {
         fontSize: {
-            xs: FONT_SIZE.text14,
+            xs: FONT_SIZE.text12,
             sm: FONT_SIZE.text14,
             md: FONT_SIZE.text16,
             lg: FONT_SIZE.text16,
@@ -75,8 +75,8 @@ export const MUIStyle = {
         alignItems: "center",
         width: "100%",
         padding: {
-            xs: "100px 0",
-            sm: "100px 0",
+            xs: "50px 0",
+            sm: "50px 0",
             md: "100px 0",
             lg: "100px 0",
             xl: "100px 0",

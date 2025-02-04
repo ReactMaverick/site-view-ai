@@ -5,8 +5,8 @@ export const MUIStyle = {
   IndustriesMain: {
     width: "100%",
     padding: {
-      xs: "50px 0",
-      sm: "50px 0",
+      xs: "10px",
+      sm: "20px 10px",
       md: "50px 0",
       lg: "50px 0",
       xl: "100px 0",
@@ -15,7 +15,7 @@ export const MUIStyle = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    height: '100vh',
+    minHeight: '100vh',
   },
 
   IndustriesHeadingBoxOuter: {
@@ -36,8 +36,8 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
@@ -51,8 +51,8 @@ export const MUIStyle = {
   },
   SubHeading: {
     fontSize: {
-      xs: FONT_SIZE.text14,
-      sm: FONT_SIZE.text14,
+      xs: FONT_SIZE.text12,
+      sm: FONT_SIZE.text12,
       md: FONT_SIZE.text16,
       lg: FONT_SIZE.text16,
       xl: FONT_SIZE.text20,
@@ -62,8 +62,8 @@ export const MUIStyle = {
     color: commonColor.grey,
     textAlign: "center",
     marginBottom: {
-      xs: "16px",
-      sm: "16px",
+      xs: "5px",
+      sm: "5px",
       md: "16px",
       lg: "16px",
       xl: "24px",
@@ -71,8 +71,8 @@ export const MUIStyle = {
   },
   IndustriesSec: {
     padding: {
-      xs: "30px 0",
-      sm: "30px 0",
+      xs: "10px 0",
+      sm: "10px 0",
       md: "30px 0",
       lg: "30px 0",
       xl: "50px 0",
@@ -80,7 +80,13 @@ export const MUIStyle = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    gap: "24px 50px",
+    gap: {
+      xs: "6px",
+      sm: "10px",
+      md: "24px 50px",
+      lg: "24px 50px",
+      xl: "24px 50px",
+    },
     flexWrap: "wrap",
   },
   IndustriesButton: {
@@ -89,8 +95,8 @@ export const MUIStyle = {
     backgroundColor: commonColor.trans,
     color: commonColor.black,
     fontSize: {
-      xs: FONT_SIZE.text18,
-      sm: FONT_SIZE.text18,
+      xs: FONT_SIZE.text12,
+      sm: FONT_SIZE.text14,
       md: FONT_SIZE.text20,
       lg: FONT_SIZE.text20,
       xl: FONT_SIZE.heading24,
@@ -101,8 +107,8 @@ export const MUIStyle = {
     textTransform: "capitalize",
     borderRadius: "99px",
     padding: {
-      xs: "10px 20px",
-      sm: "10px 20px",
+      xs: "8px 16px",
+      sm: "8px 16px",
       md: "10px 20px",
       lg: "12px 24px",
       xl: "20px 40px",

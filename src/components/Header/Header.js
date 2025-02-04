@@ -71,17 +71,19 @@ export default function Header({ theme = "light" }) {
               />
             </Link>
           </Box>
-          <Box sx={MUIStyle.menuBox} className="headerInner">
+          {/* Desktop Menu */}
+          <Box
+            sx={[MUIStyle.menuBox, {
+              display: {
+                xs: "none",
+                sm: "none",
+                md: "block",
+                lg: "block",
+              },
+            }]}
+            className="headerInner"
+          >
             <Box
-              sx={MUIStyle.menuBtn}
-              onClick={() => setIsActiveMenuVisible(!isActiveMenuVisible)}
-            >
-              <Icon icon="heroicons:bars-3-bottom-right-16-solid" />
-            </Box>
-            <Box
-              className={
-                isActiveMenuVisible ? styles.activeMenu : styles.inactiveMenu
-              }
               sx={MUIStyle.HeaderMenuBox}
             >
               <Box sx={MUIStyle.HeadermobInner}>
@@ -167,12 +169,137 @@ export default function Header({ theme = "light" }) {
                       window.open("https://user.sitepace.ai", "_blank");
                     }}
                   >
-                      Login
+                    Login
                   </Button>
                 </Box>
               </Box>
             </Box>
           </Box>
+
+          {/* Mobile Menu Icon */}
+          <Box sx={[MUIStyle.menuBox, {
+            display: {
+              xs: "block",
+              sm: "block",
+              md: "none",
+              lg: "none",
+            },
+            borderRadius: "2.5rem",
+          }]}
+            className="headerInner_Mobile"
+          >
+            <Box
+              sx={MUIStyle.menuBtn}
+              onClick={() => setIsActiveMenuVisible(!isActiveMenuVisible)}
+            >
+              <Icon icon="heroicons:bars-3-bottom-right-16-solid" />
+            </Box>
+          </Box>
+
+          {/* Mobile Menu */}
+          <Box
+            className={
+              isActiveMenuVisible ? styles.activeMenu : styles.inactiveMenu
+            }
+            sx={[MUIStyle.HeaderMenuBox, {
+              display: {
+                xs: "block",
+                sm: "block",
+                md: "none",
+                lg: "none",
+              },
+            }]}
+            onClick={() => setIsActiveMenuVisible(!isActiveMenuVisible)}
+          >
+            <Box sx={MUIStyle.HeadermobInner}>
+              <Box sx={MUIStyle.HeaderMobLogoBox}>
+                <Link href="/">
+                  <Box
+                    component={"img"}
+                    src={LOGOFTR}
+                    alt="logo"
+                    sx={MUIStyle.LogoImgMob}
+                  />
+                </Link>
+                <Box
+                  sx={MUIStyle.menuCloseBtn}
+                  onClick={() => setIsActiveMenuVisible(!isActiveMenuVisible)}
+                >
+                  <Icon icon="charm:cross" />
+                </Box>
+              </Box>
+              <Box
+                component="ul"
+                sx={[
+                  MUIStyle.HEaderMenu,
+                  {
+                    background:
+                      theme === "light"
+                        ? commonColor.trans
+                        : commonColor.white10,
+                    borderRadius: "90px",
+                  },
+                ]}
+              >
+                {menuItems.map(({ label, path, shouldRender }, index) => shouldRender && (
+                  <Box component="li" key={path} sx={MUIStyle.HeaderMenuLi}>
+                    <Link
+                      className={
+                        "headerMenu_Mobile" + (pathName === path ? " active" : "")
+                      }
+                      href={path}
+                    >
+                      <Typography
+                        component="p"
+                        sx={[
+                          MUIStyle.HeaderMenuBtn,
+                          {
+                            color: {
+                              xs: "white",
+                              sm: "white",
+                              md: theme === "light"
+                                ? commonColor.black
+                                : commonColor.white,
+                              lg: theme === "light"
+                                ? commonColor.black
+                                : commonColor.white,
+                            },
+                          },
+                          // (index === 0 || index === menuItems.length - 1) && {
+                          //   padding: "15px 24px",
+                          // },
+                        ]}
+                      >
+                        {label}
+                      </Typography>
+                    </Link>
+                  </Box>
+                ))}
+                <Button
+                  sx={[
+                    MUIStyle.HeaderBtn,
+                    {
+                      display: {
+                        xs: "block",
+                        sm: "block",
+                        md: "none",
+                        lg: "none",
+                      },
+                      marginLeft: "20px",
+                      marginTop: "20px",
+                    },
+                  ]}
+                  className={styles.loginButton}
+                  onClick={() => {
+                    window.open("https://user.sitepace.ai", "_blank");
+                  }}
+                >
+                  Login
+                </Button>
+              </Box>
+            </Box>
+          </Box>
+
           <Button
             sx={[
               MUIStyle.HeaderBtn,
@@ -191,7 +318,7 @@ export default function Header({ theme = "light" }) {
               window.open("https://user.sitepace.ai", "_blank");
             }}
           >
-              Login
+            Login
           </Button>
         </Box>
       </Container>

@@ -13,7 +13,13 @@ export default function CustomProgressArrow({
             sx={{
                 position: 'relative',
                 width: '100px',
-                height: '25px',
+                height: {
+                    xs: '15px',
+                    sm: '15px',
+                    md: '25px',
+                    lg: '25px',
+                    xl: '25px',
+                },
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -25,28 +31,77 @@ export default function CustomProgressArrow({
                 // className={"progress-bar" + " " + progressClass}
                 sx={{
                     width: '20px',
-                    height: '5px',
+                    height: {
+                        xs: '3px',
+                        sm: '3px',
+                        md: '5px',
+                        lg: '5px',
+                        xl: '5px',
+                    },
                     background: arrowColor,
                     borderRadius: '20px',
                     overflow: 'hidden',
                     position: 'absolute',
-                    top: '3px',
-                    right: '-1px',
-                    transform: 'rotate(45deg)',
+                    top: {
+                        xs: '2px',
+                        sm: '2px',
+                        md: '3px',
+                        lg: '3px',
+                        xl: '3px',
+                        
+                    },
+                    right: {
+                        xs: '-1px',
+                        sm: '-1px',
+                        md: '-1px',
+                        lg: '-1px',
+                        xl: '-1px',
+                    },
+                    transform: {
+                        xs: 'rotate(25deg)',
+                        sm: 'rotate(25deg)',
+                        md: 'rotate(45deg)',
+                        lg: 'rotate(45deg)',
+                        xl: 'rotate(45deg)',
+                    },
                 }}
             ></Box>
             <CustomProgress progressClass={progressClass} progressValue={progressValue} />
             <Box
                 sx={{
                     width: '20px',
-                    height: '5px',
+                    height: {
+                        xs: '3px',
+                        sm: '3px',
+                        md: '5px',
+                        lg: '5px',
+                        xl: '5px',
+                    },
                     background: arrowColor,
                     borderRadius: '20px',
                     overflow: 'hidden',
                     position: 'absolute',
-                    bottom: '3px',
-                    right: '-1px',
-                    transform: 'rotate(-45deg)',
+                    bottom: {
+                        xs: '2px',
+                        sm: '2px',
+                        md: '3px',
+                        lg: '3px',
+                        xl: '3px',
+                    },
+                    right: {
+                        xs: '-1px',
+                        sm: '-1px',
+                        md: '-1px',
+                        lg: '-1px',
+                        xl: '-1px',
+                    },
+                    transform: {
+                        xs: 'rotate(-25deg)',
+                        sm: 'rotate(-25deg)',
+                        md: 'rotate(-45deg)',
+                        lg: 'rotate(-45deg)',
+                        xl: 'rotate(-45deg)',
+                    },
                 }}
             ></Box>
         </Box>

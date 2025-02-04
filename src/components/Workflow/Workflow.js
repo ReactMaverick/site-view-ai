@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { backgroundColors, workflowContents } from "./WorkflowContents";
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function Workflow() {
 
@@ -22,7 +23,7 @@ export default function Workflow() {
     // console.log(document.querySelector(".workflowSec").offsetWidth, document.querySelector(".sliderOuter").offsetWidth);
 
     gsap.to(cards, {
-      xPercent: -100 * (cards.length - 1),
+      xPercent: -(isSmallScreen() ? 108 : 100) * (cards.length - 1),
       ease: "none",
       scrollTrigger: {
         trigger: ".workflowSec",
@@ -31,7 +32,7 @@ export default function Workflow() {
         pin: true,
         scrub: 1,
         // snap: 1 / (cards.length - 2),
-        end: () => "+=" + (document.querySelector(".workflowSec").offsetWidth * 2),
+        end: () => "+=" + isSmallScreen() ? (document.querySelector(".workflowSec").offsetHeight * 15) : (document.querySelector(".workflowSec").offsetWidth * 2),
         endTrigger: ".videoSecMain",
         onUpdate: self => {
 

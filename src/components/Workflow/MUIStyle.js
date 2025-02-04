@@ -13,8 +13,8 @@ export const MUIStyle = {
       xl: "100vh",
     },
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
+      xs: "50px 0",
+      sm: "50px 0",
       md: "0",
       lg: "0",
       xl: "0",
@@ -50,8 +50,8 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
@@ -65,7 +65,7 @@ export const MUIStyle = {
   },
   SubHeading: {
     fontSize: {
-      xs: FONT_SIZE.text14,
+      xs: FONT_SIZE.text12,
       sm: FONT_SIZE.text14,
       md: FONT_SIZE.text16,
       lg: FONT_SIZE.text16,

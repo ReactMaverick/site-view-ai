@@ -7,6 +7,7 @@ import { useEffect, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function About() {
 
@@ -15,6 +16,10 @@ export default function About() {
   }, []);
 
   useGSAP(() => {
+
+    // If the screen is small, don't run the animation
+    if (isSmallScreen()) return;
+
     const leftBoxes = gsap.utils.toArray('.leftAnimBoxes .animBox');
     const rightBoxes = gsap.utils.toArray('.rightAnimBoxes .animBox');
     const middleBoxes = gsap.utils.toArray('.middleAnimBoxes .animBox');

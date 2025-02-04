@@ -17,7 +17,7 @@ export const MUIStyle = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    height: '100vh',
+    minHeight: '100vh',
   },
 
   BuildForHeadingBoxOuter: {
@@ -44,8 +44,8 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
@@ -59,7 +59,7 @@ export const MUIStyle = {
   },
   SubHeading: {
     fontSize: {
-      xs: FONT_SIZE.text14,
+      xs: FONT_SIZE.text12,
       sm: FONT_SIZE.text14,
       md: FONT_SIZE.text14,
       lg: FONT_SIZE.text14,
@@ -83,8 +83,8 @@ export const MUIStyle = {
     width: "100%",
     height: "100%",
     minHeight: {
-      xs: "300px",
-      sm: "300px",
+      xs: "150px",
+      sm: "150px",
       md: "120px",
       lg: "120px",
       xl: "150px",

@@ -27,7 +27,7 @@ export const MUIStyle = {
       md: "2rem",
       lg: "2rem",
       xl: "5rem",
-    }
+    },
   },
   HeaderInner: {
     display: "flex",
@@ -232,6 +232,7 @@ export const MUIStyle = {
     alignItems: "center",
     fontSize: "30px",
     color: commonColor.lime,
+    padding: "5px",
   },
   LogoImgMob: {
     width: {
@@ -292,7 +293,13 @@ export const MUIStyle = {
     "&:hover": {
       color: commonColor.white,
       boxShadow: "none",
-      background: 'linear-gradient(180deg, #030712b0 0%, #03071269 50%, rgba(255, 255, 255, 0) 100%)',
+      background: {
+        xs: 'none',
+        sm: 'none',
+        md: 'linear-gradient(180deg, #030712b0 0%, #03071269 50%, rgba(255, 255, 255, 0) 100%)',
+        lg: 'linear-gradient(180deg, #030712b0 0%, #03071269 50%, rgba(255, 255, 255, 0) 100%)',
+        xl: 'linear-gradient(180deg, #030712b0 0%, #03071269 50%, rgba(255, 255, 255, 0) 100%)',
+      },
       transition: "all 0.3s",
     },
   },

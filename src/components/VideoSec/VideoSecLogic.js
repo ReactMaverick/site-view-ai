@@ -1,3 +1,5 @@
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
+
 export const gsapAnimation = ({
     gsap,
     videoSecMain,
@@ -10,7 +12,7 @@ export const gsapAnimation = ({
     const scrollTriggerConfig = {
         trigger: videoSecMainElement,
         start: "top top", // Starts when top of element hits top of viewport
-        end: () => "+=" + videoSecMainElement.offsetHeight * 4, // Ends when the element is 4 times its height below the viewport
+        end: () => "+=" + (isSmallScreen() ? (videoSecMainElement.offsetWidth * 6) : (videoSecMainElement.offsetHeight * 4)), // Ends when the element is 4 times its height below the viewport
         scrub: 1, // Smoothly animates the element when scrolling
         pin: true, // Pin the trigger element while active
         // markers: true,

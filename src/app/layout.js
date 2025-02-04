@@ -45,20 +45,20 @@ const Fellix = localFont({
 export const metadata = {
   title: "SitePace.ai - Connected Construction",
   description: "Autopilot your project. See More. Save More",
-  icons: {
-    icon: [
-      {
-        media: '(prefers-color-scheme: light)',
-        url: '/images/favicon-light.png',
-        href: '/images/favicon-light.png',
-      },
-      {
-        media: '(prefers-color-scheme: dark)',
-        url: '/images/favicon-dark.png',
-        href: '/images/favicon-dark.png',
-      },
-    ],
-  },
+  // icons: {
+  //   icon: [
+  //     {
+  //       media: '(prefers-color-scheme: light)',
+  //       url: '/images/favicon-light.png',
+  //       href: '/images/favicon-light.png',
+  //     },
+  //     {
+  //       media: '(prefers-color-scheme: dark)',
+  //       url: '/images/favicon-dark.png',
+  //       href: '/images/favicon-dark.png',
+  //     },
+  //   ],
+  // },
   openGraph: {
     images: process.env.BASE_URL + '/images/og-image.jpeg',
   },

@@ -44,8 +44,8 @@ export const MUIStyle = {
   AboutSecText: {
     color: commonColor.grey,
     fontSize: {
-      xs: FONT_SIZE.text16,
-      sm: FONT_SIZE.text16,
+      xs: FONT_SIZE.text12,
+      sm: FONT_SIZE.text14,
       md: FONT_SIZE.text16,
       lg: FONT_SIZE.text16,
       xl: FONT_SIZE.text18,
@@ -64,8 +64,8 @@ export const MUIStyle = {
   AboutSecHeading: {
     // color: commonColor.black,
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
@@ -302,7 +302,7 @@ export const MUIStyle = {
       xl: "100%",
     },
     objectFit: "cover",
-    borderRadius: "32px",
+    borderRadius: "8px",
     // filter: 'drop-shadow(4px 5px 32px rgba(0, 0, 0, 0.3))',
   },
   BannerSVGContainer: {

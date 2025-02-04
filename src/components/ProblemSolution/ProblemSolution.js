@@ -1,15 +1,15 @@
 "use client";
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { Fragment, useEffect, useLayoutEffect } from "react";
 import { Box, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import ProblemSolutionBox from "../Problem/Problem";
 import Grid from "@mui/material/Grid2";
-import Solution from "../Solution/Solution";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
 import { ProblemSolutionContent } from "./ProblemSolutionContent";
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function ProblemSolution() {
   // const problemSolutionPairs = [
@@ -33,6 +33,9 @@ export default function ProblemSolution() {
   }, []);
 
   useGSAP(() => {
+
+    if (isSmallScreen()) return;
+
     // Set Problem Cards
     gsap.set(".problem-main", {
       xPercent: 52
@@ -126,10 +129,12 @@ export default function ProblemSolution() {
             }}
           >
             {problemSolutionPairs.map(({ problem, solution, key }) => (
-              <Box sx={MUIStyle.ProblemSolutionPair} key={key}>
+              // <Box sx={MUIStyle.ProblemSolutionPair} key={key}>
+              <Fragment key={key}>
                 {problem}
                 {solution}
-              </Box>
+              </Fragment>
+              // </Box>
             ))}
           </Grid>
         </Box>

@@ -13,7 +13,13 @@ export default function CustomProgress({
             sx={{
                 position: 'relative',
                 width: '100px',
-                height: '5px',
+                height: {
+                    xs: '3px',
+                    sm: '3px',
+                    md: '5px',
+                    lg: '5px',
+                    xl: '5px',
+                },
                 background: '#ccc',
                 borderRadius: '20px',
                 overflow: 'hidden',

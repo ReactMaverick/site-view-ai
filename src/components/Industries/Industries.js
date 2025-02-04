@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { industryContents } from "./IndustryContents";
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function Industries() {
   const [hoveredButton, setHoveredButton] = useState(null);
@@ -14,6 +15,9 @@ export default function Industries() {
 
   const handleMouseEnter = (e, industry) => {
     // console.log("Event target", e.target);
+
+    // Prevent hover effect on small screens
+    if (isSmallScreen()) return;
 
     if (e.target.tagName === "BUTTON") {
       // console.log("Button hovered", industry);
@@ -45,8 +49,50 @@ export default function Industries() {
   };
 
   const handleMouseLeave = () => {
+    // Prevent hover effect on small screens
+    if (isSmallScreen()) return;
+
     setHoveredButton(null);
   };
+
+  const handleClick = (e, industry) => {
+    // console.log("Button clicked", industry);
+
+    // Prevent Click effect on big screens
+    if (!isSmallScreen()) return;
+
+    if (e.target.tagName === "BUTTON") {
+      // console.log("Button hovered", industry);
+
+      if (e.target.style.filter === "blur(5px)") {
+        setHoveredButton(null);
+        e.target.classList.remove("hovered");
+        return;
+      } else {
+        e.target.style.filter = "blur(0px)";
+        e.target.style.opacity = 1;
+
+        e.target.classList.add("hovered");
+      }
+    } else {
+      // console.log("Parent element hovered", industry);
+      if (e.target.children[0].style.filter === "blur(5px)") {
+        setHoveredButton(null);
+        e.target.children[0].classList.remove("hovered");
+        return;
+      } else {
+        e.target.children[0].style.filter = "blur(0px)";
+        e.target.children[0].style.opacity = 1;
+        e.target.children[0].classList.add("hovered");
+      }
+    }
+
+    if (hoveredButton === industry) {
+      setHoveredButton(null);
+    } else {
+      setHoveredButton(industry);
+    }
+  }
 
   // Runs before the first render
   useLayoutEffect(() => {
@@ -89,7 +135,7 @@ export default function Industries() {
   });
 
   return (
-    <Box sx={MUIStyle.IndustriesMain} ref={industriesRef}>
+    <Box sx={MUIStyle.IndustriesMain} ref={industriesRef} className="industriesSec">
       <Container maxWidth="xl">
         <Box sx={MUIStyle.IndustriesHeadingBoxOuter}>
           <Box sx={MUIStyle.IndustriesHeadingBoxInner}>
@@ -108,6 +154,7 @@ export default function Industries() {
               key={index}
               onMouseEnter={(e) => handleMouseEnter(e, industry)}
               onMouseLeave={handleMouseLeave}
+              onClick={(e) => handleClick(e, industry)}
               sx={{ position: "relative", display: "inline-block" }}
             >
               <Button

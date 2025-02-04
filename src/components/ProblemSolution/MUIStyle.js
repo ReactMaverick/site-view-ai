@@ -15,7 +15,7 @@ export const MUIStyle = {
         },
         overflow: "hidden",
         position: "relative",
-        height: "100vh",
+        minHeight: "100vh",
     },
     AboutSecOuterBox: {
         display: "flex",
@@ -45,8 +45,8 @@ export const MUIStyle = {
     AboutSecText: {
         color: commonColor.grey,
         fontSize: {
-            xs: FONT_SIZE.text16,
-            sm: FONT_SIZE.text16,
+            xs: FONT_SIZE.text14,
+            sm: FONT_SIZE.text14,
             md: FONT_SIZE.text16,
             lg: FONT_SIZE.text16,
             xl: FONT_SIZE.text18,
@@ -65,8 +65,8 @@ export const MUIStyle = {
     AboutSecHeading: {
         color: commonColor.white,
         fontSize: {
-            xs: FONT_SIZE.heading24,
-            sm: FONT_SIZE.heading24,
+            xs: FONT_SIZE.text22,
+            sm: FONT_SIZE.text22,
             md: FONT_SIZE.heading24,
             lg: FONT_SIZE.heading28,
             xl: FONT_SIZE.heading32,
@@ -89,17 +89,17 @@ export const MUIStyle = {
     BoxOuter: {
         position: "relative",
     },
-    ProblemSolutionPair: {
-        display: "flex",
-        flexDirection: "row",
-        gap: {
-            xs: "10px",
-            sm: "10px",
-            md: "10px",
-            lg: "10px",
-            xl: "20px",
-        },
-    },
+    // ProblemSolutionPair: {
+    //     display: "flex",
+    //     flexDirection: "row",
+    //     gap: {
+    //         xs: "10px",
+    //         sm: "10px",
+    //         md: "10px",
+    //         lg: "10px",
+    //         xl: "20px",
+    //     },
+    // },
     BannerSVGContainer: {
         position: "absolute",
         top: "0",

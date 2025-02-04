@@ -287,6 +287,16 @@ a.headerMenu.active p {
   scale: 1.2;
 }
 
+a.headerMenu_Mobile.active p {
+  /* color: #c9f625; */
+  font-weight: 600;
+  scale: 1.2;
+  transform: translateX(20px);
+  background-color: #c9f625;
+  color: #000;
+  border-radius: 8px 0 0 8px;
+}
+
 p.BlogContent {
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
@@ -392,8 +402,8 @@ p.BlogContent {
 
 @media screen and (max-width: 600px) and (min-width: 0px) {
   .image-slider-container {
-    width: 297px;
-    height: 320px;
+    width: 225px;
+    height: 250px;
   }
 
 }

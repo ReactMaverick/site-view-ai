@@ -17,6 +17,7 @@ import { commonColor } from "@/values/Colors/CommonColor";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function OurTeam() {
 
@@ -28,6 +29,11 @@ export default function OurTeam() {
 
   useGSAP(() => {
     const teamGrids = gsap.utils.toArray(".ourTeamGrid");
+
+    // Prevent hover effect on small screens
+    if (isSmallScreen()) {
+      return;
+    }
 
     const xPercentValues = [20, -20, 20, 0, -20, 20, -20];
     const yPercentValues = [20, 20, 0, 0, 0, -20, -20];
