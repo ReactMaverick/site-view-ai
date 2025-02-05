@@ -17,7 +17,7 @@ export const MUIStyle = {
     flexDirection: "column",
     backgroundColor: commonColor.black,
     position: 'relative',
-    height: '100vh',
+    minHeight: '100vh',
     overflow: 'hidden',
   },
 
@@ -36,8 +36,8 @@ export const MUIStyle = {
       xl: "45%",
     },
     marginBottom: {
-      xs: "80px",
-      sm: "80px",
+      xs: "20px",
+      sm: "20px",
       md: "48px",
       lg: "48px",
       xl: "48px",
@@ -45,8 +45,8 @@ export const MUIStyle = {
   },
   SubHeading: {
     fontSize: {
-      xs: FONT_SIZE.text14,
-      sm: FONT_SIZE.text14,
+      xs: FONT_SIZE.text12,
+      sm: FONT_SIZE.text12,
       md: FONT_SIZE.text14,
       lg: FONT_SIZE.text14,
       xl: FONT_SIZE.text16,
@@ -57,8 +57,8 @@ export const MUIStyle = {
     textAlign: "center",
     transition: "all 0.5s ease-in-out",
     marginBottom: {
-      xs: "24px",
-      sm: "24px",
+      xs: "10px",
+      sm: "10px",
       md: "24px",
       lg: "15px",
       xl: "24px",
@@ -66,8 +66,8 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.text20,
       xl: FONT_SIZE.heading28,
@@ -128,15 +128,15 @@ export const MUIStyle = {
     },
     "& img": {
       width: {
-        xs: "100%",
-        sm: "100%",
+        xs: "80%",
+        sm: "80%",
         md: "100%",
         lg: "50%",
         xl: "100%",
       },
       height: {
-        xs: "100%",
-        sm: "100%",
+        xs: "auto",
+        sm: "auto",
         md: "200px",
         lg: "200px",
         xl: "250px",
@@ -166,8 +166,8 @@ export const MUIStyle = {
     },
     "& img": {
       width: {
-        xs: "220px",
-        sm: "220px",
+        xs: "150px",
+        sm: "200px",
         md: "220px",
         lg: "100px",
         xl: "220px",
@@ -200,8 +200,8 @@ export const MUIStyle = {
   },
   ContentHeading: {
     fontSize:{
-      xs: FONT_SIZE.text18,
-      sm: FONT_SIZE.text18,
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text16,
       md: FONT_SIZE.text18,
       lg: FONT_SIZE.text18,
       xl: FONT_SIZE.heading24,
@@ -216,8 +216,8 @@ export const MUIStyle = {
   },
   ContentText: {
     fontSize: {
-      xs: FONT_SIZE.text14,
-      sm: FONT_SIZE.text14,
+      xs: FONT_SIZE.text12,
+      sm: FONT_SIZE.text12,
       md: FONT_SIZE.text14,
       lg: FONT_SIZE.text14,
       xl: FONT_SIZE.text18,
@@ -234,5 +234,5 @@ export const MUIStyle = {
     left: "0",
     width: "100%",
     height: "100%",
-  }
+  },
 };

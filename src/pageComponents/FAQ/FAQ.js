@@ -52,7 +52,12 @@ export default function FAQ() {
                     <AccordionSummary
                       sx={MUIStyle.FAQAccordionSummary}
                       expandIcon={
-                        <Box component={"img"} src={BUTTONDOWN} alt="plus" />
+                        <Box 
+                        component={"img"} 
+                        src={BUTTONDOWN} 
+                        alt="plus" 
+                        sx={MUIStyle.FAQAccordionIcon}
+                        />
                       }
                       aria-controls={`${getUniqueKey(index, faqIndex)}-content`}
                       id={`${getUniqueKey(index, faqIndex)}-header`}

@@ -8,6 +8,7 @@ import { useGSAP } from '@gsap/react';
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import { COMPAREPROCESS, NOBLINDSPOT, TIMETRAVEL, VISUALDOCUMENTATION, VIRTUALSITEMEETS } from "@/values/Constants/ImageConstants";
 import { commonColor } from "@/values/Colors/CommonColor";
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function Project() {
   const projectBoxes = Array(5).fill(null); // Adjust the number of ProjectBox components as needed
@@ -82,7 +83,7 @@ export default function Project() {
       ScrollTrigger.create({
         trigger: card, // The element that ScrollTrigger will "trigger" when it comes into view
         start: `top-=${i * window.innerHeight * 0.03}px ${window.innerHeight * 0.08}px`, // When the top of the trigger - 30px * i hits 5% of the viewport from the top
-        end: `-${endLocation}px bottom`, // When the top of the trigger hits the bottom of the viewport
+        end: `-${endLocation}px ${isSmallScreen() ? `${(3 * window.innerHeight / 4)}px` : 'bottom'}`, // When the top of the trigger hits the bottom of the viewport
         endTrigger: ".workflowSec", // The element that ScrollTrigger will use as the end of the trigger.
         pin: true, // Pin the trigger element while it is in view
         // pinType: "transform", // Use transforms for pinning instead of fixed positioning

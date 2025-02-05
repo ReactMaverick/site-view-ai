@@ -54,8 +54,8 @@ export const MUIStyle = {
   },
   BlogTitle: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text22,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
@@ -89,7 +89,13 @@ export const MUIStyle = {
     border: "2px solid",
     borderColor: commonColor.green,
     boxShadow: "none",
-    padding: "12px 24px",
+    padding: {
+      xs: "8px 16px",
+      sm: "8px 16px",
+      md: "12px 24px",
+      lg: "12px 24px",
+      xl: "12px 24px",
+    },
     borderRadius: "100px",
     textTransform: "capitalize",
     display: "flex",

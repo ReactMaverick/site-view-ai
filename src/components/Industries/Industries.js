@@ -166,7 +166,12 @@ export default function Industries() {
               {hoveredButton?.title === industry?.title && (
                 <Box sx={[MUIStyle.CustomTooltip,
                 index <= 3 ? { top: "110%" } : { bottom: "110%" }
-                ]}>
+                ]}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setHoveredButton(null);
+                  }}
+                >
                   <ButtonTooltip
                     title={industry.title}
                     content={industry.content}

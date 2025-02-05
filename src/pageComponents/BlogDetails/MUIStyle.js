@@ -4,7 +4,13 @@ import { CARD1, TITLEBG } from "@/values/Constants/ImageConstants";
 
 export const MUIStyle = {
     BlogDetailsSec: {
-        padding: "200px 0 100px",
+        padding: {
+            xs: "100px 0",
+            sm: "100px 0",
+            md: "200px 0",
+            lg: "200px 0",
+            xl: "200px 0",
+        },
     },
     SingleBlogMain  :{
        width:{
@@ -38,18 +44,25 @@ export const MUIStyle = {
     BlogImg : {
         width: "100%",
         objectFit: "cover",
-        minHeight:{
-            xs: "400px",
-            sm: "400px",
-            md: "600px",
-            lg: "600px",
-            xl: "600px",
-        },
+        height: 'auto',
+        // minHeight:{
+        //     xs: "400px",
+        //     sm: "400px",
+        //     md: "600px",
+        //     lg: "600px",
+        //     xl: "600px",
+        // },
         borderRadius: "20px",
         marginBottom: "40px",
     },
     BlogText:{
-        fontSize: FONT_SIZE.text20,
+        fontSize: {
+            xs: FONT_SIZE.text14,
+            sm: FONT_SIZE.text16,
+            md: FONT_SIZE.text16,
+            lg: FONT_SIZE.text16,
+            xl: FONT_SIZE.text20,
+        },
         color: commonColor.grey,
         fontWeight: FONT_WEIGHT.MEDIUM,
      lineHeight: "1.5em",

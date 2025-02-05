@@ -47,7 +47,7 @@ export default function TabBarSec({
         // Collapse all other elements
         expandedElements.forEach((el, i) => {
           gsap.to(el, {
-            marginTop: 0,
+            // marginTop: 0,
             height: 0,
             padding: 0,
             minHeight: 0,
@@ -62,7 +62,7 @@ export default function TabBarSec({
 
           // Expand the element
           gsap.to(element, {
-            marginTop: window.innerHeight * 0.02,
+            // marginTop: window.innerHeight * 0.02,
             height: "auto",
             padding: window.innerHeight * 0.02,
             minHeight: window.innerHeight * 0.15, // Adjust minHeight as needed
@@ -84,7 +84,7 @@ export default function TabBarSec({
         } else {
           // Collapse the element
           gsap.to(element, {
-            marginTop: 0,
+            // marginTop: 0,
             height: 0,
             padding: 0,
             minHeight: 0,
@@ -111,7 +111,13 @@ export default function TabBarSec({
       // });
 
       // Prevent animation on small screens
-      if (isSmallScreen()) return;
+      if (isSmallScreen()) {
+        buttonElements.forEach((button, index) => {
+          button.addEventListener("click", () => handleClick(index));
+        });
+
+        return;
+      }
 
       const tl = gsap.timeline({
         scrollTrigger: {

@@ -274,7 +274,7 @@ export const MUIStyle = {
     padding: "0",
     width: {
       xs: "100%",
-      sm: "auto",
+      sm: "100%",
       md: "auto",
     },
   },

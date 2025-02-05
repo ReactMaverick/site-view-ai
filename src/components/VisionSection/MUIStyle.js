@@ -1,14 +1,12 @@
 import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
-import { BANNER } from "@/values/Constants/ImageConstants";
-import zIndex from "@mui/material/styles/zIndex";
 
 export const MUIStyle = {
   VisionMain: {
     width: "100%",
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
+      xs: "50px 0",
+      sm: "50px 0",
       md: "100px 0",
       lg: "60px 50px 30px",
       xl: "284px 50px 0px",
@@ -34,8 +32,8 @@ export const MUIStyle = {
       xl: orientation === "image-left" ? "row" : "row-reverse",
     },
     gap: {
-      xs: "30px",
-      sm: "30px",
+      xs: "10px",
+      sm: "10px",
       md: "30px",
       lg: "0",
       xl: "0",
@@ -59,11 +57,23 @@ export const MUIStyle = {
 
   },
   Heading: {
-    fontSize: FONT_SIZE.heading32,
-   lineHeight: "1.5em",
+    fontSize: {
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading28,
+    },
+    lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.white,
-    marginBottom: "20px",
+    marginBottom: {
+      xs: "10px",
+      sm: "10px",
+      md: "20px",
+      lg: "20px",
+      xl: "20px",
+    },
     paddingRight: {
       xs: "0",
       sm: "0",
@@ -73,25 +83,43 @@ export const MUIStyle = {
     }
   },
   smallTitle: {
-    fontSize: FONT_SIZE.text16,
+    fontSize: {
+      xs: FONT_SIZE.text12,
+      sm: FONT_SIZE.text12,
+      md: FONT_SIZE.text14,
+      lg: FONT_SIZE.text14,
+      xl: FONT_SIZE.text16,
+    },
     lineHeight: "24px",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
     display: "block",
-    marginBottom: "16px",
+    marginBottom: {
+      xs: "8px",
+      sm: "8px",
+      md: "16px",
+      lg: "16px",
+      xl: "16px",
+    },
   },
   SubHeading: {
     fontSize: {
       xs: FONT_SIZE.text14,
       sm: FONT_SIZE.text14,
-      md: FONT_SIZE.text14,
-      lg: FONT_SIZE.text14,
-      xl: FONT_SIZE.text16,
+      md: FONT_SIZE.text16,
+      lg: FONT_SIZE.text16,
+      xl: FONT_SIZE.text18,
     },
     lineHeight: "26px",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.white,
-    marginBottom: "16px",
+    marginBottom: {
+      xs: "8px",
+      sm: "8px",
+      md: "16px",
+      lg: "16px",
+      xl: "16px",
+    }
   },
   VisionColRight: {
     maxWidth: {

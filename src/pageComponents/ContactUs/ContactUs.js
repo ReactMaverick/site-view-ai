@@ -160,7 +160,12 @@ export default function ContactUs() {
                   <AccordionSummary
                     sx={MUIStyle.FAQAccordionSummary}
                     expandIcon={
-                      <Box component={"img"} src={BUTTONDOWN} alt="plus" />
+                      <Box 
+                      component={"img"} 
+                      src={BUTTONDOWN} 
+                      alt="plus" 
+                        sx={MUIStyle.FAQAccordionIcon}
+                      />
                     }
                     aria-controls={`${item.id}-content`}
                     id={`${item.id}-header`}

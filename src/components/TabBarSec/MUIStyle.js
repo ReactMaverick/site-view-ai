@@ -110,6 +110,10 @@ export const MUIStyle = {
     flexDirection: "column",
     position: "relative",
     // minHeight: "64px",
+    width: {
+      xs: "100%",
+      sm: "100%",
+    }
   },
   TabBarSecButtonHead: {
     // background: commonColor.black5,
@@ -198,6 +202,13 @@ export const MUIStyle = {
     },
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     textAlign: "center",
+    display: {
+      xs: "none",
+      sm: "none",
+      md: "block",
+      lg: "block",
+      xl: "block",
+    }
   },
   TabBarSecButtonBodyTopText: {
     color: commonColor.black,

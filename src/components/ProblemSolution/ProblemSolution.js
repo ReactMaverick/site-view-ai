@@ -9,7 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
 import { ProblemSolutionContent } from "./ProblemSolutionContent";
-import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
+import { isMobileScreen, isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function ProblemSolution() {
   // const problemSolutionPairs = [
@@ -34,7 +34,7 @@ export default function ProblemSolution() {
 
   useGSAP(() => {
 
-    if (isSmallScreen()) return;
+    if (isMobileScreen()) return;
 
     // Set Problem Cards
     gsap.set(".problem-main", {

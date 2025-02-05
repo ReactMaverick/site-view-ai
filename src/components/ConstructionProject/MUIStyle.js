@@ -16,7 +16,7 @@ export const MUIStyle = {
     alignItems: "center",
     flexDirection: "column",
     backgroundColor: commonColor.black,
-    height: '100vh',
+    minHeight: '100vh',
   },
 
   workflowHeadingBoxOuter: {
@@ -34,8 +34,8 @@ export const MUIStyle = {
       xl: "45%",
     },
     marginBottom: {
-      xs: "30px",
-      sm: "30px",
+      xs: "20px",
+      sm: "20px",
       md: "20px",
       lg: "20px",
       xl: "30px",
@@ -43,8 +43,8 @@ export const MUIStyle = {
   },
   SubHeading: {
     fontSize: {
-      xs: FONT_SIZE.text14,
-      sm: FONT_SIZE.text14,
+      xs: FONT_SIZE.text12,
+      sm: FONT_SIZE.text12,
       md: FONT_SIZE.text14,
       lg: FONT_SIZE.text14,
       xl: FONT_SIZE.text16,
@@ -55,8 +55,8 @@ export const MUIStyle = {
     textAlign: "center",
     transition: "all 0.5s ease-in-out",
     marginBottom: {
-      xs: "16px",
-      sm: "16px",
+      xs: "10px",
+      sm: "10px",
       md: "16px",
       lg: "16px",
       xl: "20px",
@@ -64,8 +64,8 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.text20,
-      sm: FONT_SIZE.text20,
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text18,
       md: FONT_SIZE.text20,
       lg: FONT_SIZE.text20,
       xl: FONT_SIZE.heading24,
@@ -79,8 +79,8 @@ export const MUIStyle = {
   },
   ProjectText: {
     fontSize: {
-      xs: FONT_SIZE.text14,
-      sm: FONT_SIZE.text14,
+      xs: FONT_SIZE.text12,
+      sm: FONT_SIZE.text12,
       md: FONT_SIZE.text14,
       lg: FONT_SIZE.text14,
       xl: FONT_SIZE.text16,
@@ -101,13 +101,17 @@ export const MUIStyle = {
       xl: "1fr 1fr",
     },
     gap: {
-      xs: "40px 40px",
-      sm: "40px 40px",
+      xs: "20px 20px",
+      sm: "20px 20px",
       md: "70px 60px",
       lg: "70px 60px",
       xl: "200px 180px",
     },
     position: "relative",
+    justifyItems: {
+      xs: "center",
+      sm: "center",
+    }
   },
   DividerBox: {
     width: "100%",
@@ -123,7 +127,7 @@ export const MUIStyle = {
   },
 
   ConstructionProjectImg: {
-    display:{
+    display: {
       xs: "none",
       sm: "none",
       md: "block",
@@ -143,7 +147,7 @@ export const MUIStyle = {
     transform: "translate(-50%, -50%)",
   },
   ConstructionProjectBox: {
-    width:{
+    width: {
       xs: "100%",
       sm: "80%",
       md: "80%",
@@ -151,9 +155,9 @@ export const MUIStyle = {
       xl: "100%",
     },
     backgroundColor: commonColor.white5,
-    padding:{
-      xs: "15px",
-      sm: "15px",
+    padding: {
+      xs: "12px",
+      sm: "12px",
       md: "15px",
       lg: "15px",
       xl: "24px",
@@ -166,8 +170,8 @@ export const MUIStyle = {
     alignItems: "center",
     flexDirection: "column",
     gap: {
-      xs: "10px",
-      sm: "10px",
+      xs: "5px",
+      sm: "5px",
       md: "10px",
       lg: "24px",
       xl: "24px",

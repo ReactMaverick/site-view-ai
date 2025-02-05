@@ -5,13 +5,13 @@ import { EXTRABG } from "@/values/Constants/ImageConstants";
 export const MUIStyle = {
   ContactSec: {
     width: "100%",
-    // padding: {
-    //   xs: "100px 0",
-    //   sm: "100px 0",
-    //   md: "100px 0 100px",
-    //   lg: "284px 0 100px",
-    //   xl: "284px 0 130px",
-    // },
+    padding: {
+      xs: "50px 0",
+      sm: "50px 0",
+      md: "50px 0",
+      lg: "50px 0",
+      xl: "100px 0",
+    },
     minHeight: '100vh',
     display: "flex",
     justifyContent: "center",
@@ -40,16 +40,16 @@ export const MUIStyle = {
       xl: "70%",
     },
     marginBottom: {
-      xs: "80px",
-      sm: "80px",
-      md: "96px",
-      lg: "96px",
-      xl: "96px",
+      xs: "20px",
+      sm: "30px",
+      md: "40px",
+      lg: "50px",
+      xl: "60px",
     },
   },
   SubHeading: {
     fontSize: {
-      xs: FONT_SIZE.text14,
+      xs: FONT_SIZE.text12,
       sm: FONT_SIZE.text14,
       md: FONT_SIZE.text14,
       lg: FONT_SIZE.text14,
@@ -60,12 +60,18 @@ export const MUIStyle = {
     color: commonColor.grey,
     textAlign: "center",
     transition: "all 0.5s ease-in-out",
-    marginBottom: "24px",
+    marginBottom: {
+      xs: "10px",
+      sm: "15px",
+      md: "20px",
+      lg: "20px",
+      xl: "20px",
+    },
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
@@ -110,8 +116,8 @@ export const MUIStyle = {
     borderRadius: "20px",
     transition: "all 0.5s ease-in-out",
     minHeight: {
-      xs: "250px",
-      sm: "250px",
+      xs: "220px",
+      sm: "230px",
       md: "250px",
       lg: "360px",
       xl: "360px",
@@ -150,7 +156,7 @@ export const MUIStyle = {
   },
   ContactBoxHeading: {
     fontSize: {
-      xs: FONT_SIZE.heading28,
+      xs: FONT_SIZE.heading24,
       sm: FONT_SIZE.heading26,
       md: FONT_SIZE.heading28,
       lg: FONT_SIZE.heading36,
@@ -176,7 +182,13 @@ export const MUIStyle = {
   },
 
   ContactBoxText: {
-    fontSize: FONT_SIZE.heading24,
+    fontSize: {
+      xs: FONT_SIZE.text18,
+      sm: FONT_SIZE.text20,
+      md: FONT_SIZE.text22,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading24,
+    },
     lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey3,
@@ -208,11 +220,11 @@ export const MUIStyle = {
   FAQSec: {
     width: "100%",
     padding: {
-      xs: "100px 0",
-      sm: "100px 0",
-      md: "100px 0",
-      lg: "132px 0",
-      xl: "132px 0",
+      xs: "50px 0",
+      sm: "50px 0",
+      md: "50px 0",
+      lg: "50px 0",
+      xl: "100px 0",
     },
     display: "flex",
     justifyContent: "center",
@@ -233,7 +245,13 @@ export const MUIStyle = {
     alignItems: "center",
     flexDirection: "column",
     width: "100%",
-    gap: "30px",
+    gap: {
+      xs: "15px",
+      sm: "15px",
+      md: "15px",
+      lg: "15px",
+      xl: "20px",
+    },
     width: {
       xs: "100%",
       sm: "100%",
@@ -247,7 +265,13 @@ export const MUIStyle = {
       boxShadow: "none",
       borderRadius: "50px",
       transition: "all 0.5s ease-in-out",
-      padding: "15px 20px",
+      padding: {
+        xs: "2px 15px",
+        sm: "2px 15px",
+        md: "5px 15px",
+        lg: "5px 15px",
+        xl: "15px 20px",
+      },
       "&.Mui-expanded": {
         margin: "0px",
       },
@@ -260,7 +284,13 @@ export const MUIStyle = {
   },
 
   FAQSecAccrodinHeading: {
-    fontSize: FONT_SIZE.heading24,
+    fontSize: {
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text18,
+      md: FONT_SIZE.text20,
+      lg: FONT_SIZE.text20,
+      xl: FONT_SIZE.heading24,
+    },
     lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
@@ -268,7 +298,13 @@ export const MUIStyle = {
     transition: "all 0.5s ease-in-out",
   },
   FAQSecAccrodiontext: {
-    fontSize: FONT_SIZE.text20,
+    fontSize: {
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text16,
+      md: FONT_SIZE.text16,
+      lg: FONT_SIZE.text16,
+      xl: FONT_SIZE.text20,
+    },
     lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
@@ -276,28 +312,52 @@ export const MUIStyle = {
     transition: "all 0.5s ease-in-out",
   },
   FaqHeading: {
-    fontSize: FONT_SIZE.heading32,
+    fontSize: {
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading28,
+    },
     lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.black,
     textTransform: "uppercase",
     textAlign: "center",
     transition: "all 0.5s ease-in-out",
-    paddingBottom: "80px",
+    marginBottom: {
+      xs: "20px",
+      sm: "30px",
+      md: "40px",
+      lg: "50px",
+      xl: "60px",
+    },
   },
   BtnRow: {
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
     width: "100%",
-    marginTop: "80px",
+    marginTop: {
+      xs: "20px",
+      sm: "20px",
+      md: "30px",
+      lg: "30px",
+      xl: "40px",
+    },
   },
   CustomBtn: {
     background: commonColor.green,
     border: "2px solid",
     borderColor: commonColor.green,
     boxShadow: "none",
-    padding: "12px 42px",
+    padding: {
+      xs: "8px 28px",
+      sm: "8px 28px",
+      md: "12px 42px",
+      lg: "12px 42px",
+      xl: "12px 42px",
+    },
     borderRadius: "100px",
     textTransform: "capitalize",
     display: "flex",
@@ -306,10 +366,11 @@ export const MUIStyle = {
     gap: "10px",
     transition: "all 0.3s ease-in-out",
     fontSize: {
-      xs: FONT_SIZE.text18,
-      sm: FONT_SIZE.text18,
-      md: FONT_SIZE.text18,
-      lg: FONT_SIZE.text20,
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text16,
+      lg: FONT_SIZE.text16,
+      xl: FONT_SIZE.text20,
     },
     lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
@@ -334,5 +395,14 @@ export const MUIStyle = {
     left: "0",
     width: "100%",
     height: "100%",
+  },
+  FAQAccordionIcon: {
+    width: {
+      xs: "24px",
+      sm: "24px",
+      md: "32px",
+      lg: "32px",
+      xl: "32px",
+    },
   }
 };

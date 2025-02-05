@@ -16,7 +16,7 @@ export const MUIStyle = {
     alignItems: "center",
     flexDirection: "column",
     backgroundColor: commonColor.black,
-    height: '100vh'
+    minHeight: '100vh'
   },
 
   DigitalConstructionHeadingBoxOuter: {
@@ -34,8 +34,8 @@ export const MUIStyle = {
       xl: "45%",
     },
     marginBottom: {
-      xs: "30px",
-      sm: "30px",
+      xs: "20px",
+      sm: "20px",
       md: "30px",
       lg: "30px",
       xl: "40px",
@@ -43,8 +43,8 @@ export const MUIStyle = {
   },
   SubHeading: {
     fontSize: {
-      xs: FONT_SIZE.text14,
-      sm: FONT_SIZE.text14,
+      xs: FONT_SIZE.text12,
+      sm: FONT_SIZE.text12,
       md: FONT_SIZE.text14,
       lg: FONT_SIZE.text14,
       xl: FONT_SIZE.text16,
@@ -64,8 +64,8 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
@@ -98,15 +98,15 @@ export const MUIStyle = {
     },
     "& img": {
       width: {
-        xs: "100%",
-        sm: "100%",
+        xs: "80%",
+        sm: "80%",
         md: "400px",
         lg: "400px",
         xl: "500px",
       },
       height: {
-        xs: "100%",
-        sm: "100%",
+        xs: "auto",
+        sm: "auto",
         md: "400px",
         lg: "400px",
         xl: "500px",
@@ -126,7 +126,13 @@ export const MUIStyle = {
       lg: "row",
       xl: "row",
     },
-    gap: "50px",
+    gap: {
+      xs: "20px",
+      sm: "20px",
+      md: "50px",
+      lg: "50px",
+      xl: "50px",
+    },
     maxWidth: {
       xs: "100%",
       sm: "100%",
@@ -171,8 +177,8 @@ export const MUIStyle = {
   },
   DigitalContentBox: {
     padding: {
-      xs: "16px",
-      sm: "16px",
+      xs: "8px",
+      sm: "8px",
       md: "16px",
       lg: "16px",
       xl: "16px",
@@ -184,16 +190,32 @@ export const MUIStyle = {
       lg: "276px",
       xl: "276px",
     },
+    width: {
+      xs: "100%",
+      sm: "100%",
+    },
     borderRadius: "8px",
     display: "flex",
-    gap: "16px",
+    gap: {
+      xs: "5px",
+      sm: "5px",
+      md: "16px",
+      lg: "16px",
+      xl: "16px",
+    },
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     transition: "all 0.5s ease-in-out",
   },
   ContentHeading: {
-    fontSize: FONT_SIZE.text20,
+    fontSize: {
+      xs: FONT_SIZE.text18,
+      sm: FONT_SIZE.text18,
+      md: FONT_SIZE.text20,
+      lg: FONT_SIZE.text20,
+      xl: FONT_SIZE.text20,
+    },
     lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.SEMI_BOLD,
     color: commonColor.black,
@@ -201,7 +223,13 @@ export const MUIStyle = {
     transition: "all 0.5s ease-in-out",
   },
   ContentText: {
-    fontSize: FONT_SIZE.text16,
+    fontSize: {
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text16,
+      lg: FONT_SIZE.text16,
+      xl: FONT_SIZE.text16,
+    },
     lineHeight: "24px",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,

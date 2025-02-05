@@ -22,6 +22,9 @@ export default function Workflow() {
 
     // console.log(document.querySelector(".workflowSec").offsetWidth, document.querySelector(".sliderOuter").offsetWidth);
 
+    console.log("isSmallScreen", isSmallScreen());
+    
+
     gsap.to(cards, {
       xPercent: -(isSmallScreen() ? 108 : 100) * (cards.length - 1),
       ease: "none",

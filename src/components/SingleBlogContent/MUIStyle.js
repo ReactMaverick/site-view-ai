@@ -55,8 +55,8 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
@@ -75,7 +75,7 @@ export const MUIStyle = {
   },
   SubHeading: {
     fontSize: {
-      xs: FONT_SIZE.text14,
+      xs: FONT_SIZE.text12,
       sm: FONT_SIZE.text14,
       md: FONT_SIZE.text14,
       lg: FONT_SIZE.text14,
@@ -99,7 +99,13 @@ export const MUIStyle = {
     alignItems: "center",
     borderRadius: "10px",
     "& img": {
-      width: "100%",
+      width: {
+        xs: "100%",
+        sm: "80%",
+        md: "100%",
+        lg: "100%",
+        xl: "100%",
+      },
       height: "100%",
       objectFit: "cover",
     },
@@ -112,7 +118,13 @@ export const MUIStyle = {
     border: "2px solid",
     borderColor: commonColor.green,
     boxShadow: "none",
-    padding: "12px 24px",
+    padding: {
+      xs: "8px 16px",
+      sm: "8px 16px",
+      md: "12px 24px",
+      lg: "12px 24px",
+      xl: "12px 24px",
+    },
     borderRadius: "100px",
     textTransform: "capitalize",
     display: "flex",
@@ -121,7 +133,7 @@ export const MUIStyle = {
     gap: "10px",
     transition: "all 0.3s ease-in-out",
     fontSize: {
-      xs: FONT_SIZE.text18,
+      xs: FONT_SIZE.text16,
       sm: FONT_SIZE.text18,
       md: FONT_SIZE.text18,
       lg: FONT_SIZE.text20,

@@ -15,6 +15,7 @@ export default function About() {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
   }, []);
 
+  /* global window */
   useGSAP(() => {
 
     // If the screen is small, don't run the animation

@@ -8,6 +8,7 @@ import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function OnsiteSection() {
 
@@ -19,6 +20,10 @@ export default function OnsiteSection() {
   }, []);
 
   useGSAP(() => {
+
+    if (isSmallScreen()) {
+      return;
+    }
 
     const onSiteContent = gsap.utils.toArray(".onsite-content");
 

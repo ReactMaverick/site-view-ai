@@ -43,8 +43,8 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
@@ -90,8 +90,8 @@ export const MUIStyle = {
       borderRadius: "50px",
       backgroundColor: commonColor.white,
       padding: {
-        xs: "5px 15px",
-        sm: "5px 15px",
+        xs: "2px 15px",
+        sm: "2px 15px",
         md: "5px 15px",
         lg: "5px 15px",
         xl: "15px 20px",
@@ -108,8 +108,8 @@ export const MUIStyle = {
 
   FAQSecAccrodinHeading: {
     fontSize: {
-      xs: FONT_SIZE.text20,
-      sm: FONT_SIZE.text20,
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text18,
       md: FONT_SIZE.text20,
       lg: FONT_SIZE.text20,
       xl: FONT_SIZE.heading24,
@@ -122,7 +122,7 @@ export const MUIStyle = {
   },
   FAQSecAccrodiontext: {
     fontSize: {
-      xs: FONT_SIZE.text16,
+      xs: FONT_SIZE.text14,
       sm: FONT_SIZE.text16,
       md: FONT_SIZE.text16,
       lg: FONT_SIZE.text16,
@@ -140,8 +140,8 @@ export const MUIStyle = {
     alignItems: "center",
     width: "100%",
     marginTop: {
-      xs: "30px",
-      sm: "30px",
+      xs: "20px",
+      sm: "20px",
       md: "30px",
       lg: "30px",
       xl: "40px",
@@ -152,7 +152,13 @@ export const MUIStyle = {
     border: "2px solid",
     borderColor: commonColor.green,
     boxShadow: "none",
-    padding: "12px 42px",
+    padding: {
+      xs: "8px 28px",
+      sm: "8px 28px",
+      md: "12px 42px",
+      lg: "12px 42px",
+      xl: "12px 42px",
+    },
     borderRadius: "100px",
     textTransform: "capitalize",
     display: "flex",
@@ -161,8 +167,8 @@ export const MUIStyle = {
     gap: "10px",
     transition: "all 0.3s ease-in-out",
     fontSize: {
-      xs: FONT_SIZE.text16,
-      sm: FONT_SIZE.text16,
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
       md: FONT_SIZE.text16,
       lg: FONT_SIZE.text16,
       xl: FONT_SIZE.text20,
@@ -184,4 +190,13 @@ export const MUIStyle = {
       color: commonColor.green,
     },
   },
+  FAQAccordionIcon: {
+    width: {
+      xs: "24px",
+      sm: "24px",
+      md: "32px",
+      lg: "32px",
+      xl: "32px",
+    },
+  }
 };

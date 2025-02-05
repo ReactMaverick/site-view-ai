@@ -10,6 +10,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { constructionContent } from "./ConstructionContent";
+import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function ConstructionProject() {
 
@@ -122,7 +123,11 @@ export default function ConstructionProject() {
           </Box>
           {constructionContent.map((content, index) => (
             <Box
-              sx={MUIStyle.ConstructionProjectBox}
+              sx={[MUIStyle.ConstructionProjectBox, 
+                isSmallScreen() && {
+                  order: content.mobileOrder
+                }
+              ]}
               key={index}
               className="construction-project-box"
             >

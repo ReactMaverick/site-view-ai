@@ -8,8 +8,8 @@ export const MUIStyle = {
   },
   Heading: {
     fontSize: {
-      xs: FONT_SIZE.heading24,
-      sm: FONT_SIZE.heading24,
+      xs: FONT_SIZE.text20,
+      sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
       xl: FONT_SIZE.heading28,
@@ -36,7 +36,13 @@ export const MUIStyle = {
     alignItems: "start",
     flexDirection: "column",
     width: "100%",
-    gap: "30px",
+    gap: {
+      xs: "15px",
+      sm: "15px",
+      md: "15px",
+      lg: "15px",
+      xl: "20px",
+    },
     width: {
       xs: "100%",
       sm: "100%",
@@ -50,7 +56,13 @@ export const MUIStyle = {
       boxShadow: "none",
       borderRadius: "50px",
       transition: "all 0.5s ease-in-out",
-      padding: "15px 20px",
+      padding: {
+        xs: "2px 15px",
+        sm: "2px 15px",
+        md: "5px 15px",
+        lg: "5px 15px",
+        xl: "15px 20px",
+      },
       "&.Mui-expanded": {
         margin: "0px",
       },
@@ -63,7 +75,13 @@ export const MUIStyle = {
   },
 
   FAQSecAccrodinHeading: {
-    fontSize: FONT_SIZE.heading24,
+    fontSize: {
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text18,
+      md: FONT_SIZE.heading24,
+      lg: FONT_SIZE.heading24,
+      xl: FONT_SIZE.heading24,
+    },
     lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
@@ -71,12 +89,27 @@ export const MUIStyle = {
     transition: "all 0.5s ease-in-out",
   },
   FAQSecAccrodiontext: {
-    fontSize: FONT_SIZE.text20,
+    fontSize: {
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text16,
+      md: FONT_SIZE.text16,
+      lg: FONT_SIZE.text16,
+      xl: FONT_SIZE.text20,
+    },
     lineHeight: "1.5em",
     fontWeight: FONT_WEIGHT.REGULAR,
     color: commonColor.grey,
     textAlign: "left",
     transition: "all 0.5s ease-in-out",
   },
+  FAQAccordionIcon: {
+    width: {
+      xs: "24px",
+      sm: "24px",
+      md: "32px",
+      lg: "32px",
+      xl: "32px",
+    },
+  }
 
 };
