@@ -2,6 +2,8 @@ import { commonColor } from "@/values/Colors/CommonColor";
 import styles from "./CustomInput.module.css";
 import { useEffect, useRef, useState } from "react";
 import $ from 'jquery';
+import Image from "next/image";
+import { Box } from "@mui/material";
 
 export default function CustomInput({
     label = "Custom Label",
@@ -54,7 +56,7 @@ export default function CustomInput({
         setIsSelectOpen(false);
 
         setSearchTerm('');
-        
+
         onTextChange && onTextChange({ label, value });
     }
 
@@ -144,7 +146,8 @@ export default function CustomInput({
                                             }}
                                         >
                                             {flagIcon && (
-                                                <img
+                                                <Box
+                                                    component={'img'}
                                                     src={flagIcon}
                                                     alt="flag"
                                                     className={styles.flagIcon}

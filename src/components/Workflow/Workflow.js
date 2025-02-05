@@ -22,7 +22,9 @@ export default function Workflow() {
 
     // console.log(document.querySelector(".workflowSec").offsetWidth, document.querySelector(".sliderOuter").offsetWidth);
 
-    console.log("isSmallScreen", isSmallScreen());
+    // console.log("isSmallScreen", isSmallScreen());
+
+    const endLocation = isSmallScreen() ? (document.querySelector(".workflowSec").offsetHeight * 15) : (document.querySelector(".workflowSec").offsetWidth * 2);
     
 
     gsap.to(cards, {
@@ -35,7 +37,7 @@ export default function Workflow() {
         pin: true,
         scrub: 1,
         // snap: 1 / (cards.length - 2),
-        end: () => "+=" + isSmallScreen() ? (document.querySelector(".workflowSec").offsetHeight * 15) : (document.querySelector(".workflowSec").offsetWidth * 2),
+        end: () => "+=" + endLocation,
         endTrigger: ".videoSecMain",
         onUpdate: self => {
 
