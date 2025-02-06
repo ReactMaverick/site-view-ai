@@ -132,10 +132,11 @@ export const MUIStyle = {
     transition: "all 0.5s",
     background: commonColor.trans,
     top: "0",
+    // right: "0",
     width: "100%",
     height: {
-      xs: "100vh",
-      sm: "100vh",
+      xs: "100%",
+      sm: "100%",
       md: "auto",
       lg: "auto",
     },
@@ -167,7 +168,7 @@ export const MUIStyle = {
   },
   HeadermobInner: {
     width: {
-      xs: "87%",
+      xs: "80%",
       sm: "60%",
       md: "auto",
       lg: "auto",
@@ -205,8 +206,8 @@ export const MUIStyle = {
     position: "absolute",
     top: "10px",
     left: {
-      xs: "10px",
-      sm: "34%",
+      xs: "-40px",
+      sm: "-40px",
       md: "auto",
       lg: "auto",
     },
@@ -220,6 +221,7 @@ export const MUIStyle = {
       md: "none",
       lg: "none",
     },
+    position: "relative",
   },
   menuBtn: {
     display: {
