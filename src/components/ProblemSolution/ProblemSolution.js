@@ -34,7 +34,53 @@ export default function ProblemSolution() {
 
   useGSAP(() => {
 
-    if (isMobileScreen()) return;
+    const problemCards = gsap.utils.toArray(".problem-main");
+    const solutionCards = gsap.utils.toArray(".solution-main");
+
+    if (isMobileScreen()) {
+      // use staggering for mobile
+      gsap.set(".problem-main", {
+        xPercent: 50
+      });
+
+      gsap.set(".solution-main", {
+        xPercent: -50
+      });
+
+      problemCards.forEach((card, index) => {
+        gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top " + (4 * window.innerHeight / 5),
+            end: "+=100",
+            scrub: true,
+            // markers: true,
+            id: `problem-card`,
+            snap: 1,
+          },
+          xPercent: 0,
+          ease: "power1.inOut",
+        });
+      });
+
+      solutionCards.forEach((card, index) => {
+        gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top " + (4 * window.innerHeight / 5),
+            end: "+=100",
+            scrub: 1,
+            // markers: true,
+            id: `solution-card`,
+            snap: 1,
+          },
+          xPercent: 0,
+          ease: "power1.inOut",
+        });
+      });
+
+      return;
+    }
 
     // Set Problem Cards
     gsap.set(".problem-main", {
@@ -45,9 +91,6 @@ export default function ProblemSolution() {
     gsap.set(".solution-main", {
       xPercent: -52
     });
-
-    const problemCards = gsap.utils.toArray(".problem-main");
-    const solutionCards = gsap.utils.toArray(".solution-main");
 
     gsap.to('.problem-solution-main', {
       scrollTrigger: {
