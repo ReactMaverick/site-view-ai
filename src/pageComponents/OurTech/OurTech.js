@@ -2,7 +2,7 @@
 import { Box } from "@mui/material";
 import styles from "./OurTech.module.css";
 import BannerNew from "@/components/BannerNew/BannerNew";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Vision from "@/components/Vision/Vision";
 import ConstructionProject from "@/components/ConstructionProject/ConstructionProject";
 import OnsiteSection from "@/components/OnsiteSection/OnsiteSection";
@@ -14,6 +14,15 @@ import VisionSection from "@/components/VisionSection/VisionSection";
 import { VISION, VISIONMEETSPRECISION, WHYSITEPACELASTVID } from "@/values/Constants/ImageConstants";
 
 export default function OutTech() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) return null;
+
   return (
     <Box className={styles.OurTechSec}>
       <BannerNew

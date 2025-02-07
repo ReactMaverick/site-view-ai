@@ -402,8 +402,8 @@ p.BlogContent {
 
 @media screen and (max-width: 600px) and (min-width: 0px) {
   .image-slider-container {
-    width: 225px;
-    height: 250px;
+    width: 135px;
+    height: 150px;
   }
 
 }

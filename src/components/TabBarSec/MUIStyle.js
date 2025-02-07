@@ -15,6 +15,7 @@ export const MUIStyle = {
     },
     position: "relative",
     minHeight: "100vh",
+    backgroundColor: '#030712'
   },
   AboutSecOuterBox: {
     display: "flex",

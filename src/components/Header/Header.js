@@ -8,6 +8,7 @@ import Link from "next/link";
 import { LOGO, LOGOFTR } from "@/values/Constants/ImageConstants";
 import { commonColor } from "@/values/Colors/CommonColor";
 import { usePathname } from "next/navigation";
+import FullPageLoader from "../FullPageLoader/FullPageLoader";
 
 const menuItems = [
   { label: "Home", path: "/home", theme: 'light', shouldRender: true },
@@ -22,6 +23,8 @@ const menuItems = [
   { label: "Blog Details", path: "/blog-details", theme: 'light', shouldRender: false },
 ];
 export default function Header({ theme = "light" }) {
+
+  const [isHeaderLoading, setIsHeaderLoading] = useState(true);
 
   const pathName = usePathname();
 
@@ -48,7 +51,13 @@ export default function Header({ theme = "light" }) {
     const activeMenu = menuItems.find(item => pathName.includes(item.path));
 
     setActiveMenu(activeMenu);
+
+    setIsHeaderLoading(false);
   }, [pathName])
+
+  if (isHeaderLoading) {
+    return <FullPageLoader />
+  }
 
 
   return (

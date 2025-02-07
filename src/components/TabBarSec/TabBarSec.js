@@ -23,6 +23,9 @@ export default function TabBarSec({
   const buttonRefs = useRef([]);
   const bodyRefs = useRef([]);
   const sectionRef = useRef(null);
+  const tabBarSecRef = useRef(null);
+  const tabBarButtonsRef = useRef(null);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [swiper, setSwiper] = useState(null);
 
@@ -112,13 +115,74 @@ export default function TabBarSec({
 
       // Prevent animation on small screens
       if (isSmallScreen()) {
+        // buttonElements.forEach((button, index) => {
+        //   button.addEventListener("click", () => handleClick(index));
+        // });
+
+
+        // Pin the Section
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "190px top",
+            end: "+=" + buttonElements.length * 375 + "px",
+            // end: "bottom bottom",
+            scrub: 1,
+            markers: true,
+            pin: true,
+            id: "tabBarSec",
+            snap: {
+              snapTo: 1 / ((tabBarContents.length) * 2),
+              duration: 0.2,
+              delay: 0,  // No delay in snapping
+              ease: "power3.inOut",
+            }
+          }
+        });
+
+        // Expand and collapse all elements one by one in sequence on scroll
         buttonElements.forEach((button, index) => {
-          button.addEventListener("click", () => handleClick(index));
+
+          tl.to(bodyRefs.current[index], {
+            // marginTop: '-' + buttonRefs.current[index].offsetHeight + 'px',
+            height: "auto",
+            padding: window.innerHeight * 0.02,
+            minHeight: window.innerHeight * 0.15, // Adjust minHeight as needed
+            opacity: 1,
+            duration: 0.8,
+            ease: "power4.out", // Slower easing for expand
+            onStart: () => {
+              swiper?.slideTo(index);
+            },
+          });
+
+          tl.to(bodyRefs.current[index], {
+            // marginTop: 0,
+            height: 0,
+            padding: 0,
+            minHeight: 0,
+            opacity: 0,
+            duration: 0.1,
+            ease: "power4.in", // Faster easing for collapse
+            onReverseComplete: () => {
+              swiper?.slideTo(index);
+            },
+          });
+        });
+
+        tl.to(bodyRefs.current[bodyRefs.current.length - 1], {
+          // marginTop: 0,
+          height: 0,
+          padding: 0,
+          minHeight: 0,
+          opacity: 0,
+          duration: 0.2,
         });
 
         return;
       }
 
+      // Pin the Section
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -205,7 +269,11 @@ export default function TabBarSec({
             </Typography>
           </Box>
         </Box>
-        <Box sx={MUIStyle.TabBarSecMyRow}>
+        <Box 
+        sx={MUIStyle.TabBarSecMyRow} 
+        className="tabBarSecMyRow"
+        ref={tabBarSecRef}
+        >
           <Box sx={MUIStyle.TabBarSecMyColLeft}>
             <Box sx={MUIStyle.TabBarSecImageBox} ref={imagesRef}>
               {/* {activeIndex !== null && tabBarContents[activeIndex].images && ( */}
@@ -233,7 +301,9 @@ export default function TabBarSec({
               /> */}
             </Box>
           </Box>
-          <Box sx={MUIStyle.TabBarSecMyColRight}>
+          <Box sx={MUIStyle.TabBarSecMyColRight}
+          ref={tabBarButtonsRef}
+          >
             <Box sx={MUIStyle.TabBarSecInnerBox} ref={container}>
               {tabBarContents.map((tabBar, index) => (
                 <Box

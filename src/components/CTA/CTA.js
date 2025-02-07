@@ -92,6 +92,17 @@ export default function CTA() {
 
     const ctaImages = gsap.utils.toArray(".ctaImage");
 
+    const numScrolls = ctaImages.length;
+
+    if (isSmallScreen()) {
+
+      ctaImages.forEach((element, index) => {
+        updateProgress(index);
+      });
+
+      return;
+    };
+
     // For each ctaImage, create a progress bar that fills as the image scrolls into view
     // ctaImages.forEach((ctaImage, index) => {
     //   const progressBar = $('.progress-' + index);
@@ -135,8 +146,6 @@ export default function CTA() {
 
     //   });
     // });
-
-    const numScrolls = ctaImages.length;
 
     // Create a horizontal slider for the ctaImages
     // gsap.to(ctaImages, {
@@ -228,7 +237,8 @@ export default function CTA() {
       scrollTrigger: {
         trigger: ".CTASection",
         start: "top top",
-        end: isSmallScreen() ? "+=5000" : "+=2000",
+        // end: isSmallScreen() ? "+=5000" : "+=2000",
+        end: "+=2000",
         // markers: true,  // Set to true to see the trigger area
         pin: true,
         scrub: 1,

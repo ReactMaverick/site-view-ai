@@ -82,8 +82,8 @@ export const MUIStyle = {
             top: "0",
             left: "0",
             width: {
-                xs: "100px",
-                sm: "100px",
+                xs: "10px",
+                sm: "50px",
                 md: "290px",
                 lg: "290px",
                 xl: "290px",
@@ -98,8 +98,8 @@ export const MUIStyle = {
             top: "0",
             right: "0",
             width: {
-                xs: "100px",
-                sm: "100px",
+                xs: "10px",
+                sm: "50px",
                 md: "290px",
                 lg: "290px",
                 xl: "290px",
