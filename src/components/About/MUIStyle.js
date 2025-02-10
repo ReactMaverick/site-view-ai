@@ -80,8 +80,8 @@ export const MUIStyle = {
         position: "relative",
         paddingTop: "30px",
         paddingBottom: {
-            xs: "50px",
-            sm: "50px",
+            xs: "10px",
+            sm: "10px",
             md: "100px",
             lg: "264px",
             xl: "264px",
@@ -132,7 +132,13 @@ export const MUIStyle = {
             lg: "absolute",
             xl: "absolute",
         },
-        top: "75px",
+        top: {
+            xs: "10px",
+            sm: "10px",
+            md: "75px",
+            lg: "75px",
+            xl: "75px",
+        },
         gridTemplateColumns: "repeat(2, 1fr)",
         gap: "20px 0",
         order: {
@@ -144,11 +150,16 @@ export const MUIStyle = {
 
         },
         left: "0",
-        minHeight: "450px",
+        minHeight: {
+            md: "400px",
+            sm: "400px",
+            lg: "450px",
+            xl: "450px",
+        },
         width: "100%",
         display: {
-            xs: "none",
-            sm: "none",
+            xs: "grid",
+            sm: "grid",
             md: "grid",
             lg: "grid",
             xl: "grid",
@@ -183,6 +194,14 @@ export const MUIStyle = {
         //     boxShadow: "50px 1px 50px 0px rgb(223 255 96 / 19%)",
         //     background: commonColor.black,
         // },
+        display: {
+            xs: "block",
+            sm: "block",
+        },
+        margin: {
+            xs: "2px",
+            sm: "5px",
+        }
     },
 
     Btn1: {
@@ -356,6 +375,10 @@ export const MUIStyle = {
             lg: "35%",
             xl: "35%",
         },
+        transform: {
+            xs: "translateX(-50%)",
+            sm: "translateX(-50%)",
+        }
     },
     Btn9: {
         position: {
@@ -425,6 +448,10 @@ export const MUIStyle = {
             lg: "45%",
             xl: "45%",
         },
+        display: {
+            xs: "none",
+            sm: "none",
+        }
     },
     Btn12: {
         position: {

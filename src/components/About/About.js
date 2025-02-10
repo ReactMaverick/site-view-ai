@@ -143,7 +143,7 @@ export default function About() {
 
           <Box className="middleAnimBoxes">
             <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn11]} variant="contained" className="animBox">
-              Visual Progress1
+              Visual Progress
             </Box>
           </Box>
 

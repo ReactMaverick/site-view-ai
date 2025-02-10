@@ -128,7 +128,7 @@ export default function TabBarSec({
             end: "+=" + buttonElements.length * 375 + "px",
             // end: "bottom bottom",
             scrub: 1,
-            markers: true,
+            // markers: true,
             pin: true,
             id: "tabBarSec",
             snap: {

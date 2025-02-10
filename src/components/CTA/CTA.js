@@ -12,9 +12,11 @@ import $ from "jquery";
 import { commonColor } from "@/values/Colors/CommonColor";
 import CustomProgressArrow from "../CustomProgress/CustomProgressArrow";
 import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
+import ContactFormModal from "../ContactFormModal/ContactFormModal";
 
 export default function CTA() {
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [progress, setProgress] = useState([
     {
       value: 0,
@@ -250,71 +252,86 @@ export default function CTA() {
   });
 
   return (
-    <Box sx={MUIStyle.CTAMain} className="CTASection">
-      <Container maxWidth="xl" sx={MUIStyle.CTAContainer}>
-        <Box sx={MUIStyle.CTAInner}>
-          <Typography variant="h2" sx={MUIStyle.CTAHeading}>
-            “SitePace.ai for every stage of construction”
-          </Typography>
-        </Box>
-        <Box sx={MUIStyle.CTAImgInner}>
-          <Box
-            component={"img"}
-            src={HELMETCAMERA}
-            alt="CTA"
-          />
-        </Box>
-        <Box component={"ul"} sx={MUIStyle.CTAList}>
-          {progress.map((item, index) => (
-            <Fragment key={index}>
-              <CustomProgressArrow
-                progressValue={item.value}
-                progressClass={"progress-" + index}
-                progressColor={item.color}
-                arrowColor={item.arrowColor}
-                opacity={item.value === 0 ? 0 : 1}
-              />
-              {index !== progress.length - 1 ?
-                <Typography
-                  variant="h4"
-                  sx={[MUIStyle.CTAListItemHeading,
-                  {
-                    color: item.titleColor,
-                    opacity: item.value === 0 ? 0 : 1,
-                    animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
-                  }
-                  ]}
-                >
-                  {item.title}
-                </Typography>
-                :
-                <Button
-                  sx={[MUIStyle.BannerBtn,
-                  {
-                    // color: item.titleColor,
-                    opacity: item.value === 0 ? 0 : 1,
-                    animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
-                  }
-                  ]}
-                  variant="contained" size="large"
-                >
-                  <Box component={"span"} className="BannerBtnIcon" sx={MUIStyle.BannerBtnIcon}>
-                    <Icon icon="flowbite:arrow-right-outline" />
-                  </Box>
-                  {item.title}
-                  <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG} />
-                </Button>
-              }
-            </Fragment>
-          ))}
+    <>
+      <Box sx={MUIStyle.CTAMain} className="CTASection">
+        <Container maxWidth="xl" sx={MUIStyle.CTAContainer}>
+          <Box sx={MUIStyle.CTAInner}>
+            <Typography variant="h2" sx={MUIStyle.CTAHeading}>
+              “SitePace.ai for every stage of construction”
+            </Typography>
+          </Box>
+          <Box sx={MUIStyle.CTAImgInner}>
+            <Box
+              component={"img"}
+              src={HELMETCAMERA}
+              alt="CTA"
+            />
+          </Box>
+          <Box component={"ul"} sx={MUIStyle.CTAList}>
+            {progress.map((item, index) => (
+              <Fragment key={index}>
+                <CustomProgressArrow
+                  progressValue={item.value}
+                  progressClass={"progress-" + index}
+                  progressColor={item.color}
+                  arrowColor={item.arrowColor}
+                  opacity={item.value === 0 ? 0 : 1}
+                />
+                {index !== progress.length - 1 ?
+                  <Typography
+                    variant="h4"
+                    sx={[MUIStyle.CTAListItemHeading,
+                    {
+                      color: item.titleColor,
+                      opacity: item.value === 0 ? 0 : 1,
+                      animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
+                    }
+                    ]}
+                  >
+                    {item.title}
+                  </Typography>
+                  :
+                  <Button
+                    sx={[MUIStyle.BannerBtn,
+                    {
+                      // color: item.titleColor,
+                      opacity: item.value === 0 ? 0 : 1,
+                      animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
+                      cursor: item.value === 0 ? 'default' : 'pointer',
+                    }
+                    ]}
+                    variant="contained" size="large"
+                    onClick={() => {
+                      if (item.value === 0) {
+                        return;
+                      }
 
+                      setIsModalOpen(true);
+                    }}
+                  >
+                    <Box component={"span"} className="BannerBtnIcon" sx={MUIStyle.BannerBtnIcon}>
+                      <Icon icon="flowbite:arrow-right-outline" />
+                    </Box>
+                    {item.title}
+                    <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG} />
+                  </Button>
+                }
+              </Fragment>
+            ))}
+
+          </Box>
+        </Container>
+        <Box sx={MUIStyle.CTAImgFlex} className="ctaImageFlex">
+          {[PLANNING, EXECUTION, CTABG, TRYNOW].map((image, index) => (
+            <Box component={"img"} src={image} alt="CTA" sx={MUIStyle.CTAImg} className="ctaImage" key={index} />
+          ))}
         </Box>
-      </Container>
-      <Box sx={MUIStyle.CTAImgFlex} className="ctaImageFlex">
-        {[PLANNING, EXECUTION, CTABG, TRYNOW].map((image, index) => (
-          <Box component={"img"} src={image} alt="CTA" sx={MUIStyle.CTAImg} className="ctaImage" key={index} />
-        ))}
       </Box>
-    </Box>
+      <ContactFormModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        theme={'light'}
+      />
+    </>
   );
 }
