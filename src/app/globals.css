@@ -413,3 +413,23 @@ p.BlogContent {
       transform: scale(0.75);
     }
 }
+
+/* Scrollbar custom */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9F625;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(77, 97, 4);
+}
+
+/* Scrollbar custom */

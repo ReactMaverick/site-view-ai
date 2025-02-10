@@ -205,6 +205,10 @@ export const MUIStyle = {
             sm: "5px",
         },
         alignContent: "center",
+        textAlign: {
+            xs: "center",
+            sm: "center",
+        }
     },
 
     Btn1: {
@@ -458,6 +462,7 @@ export const MUIStyle = {
         display: {
             xs: "none",
             sm: "none",
+            md: "block",
         }
     },
     Btn12: {

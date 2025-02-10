@@ -275,8 +275,8 @@ export default function About() {
           <Box sx={{
             display: "flex",
           }}>
-            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1, textAlign: 'center' }]} variant="contained" className="animBoxMobile">
-              Visual Progress
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              Visual Project Management
             </Box>
           </Box>
 
