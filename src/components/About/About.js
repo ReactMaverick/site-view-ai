@@ -18,12 +18,55 @@ export default function About() {
   /* global window */
   useGSAP(() => {
 
-    // If the screen is small, don't run the animation
-    if (isSmallScreen()) return;
-
+    
     const leftBoxes = gsap.utils.toArray('.leftAnimBoxes .animBox');
     const rightBoxes = gsap.utils.toArray('.rightAnimBoxes .animBox');
     const middleBoxes = gsap.utils.toArray('.middleAnimBoxes .animBox');
+    
+    // If the screen is small, don't run the animation
+    if (isSmallScreen()) {
+
+      const mobileBoxes = gsap.utils.toArray('.animBoxMobile');
+
+      gsap.set(mobileBoxes, {
+        xPercent: (i) => {
+          const returnValue = i % 2 === 0 ? -120 : 120
+
+          if (i === mobileBoxes.length - 1) {
+            return 0;
+          }
+
+          return returnValue;
+        },
+        scale: (i) => {
+          if (i === mobileBoxes.length - 1) {
+            return 0;
+          }
+
+          return 1;
+        },
+      });
+
+      mobileBoxes.forEach((box, i) => {
+        
+        gsap.to(box, {
+          scrollTrigger: {
+            trigger: box,
+            start: "top center",
+            end: "+=100",
+            scrub: 1,
+            // markers: true,
+            id: `box-${i}`,
+            snap: 1
+          },
+          xPercent: 0,
+          scale: 1,
+        });
+      });
+
+      return;
+    }
+
 
     // console.log("cards", cards);
 
@@ -94,6 +137,7 @@ export default function About() {
         display: "flex",
         flexDirection: "column",
       }}>
+        {/* Desktop & Tablet */}
         <Box sx={MUIStyle.AboutAllBtns} className="animBoxes">
           <Box className="leftAnimBoxes">
             <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn10]} variant="contained" className="animBox">
@@ -143,6 +187,95 @@ export default function About() {
 
           <Box className="middleAnimBoxes">
             <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn11]} variant="contained" className="animBox">
+              Visual Progress
+            </Box>
+          </Box>
+
+        </Box>
+
+        {/* Mobile */}
+        <Box sx={[MUIStyle.AboutAllBtns, {
+          display: {
+            xs: "flex",
+            sm: "flex",
+            md: "none",
+            lg: "none",
+            xl: "none",
+          },
+          flexDirection: "column",
+          gap: "0",
+        }]} className="animBoxesMobile"
+        >
+          <Box sx={{
+            display: "flex",
+          }}>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              Increased Efficiency
+            </Box>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              No Blind Spot
+            </Box>
+          </Box>
+
+          <Box sx={{
+            display: "flex",
+          }}>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              Reduce Rework
+            </Box>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              Sustainable Practices
+            </Box>
+          </Box>
+
+          <Box sx={{
+            display: "flex",
+          }}>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              Save Cost
+            </Box>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              Save Time
+            </Box>
+          </Box>
+
+          <Box sx={{
+            display: "flex",
+          }}>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              Save Resources
+            </Box>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              No Blind Spot
+            </Box>
+          </Box>
+
+          <Box sx={{
+            display: "flex",
+          }}>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              Historical Records
+            </Box>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
+              Safety Management
+            </Box>
+          </Box>
+
+          <Box sx={{
+            display: "flex",
+          }}>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: '1 50%' }]} variant="contained" className="animBoxMobile">
+              Remote Collaboration
+            </Box>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: '1 50%' }]} variant="contained" className="animBoxMobile">
+              Data Management
+            </Box>
+          </Box>
+
+          <Box sx={{
+            display: "flex",
+          }}>
+            <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1, textAlign: 'center' }]} variant="contained" className="animBoxMobile">
               Visual Progress
             </Box>
           </Box>

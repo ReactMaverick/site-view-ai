@@ -1,5 +1,6 @@
 // Font Constants
 export const FONT_SIZE = {
+    text10: '1.0rem',
     text12: '1.2rem',
     text14: '1.4rem',
     text16: '1.6rem',

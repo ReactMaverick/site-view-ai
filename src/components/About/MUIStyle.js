@@ -19,6 +19,7 @@ export const MUIStyle = {
             xl: "132px 0",
         },
         minHeight: "100vh",
+        overflow: "hidden", 
     },
 
     AboutDashBoardImg: {
@@ -158,8 +159,8 @@ export const MUIStyle = {
         },
         width: "100%",
         display: {
-            xs: "grid",
-            sm: "grid",
+            xs: "none",
+            sm: "none",
             md: "grid",
             lg: "grid",
             xl: "grid",
@@ -169,7 +170,7 @@ export const MUIStyle = {
         background: commonColor.trans,
         color: commonColor.white,
         fontSize: {
-            xs: FONT_SIZE.text14,
+            xs: FONT_SIZE.text10,
             sm: FONT_SIZE.text14,
             md: FONT_SIZE.text14,
             lg: FONT_SIZE.text14,
@@ -182,6 +183,7 @@ export const MUIStyle = {
         boxShadow: "1px 15px 40px 0px rgb(223 255 96 / 10%)",
         borderBottom: `2px solid ${commonColor.green}`,
         background: commonColor.black,
+        borderRadius: "5px",
         // "&::before": {
         //     content: '""',
         //     position: "absolute",
@@ -201,7 +203,8 @@ export const MUIStyle = {
         margin: {
             xs: "2px",
             sm: "5px",
-        }
+        },
+        alignContent: "center",
     },
 
     Btn1: {
@@ -378,6 +381,10 @@ export const MUIStyle = {
         transform: {
             xs: "translateX(-50%)",
             sm: "translateX(-50%)",
+        },
+        textAlign: {
+            xs: "center",
+            sm: "center",
         }
     },
     Btn9: {
