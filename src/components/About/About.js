@@ -32,19 +32,19 @@ export default function About() {
         xPercent: (i) => {
           const returnValue = i % 2 === 0 ? -120 : 120
 
-          if (i === mobileBoxes.length - 1) {
-            return 0;
-          }
+          // if (i === mobileBoxes.length - 1) {
+          //   return 0;
+          // }
 
           return returnValue;
         },
-        scale: (i) => {
-          if (i === mobileBoxes.length - 1) {
-            return 0;
-          }
+        // scale: (i) => {
+        //   // if (i === mobileBoxes.length - 1) {
+        //   //   return 0;
+        //   // }
 
-          return 1;
-        },
+        //   return 1;
+        // },
       });
 
       mobileBoxes.forEach((box, i) => {
@@ -52,7 +52,7 @@ export default function About() {
         gsap.to(box, {
           scrollTrigger: {
             trigger: box,
-            start: "top center",
+            start: "top " + (3 * window.innerHeight / 4),
             end: "+=100",
             scrub: 1,
             // markers: true,
@@ -60,7 +60,7 @@ export default function About() {
             snap: 1
           },
           xPercent: 0,
-          scale: 1,
+          // scale: 1,
         });
       });
 
@@ -170,9 +170,9 @@ export default function About() {
             <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn2]} variant="contained" className="animBox">
               Save Time
             </Box>
-            <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn12]} variant="contained" className="animBox">
+            {/* <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn12]} variant="contained" className="animBox">
               No Blind Spot
-            </Box>
+            </Box> */}
             <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn6]} variant="contained" className="animBox">
               Safety Management
             </Box>
@@ -185,11 +185,11 @@ export default function About() {
             </Box>
           </Box>
 
-          <Box className="middleAnimBoxes">
+          {/* <Box className="middleAnimBoxes">
             <Box component={"span"} sx={[MUIStyle.Btn, MUIStyle.Btn11]} variant="contained" className="animBox">
               Visual Progress
             </Box>
-          </Box>
+          </Box> */}
 
         </Box>
 
@@ -246,7 +246,7 @@ export default function About() {
               Save Resources
             </Box>
             <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
-              No Blind Spot
+              Safety Management
             </Box>
           </Box>
 
@@ -257,7 +257,7 @@ export default function About() {
               Historical Records
             </Box>
             <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
-              Safety Management
+              Data Management
             </Box>
           </Box>
 
@@ -268,17 +268,17 @@ export default function About() {
               Remote Collaboration
             </Box>
             <Box component={"span"} sx={[MUIStyle.Btn, { flex: '1 50%' }]} variant="contained" className="animBoxMobile">
-              Data Management
+              Visual Project Management
             </Box>
           </Box>
 
-          <Box sx={{
+          {/* <Box sx={{
             display: "flex",
           }}>
             <Box component={"span"} sx={[MUIStyle.Btn, { flex: 1 }]} variant="contained" className="animBoxMobile">
               Visual Project Management
             </Box>
-          </Box>
+          </Box> */}
 
         </Box>
 

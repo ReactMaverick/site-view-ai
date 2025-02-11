@@ -152,8 +152,8 @@ export const MUIStyle = {
         },
         left: "0",
         minHeight: {
-            md: "400px",
-            sm: "400px",
+            md: "auto",
+            sm: "auto",
             lg: "450px",
             xl: "450px",
         },
