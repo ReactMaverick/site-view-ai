@@ -127,7 +127,7 @@ export default function ContactFormModal({
             });
             return;
         } else {
-            // console.log("Form Submitted", formData);
+            console.log("Form Submitted", formData);
 
             submitForm();
         }
@@ -147,9 +147,6 @@ export default function ContactFormModal({
 
             const response = await fetch(CONTACT_US, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "multipart/form-data",
-                },
                 body: newFormData,
             });
 
