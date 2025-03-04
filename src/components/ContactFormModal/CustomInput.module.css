@@ -59,10 +59,11 @@
 
 .labelText {
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 0 5px;
-    background-color: black;
+    /* background-color: black; */
     transition: 0.3s;
+    border-radius: 5px;
 }
 
 .errorView {
@@ -92,7 +93,7 @@
     padding: 10px;
     border: 1px solid #C9F625;
     border-radius: 20px;
-    background-color: transparent;
+    background-color: #121212;
     color: white;
     font-size: 1.35rem;
     cursor: pointer;
@@ -157,6 +158,8 @@
 .searchInput {
     /* position: absolute; */
     border-radius: 20px 20px 0 0 !important;
+    background-color: #121212 !important;
+    color: white;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -175,4 +178,12 @@
     width: 16px;
     height: 12px;
     margin-right: 10px;
+}
+
+.inputField {
+    background-color: #121212 !important;
+}
+
+.textareaField {
+    background-color: #121212 !important;
 }

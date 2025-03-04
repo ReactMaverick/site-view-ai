@@ -3,12 +3,16 @@
 const nextConfigDevelopment = {
     env: {
         BASE_URL: 'http://localhost:3000',
+        GOOGLE_SITE_KEY: '6Lc77-cqAAAAAFtLG42JpP3HPAgEhppYFLIWKOH4',
+        GOOGLE_SECRET_KEY: '6Lc77-cqAAAAAF0WyMRDR4UnIQGx_0DNipUyJQhb',
     },
 }
 
 const nextConfigProduction = {
     env: {
         BASE_URL: 'https://sitepace.ai',
+        GOOGLE_SITE_KEY: '6Lc77-cqAAAAAFtLG42JpP3HPAgEhppYFLIWKOH4',
+        GOOGLE_SECRET_KEY: '6Lc77-cqAAAAAF0WyMRDR4UnIQGx_0DNipUyJQhb',
     },
 }
 

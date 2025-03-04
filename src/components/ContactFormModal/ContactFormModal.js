@@ -4,9 +4,10 @@ import Fade from "@mui/material/Fade";
 import { MUIStyle } from "./MUIStyle";
 import { CHECK, CLOSEICON, CROSS } from "@/values/Constants/ImageConstants";
 import CustomInput from "./CustomInput";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { countryList, countryNames } from "@/values/Constants/CountryCodes";
 import { CONTACT_US } from "@/values/Constants/Urls";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const CustomBackdrop = (props) => (
     <Backdrop
@@ -22,6 +23,8 @@ export default function ContactFormModal({
     setIsModalOpen,
     theme = "light",
 }) {
+
+    const recaptchaRef = useRef();
 
     const [formData, setFormData] = useState({
         name: "",
@@ -40,6 +43,10 @@ export default function ContactFormModal({
     });
     const [isSuccess, setIsSuccess] = useState(false);
     const [isError, setIsError] = useState(false);
+
+    // Google Recaptcha v2
+    const [recaptchaToken, setRecaptchaToken] = useState("");
+
 
     const resetFormData = () => {
         setFormData({
@@ -137,6 +144,10 @@ export default function ContactFormModal({
     const submitForm = async () => {
         try {
 
+            if (!recaptchaToken) {
+                return;
+            }
+
             const newFormData = new FormData();
 
             newFormData.append("name", formData.name);
@@ -168,6 +179,20 @@ export default function ContactFormModal({
         }
     }
 
+    const handleRecaptchaChange = (token) => {
+        console.log("token", token);
+
+        if (token) {
+            setRecaptchaToken(token);
+        }
+    };
+
+    const handleRecaptchaExpired = () => {
+        console.log("expired");
+
+        setRecaptchaToken("");
+    };
+
 
     return (
         <Modal
@@ -195,6 +220,12 @@ export default function ContactFormModal({
                             alt="close"
                             sx={MUIStyle.closeIcon}
                             onClick={handleClose}
+                        />
+                        <ReCAPTCHA
+                            sitekey={process.env.GOOGLE_SITE_KEY || ""}
+                            ref={recaptchaRef}
+                            onChange={handleRecaptchaChange}
+                            onExpired={handleRecaptchaExpired}
                         />
                         <Box sx={MUIStyle.modalContent}>
                             {isSuccess ? (
@@ -240,6 +271,9 @@ export default function ContactFormModal({
                                         onTextChange={(value) => handleTextChange("name", value)}
                                         error={error?.name !== ''}
                                         helperText={error?.name || ''}
+                                        labelContainerStyle={{
+                                            background: 'linear-gradient(#030303, #121212)',
+                                        }}
                                     />
                                     <CustomInput
                                         label="Country"
@@ -252,6 +286,9 @@ export default function ContactFormModal({
                                         options={countryList}
                                         error={error?.country !== ''}
                                         helperText={error?.country || ''}
+                                        labelContainerStyle={{
+                                            background: 'linear-gradient(#040404, #121212)',
+                                        }}
                                     />
                                     <CustomInput
                                         label="Contact Number"
@@ -261,6 +298,9 @@ export default function ContactFormModal({
                                         onTextChange={(value) => handleTextChange("contactNumber", value)}
                                         error={error?.contactNumber !== ''}
                                         helperText={error?.contactNumber || ''}
+                                        labelContainerStyle={{
+                                            background: 'linear-gradient(#030303, #121212)',
+                                        }}
                                     />
                                     <CustomInput
                                         label="Email"
@@ -269,6 +309,9 @@ export default function ContactFormModal({
                                         onTextChange={(value) => handleTextChange("email", value)}
                                         error={error?.email !== ''}
                                         helperText={error?.email || ''}
+                                        labelContainerStyle={{
+                                            background: 'linear-gradient(#050505, #121212)',
+                                        }}
                                     />
                                     <CustomInput
                                         label="Please Add More"
@@ -278,9 +321,13 @@ export default function ContactFormModal({
                                         onTextChange={(value) => handleTextChange("message", value)}
                                         error={error?.message !== ''}
                                         helperText={error?.message || ''}
+                                        labelContainerStyle={{
+                                            background: 'linear-gradient(#030303, #121212)',
+                                        }}
                                     />
                                     <Button
                                         sx={MUIStyle.letsTalkButton}
+                                        disabled={!recaptchaToken}
                                         onClick={handleFormSubmit}
                                     >
                                         Let&apos;s Connect

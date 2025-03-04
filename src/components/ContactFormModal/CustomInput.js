@@ -33,7 +33,9 @@ export default function CustomInput({
     ],
     leftBox = true,
     leftBoxText = "91",
+    labelContainerStyle = {},
 }) {
+    
 
     const selectSearchRef = useRef(null);
 
@@ -90,6 +92,9 @@ export default function CustomInput({
                 >
                     <label
                         className={styles.labelText}
+                        style={{
+                            ...labelContainerStyle
+                        }}
                     >
                         {label}
                     </label>
@@ -102,6 +107,7 @@ export default function CustomInput({
                         disabled={disabled}
                         required={required}
                         rows={4}
+                        className={styles.textareaField}
                         {...textareaProps}
                     />
                 ) : (
@@ -112,6 +118,7 @@ export default function CustomInput({
                         onChange={onChange}
                         disabled={disabled}
                         required={required}
+                        className={styles.inputField}
                         {...inputProps}
                     />
                 ))}
