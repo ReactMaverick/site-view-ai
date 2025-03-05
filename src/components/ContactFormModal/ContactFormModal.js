@@ -221,12 +221,6 @@ export default function ContactFormModal({
                             sx={MUIStyle.closeIcon}
                             onClick={handleClose}
                         />
-                        <ReCAPTCHA
-                            sitekey={process.env.GOOGLE_SITE_KEY || ""}
-                            ref={recaptchaRef}
-                            onChange={handleRecaptchaChange}
-                            onExpired={handleRecaptchaExpired}
-                        />
                         <Box sx={MUIStyle.modalContent}>
                             {isSuccess ? (
                                 <Box sx={MUIStyle.successMessage}>
@@ -324,6 +318,13 @@ export default function ContactFormModal({
                                         labelContainerStyle={{
                                             background: 'linear-gradient(#030303, #121212)',
                                         }}
+                                    />
+                                    <ReCAPTCHA
+                                        sitekey={process.env.GOOGLE_SITE_KEY || ""}
+                                        ref={recaptchaRef}
+                                        onChange={handleRecaptchaChange}
+                                        onExpired={handleRecaptchaExpired}
+                                        style={{ marginBottom: '10px' }}
                                     />
                                     <Button
                                         sx={MUIStyle.letsTalkButton}
