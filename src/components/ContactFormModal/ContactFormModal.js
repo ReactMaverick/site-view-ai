@@ -4,8 +4,8 @@ import Fade from "@mui/material/Fade";
 import { MUIStyle } from "./MUIStyle";
 import { CHECK, CLOSEICON, CROSS } from "@/values/Constants/ImageConstants";
 import CustomInput from "./CustomInput";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { countryList, countryNames } from "@/values/Constants/CountryCodes";
+import { useRef, useState } from "react";
+import { countryList } from "@/values/Constants/CountryCodes";
 import { CONTACT_US } from "@/values/Constants/Urls";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -180,7 +180,6 @@ export default function ContactFormModal({
     }
 
     const handleRecaptchaChange = (token) => {
-        console.log("token", token);
 
         if (token) {
             setRecaptchaToken(token);
@@ -188,7 +187,6 @@ export default function ContactFormModal({
     };
 
     const handleRecaptchaExpired = () => {
-        console.log("expired");
 
         setRecaptchaToken("");
     };
