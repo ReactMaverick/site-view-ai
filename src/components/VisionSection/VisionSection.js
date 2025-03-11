@@ -2,7 +2,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import { MUIStyle } from "./MUIStyle";
 import React, { } from "react";
-import { IMAGE2, VISIONBASED } from "@/values/Constants/ImageConstants";
+import { IMAGE2, VISION1 } from "@/values/Constants/ImageConstants";
 import OurTechSVGBG1 from "../OurTechSVGBG1/OurTechSVGBG1";
 
 export default function VisionSection({
@@ -10,7 +10,7 @@ export default function VisionSection({
   showSubtitle = true,
   subtitle = "Visual - IPS for seamless navigation",
   description = "Explore your virtual site effortlessly. SitePace.ai’s innovative platform utilizes Visual Indoor Positioning System (Visual-IPS) technology and advanced tools for a seamless, automated virtual tour experience\n\nVisual-IPS works like a robot mapping its surroundings. It enables SitePace.ai to capture 360° panoramic views, offering complete, detailed visual representations of your construction site’s progress.\n\nWith Visual-IPS, SitePace.ai navigates autonomously along pre-defined paths and builds dynamic 3D site models over time, revealing progress and identifying potential issues.",
-  image = VISIONBASED,
+  image = VISION1,
   orientation = "image-left",
 }) {
   return (

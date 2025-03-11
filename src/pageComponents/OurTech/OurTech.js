@@ -11,7 +11,7 @@ import DigitalConstruction from "@/components/DigitalConstruction/DigitalConstru
 import FAQSec from "@/components/FAQSec/FAQSec";
 import { tabBarSecContentOurTech } from "@/components/TabBarSec/TabBarSecContent";
 import VisionSection from "@/components/VisionSection/VisionSection";
-import { VISION, VISIONMEETSPRECISION, WHYSITEPACELASTVID } from "@/values/Constants/ImageConstants";
+import { VISION, VISION2, VISIONMEETSPRECISION, WHYSITEPACELASTVID } from "@/values/Constants/ImageConstants";
 
 export default function OutTech() {
 
@@ -47,6 +47,7 @@ export default function OutTech() {
         title="Building a Future with Emerging Technologies"
         description={"Enhanced Collaboration with AR/ Mixed Reality : Imagine virtually walking through your construction site with colleagues, adding real-time annotations using AR features\n\nComputer Vision for Automated Tasks: We're constantly developing features that leverage computer vision to automate tasks, such as progress tracking and potentially even identifying safety hazards in the future"}
         showSubtitle={false}
+        image={VISION2}
       />
       <TabBarSec
         theme="dark"
