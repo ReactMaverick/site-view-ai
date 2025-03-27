@@ -56,7 +56,7 @@ export const EXTRABG = URL('/images/extrabg.png');
 export const MAP = URL('/images/map.png');
 
 // Card Images
-export const COMPAREPROCESS = URL('/images/compare-process.gif');
+export const COMPAREPROCESS = URL('/images/compare-process.jpeg');
 // export const COMPAREPROCESS = URL('/images/compare-process.gif'); // UNCOMMENT ON PRODUCTION
 export const VISUALDOCUMENTATION = URL('/images/visual-documentation.jpeg');
 export const VIRTUALSITEMEETS = URL('/images/virtual-site-meets.jpg');
