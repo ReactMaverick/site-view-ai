@@ -15,6 +15,7 @@ import {
   PARTNERSLOGO5,
   PARTNERSLOGO6,
 } from "@/values/Constants/ImageConstants";
+import Link from "next/link";
 
 // Install Swiper modules
 // SwiperCore.use([Autoplay]);
@@ -22,18 +23,18 @@ import {
 export default function Partners() {
   const partnersLogos = [
     // Add your partners' logo URLs here
-    PARTNERSLOGO1,
-    PARTNERSLOGO2,
-    PARTNERSLOGO3,
-    PARTNERSLOGO4,
-    PARTNERSLOGO5,
-    PARTNERSLOGO6,
-    PARTNERSLOGO1,
-    PARTNERSLOGO2,
-    PARTNERSLOGO3,
-    PARTNERSLOGO4,
-    PARTNERSLOGO5,
-    PARTNERSLOGO6,
+    { image: PARTNERSLOGO1, link: "https://www.iitb.ac.in/" },
+    { image: PARTNERSLOGO2, link: "https://www.chitkara.edu.in/ciif/" },
+    { image: PARTNERSLOGO3, link: "https://www.sptbi.com/" },
+    { image: PARTNERSLOGO4, link: "https://brigadereap.com/" },
+    { image: PARTNERSLOGO5, link: "https://marlvc.com/" },
+    { image: PARTNERSLOGO6, link: "https://sineiitb.org/" },
+    { image: PARTNERSLOGO1, link: "https://www.iitb.ac.in/" },
+    { image: PARTNERSLOGO2, link: "https://www.chitkara.edu.in/ciif/" },
+    { image: PARTNERSLOGO3, link: "https://www.sptbi.com/" },
+    { image: PARTNERSLOGO4, link: "https://brigadereap.com/" },
+    { image: PARTNERSLOGO5, link: "https://marlvc.com/" },
+    { image: PARTNERSLOGO6, link: "https://sineiitb.org/" },
     // more logos
   ];
   return (
@@ -87,12 +88,14 @@ export default function Partners() {
           >
             {partnersLogos.map((logo, index) => (
               <SwiperSlide className={styles.logoSliderBox} key={index}>
-                <Box
-                  component={"img"}
-                  src={logo}
-                  alt={`Partner ${index + 1}`}
-                  sx={MUIStyle.partnersLogo}
-                />
+                <Link href={logo.link} target="_blank">
+                  <Box
+                    component={"img"}
+                    src={logo.image}
+                    alt={`Partner ${index + 1}`}
+                    sx={MUIStyle.partnersLogo}
+                  />
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
