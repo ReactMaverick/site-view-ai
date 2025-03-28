@@ -295,17 +295,13 @@ export default function CTA() {
                     sx={[MUIStyle.BannerBtn,
                     {
                       // color: item.titleColor,
-                      opacity: item.value === 0 ? 0 : 1,
-                      animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
-                      cursor: item.value === 0 ? 'default' : 'pointer',
+                      // opacity: item.value === 0 ? 0 : 1,
+                      // animation: item.value === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
+                      // cursor: item.value === 0 ? 'default' : 'pointer',
                     }
                     ]}
                     variant="contained" size="large"
                     onClick={() => {
-                      if (item.value === 0) {
-                        return;
-                      }
-
                       setIsModalOpen(true);
                     }}
                   >

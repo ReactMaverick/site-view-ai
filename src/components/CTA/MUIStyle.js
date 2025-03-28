@@ -285,7 +285,7 @@ export const MUIStyle = {
   },
   CTAImg: {
     width: '100vw',
-    objectFit: 'cover',
+    objectFit: 'contain',
   },
   CTAContainer: {
     position: 'relative',
