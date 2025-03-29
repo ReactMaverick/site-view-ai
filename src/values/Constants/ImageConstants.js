@@ -130,3 +130,6 @@ export const WHYSITEPACELASTVID = URL('/images/why-sitepace-last-vid.gif');
 
 export const CHECK = URL('/images/check.png');
 export const CROSS = URL('/images/cross.png');
+
+// Arrow Down PNG
+export const ARROWDOWN = URL('/images/arrow-down-png.png')
