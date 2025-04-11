@@ -76,7 +76,7 @@ export default function FooterSec() {
                     </Box>
                     <Box sx={MUIStyle.FooterCopyRightRow}>
                         <Typography variant="p" sx={MUIStyle.FooterCopyRightText}>
-                            © All Right Reserved by SitePace.ai 2024.
+                            © 2024 SitePace.ai by Walktheprop Pvt. Ltd. All rights reserved.
                         </Typography>
                         <Box sx={MUIStyle.FooterPolicyBox}>
                             <Link href="/privacy-policy">
