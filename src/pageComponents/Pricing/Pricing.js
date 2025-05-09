@@ -6,6 +6,7 @@ import React from "react";
 import { MUIStyle } from "./MUIStyle";
 import PricingSec from "@/components/Pricing/PricingSec";
 import PricingQuote from "@/components/PricingQuote/PricingQuote";
+import FAQSecLight from "@/components/FAQSecLight/FAQSecLight";
 
 export default function Pricing() {
 
@@ -19,6 +20,7 @@ export default function Pricing() {
       />
       <PricingSec />
       <PricingQuote />
+      <FAQSecLight />
     </Box>
   );
 }
