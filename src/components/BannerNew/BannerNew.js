@@ -73,6 +73,16 @@ export default function BannerNew({
                     <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG} />
                   </Button>
                 )}
+                <Box sx={MUIStyle.BtnRow}>
+                  <Button sx={MUIStyle.CustomBtn}
+                  // onClick={() => router.push("/faq")}
+                  >
+                    Get Custom Pricing
+                    <Box component={"span"} sx={MUIStyle.BtnIcon}>
+                      <Icon icon="heroicons:arrow-up" />
+                    </Box>
+                  </Button>
+                </Box>
                 {contactButtons && (
                   <Box
                     sx={MUIStyle.BannerContactBtns}

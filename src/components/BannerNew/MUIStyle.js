@@ -241,5 +241,68 @@ export const MUIStyle = {
         "&:hover": {
             background: commonColor.trans,
         },
-    }
+    },
+
+    BtnRow: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        marginTop: {
+            xs: "20px",
+            sm: "20px",
+            md: "30px",
+            lg: "30px",
+            xl: "40px",
+        },
+    },
+    CustomBtn: {
+        background: commonColor.green,
+        border: "2px solid",
+        borderColor: commonColor.green,
+        boxShadow: "none",
+        padding: {
+            xs: "15px 28px",
+            sm: "15px 28px",
+            md: "20px 30px",
+            lg: "20px 30px",
+            xl: "20px 30px",
+        },
+        borderRadius: "100px",
+        textTransform: "capitalize",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "10px",
+        transition: "all 0.3s ease-in-out",
+        fontSize: {
+            xs: FONT_SIZE.text14,
+            sm: FONT_SIZE.text14,
+            md: FONT_SIZE.text16,
+            lg: FONT_SIZE.text16,
+            xl: FONT_SIZE.text20,
+        },
+        lineHeight: "1.5em",
+        fontWeight: FONT_WEIGHT.MEDIUM,
+        color: commonColor.black,
+        "&:hover": {
+            background: commonColor.black,
+            boxShadow: "none",
+            color: commonColor.green,
+        },
+        "& span": {
+            fontSize: FONT_SIZE.heading24,
+            lineHeight: FONT_SIZE.heading24,
+            transition: "all 0.3s ease-in-out",
+        },
+        "&:hover span": {
+            color: commonColor.green,
+        },
+    },
+    BtnIcon: {
+        fontSize: FONT_SIZE.heading24,
+        color: commonColor.black,
+        transform: "rotate(30deg)",
+        transition: "all 0.3s ease-in-out",
+    },
 };

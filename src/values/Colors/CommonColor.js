@@ -1,3 +1,4 @@
+import { red } from "@mui/material/colors";
 
 export const colorAlias = {
     DEFAULT: "default",
@@ -24,11 +25,18 @@ export const commonColor = {
     greenFade2: "#EDFF95",
     greenFade3: "#DFFF60",
     lime: "#223201",
+    lime50: "#FCFFE5",
+    lime100: "#F7FFC7",
+    lime200: "#EDFF95",
     boxShadowColor: "rgba(0, 0, 0, 0.12)",
     black5: "rgba(0, 0, 0, 0.05)",
     white10: "rgba(255, 255, 255, 0.1)",
     white5: "rgba(255, 255, 255, 0.05)",
     grey3: "#D1D5DB",
     grey4: "#F3F4F6",
-    lightGrey: '#ccc'
+    lightGrey: '#ccc',
+    grey500: "#6B7280",
+    grey600: "#E5E7EB",
+    black12: "rgba(0, 0, 0, 0.12)",
+    red: "#EF4444",
 };  

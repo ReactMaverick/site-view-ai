@@ -133,3 +133,25 @@ export const CROSS = URL('/images/cross.png');
 
 // Arrow Down PNG
 export const ARROWDOWN = URL('/images/arrow-down-png.png')
+
+
+// pricing Section Images
+export const PRICINGICON1 = URL('/images/Icon1.svg');
+export const PRICINGICON2 = URL('/images/Icon2.svg');
+export const PRICINGICON3 = URL('/images/Icon3.svg');
+export const PRICINGICON4 = URL('/images/Icon4.svg');
+export const PRICINGICON5 = URL('/images/Icon5.svg');
+export const PRICINGICON6 = URL('/images/Icon6.svg');
+export const PRICINGICON7 = URL('/images/Icon7.svg');
+export const PRICINGICON8 = URL('/images/Icon8.svg');
+export const PRICINGICON9 = URL('/images/Icon9.svg');
+export const PRICINGICON10 = URL('/images/Icon10.svg');
+export const PRICINGICON11 = URL('/images/Icon11.svg');
+export const PRICINGICON12 = URL('/images/Icon12.svg');
+export const PRICINGICON13 = URL('/images/Icon13.svg');
+export const PRICINGICON14 = URL('/images/Icon14.svg');
+export const PRICINGICON15 = URL('/images/Icon15.svg');
+export const PRICINGICON16 = URL('/images/Icon16.svg');
+export const PRICINGICON17 = URL('/images/Icon17.svg');
+export const PRICINGICON18 = URL('/images/Icon18.svg');
+export const SITECONT = URL('/images/siteCont.png');
