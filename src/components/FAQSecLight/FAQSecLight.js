@@ -13,31 +13,31 @@ import { useRouter } from "next/navigation";
 const FAQSecLightItems = [
   {
     id: "panel1",
-    question: "What is SitePace.ai?",
+    question: "How is pricing calculated?",
     answer:
       "SitePace.ai is a construction management platform that uses 360° imaging and computer vision to streamline site monitoring and collaboration.",
   },
   {
     id: "panel2",
-    question: "How does SitePace.ai capture 360° visuals?",
+    question: "Is there a free trial?",
     answer:
       "SitePace.ai works with industry-standard 360° cameras to capture high-quality images, ensuring every detail of your site is recorded.",
   },
   {
     id: "panel3",
-    question: "How does SitePace.ai handle indoor positioning without GPS?",
+    question: "Can I upgrade storage later?",
     answer:
       "SitePace.ai uses a Visual Indoor Positioning System (VIPS) to map locations accurately indoors without relying on GPS, Wi-Fi, or beacons.",
   },
   {
     id: "panel4",
-    question: "What is an automated virtual tour in SitePace.ai?",
+    question: "Do I need a special device?",
     answer:
       "Our system stitches 360° images into immersive virtual tours, allowing users to navigate projects remotely and monitor progress effortlessly.",
   },
   {
     id: "panel5",
-    question: "Does SitePace.ai recognize the location of 360° captures automatically?",
+    question: "How do I pay?",
     answer:
       "Yes, SitePace.ai uses advanced computer vision to automatically determine and organize the location of each capture for precise documentation.",
   },
