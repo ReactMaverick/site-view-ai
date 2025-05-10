@@ -13,7 +13,11 @@ export default function BannerNew({
   subtitle = "From missed inspections to rework costs, SitePace.ai bridges the gaps with visual clarity and actionable insights.",
   button = true,
   buttonText = "Try Now",
-  contactButtons = false
+  pricingButton = false,
+  pricingButtonText = "Get Custom Pricing",
+  contactButtons = false,
+  talkToSalesButton = false,
+  talkToSalesButtonText = "Talk to Sales",
 }) {
 
   const [isButtonHovered, setIsButtonHovered] = useState(false);
@@ -33,9 +37,11 @@ export default function BannerNew({
           <Box sx={MUIStyle.BannerRow}>
             <Box sx={MUIStyle.BannerContent}>
               <Box sx={MUIStyle.BannerContentInner}>
-                <Typography variant="span" sx={MUIStyle.BannerTopHeading}>
-                  {headerButtonText}
-                </Typography>
+                {headerButtonText && (
+                  <Typography variant="span" sx={MUIStyle.BannerTopHeading}>
+                    {headerButtonText}
+                  </Typography>
+                )}
                 <Typography variant="h1" sx={[MUIStyle.BannerHeading, {
                   color: theme === "light" ? commonColor.black : commonColor.white,
                 }]}>
@@ -73,16 +79,27 @@ export default function BannerNew({
                     <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG} />
                   </Button>
                 )}
-                <Box sx={MUIStyle.BtnRow}>
-                  <Button sx={MUIStyle.CustomBtn}
-                  // onClick={() => router.push("/faq")}
-                  >
-                    Get Custom Pricing
-                    <Box component={"span"} sx={MUIStyle.BtnIcon}>
-                      <Icon icon="heroicons:arrow-up" />
-                    </Box>
-                  </Button>
-                </Box>
+                {pricingButton && (
+                  <Box sx={MUIStyle.BtnRow}>
+                    <Button sx={MUIStyle.CustomBtn}
+                    // onClick={() => router.push("/faq")}
+                    >
+                      {pricingButtonText}
+                      <Box component={"span"} sx={MUIStyle.BtnIcon}>
+                        <Icon icon="heroicons:arrow-up" />
+                      </Box>
+                    </Button>
+                  </Box>
+                )}
+                {talkToSalesButton && (
+                  <Box sx={MUIStyle.BtnRow}>
+                    <Button sx={MUIStyle.CustomBtn}
+                    // onClick={() => router.push("/faq")}
+                    >
+                      {talkToSalesButtonText}
+                    </Button>
+                  </Box>
+                )}
                 {contactButtons && (
                   <Box
                     sx={MUIStyle.BannerContactBtns}

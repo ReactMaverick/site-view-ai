@@ -15,6 +15,7 @@ export const MUIStyle = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
+    overflow: "hidden",
   },
   PricingSecGrid: {
     display: "grid",
@@ -91,7 +92,7 @@ export const MUIStyle = {
   SinglePricingBox: {
     width: "100%",
     padding: "24px",
-    backgroundColor: commonColor.white,
+    // backgroundColor: commonColor.white,
     border: `1px solid ${commonColor.grey600}`,
     borderRadius: "24px",
     display: "flex",

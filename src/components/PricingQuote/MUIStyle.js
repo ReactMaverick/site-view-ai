@@ -148,7 +148,13 @@ export const MUIStyle = {
   },
   PricingQuoteFormImage: {
     width: "100%",
-    height: "auto",
+    height: {
+      xs: "100%",
+      sm: "100%",
+      md: "100dvh",
+      lg: "100dvh",
+      xl: "100dvh",
+    },
     maxWidth: {
       xs: "100%",
       sm: "100%",
@@ -160,11 +166,12 @@ export const MUIStyle = {
   },
   PricingQuoteFormOuter: {
     display: "flex",
-    justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    gap: "20px",
+    // gap: "20px",
     width: "100%",
+    height: "100%",
+    justifyContent: "space-between",
   },
   PricingQuoteInputItem: {
     display: "flex",
@@ -235,6 +242,13 @@ export const MUIStyle = {
   },
   PricingQuoteInputItemRow: {
     display: "flex",
+    flexDirection: {
+      xs: "column",
+      sm: "column",
+      md: "row",
+      lg: "row",
+      xl: "row",
+    },
     gap: "20px",
     width: "100%",
   },
@@ -334,17 +348,17 @@ export const MUIStyle = {
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: commonColor.black,
     "&:hover": {
-      background: commonColor.black,
+      background: commonColor.white,
       boxShadow: "none",
       color: commonColor.green,
     },
-    marginTop: {
-      xs: "20px",
-      sm: "20px",
-      md: "30px",
-      lg: "30px",
-      xl: "30px",
-    },
+    // marginTop: {
+    //   xs: "20px",
+    //   sm: "20px",
+    //   md: "30px",
+    //   lg: "30px",
+    //   xl: "30px",
+    // },
   },
   PricingQuoteInputFileName: {
     fontSize: FONT_SIZE.text16,
@@ -360,6 +374,15 @@ export const MUIStyle = {
     whiteSpace: "nowrap",
     display: "block",
     marginLeft: "auto",
+  },
+  CountryCodeText: {
+    fontSize: FONT_SIZE.text16,
+    lineHeight: "1",
+    fontWeight: FONT_WEIGHT.MEDIUM,
+    color: commonColor.black,
+    textAlign: "left",
+    transition: "all 0.5s ease-in-out",
+    marginLeft: "10px",
   },
 
 };

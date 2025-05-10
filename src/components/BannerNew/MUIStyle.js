@@ -286,7 +286,7 @@ export const MUIStyle = {
         fontWeight: FONT_WEIGHT.MEDIUM,
         color: commonColor.black,
         "&:hover": {
-            background: commonColor.black,
+            background: commonColor.trans,
             boxShadow: "none",
             color: commonColor.green,
         },
