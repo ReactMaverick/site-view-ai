@@ -3,8 +3,12 @@ import { MUIStyle } from "./MUIStyle";
 import { Icon } from "@iconify/react";
 import { commonColor } from "@/values/Colors/CommonColor";
 import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import ContactFormModal from "../ContactFormModal/ContactFormModal";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 export default function BannerNew({
   theme = "light",
@@ -20,8 +24,41 @@ export default function BannerNew({
   talkToSalesButtonText = "Talk to Sales",
 }) {
 
+  const container = useRef(null);
+  const pricingButtonRef = useRef(null);
+
   const [isButtonHovered, setIsButtonHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  }, []);
+
+  useGSAP(
+    (context, contextSafe) => {
+
+      const customPricingButton = pricingButtonRef.current;
+
+      if (!customPricingButton) return;
+
+      const handleClick = contextSafe(() => {
+        gsap.to(window, {
+          scrollTo: {
+            y: ".quoteFormInput", // target class name
+            autoKill: false, // allow scrolling to the target
+            offsetY: 80, // offset from the top of the viewport
+          },
+          duration: 3,
+          ease: "power2.inOut",
+        });
+        
+      });
+
+      customPricingButton.addEventListener("click", () => handleClick());
+
+    },
+    { dependencies: [pricingButtonRef], scope: container }
+  );
 
   return (
     <>
@@ -80,9 +117,9 @@ export default function BannerNew({
                   </Button>
                 )}
                 {pricingButton && (
-                  <Box sx={MUIStyle.BtnRow}>
-                    <Button sx={MUIStyle.CustomBtn}
-                    // onClick={() => router.push("/faq")}
+                  <Box sx={MUIStyle.BtnRow} ref={container}>
+                    <Button sx={MUIStyle.CustomBtn} id="custom-pricing-btn"
+                      ref={pricingButtonRef}
                     >
                       {pricingButtonText}
                       <Box component={"span"} sx={MUIStyle.BtnIcon}>
@@ -94,7 +131,7 @@ export default function BannerNew({
                 {talkToSalesButton && (
                   <Box sx={MUIStyle.BtnRow}>
                     <Button sx={MUIStyle.CustomBtn}
-                    // onClick={() => router.push("/faq")}
+                      onClick={() => setIsModalOpen(true)}
                     >
                       {talkToSalesButtonText}
                     </Button>

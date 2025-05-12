@@ -6,20 +6,11 @@ import styles from "./PricingQuote.module.css";
 import { SITECONT } from "@/values/Constants/ImageConstants";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Icon } from "@iconify/react";
-import { countryCodes, countryList } from "@/values/Constants/CountryCodes";
-import { event } from "jquery";
+import { countryList } from "@/values/Constants/CountryCodes";
 import { commonColor } from "@/values/Colors/CommonColor";
 import Swal from "sweetalert2";
 import ReCAPTCHA from "react-google-recaptcha";
-
-const countries = [
-  { label: "United States", value: "us", code: "+1" },
-  { label: "United Kingdom", value: "gb", code: "+44" },
-  { label: "India", value: "in", code: "+91" },
-  { label: "Canada", value: "ca", code: "+1" },
-  { label: "Australia", value: "au", code: "+61" },
-  // Add more countries as needed
-];
+import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
 
 export default function PricingQuote() {
 
@@ -202,7 +193,7 @@ export default function PricingQuote() {
             </Typography>
           </Box>
         </Box>
-        <Box sx={MUIStyle.PricingQuoteFormGrid}>
+        <Box sx={MUIStyle.PricingQuoteFormGrid} id="quoteForm">
           <Box sx={MUIStyle.PricingQuoteFormCol}>
             <Box sx={MUIStyle.PricingQuoteFormOuter}>
               <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
@@ -431,6 +422,12 @@ export default function PricingQuote() {
           </Box>
           <Box sx={MUIStyle.PricingQuoteCol}>
             <Box component={"img"} src={SITECONT} alt="Quote" sx={MUIStyle.PricingQuoteFormImage} />
+          </Box>
+
+          <Box sx={MUIStyle.BannerSVGContainer}>
+            <SiteViewSVG
+              fillOpacity={1}
+            />
           </Box>
         </Box>
 

@@ -120,6 +120,7 @@ export const MUIStyle = {
       lg: "30px",
       xl: "30px",
     },
+    position: "relative",
   },
   PricingQuoteFormCol: {
     display: "flex",
@@ -137,6 +138,9 @@ export const MUIStyle = {
     overflow: "hidden",
     border: `1px solid ${commonColor.grey600}`,
     boxShadow: `0px 0px 15px ${commonColor.black12}`,
+    position: "relative",
+    zIndex: 2,
+    backgroundColor: commonColor.white,
   },
   PricingQuoteCol: {
     display: "flex",
@@ -145,6 +149,8 @@ export const MUIStyle = {
     backgroundColor: commonColor.black,
     borderRadius: "30px",
     overflow: "hidden",
+    position: "relative",
+    zIndex: 2,
   },
   PricingQuoteFormImage: {
     width: "100%",
@@ -384,5 +390,12 @@ export const MUIStyle = {
     transition: "all 0.5s ease-in-out",
     marginLeft: "10px",
   },
+  BannerSVGContainer: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+  }
 
 };

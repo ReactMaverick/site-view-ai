@@ -2,7 +2,7 @@
 import { Box } from "@mui/material";
 import styles from "./Pricing.module.css";
 import BannerNew from "@/components/BannerNew/BannerNew";
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import PricingSec from "@/components/Pricing/PricingSec";
 import PricingQuote from "@/components/PricingQuote/PricingQuote";
 import FAQSecLight from "@/components/FAQSecLight/FAQSecLight";
