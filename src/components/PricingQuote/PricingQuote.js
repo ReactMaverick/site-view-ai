@@ -11,6 +11,7 @@ import { commonColor } from "@/values/Colors/CommonColor";
 import Swal from "sweetalert2";
 import ReCAPTCHA from "react-google-recaptcha";
 import SiteViewSVG from "../SiteViewSVG/SiteViewSVG";
+import { PRICING_QUOTATION } from "@/values/Constants/Urls";
 
 export default function PricingQuote() {
 
@@ -65,7 +66,7 @@ export default function PricingQuote() {
 
     if (name === "mobile") {
       const regex = /^[0-9]*$/;
-      if (!(regex.test(value) && value.length <= 10)) {
+      if (!(regex.test(value) && value.length <= 13)) {
         return;
       }
     }
@@ -114,7 +115,13 @@ export default function PricingQuote() {
   const validateForm = () => {
     let isValid = true;
 
-    if (!formData.email) {
+    if (!formData.name) {
+      setError((prevError) => ({
+        ...prevError,
+        name: "Name is required",
+      }));
+      isValid = false;
+    } else if (!formData.email) {
       setError((prevError) => ({
         ...prevError,
         email: "Email is required",
@@ -126,16 +133,46 @@ export default function PricingQuote() {
         email: "Email is invalid",
       }));
       isValid = false;
+    } else if (!formData.mobile) {
+      setError((prevError) => ({
+        ...prevError,
+        mobile: "Mobile number is required",
+      }));
+      isValid = false;
+    } else if (formData.mobile.length < 5 || formData.mobile.length > 17) {
+      setError((prevError) => ({
+        ...prevError,
+        mobile: "Mobile number must be between 5 and 17 digits",
+      }));
+      isValid = false;
+    } else if (!formData.projectName) {
+      setError((prevError) => ({
+        ...prevError,
+        projectName: "Project name is required",
+      }));
+      isValid = false;
     } else if (!formData.country) {
       setError((prevError) => ({
         ...prevError,
         country: "Country is required",
       }));
       isValid = false;
+    } else if (!formData.city) {
+      setError((prevError) => ({
+        ...prevError,
+        city: "City is required",
+      }));
+      isValid = false;
+    } else if (!formData.floors) {
+      setError((prevError) => ({
+        ...prevError,
+        floors: "Number of floors is required",
+      }));
+      isValid = false;
     } else if (!formData.area) {
       setError((prevError) => ({
         ...prevError,
-        area: "Area is required",
+        area: "Area of the floor plan is required",
       }));
       isValid = false;
     } else {
@@ -147,7 +184,7 @@ export default function PricingQuote() {
     return isValid;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
 
     const isFormValidated = validateForm();
 
@@ -155,15 +192,53 @@ export default function PricingQuote() {
       return;
     }
 
-    const formDataToSubmit = new FormData();
+    // Uncomment in production
+    if (!recaptchaToken) {
+      return;
+    }
 
-    Swal.fire({
-      title: "Quote Request",
-      text: "Your quote request has been submitted successfully.",
-      icon: "success",
-      showConfirmButton: false,
-      timer: 2000,
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append("name", formData.name);
+    formDataToSubmit.append("work_email", formData.email);
+    formDataToSubmit.append("country_code", formData.countryCode);
+    formDataToSubmit.append("mobile_number", formData.mobile);
+    formDataToSubmit.append("project_name", formData.projectName);
+    formDataToSubmit.append("country", formData.country);
+    formDataToSubmit.append("city_or_location", formData.city);
+    formDataToSubmit.append("floor_to_monitor", formData.floors);
+    formDataToSubmit.append("floor_area", formData.area);
+    formData.file && formDataToSubmit.append("attach_floorplan", formData.file);
+
+    const response = await fetch(PRICING_QUOTATION, {
+      method: "POST",
+      body: formDataToSubmit,
     });
+
+    // console.log("response", response);            
+
+    const data = await response.json();
+
+    // console.log("data", data);
+
+    if (data.success) {
+      Swal.fire({
+        title: "Quote Request",
+        text: "Your quote request has been submitted successfully.",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+
+      resetFormData();
+      recaptchaRef.current.reset();
+    } else {
+      Swal.fire({
+        title: "Error",
+        text: 'Something went wrong. Please try again later.',
+        icon: "error",
+        showConfirmButton: true,
+      });
+    }
 
   }
 
@@ -198,7 +273,7 @@ export default function PricingQuote() {
             <Box sx={MUIStyle.PricingQuoteFormOuter}>
               <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
                 <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
-                  Your Name
+                  Your Name <span>*</span>
                 </Typography>
                 <TextField
                   id="name"
@@ -229,7 +304,7 @@ export default function PricingQuote() {
               </Box>
               <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
                 <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
-                  Mobile Number
+                  Mobile Number <span>*</span>
                 </Typography>
                 <Box sx={MUIStyle.PricingQuoteInputFlex}>
                   {/* country code dropdown with flag */}
@@ -282,7 +357,7 @@ export default function PricingQuote() {
               </Box>
               <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
                 <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
-                  Project Name
+                  Project Name <span>*</span>
                 </Typography>
                 <TextField
                   id="project-name"
@@ -313,7 +388,7 @@ export default function PricingQuote() {
                 </Box>
                 <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
                   <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
-                    City / Location
+                    City / Location <span>*</span>
                   </Typography>
                   <TextField
                     id="city"
@@ -330,7 +405,7 @@ export default function PricingQuote() {
               <Box sx={MUIStyle.PricingQuoteInputItemRow}>
                 <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
                   <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
-                    Number of Floors to Monitor
+                    Number of Floors to Monitor <span>*</span>
                   </Typography>
                   <TextField
                     id="floors"
@@ -411,7 +486,10 @@ export default function PricingQuote() {
               {/* button  */}
               <Button
                 variant="contained"
-                sx={MUIStyle.PricingQuoteInputBtn}
+                sx={[MUIStyle.PricingQuoteInputBtn, {
+                  border: recaptchaToken ? "2px solid" : "none",
+                }]}
+                disabled={!recaptchaToken}
                 onClick={handleSubmit}
               >
                 Get My Quote
