@@ -28,6 +28,7 @@ export default function PricingQuote() {
     floors: "",
     area: "",
     file: null,
+    message: "",
   });
 
   const [error, setError] = useState({
@@ -41,6 +42,7 @@ export default function PricingQuote() {
     floors: "",
     area: "",
     file: "",
+    message: "",
   });
 
   // Google Recaptcha v2
@@ -62,12 +64,22 @@ export default function PricingQuote() {
   };
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    let { name, value } = event.target;
 
     if (name === "mobile") {
       const regex = /^[0-9]*$/;
-      if (!(regex.test(value) && value.length <= 13)) {
+      if (!(regex.test(value))) {
         return;
+      }
+
+      if (value.length > 13) {
+        value = value.slice(0, 13);
+      }
+    }
+
+    if (name === "message") {
+      if (value.length >= 1000) {
+        value = value.slice(0, 1000);
       }
     }
 
@@ -91,6 +103,7 @@ export default function PricingQuote() {
       floors: "",
       area: "",
       file: null,
+      message: "",
     });
 
     resetError();
@@ -108,6 +121,7 @@ export default function PricingQuote() {
       floors: "",
       area: "",
       file: "",
+      message: "",
     });
 
   };
@@ -208,6 +222,7 @@ export default function PricingQuote() {
     formDataToSubmit.append("floor_to_monitor", formData.floors);
     formDataToSubmit.append("floor_area", formData.area);
     formData.file && formDataToSubmit.append("attach_floorplan", formData.file);
+    formData.message && formDataToSubmit.append("message", formData.message);
 
     const response = await fetch(PRICING_QUOTATION, {
       method: "POST",
@@ -473,6 +488,24 @@ export default function PricingQuote() {
                 <Typography variant="body1" sx={MUIStyle.FormShortText}>
                   * Attach the Typical Floorplan to Get Accurate Pricing. Allowed JPG, JPEG or PDF file only.
                 </Typography>
+              </Box>
+
+              <Box sx={MUIStyle.PricingQuoteInputItemMulti} className="quoteFormInput">
+                <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
+                  Message
+                </Typography>
+                <TextField
+                  id="message"
+                  placeholder="Please provide any additional information or requirements you have for your project."
+                  variant="outlined"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  error={!!error.message}
+                  helperText={error.message}
+                  multiline
+                  rows={2}
+                />
               </Box>
 
               <ReCAPTCHA

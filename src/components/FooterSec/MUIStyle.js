@@ -129,9 +129,9 @@ export const MUIStyle = {
         alignItems:{
             xs: "center",
             sm: "center",
-            md: "flex-end",
-            lg: "flex-end",
-            xl: "flex-end",
+            md: "flex-start",
+            lg: "flex-start",
+            xl: "flex-start",
         },
         gap: {
             xs: "20px",

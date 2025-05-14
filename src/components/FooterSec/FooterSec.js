@@ -34,7 +34,7 @@ export default function FooterSec() {
                                 <Typography variant="h3" sx={MUIStyle.FooterMenuTitleText}>About</Typography>
                                 <Box component={"ul"} sx={MUIStyle.FooterMenuUl}>
                                     <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
-                                        <Link href="/">
+                                        <Link href="/home">
                                             <Typography sx={MUIStyle.FooterMenuText}>Home</Typography>
                                         </Link>
                                     </Box>
@@ -53,6 +53,11 @@ export default function FooterSec() {
                             <Box sx={MUIStyle.FooterMenuBox}>
                                 <Typography variant="h3" sx={MUIStyle.FooterMenuTitleText}>Company</Typography>
                                 <Box component={"ul"} sx={MUIStyle.FooterMenuUl}>
+                                    <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
+                                        <Link href="/pricing">
+                                            <Typography sx={MUIStyle.FooterMenuText}>Pricing</Typography>
+                                        </Link>
+                                    </Box>
                                     <Box component={"li"} sx={MUIStyle.FooterMenuLi}>
                                         <Link href="/blogs">
                                             <Typography sx={MUIStyle.FooterMenuText}>Blogs</Typography>

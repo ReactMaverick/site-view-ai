@@ -2,6 +2,52 @@ import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 import { light } from "@mui/material/styles/createPalette";
 
+const PricingQuoteInputItem = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "5px",
+  width: "100%",
+  "& .MuiOutlinedInput-root": {
+    borderRadius: "100px !important",
+    borderColor: commonColor.grey600,
+    "& fieldset": {
+      borderColor: commonColor.grey600,
+    },
+    "&:hover fieldset": {
+      borderColor: commonColor.grey600,
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: commonColor.grey600,
+    },
+    "&.Mui-focused": {
+      borderColor: commonColor.grey600,
+    },
+  },
+  "& .MuiInputBase-input": {
+    padding: "0px 20px 5px",
+    minHeight: "48px",
+    backgroundColor: commonColor.white,
+    color: commonColor.black,
+    fontSize: FONT_SIZE.text18,
+    lightHeight: "1.5em",
+    fontWeight: FONT_WEIGHT.MEDIUM,
+    width: "100%",
+    borderColor: commonColor.grey600,
+    borderRadius: "50px",
+    "&::placeholder": {
+      color: commonColor.grey,
+      fontSize: FONT_SIZE.text16,
+      fontWeight: FONT_WEIGHT.MEDIUM,
+      lineHeight: "1.5em",
+      opacity: 1,
+    },
+  },
+  "& .MuiSelect-select": {
+    display: "flex",
+    alignItems: "center",
+  },
+};
+
 export const MUIStyle = {
   PricingQuoteSec: {
     width: "100%",
@@ -154,7 +200,7 @@ export const MUIStyle = {
   },
   PricingQuoteFormImage: {
     width: "100%",
-    height: {
+    minHeight: {
       xs: "100%",
       sm: "100%",
       md: "100dvh",
@@ -179,53 +225,19 @@ export const MUIStyle = {
     height: "100%",
     justifyContent: "space-between",
   },
-  PricingQuoteInputItem: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "5px",
-    width: "100%",
+  PricingQuoteInputItem,
+  PricingQuoteInputItemMulti: {
+    ...PricingQuoteInputItem,
     "& .MuiOutlinedInput-root": {
-      borderRadius: "100px !important",
-      borderColor: commonColor.grey600,
-      "& fieldset": {
-        borderColor: commonColor.grey600,
-      },
-
-      "&:hover fieldset": {
-        borderColor: commonColor.grey600,
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: commonColor.grey600,
-      },
-      "&.Mui-focused": {
-        borderColor: commonColor.grey600,
-      },
-
+      ...PricingQuoteInputItem["& .MuiOutlinedInput-root"],
+      borderRadius: "50px !important",
     },
     "& .MuiInputBase-input": {
-      padding: "0px 20px 5px",
-      minHeight: "48px",
-      backgroundColor: commonColor.white,
-      color: commonColor.black,
-      fontSize: FONT_SIZE.text18,
-      lightHeight: "1.5em",
-      fontWeight: FONT_WEIGHT.MEDIUM,
-      width: "100%",
-      borderColor: commonColor.grey600,
-      borderRadius: "50px",
-      "&::placeholder": {
-        color: commonColor.grey,
-        fontSize: FONT_SIZE.text16,
-        fontWeight: FONT_WEIGHT.MEDIUM,
-        lineHeight: "30px",
-        opacity: 1,
-      },
+      ...PricingQuoteInputItem["& .MuiInputBase-input"],
+      padding: "10px 20px",
+      lineHeight: "normal",
     },
-    "& .MuiSelect-select": {
-      display: "flex",
-      alignItems: "center",
-
-    },
+    marginBottom: "20px",
   },
   PricingQuoteInputLabel: {
     fontSize: FONT_SIZE.text18,

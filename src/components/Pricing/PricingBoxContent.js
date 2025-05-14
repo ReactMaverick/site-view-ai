@@ -11,7 +11,7 @@ export const PricingBoxContent = [
     {
         id: 1,
         title: "Unlimited 360° Captures",
-        desc: "ACapture your site as often as needed – no limits",
+        desc: "Capture your site as often as needed – no limits",
         img: PRICINGICON1,
         bgColor: commonColor.lime50,
     },
