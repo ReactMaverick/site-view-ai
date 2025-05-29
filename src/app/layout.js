@@ -4,6 +4,8 @@ import Header from "@/components/Header/Header";
 import FooterSec from "@/components/FooterSec/FooterSec";
 import Image from "next/image";
 import { ARROWDOWN } from "@/values/Constants/ImageConstants";
+import Head from "next/head";
+import Script from "next/script";
 
 const Fellix = localFont({
   src: "./fonts/Fellix-Black.ttf",
@@ -87,6 +89,16 @@ export default function RootLayout({ children }) {
             backgroundColor: "transparent",
           }}
         />
+
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-Y1V7H0SSWP" async strategy="beforeInteractive" />
+        <Script id="google-analytics" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Y1V7H0SSWP');
+          `}
+        </Script>
       </body>
     </html>
   );
