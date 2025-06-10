@@ -18,7 +18,7 @@ export const MUIStyle = {
             lg: "132px 0",
             xl: "132px 0",
         },
-        minHeight: "100vh",
+        minHeight: "60vh",
         overflow: "hidden", 
     },
 

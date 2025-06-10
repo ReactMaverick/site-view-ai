@@ -14,6 +14,7 @@ import {
   PARTNERSLOGO4,
   PARTNERSLOGO5,
   PARTNERSLOGO6,
+  PARTNERSLOGO7,
 } from "@/values/Constants/ImageConstants";
 import Link from "next/link";
 
@@ -35,6 +36,7 @@ export default function Partners() {
     { image: PARTNERSLOGO4, link: "https://brigadereap.com/" },
     { image: PARTNERSLOGO5, link: "https://marlvc.com/" },
     { image: PARTNERSLOGO6, link: "https://sineiitb.org/" },
+    { image: PARTNERSLOGO7, link: "#" },
     // more logos
   ];
   return (

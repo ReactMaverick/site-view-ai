@@ -19,29 +19,29 @@ export default function CTA() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [progress, setProgress] = useState([
     {
-      value: 0,
+      value: 100,
       title: "Planning",
       color: commonColor.green,
-      titleColor: commonColor.white,
+      titleColor: commonColor.green,
     },
     {
-      value: 0,
+      value: 100,
       title: "Execution",
       color: commonColor.green,
-      titleColor: commonColor.white,
+      titleColor: commonColor.green,
     },
     {
-      value: 0,
+      value: 100,
       title: "Close Out",
       color: commonColor.green,
-      titleColor: commonColor.white,
+      titleColor: commonColor.green,
     },
     {
-      value: 0,
+      value: 100,
       title: "Try Now",
       color: commonColor.green,
-      titleColor: commonColor.white,
-      arrowColor: commonColor.lightGrey,
+      titleColor: commonColor.green,
+      arrowColor: commonColor.green,
     }
   ]);
 
@@ -228,10 +228,10 @@ export default function CTA() {
     }
 
     // Reset position
-    tl.to('.ctaImageFlex', {
-      xPercent: 0,
-      onStart: () => resetProgress(),
-    }, '+=1');
+    // tl.to('.ctaImageFlex', {
+    //   xPercent: 0,
+    //   onStart: () => resetProgress(),
+    // }, '+=1');
 
 
     // Pin the CTASection (up to 2000px)
@@ -240,7 +240,7 @@ export default function CTA() {
         trigger: ".CTASection",
         start: "top top",
         // end: isSmallScreen() ? "+=5000" : "+=2000",
-        end: "+=2000",
+        end: "+=500",
         // markers: true,  // Set to true to see the trigger area
         pin: true,
         scrub: 1,
@@ -275,7 +275,7 @@ export default function CTA() {
                   progressClass={"progress-" + index}
                   progressColor={item.color}
                   arrowColor={item.arrowColor}
-                  opacity={item.value === 0 ? 0 : 1}
+                  opacity={1} // Always visible
                 />
                 {index !== progress.length - 1 ?
                   <Typography

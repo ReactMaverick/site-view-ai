@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import FooterSec from "@/components/FooterSec/FooterSec";
 import Image from "next/image";
-import { ARROWDOWN } from "@/values/Constants/ImageConstants";
+import { ARROWDOWN, MOUSEDOWN } from "@/values/Constants/ImageConstants";
 import Head from "next/head";
 import Script from "next/script";
 
@@ -76,17 +76,18 @@ export default function RootLayout({ children }) {
         {children}
         <FooterSec />
         <Image
-          src={ARROWDOWN}
+          src={MOUSEDOWN}
           alt="up"
           className="up"
-          width={32}
-          height={32}
+          width={140}
+          height={42}
           style={{
             position: "fixed",
             bottom: "5%",
             left: "50%",
             transform: "translate(-50%, 0%)",
             backgroundColor: "transparent",
+            zIndex: 1000,
           }}
         />
 

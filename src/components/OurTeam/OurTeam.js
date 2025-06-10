@@ -52,7 +52,7 @@ export default function OurTeam() {
       scrollTrigger: {
         trigger: teamGridsSec.current,
         start: "top top",
-        end: "+=2000",
+        end: "+=1200",
         // endTrigger: '.CTASection',
         scrub: true,
         // markers: true,
@@ -66,7 +66,7 @@ export default function OurTeam() {
         scrollTrigger: {
           trigger: ".ourTeamGrids",
           start: "top top",
-          end: "+=1500",
+          end: "+=300",
           scrub: 2,
           // markers: true,
           id: `grid-${i}`,

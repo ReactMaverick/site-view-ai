@@ -70,64 +70,64 @@ export default function About() {
 
     // console.log("cards", cards);
 
-    leftBoxes.forEach((box, i) => {
+    // leftBoxes.forEach((box, i) => {
 
-      gsap.to(box, {
-        scrollTrigger: {
-          trigger: ".animBoxes",
-          start: "top 15%",
-          end: "bottom top",
-          scrub: 1,
-          // markers: true,
-          id: `box-${i}`,
-        },
-        x: `+=${50 - i * 8}vw`,
-        y: 800,
-        duration: 3,
-        opacity: 0,
-        delay: 2,
-      });
-    });
+    //   gsap.to(box, {
+    //     scrollTrigger: {
+    //       trigger: ".animBoxes",
+    //       start: "top 15%",
+    //       end: "bottom top",
+    //       scrub: 1,
+    //       // markers: true,
+    //       id: `box-${i}`,
+    //     },
+    //     x: `+=${50 - i * 8}vw`,
+    //     y: 800,
+    //     duration: 3,
+    //     opacity: 0,
+    //     delay: 2,
+    //   });
+    // });
 
-    rightBoxes.forEach((box, i) => {
+    // rightBoxes.forEach((box, i) => {
 
-      gsap.to(box, {
-        scrollTrigger: {
-          trigger: ".animBoxes",
-          start: "top 15%",
-          end: "bottom top",
-          scrub: 1,
-          // markers: true,
-          id: `box-${i}`,
-        },
-        x: `+=${i * 8 - 50}vw`,
-        y: 800,
-        duration: 3,
-        opacity: 0,
-        delay: 2,
-      });
-    });
+    //   gsap.to(box, {
+    //     scrollTrigger: {
+    //       trigger: ".animBoxes",
+    //       start: "top 15%",
+    //       end: "bottom top",
+    //       scrub: 1,
+    //       // markers: true,
+    //       id: `box-${i}`,
+    //     },
+    //     x: `+=${i * 8 - 50}vw`,
+    //     y: 800,
+    //     duration: 3,
+    //     opacity: 0,
+    //     delay: 2,
+    //   });
+    // });
 
-    middleBoxes.forEach((box, i) => {
+    // middleBoxes.forEach((box, i) => {
 
-      gsap.to(box, {
-        scrollTrigger: {
-          trigger: ".animBoxes",
-          start: "top 15%",
-          end: "bottom top",
-          scrub: 1,
-          // markers: true,
-          id: `box-${i}`,
-          snap: 1,
-        },
-        // y: 1000,
-        x: 0,
-        y: 800,
-        opacity: 0,
-        duration: 3,
-        delay: 2,
-      });
-    });
+    //   gsap.to(box, {
+    //     scrollTrigger: {
+    //       trigger: ".animBoxes",
+    //       start: "top 15%",
+    //       end: "bottom top",
+    //       scrub: 1,
+    //       // markers: true,
+    //       id: `box-${i}`,
+    //       snap: 1,
+    //     },
+    //     // y: 1000,
+    //     x: 0,
+    //     y: 800,
+    //     opacity: 0,
+    //     duration: 3,
+    //     delay: 2,
+    //   });
+    // });
 
   });
 
@@ -292,9 +292,9 @@ export default function About() {
             </Typography>
           </Box>
         </Box>
-        <Box sx={MUIStyle.AboutDashBoardImg}>
+        {/* <Box sx={MUIStyle.AboutDashBoardImg}>
           <Box component={"img"} src={DASHBOARD} alt="Dashboard" />
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   );

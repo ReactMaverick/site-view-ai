@@ -13,19 +13,13 @@ export default function CustomProgressArrow({
             sx={{
                 position: 'relative',
                 width: '100px',
-                height: {
-                    xs: '15px',
-                    sm: '15px',
-                    md: '25px',
-                    lg: '25px',
-                    xl: '25px',
-                },
+                height: { xs: '15px', sm: '15px', md: '25px', lg: '25px', xl: '25px' },
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 opacity: opacity,
-                animation: opacity === 0 ? 'fadeOut .5s ease' : 'fadeIn 1.5s ease',
-            }}
+                // Remove animation for static display
+              }}
         >
             <Box
                 // className={"progress-bar" + " " + progressClass}

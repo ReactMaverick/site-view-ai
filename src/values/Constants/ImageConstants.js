@@ -15,6 +15,7 @@ export const PARTNERSLOGO3 = URL('/images/logos/image3.png');
 export const PARTNERSLOGO4 = URL('/images/logos/image4.png');
 export const PARTNERSLOGO5 = URL('/images/logos/image5.png');
 export const PARTNERSLOGO6 = URL('/images/logos/image6.png');
+export const PARTNERSLOGO7 = URL('/images/logos/image7.png');
 export const PROJECTIMG = URL('/images/projectImg.png');
 export const VIDEOBG = URL('/images/ProductVideo.jpg');
 export const VIDEOGREADIENT = URL('/images/ProductOverlay.png');
@@ -132,7 +133,9 @@ export const CHECK = URL('/images/check.png');
 export const CROSS = URL('/images/cross.png');
 
 // Arrow Down PNG
-export const ARROWDOWN = URL('/images/arrow-down-png.png')
+// export const ARROWDOWN = URL('/images/arrow-down-png.png')
+export const MOUSEDOWN = URL('/images/mouse-down-png.png');
+
 
 
 // pricing Section Images
