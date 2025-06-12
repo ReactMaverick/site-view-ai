@@ -9,6 +9,8 @@ import {
 } from "@mui/material";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FSLOGO } from "@/values/Constants/ImageConstants";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,8 +66,6 @@ const videos = [
   { src: "/videos/PersonWalking_fast_speed.mp4", alt: "Worker Demo" },
   { src: "/videos/Floor_map_animation.mp4", alt: "Floorplan Demo" },
 ];
-
-const logo = "/images/sitepace-logo.png";
 
 export default function FeatureShowcase() {
   const [selectedFeatureIdx, setSelectedFeatureIdx] = useState(0);
@@ -215,12 +215,14 @@ export default function FeatureShowcase() {
                 height: 120,
               }}
             >
-              <CardMedia
+              {/* <CardMedia
                 component="image"
-                src={logo}
+                image={FSLOGO}
+                src={FSLOGO}
                 alt="Sitepace Logo"
                 sx={{ width: "80%", objectFit: "contain" }}
-              />
+              /> */}
+              <Image src={FSLOGO} alt="Sitepace Logo" style={{ width: '80%', objectFit: 'contain'}} width={500} height={500} />
             </Card>
           </Grid>
         </Grid>

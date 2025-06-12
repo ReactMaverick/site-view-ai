@@ -158,3 +158,6 @@ export const PRICINGICON16 = URL('/images/icon16.svg');
 export const PRICINGICON17 = URL('/images/icon17.svg');
 export const PRICINGICON18 = URL('/images/icon18.svg');
 export const SITECONT = URL('/images/siteContent.svg');
+
+// Feature Showcase 
+export const FSLOGO = URL('/images/sitepace-logo.png');
