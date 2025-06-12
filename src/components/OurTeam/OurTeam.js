@@ -20,7 +20,6 @@ import { useGSAP } from "@gsap/react";
 import { isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 export default function OurTeam() {
-
   const teamGridsSec = useRef(null);
 
   useLayoutEffect(() => {
@@ -35,9 +34,13 @@ export default function OurTeam() {
       return;
     }
 
-    const xPercentValues = [20, -20, 20, 0, -20, 20, -20];
-    const yPercentValues = [20, 20, 0, 0, 0, -20, -20];
-    const rotateZValues = [-10, 10, 0, 0, 0, 10, -10];
+    // const xPercentValues = [20, -20, 20, 0, -20, 20, -20];
+    // const yPercentValues = [20, 20, 0, 0, 0, -20, -20];
+    // const rotateZValues = [-10, 10, 0, 0, 0, 10, -10];
+
+    const xPercentValues = [10, -10, 10, 0, -10, 10, -10];
+    const yPercentValues = [10, 10, 0, 0, 0, -10, -10];
+    const rotateZValues = [-5, 5, 0, 0, 0, 5, -5];
 
     gsap.set(teamGrids, {
       // set initial position for each grid dynamically
@@ -66,8 +69,8 @@ export default function OurTeam() {
         scrollTrigger: {
           trigger: ".ourTeamGrids",
           start: "top top",
-          end: "+=300",
-          scrub: 2,
+          end: "+=150",   // reduced from 300
+          scrub: 0.3,      // reduced from 2 for quicker response
           // markers: true,
           id: `grid-${i}`,
         },
@@ -77,7 +80,6 @@ export default function OurTeam() {
         // duration: 3,
       });
     });
-
   });
 
   return (
@@ -141,13 +143,14 @@ export default function OurTeam() {
                 />
               </Box>
             </Grid>
-            <Grid size={{
-              xs: 12,
-              sm: 6,
-              md: 6,
-              lg: 6,
-              xl: 6,
-            }}
+            <Grid
+              size={{
+                xs: 12,
+                sm: 6,
+                md: 6,
+                lg: 6,
+                xl: 6,
+              }}
               className="ourTeamGrid"
             >
               <Box
@@ -175,13 +178,14 @@ export default function OurTeam() {
                 />
               </Box>
             </Grid>
-            <Grid size={{
-              xs: 12,
-              sm: 6,
-              md: 4.3,
-              lg: 4.3,
-              xl: 4.3,
-            }}
+            <Grid
+              size={{
+                xs: 12,
+                sm: 6,
+                md: 4.3,
+                lg: 4.3,
+                xl: 4.3,
+              }}
               className="ourTeamGrid"
             >
               <Box
@@ -209,13 +213,14 @@ export default function OurTeam() {
                 />
               </Box>
             </Grid>
-            <Grid size={{
-              xs: 12,
-              sm: 6,
-              md: 3.2,
-              lg: 3.2,
-              xl: 3.2,
-            }}
+            <Grid
+              size={{
+                xs: 12,
+                sm: 6,
+                md: 3.2,
+                lg: 3.2,
+                xl: 3.2,
+              }}
               className="ourTeamGrid"
             >
               <Box
@@ -245,13 +250,14 @@ export default function OurTeam() {
                 />
               </Box>
             </Grid>
-            <Grid size={{
-              xs: 12,
-              sm: 6,
-              md: 4.5,
-              lg: 4.5,
-              xl: 4.5,
-            }}
+            <Grid
+              size={{
+                xs: 12,
+                sm: 6,
+                md: 4.5,
+                lg: 4.5,
+                xl: 4.5,
+              }}
               className="ourTeamGrid"
             >
               <Box
@@ -279,13 +285,14 @@ export default function OurTeam() {
                 />
               </Box>
             </Grid>
-            <Grid size={{
-              xs: 12,
-              sm: 6,
-              md: 5.5,
-              lg: 5.5,
-              xl: 5.5,
-            }}
+            <Grid
+              size={{
+                xs: 12,
+                sm: 6,
+                md: 5.5,
+                lg: 5.5,
+                xl: 5.5,
+              }}
               className="ourTeamGrid"
             >
               <Box
@@ -313,13 +320,14 @@ export default function OurTeam() {
                 />
               </Box>
             </Grid>
-            <Grid size={{
-              xs: 12,
-              sm: 6,
-              md: 6.5,
-              lg: 6.5,
-              xl: 6.5,
-            }}
+            <Grid
+              size={{
+                xs: 12,
+                sm: 6,
+                md: 6.5,
+                lg: 6.5,
+                xl: 6.5,
+              }}
               className="ourTeamGrid"
             >
               <Box

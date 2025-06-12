@@ -24,6 +24,7 @@ export default function Workflow() {
       </Container>
       <Box sx={MUIStyle.SliderOuter} className="sliderOuter">
         <Swiper
+          className={`partnersLogoSlider`}
           spaceBetween={20}
           slidesPerView={5}
           loop={true}
@@ -42,7 +43,9 @@ export default function Workflow() {
           {workflowContents.map((workflow, index) => (
             <SwiperSlide key={index}>
               <WorkflowBox
-                backgroundColor={backgroundColors[index % backgroundColors.length]}
+                backgroundColor={
+                  backgroundColors[index % backgroundColors.length]
+                }
                 title={workflow.title}
                 content={workflow.content}
               />
