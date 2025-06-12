@@ -108,33 +108,35 @@ export default function Project() {
   });
 
   return (
-    <Box sx={MUIStyle.PartnersMain} className="projectMain">
-      <Container maxWidth="xl">
-        <Box sx={MUIStyle.PartnersHeadingBoxOuter}>
-          <Box sx={MUIStyle.PartnersHeadingBoxInner}>
-            <Typography variant="h4" sx={MUIStyle.SubHeading}>
-              Take that important decision in minutes, Not Hours
-            </Typography>
-            <Typography variant="h2" sx={MUIStyle.Heading}>
-              your project, anywhere, anytime
-            </Typography>
-          </Box>
-        </Box>
+    <>
+    {/* // <Box sx={MUIStyle.PartnersMain} className="projectMain">
+    //   <Container maxWidth="xl">
+    //     <Box sx={MUIStyle.PartnersHeadingBoxOuter}>
+    //       <Box sx={MUIStyle.PartnersHeadingBoxInner}>
+    //         <Typography variant="h4" sx={MUIStyle.SubHeading}>
+    //           Take that important decision in minutes, Not Hours
+    //         </Typography>
+    //         <Typography variant="h2" sx={MUIStyle.Heading}>
+    //           your project, anywhere, anytime
+    //         </Typography>
+    //       </Box>
+    //     </Box>
 
-        <Box className="projectSecOuter" sx={MUIStyle.ProjectSecOuter}>
-          <Box className="projectSec" sx={{ ...MUIStyle.ProjectSec, }} ref={projectSecRef}>
-            {projectBoxes.map((_, index) => (
-              <ProjectBox
-                key={index}
-                title={cardContents[index].title}
-                image={cardContents[index].image}
-                backgroundColor={cardContents[index].backgroundColor}
-                content={cardContents[index].description}
-              />
-            ))}
-          </Box>
-        </Box>
-      </Container>
-    </Box>
+    //     <Box className="projectSecOuter" sx={MUIStyle.ProjectSecOuter}>
+    //       <Box className="projectSec" sx={{ ...MUIStyle.ProjectSec, }} ref={projectSecRef}>
+    //         {projectBoxes.map((_, index) => (
+    //           <ProjectBox
+    //             key={index}
+    //             title={cardContents[index].title}
+    //             image={cardContents[index].image}
+    //             backgroundColor={cardContents[index].backgroundColor}
+    //             content={cardContents[index].description}
+    //           />
+    //         ))}
+    //       </Box>
+    //     </Box>
+    //   </Container>
+    // </Box> */}
+    </>
   );
 }

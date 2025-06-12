@@ -36,7 +36,7 @@ export default function Partners() {
     { image: PARTNERSLOGO4, link: "https://brigadereap.com/" },
     { image: PARTNERSLOGO5, link: "https://marlvc.com/" },
     { image: PARTNERSLOGO6, link: "https://sineiitb.org/" },
-    { image: PARTNERSLOGO7, link: "#" },
+    { image: PARTNERSLOGO7, link: "https://sucseed-indovation.com/" },
     // more logos
   ];
   return (

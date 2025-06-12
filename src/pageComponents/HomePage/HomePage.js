@@ -13,6 +13,8 @@ import BannerThree from "@/components/BannerThree/BannerThree";
 import { useState } from "react";
 import FullPageLoader from "@/components/FullPageLoader/FullPageLoader";
 import VideoSec from "@/components/VideoSec/VideoSec";
+import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
+import FeatureShowcase from "@/components/FeatureShowcase/FeatureShowcase";
 
 
 export default function HomePage() {
@@ -25,8 +27,10 @@ export default function HomePage() {
       <BannerThree
         setIsThreeJSLoading={setIsThreeJSLoading}
       />
+      <FeatureShowcase/>
       <About />
       <Partners />
+      <WhyChooseUs/>
       <Project />
       <Workflow />
       <VideoSec />
