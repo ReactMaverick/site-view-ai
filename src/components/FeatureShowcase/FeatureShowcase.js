@@ -55,11 +55,11 @@ const featureThumbnails = [
     img: "/images/feature-floorplan.jpg",
     video: "/videos/Floor_plan.mp4",
   },
-  {
-    label: "Coming Soon: Color Changing",
-    img: "/images/feature-coming.jpg",
-    video: null,
-  },
+  // {
+  //   label: "Coming Soon: Color Changing",
+  //   img: "/images/feature-coming.jpg",
+  //   video: null,
+  // },
 ];
 
 const videos = [
@@ -71,44 +71,49 @@ export default function FeatureShowcase() {
   const [selectedFeatureIdx, setSelectedFeatureIdx] = useState(0);
   const sectionRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (!sectionRef.current) return;
+  useEffect(() => {
+    const section = sectionRef.current;
 
-  //   let ctx = gsap.context(() => {
-  //     let st = ScrollTrigger.create({
-  //       trigger: sectionRef.current,
-  //       start: "top 10%",
-  //       end: `+=${featureThumbnails.length * 300 }`, // Adjust 300 for scroll length per feature
-  //       scrub: true,
-  //       pin: true,
-  //       markers: true,
-  //       onUpdate: (self) => {
-  //         const progress = self.progress;
-  //         const idx = Math.floor(progress * (featureThumbnails.length - 1));
-  //         setSelectedFeatureIdx(idx);
-  //       },
-  //     });
-  //     return () => st.kill();
-  //   }, sectionRef);
+    let trigger = ScrollTrigger.create({
+      trigger: section,
+      start: "bottom bottom",
+      end: `+=${featureThumbnails.length * 300}`, // Adjust scroll distance
+      pin: true,
+      scrub: true,
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const newIdx = Math.floor(progress * (featureThumbnails.length - 1));
+        setSelectedFeatureIdx((prev) => {
+          if (prev !== newIdx) {
+            return newIdx;
+          }
+          return prev;
+        });
+      },
+    });
 
-  //   return () => ctx.revert();
-  // }, []);
+    return () => {
+      trigger.kill();
+    };
+  }, []);
 
   return (
     <Box
-    id='featureShowcase'
+      id="featureShowcase"
       ref={sectionRef}
       sx={{
         width: "100%",
         bgcolor: "#0B0E17",
         py: { xs: 6, md: 10 },
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
+        // display: "flex",
+        // justifyContent: "center",
+        // alignItems: "center",
+        // flexDirection: "column",
+        // height: "100vh",
+        minHeight: "100vh",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ position: "relative" }}>
         <Box sx={{ mb: { xs: 3, md: 5 } }}>
           <Typography
             variant="body2"
@@ -134,112 +139,69 @@ export default function FeatureShowcase() {
             YOUR PROJECT, ANYWHERE, ANYTIME
           </Typography>
         </Box>
-        {/* Top 2 Videos section */}
-        <Grid container spacing={4} justifyContent="center" alignItems="center">
-          <Grid item xs={12} md={6}>
-            <Card
-              sx={{ borderRadius: 4, overflow: "hidden", bgcolor: "#23263A" }}
-            >
-              <CardMedia
-                component="video"
-                src={videos[0].src}
-                autoPlay
-                muted
-                loop
-                playsInline
-                sx={{ height: { xs: 320, md: 460 }, objectFit: "cover" }}
-              />
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Card
-              sx={{ borderRadius: 4, overflow: "hidden", bgcolor: "#23263A" }}
-            >
-              <CardMedia
-                component="video"
-                src={videos[1].src}
-                autoPlay
-                muted
-                loop
-                playsInline
-                sx={{ height: { xs: 320, md: 460 }, objectFit: "cover" }}
-              />
-            </Card>
-          </Grid>
-        </Grid>
 
-        <Grid container spacing={4} sx={{ mt: 2 }} alignItems="flex-start">
-          <Grid item xs={12} md={6}>
-            <Card
-              sx={{ borderRadius: 4, overflow: "hidden", bgcolor: "#23263A" }}
-            >
-              <CardMedia
-                component="video"
-                src={featureThumbnails[selectedFeatureIdx].video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                sx={{
-                  height: { xs: "auto", md: "auto" },
-                  width: "full",
-                  objectFit: "cover",
-                }}
-                key={featureThumbnails[selectedFeatureIdx].video}
-              />
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={3} sx={{ marginTop: { xs: 2, md: 10 } }}>
-            <Box sx={{ color: "#fff", px: 2 }}>
-              <Typography variant="h3" sx={{ fontWeight: 400, mb: 1 }}>
-                {featureThumbnails[selectedFeatureIdx].label}
-              </Typography>
-              <Typography
-                variant="h4"
-                sx={{ fontWeight: 200, color: "#A0A4B8" }}
-              >
-                Click and Walk. Explore any room in 360°—right from your mobile
-                or laptop.
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Card
+        {/* Constant Right Video */}
+        <Box
+          sx={{
+            position: "absolute",
+            height: "800px",
+            width: "600px",
+            top: 150,
+            right: 250,
+            zIndex: 0,
+            display: { xs: "none", md: "block" }
+          }}
+        >
+          <video
+            src={videos[1].src}
+            autoPlay
+            muted
+            loop
+            playsInline
+            // sx={{ height: 200, objectFit: "cover" }}
+            style={{ height: "100%", objectFit: "cover" }}
+          />
+        </Box>
+
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <Box>
+            <video
+              src={videos[0].src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              // sx={{ height: 200, objectFit: "cover" }}
+              style={{ width: "639px", height: "300px", objectFit: "inherit" }}
+            />
+          </Box>
+
+          <Box>
+            <CardMedia
+              component={"video"}
+              src={featureThumbnails[selectedFeatureIdx].video}
+              autoPlay
+              muted
+              loop
+              playsInline
               sx={{
-                borderRadius: 4,
-                overflow: "hidden",
-                bgcolor: "#23263A",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: 120,
+                width: "639px",
+                objectFit: "cover",
+                opacity: 1,
+                transition: "opacity 0.3s ease-in-out",
               }}
-            >
-              {/* <CardMedia
-                component="image"
-                image={FSLOGO}
-                src={FSLOGO}
-                alt="Sitepace Logo"
-                sx={{ width: "80%", objectFit: "contain" }}
-              /> */}
-              <Image src={FSLOGO} alt="Sitepace Logo" style={{ width: '80%', objectFit: 'contain'}} width={500} height={500} />
-            </Card>
-          </Grid>
-        </Grid>
+            />
+          </Box>
+        </Box>
 
         <Box sx={{ mt: 4 }}>
-          <Grid
-            container
-            gap={2}
-            spacing={2}
-            sx={{ flexWrap: "nowrap", justifyContent: "center" }}
-          >
+          <Grid container gap={2} spacing={2} sx={{ flexWrap: "nowrap" }}>
             {featureThumbnails.map((feature, idx) => (
               <Card
                 key={idx}
                 sx={{
-                  height: "162px",
-                  width: "122px",
+                  height: "122px",
+                  width: "82px",
                   position: "relative",
                   border:
                     idx === selectedFeatureIdx
@@ -251,8 +213,8 @@ export default function FeatureShowcase() {
                 onClick={() => feature.video && setSelectedFeatureIdx(idx)}
               >
                 <CardMedia
-                  component="img"
-                  src={feature.img}
+                  component="video"
+                  src={feature.video}
                   sx={{
                     height: "100%",
                     width: "100%",
@@ -263,6 +225,57 @@ export default function FeatureShowcase() {
             ))}
           </Grid>
         </Box>
+
+        {/* Constant Right Text */}
+        <Box
+          sx={{
+            color: "#fff",
+            px: 2,
+            width: "400px",
+            position: "absolute",
+            right: 400,
+            bottom: 400,
+          }}
+        >
+          <Typography variant="h3" sx={{ fontWeight: 400, mb: 1 }}>
+            {featureThumbnails[selectedFeatureIdx].label}
+          </Typography>
+          <Typography variant="h4" sx={{ fontWeight: 200, color: "#A0A4B8" }}>
+            Click and Walk. Explore any room in 360°—right from your mobile or
+            laptop.
+          </Typography>
+        </Box>
+        <Card
+          sx={{
+            borderRadius: 4,
+            overflow: "hidden",
+            bgcolor: "#23263A",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: 120,
+            position: "absolute",
+            zIndex: 1,
+            width: "250px",
+            right: 300,
+            bottom: 150,
+          }}
+        >
+          {/* <CardMedia
+                component="image"
+                image={FSLOGO}
+                src={FSLOGO}
+                alt="Sitepace Logo"
+                sx={{ width: "80%", objectFit: "contain" }}
+              /> */}
+          <Image
+            src={FSLOGO}
+            alt="Sitepace Logo"
+            style={{ width: "80%", objectFit: "contain" }}
+            width={500}
+            height={500}
+          />
+        </Card>
       </Container>
     </Box>
   );
