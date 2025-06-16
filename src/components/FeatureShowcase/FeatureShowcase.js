@@ -110,7 +110,7 @@ export default function FeatureShowcase() {
         // alignItems: "center",
         // flexDirection: "column",
         // height: "100vh",
-        minHeight: "100vh",
+        height: "100vh",
       }}
     >
       <Container maxWidth="xl" sx={{ position: "relative" }}>
