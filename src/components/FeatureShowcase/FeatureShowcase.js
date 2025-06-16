@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import {
   Box,
   Container,
@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import { FSLOGO } from "@/values/Constants/ImageConstants";
 import Image from "next/image";
 
@@ -55,11 +56,6 @@ const featureThumbnails = [
     img: "/images/feature-floorplan.jpg",
     video: "/videos/Floor_plan.mp4",
   },
-  // {
-  //   label: "Coming Soon: Color Changing",
-  //   img: "/images/feature-coming.jpg",
-  //   video: null,
-  // },
 ];
 
 const videos = [
@@ -71,31 +67,34 @@ export default function FeatureShowcase() {
   const [selectedFeatureIdx, setSelectedFeatureIdx] = useState(0);
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const section = sectionRef.current;
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+  }, []);
 
-    let trigger = ScrollTrigger.create({
-      trigger: section,
-      start: "bottom bottom",
-      end: `+=${featureThumbnails.length * 300}`, // Adjust scroll distance
-      pin: true,
+  useGSAP(() => {
+    const sectionElement = sectionRef.current;
+
+    if (!sectionElement) return;
+
+    const scrollTriggerConfig = {
+      trigger: sectionElement,
+      start: "top+=200px top",
+      end: `+=${featureThumbnails.length * 300}`, // Adjust 300 for scroll length per feature
       scrub: true,
+      pin: true,
+      markers: true, // Set to true for debugging
+      pinSpacing: true, // Ensures proper spacing for pinned elements
       onUpdate: (self) => {
         const progress = self.progress;
-        const newIdx = Math.floor(progress * (featureThumbnails.length - 1));
-        setSelectedFeatureIdx((prev) => {
-          if (prev !== newIdx) {
-            return newIdx;
-          }
-          return prev;
-        });
+        const easedProgress = gsap.parseEase("power1.inOut")(progress); // Apply easing to progress
+        const interpolatedIdx = gsap.utils.interpolate(0, featureThumbnails.length - 1, easedProgress);
+        const idx = Math.round(interpolatedIdx);
+        setSelectedFeatureIdx(idx);
       },
-    });
-
-    return () => {
-      trigger.kill();
     };
-  }, []);
+
+    ScrollTrigger.create(scrollTriggerConfig);
+  });
 
   return (
     <Box
@@ -105,15 +104,10 @@ export default function FeatureShowcase() {
         width: "100%",
         bgcolor: "#0B0E17",
         py: { xs: 6, md: 10 },
-        // display: "flex",
-        // justifyContent: "center",
-        // alignItems: "center",
-        // flexDirection: "column",
-        // height: "100vh",
-        height: "100vh",
+        height: "150vh",
       }}
     >
-      <Container maxWidth="xl" sx={{ position: "relative" }}>
+      <Container maxWidth="lg" sx={{ position: "relative" }}>
         <Box sx={{ mb: { xs: 3, md: 5 } }}>
           <Typography
             variant="body2"
@@ -147,9 +141,9 @@ export default function FeatureShowcase() {
             height: "800px",
             width: "600px",
             top: 150,
-            right: 250,
-            zIndex: 0,
-            display: { xs: "none", md: "block" }
+            right: 50,
+            zIndex: -4,
+            display: { xs: "none", md: "block" },
           }}
         >
           <video
@@ -158,7 +152,6 @@ export default function FeatureShowcase() {
             muted
             loop
             playsInline
-            // sx={{ height: 200, objectFit: "cover" }}
             style={{ height: "100%", objectFit: "cover" }}
           />
         </Box>
@@ -171,8 +164,7 @@ export default function FeatureShowcase() {
               muted
               loop
               playsInline
-              // sx={{ height: 200, objectFit: "cover" }}
-              style={{ width: "639px", height: "300px", objectFit: "inherit" }}
+              style={{ width: "400px", height: "300px", objectFit: "inherit" }}
             />
           </Box>
 
@@ -185,7 +177,7 @@ export default function FeatureShowcase() {
               loop
               playsInline
               sx={{
-                width: "639px",
+                width: "400px",
                 objectFit: "cover",
                 opacity: 1,
                 transition: "opacity 0.3s ease-in-out",
@@ -261,13 +253,6 @@ export default function FeatureShowcase() {
             bottom: 150,
           }}
         >
-          {/* <CardMedia
-                component="image"
-                image={FSLOGO}
-                src={FSLOGO}
-                alt="Sitepace Logo"
-                sx={{ width: "80%", objectFit: "contain" }}
-              /> */}
           <Image
             src={FSLOGO}
             alt="Sitepace Logo"

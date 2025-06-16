@@ -11,8 +11,8 @@ export const gsapAnimation = ({
 
     const scrollTriggerConfig = {
         trigger: videoSecMainElement,
-        start: "top top", // Starts when top of element hits top of viewport
-        end: () => "+=" + (isSmallScreen() ? (videoSecMainElement.offsetWidth * 2) : (videoSecMainElement.offsetHeight * 1)), // Ends when the element is 4 times its height below the viewport
+        start: "top top", // Adjust starting point
+        end: () => "+=" + (isSmallScreen() ? (videoSecMainElement.offsetWidth * 3) : (videoSecMainElement.offsetHeight * 2)), // Extend the scroll duration
         scrub: 1, // Smoothly animates the element when scrolling
         pin: true, // Pin the trigger element while active
         // markers: true,
