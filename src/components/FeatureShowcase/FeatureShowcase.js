@@ -197,7 +197,7 @@ export default function FeatureShowcase() {
                 xl: "58%"
               },
               height: {
-                xs: "150px",
+                xs: "120px",
                 sm: "250px",
                 md: "300px",
                 lg: "400px",
@@ -234,7 +234,7 @@ export default function FeatureShowcase() {
               xl: "row"
             },
             height: {
-              xs: "285px",
+              xs: "270px",
               sm: "400px",
               md: "450px",
               lg: "400px",
@@ -317,7 +317,7 @@ export default function FeatureShowcase() {
                   fontWeight: 400,
                   mb: 1,
                   fontSize: {
-                    xs: '2rem',
+                    xs: '1.6rem',
                     md: '2.2rem',
                     lg: '2.6rem',
                     xl: '3rem'
@@ -328,7 +328,7 @@ export default function FeatureShowcase() {
                 </Typography>
                 <Typography variant="h4" sx={{
                   fontWeight: 200,
-                  fontSize: { xs: '1.6rem', md: '1.8rem', lg: '2rem', xl: '2.2rem' },
+                  fontSize: { xs: '1.4rem', md: '1.8rem', lg: '2rem', xl: '2.2rem' },
                   color: "#A0A4B8"
                 }}>
                   Click and Walk. Explore any room in 360°—right from your mobile or
@@ -385,7 +385,7 @@ export default function FeatureShowcase() {
                     xl: "0"
                   },
                   bottom: {
-                    xs: "0",
+                    xs: "5%",
                     md: "0",
                     lg: "0",
                     xl: "0"
