@@ -79,14 +79,15 @@ export default function FeatureShowcase() {
     const scrollTriggerConfig = {
       trigger: sectionElement,
       start: "top+=200px top",
-      end: `+=${featureThumbnails.length * 300}`, // Adjust 300 for scroll length per feature
+      end: `+=${featureThumbnails.length * 1500}`, // Increase scroll length per feature for smoother transitions
       scrub: true,
       pin: true,
       markers: true, // Set to true for debugging
       pinSpacing: true, // Ensures proper spacing for pinned elements
       onUpdate: (self) => {
         const progress = self.progress;
-        const easedProgress = gsap.parseEase("power1.inOut")(progress); // Apply easing to progress
+        const scaledProgress = progress * 0.9; // Scale down the progress to slow down index changes
+        const easedProgress = gsap.parseEase("power1.inOut")(scaledProgress); // Apply easing to scaled progress
         const interpolatedIdx = gsap.utils.interpolate(0, featureThumbnails.length - 1, easedProgress);
         const idx = Math.round(interpolatedIdx);
         setSelectedFeatureIdx(idx);
