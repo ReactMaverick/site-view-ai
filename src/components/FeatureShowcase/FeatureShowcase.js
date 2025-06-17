@@ -12,6 +12,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { FSLOGO } from "@/values/Constants/ImageConstants";
 import Image from "next/image";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -292,10 +295,22 @@ export default function FeatureShowcase() {
         </Box>
 
         <Box sx={{ mt: 4 }}>
-          <Grid container gap={2} spacing={2} sx={{
-            flexWrap: "nowrap",
-            overflowX: "scroll",
-          }}>
+          <Slider
+            dots={true}
+            infinite={false}
+            speed={500}
+            slidesToShow={3} // Number of slides visible at once
+            slidesToScroll={1} // Number of slides to scroll at a time
+            responsive={[
+              {
+                breakpoint: 768, // Adjust for smaller screens
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                },
+              },
+            ]}
+          >
             {featureThumbnails.map((feature, idx) => (
               <Card
                 key={idx}
@@ -323,7 +338,7 @@ export default function FeatureShowcase() {
                 />
               </Card>
             ))}
-          </Grid>
+          </Slider>
         </Box>
 
         {/* Constant Right Text */}
