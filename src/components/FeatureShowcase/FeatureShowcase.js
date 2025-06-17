@@ -15,6 +15,7 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import styles from "./FeatureShowcase.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -143,14 +144,16 @@ export default function FeatureShowcase() {
           sx={{
             position: "absolute",
             height: {
-              xs: "55%",
-              md: "40%",
+              xs: "45%",
+              sm: "60%",
+              md: "70%",
               lg: "68%",
               xl: "68%",
             },
             width: {
-              xs: "60%",
-              md: "68%",
+              xs: "50%",
+              sm: "45%",
+              md: "45%",
               lg: "68%",
               xl: "68%",
             },
@@ -161,7 +164,12 @@ export default function FeatureShowcase() {
               xl: "45%",
             },
             transform: "translateY(-50%)",
-            right: 0,
+            right: {
+              xs: "5%",
+              md: "5%",
+              lg: "0",
+              xl: "0",
+            },
             zIndex: -4,
             display: "flex",
             justifyContent: "flex-end",
@@ -183,13 +191,15 @@ export default function FeatureShowcase() {
               position: "relative",
               width: {
                 xs: "45%",
-                md: "58%",
+                sm: "50%",
+                md: "50%",
                 lg: "58%",
                 xl: "58%"
               },
               height: {
                 xs: "150px",
-                md: "150px",
+                sm: "250px",
+                md: "300px",
                 lg: "400px",
                 xl: "400px"
               },
@@ -208,7 +218,7 @@ export default function FeatureShowcase() {
               muted
               loop
               playsInline
-              style={{ width: "400px",borderRadius: 17, height: "300px", objectFit: "inherit" }}
+              style={{ width: "100%", borderRadius: 17, height: "100%", objectFit: "inherit" }}
             />
           </Box>
           <Box sx={{
@@ -218,13 +228,15 @@ export default function FeatureShowcase() {
             position: "relative",
             flexDirection: {
               xs: "column-reverse",
+              sm: "column-reverse",
               md: "row",
               lg: "row",
               xl: "row"
             },
             height: {
-              xs: "400px",
-              md: "400px",
+              xs: "285px",
+              sm: "400px",
+              md: "450px",
               lg: "400px",
               xl: "480px"
             },
@@ -239,7 +251,8 @@ export default function FeatureShowcase() {
               sx={{
                 width: {
                   xs: "45%",
-                  md: "58%",
+                  sm: "50%",
+                  md: "50%",
                   lg: "58%",
                   xl: "58%"
                 },
@@ -252,7 +265,13 @@ export default function FeatureShowcase() {
                   xl: "32px"
                 },
                 position: "relative",
-                height: "300px", // Set a fixed height
+                height: {
+                  xs: "100%",
+                  sm: "100%",
+                  md: "100%",
+                  lg: "100%",
+                  xl: "100%"
+                }, // Set a fixed height
                 borderRadius: 4,
                 objectFit: "cover",
                 opacity: 1,
@@ -262,11 +281,17 @@ export default function FeatureShowcase() {
             <Box sx={{
               width: {
                 xs: "100%",
-                md: "100%",
+                md: "45%",
                 lg: "40%",
                 xl: "40%"
               },
-              height: "100%",
+              height: {
+                xs: "auto",
+                sm: "auto",
+                md: "100%",
+                lg: "100%",
+                xl: "100%"
+              },
               display: "flex",
               alignItems: "flex-start",
               justifyContent: {
@@ -281,7 +306,7 @@ export default function FeatureShowcase() {
                 sx={{
                   color: "#fff",
                   padding: {
-                    xs: "10px 50px 30px 0",
+                    xs: "30px 50px 30px 0",
                     md: "40px 80px 0px 20px",
                     lg: "40px 80px 0px 20px",
                     xl: "40px 80px 0px 20px"
@@ -325,27 +350,30 @@ export default function FeatureShowcase() {
                   alignItems: "center",
                   justifyContent: "center",
                   height: {
-                    xs: "150px",
-                    md: "150px",
+                    xs: "115px",
+                    sm: "150px",
+                    md: "200px",
                     lg: "250px",
                     xl: "250px"
                   },
                   position: {
                     xs: "absolute",
-                    md: "absolute",
+                    md: "relative",
                     lg: "relative",
                     xl: "relative"
                   },
                   zIndex: 1,
                   width: {
                     xs: "40%",
-                    md: "40%",
+                    sm: "30%",
+                    md: "50%",
                     lg: "85%",
                     xl: "85%"
                   },
                   marginLeft: "auto",
                   padding: {
                     xs: "10px",
+                    sm: "30px",
                     md: "30px",
                     lg: "50px",
                     xl: "50px"
@@ -379,16 +407,32 @@ export default function FeatureShowcase() {
 
         <Box sx={{ mt: 4 }}>
           <Slider
-            dots={true}
+            className="featureSlider"
+            dots={false}
+            arrows={false}
             infinite={false}
             speed={500}
-            slidesToShow={3} // Number of slides visible at once
+            slidesToShow={8} // Number of slides visible at once
             slidesToScroll={1} // Number of slides to scroll at a time
             responsive={[
               {
-                breakpoint: 768, // Adjust for smaller screens
+                breakpoint: 1024, // Adjust for smaller screens
                 settings: {
-                  slidesToShow: 1,
+                  slidesToShow: 4.5,
+                  slidesToScroll: 1,
+                },
+              },
+              {
+                breakpoint: 600, // Adjust for smaller screens
+                settings: {
+                  slidesToShow: 4.2,
+                  slidesToScroll: 1,
+                },
+              },
+              {
+                breakpoint: 480, // Adjust for smaller screens
+                settings: {
+                  slidesToShow: 3.2,
                   slidesToScroll: 1,
                 },
               },
@@ -398,15 +442,20 @@ export default function FeatureShowcase() {
               <Card
                 key={idx}
                 sx={{
-                  height: "122px",
-                  width: "82px",
+                  height: {
+                    xs: "150px",
+                    md: "150px",
+                    lg: "170px",
+                    xl: "170px"
+                  },
+                  width: "100%",
                   position: "relative",
                   border:
                     idx === selectedFeatureIdx
-                      ? "2px solid #C6FF00"
-                      : "2px solid transparent",
-                  borderRadius: 2,
-                  transition: "border 0.2s",
+                      ? "3px solid #C6FF00"
+                      : "3px solid transparent",
+                  borderRadius: 3,
+                  transition: "all 0.3s ease-in-out",
                 }}
                 onClick={() => feature.video && setSelectedFeatureIdx(idx)}
               >
