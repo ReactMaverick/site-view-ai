@@ -12,6 +12,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { FSLOGO } from "@/values/Constants/ImageConstants";
 import Image from "next/image";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,15 +82,15 @@ export default function FeatureShowcase() {
     const scrollTriggerConfig = {
       trigger: sectionElement,
       start: "top+=200px top",
-      end: `+=${featureThumbnails.length * 1500}`, // Increase scroll length per feature for smoother transitions
+      end: `+=${featureThumbnails.length * 300}`, // Reduce scroll length for faster transitions
       scrub: true,
       pin: true,
-      markers: true, // Set to true for debugging
-      pinSpacing: true, // Ensures proper spacing for pinned elements
+      markers: true,
+      pinSpacing: true,
       onUpdate: (self) => {
         const progress = self.progress;
-        const scaledProgress = progress * 0.9; // Scale down the progress to slow down index changes
-        const easedProgress = gsap.parseEase("power1.inOut")(scaledProgress); // Apply easing to scaled progress
+        const scaledProgress = progress * 1; // Scale up the progress
+        const easedProgress = gsap.parseEase("power1.inOut")(scaledProgress);
         const interpolatedIdx = gsap.utils.interpolate(0, featureThumbnails.length - 1, easedProgress);
         const idx = Math.round(interpolatedIdx);
         setSelectedFeatureIdx(idx);
@@ -116,7 +119,7 @@ export default function FeatureShowcase() {
               color: "#A0A4B8",
               mb: 1,
               fontSize: 14,
-              textAlign: { xs: "center", md: "left" },
+              textAlign: { xs: "center", md: "center" },
             }}
           >
             Take that important decision in minutes, Not Hours
@@ -128,7 +131,7 @@ export default function FeatureShowcase() {
               mb: 4,
               fontWeight: 600,
               letterSpacing: 1,
-              textAlign: { xs: "center", md: "left" },
+              textAlign: { xs: "center", md: "center" },
             }}
           >
             YOUR PROJECT, ANYWHERE, ANYTIME
@@ -205,11 +208,7 @@ export default function FeatureShowcase() {
               muted
               loop
               playsInline
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
+              style={{ width: "400px",borderRadius: 17, height: "300px", objectFit: "inherit" }}
             />
           </Box>
           <Box sx={{
@@ -253,6 +252,8 @@ export default function FeatureShowcase() {
                   xl: "32px"
                 },
                 position: "relative",
+                height: "300px", // Set a fixed height
+                borderRadius: 4,
                 objectFit: "cover",
                 opacity: 1,
                 transition: "opacity 0.3s ease-in-out",
@@ -377,10 +378,22 @@ export default function FeatureShowcase() {
         </Box>
 
         <Box sx={{ mt: 4 }}>
-          <Grid container gap={2} spacing={2} sx={{
-            flexWrap: "nowrap",
-            overflowX: "scroll",
-          }}>
+          <Slider
+            dots={true}
+            infinite={false}
+            speed={500}
+            slidesToShow={3} // Number of slides visible at once
+            slidesToScroll={1} // Number of slides to scroll at a time
+            responsive={[
+              {
+                breakpoint: 768, // Adjust for smaller screens
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                },
+              },
+            ]}
+          >
             {featureThumbnails.map((feature, idx) => (
               <Card
                 key={idx}
@@ -408,7 +421,7 @@ export default function FeatureShowcase() {
                 />
               </Card>
             ))}
-          </Grid>
+          </Slider>
         </Box>
 
         {/* Constant Right Text */}
