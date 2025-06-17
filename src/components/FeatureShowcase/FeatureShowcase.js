@@ -140,13 +140,23 @@ export default function FeatureShowcase() {
           sx={{
             position: "absolute",
             height: {
-              xs: "60%",
+              xs: "55%",
               md: "40%",
               lg: "68%",
               xl: "68%",
             },
-            width: "43%",
-            top: "45%",
+            width: {
+              xs: "60%",
+              md: "68%",
+              lg: "68%",
+              xl: "68%",
+            },
+            top: {
+              xs: "42%",
+              md: "45%",
+              lg: "45%",
+              xl: "45%",
+            },
             transform: "translateY(-50%)",
             right: 0,
             zIndex: -4,
@@ -206,9 +216,16 @@ export default function FeatureShowcase() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "stretch",
+            position: "relative",
+            flexDirection: {
+              xs: "column-reverse",
+              md: "row",
+              lg: "row",
+              xl: "row"
+            },
             height: {
-              xs: "200px",
-              md: "360px",
+              xs: "400px",
+              md: "400px",
               lg: "400px",
               xl: "480px"
             },
@@ -242,42 +259,108 @@ export default function FeatureShowcase() {
               }}
             />
             <Box sx={{
-              width: "40%",
+              width: {
+                xs: "100%",
+                md: "100%",
+                lg: "40%",
+                xl: "40%"
+              },
               height: "100%",
               display: "flex",
               alignItems: "flex-start",
-              justifyContent: "space-between",
+              justifyContent: {
+                xs: "flex-end",
+                md: "space-between",
+                lg: "space-between",
+                xl: "space-between"
+              },
               flexDirection: "column",
             }}>
               <Box
                 sx={{
                   color: "#fff",
-                  padding: '40px 80px 0px 20px',
+                  padding: {
+                    xs: "10px 50px 30px 0",
+                    md: "40px 80px 0px 20px",
+                    lg: "40px 80px 0px 20px",
+                    xl: "40px 80px 0px 20px"
+                  },
                 }}
               >
-                <Typography variant="h3" sx={{ fontWeight: 400, mb: 1 }}>
+                <Typography variant="h3" sx={{
+                  fontWeight: 400,
+                  mb: 1,
+                  fontSize: {
+                    xs: '2rem',
+                    md: '2.2rem',
+                    lg: '2.6rem',
+                    xl: '3rem'
+                  },
+
+                }}>
                   {featureThumbnails[selectedFeatureIdx].label}
                 </Typography>
-                <Typography variant="h4" sx={{ fontWeight: 200, color: "#A0A4B8" }}>
+                <Typography variant="h4" sx={{
+                  fontWeight: 200,
+                  fontSize: { xs: '1.6rem', md: '1.8rem', lg: '2rem', xl: '2.2rem' },
+                  color: "#A0A4B8"
+                }}>
                   Click and Walk. Explore any room in 360°—right from your mobile or
                   laptop.
                 </Typography>
               </Box>
               <Card
                 sx={{
-                  borderRadius: '32px',
+                  borderRadius: {
+                    xs: "20px",
+                    md: "32px",
+                    lg: "32px",
+                    xl: "32px"
+                  },
                   overflow: "hidden",
                   bgcolor: "#030712",
                   border: "2px solid #1F2937",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  height: '250px',
-                  position: "relative",
+                  height: {
+                    xs: "150px",
+                    md: "150px",
+                    lg: "250px",
+                    xl: "250px"
+                  },
+                  position: {
+                    xs: "absolute",
+                    md: "absolute",
+                    lg: "relative",
+                    xl: "relative"
+                  },
                   zIndex: 1,
-                  width: "85%",
+                  width: {
+                    xs: "40%",
+                    md: "40%",
+                    lg: "85%",
+                    xl: "85%"
+                  },
                   marginLeft: "auto",
-                  padding: '50px',
+                  padding: {
+                    xs: "10px",
+                    md: "30px",
+                    lg: "50px",
+                    xl: "50px"
+                  },
+                  right: {
+                    xs: "0",
+                    md: "0",
+                    lg: "0",
+                    xl: "0"
+                  },
+                  bottom: {
+                    xs: "0",
+                    md: "0",
+                    lg: "0",
+                    xl: "0"
+                  }
                 }}
               >
                 <Image
