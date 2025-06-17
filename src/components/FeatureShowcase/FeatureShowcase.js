@@ -103,7 +103,7 @@ export default function FeatureShowcase() {
       ref={sectionRef}
       sx={{
         width: "100%",
-        bgcolor: "#0B0E17",
+        bgcolor: "#030712",
         py: { xs: 6, md: 10 },
         height: "150vh",
       }}
@@ -139,12 +139,19 @@ export default function FeatureShowcase() {
         <Box
           sx={{
             position: "absolute",
-            height: "800px",
-            width: "600px",
-            top: 150,
-            right: 50,
+            height: {
+              xs: "60%",
+              md: "40%",
+              lg: "68%",
+              xl: "68%",
+            },
+            width: "43%",
+            top: "45%",
+            transform: "translateY(-50%)",
+            right: 0,
             zIndex: -4,
-            display: { xs: "none", md: "block" },
+            display: "flex",
+            justifyContent: "flex-end",
           }}
         >
           <video
@@ -153,12 +160,35 @@ export default function FeatureShowcase() {
             muted
             loop
             playsInline
-            style={{ height: "100%", objectFit: "cover" }}
+            style={{ height: "100%", width: "100%", objectFit: "contain", objectPosition: "right" }}
           />
         </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: '30px' }}>
+          <Box
+            sx={{
+              position: "relative",
+              width: {
+                xs: "45%",
+                md: "58%",
+                lg: "58%",
+                xl: "58%"
+              },
+              height: {
+                xs: "150px",
+                md: "150px",
+                lg: "400px",
+                xl: "400px"
+              },
+              overflow: "hidden",
+              borderRadius: {
+                xs: "20px",
+                md: "32px",
+                lg: "32px",
+                xl: "32px"
+              },
+            }}
+          >
             <video
               src={videos[0].src}
               autoPlay
@@ -168,8 +198,17 @@ export default function FeatureShowcase() {
               style={{ width: "400px",borderRadius: 17, height: "300px", objectFit: "inherit" }}
             />
           </Box>
-
-          <Box>
+          <Box sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "stretch",
+            height: {
+              xs: "200px",
+              md: "360px",
+              lg: "400px",
+              xl: "480px"
+            },
+          }}>
             <CardMedia
               component={"video"}
               src={featureThumbnails[selectedFeatureIdx].video}
@@ -178,7 +217,21 @@ export default function FeatureShowcase() {
               loop
               playsInline
               sx={{
-                width: "400px",
+                width: {
+                  xs: "45%",
+                  md: "58%",
+                  lg: "58%",
+                  xl: "58%"
+                },
+                overflow: "hidden",
+                height: "100%",
+                borderRadius: {
+                  xs: "20px",
+                  md: "32px",
+                  lg: "32px",
+                  xl: "32px"
+                },
+                position: "relative",
                 height: "300px", // Set a fixed height
                 borderRadius: 4,
                 objectFit: "cover",
@@ -186,11 +239,63 @@ export default function FeatureShowcase() {
                 transition: "opacity 0.3s ease-in-out",
               }}
             />
+            <Box sx={{
+              width: "40%",
+              height: "100%",
+              display: "flex",
+              alignItems: "flex-start",
+              justifyContent: "space-between",
+              flexDirection: "column",
+            }}>
+              <Box
+                sx={{
+                  color: "#fff",
+                  padding: '40px 80px 0px 20px',
+                }}
+              >
+                <Typography variant="h3" sx={{ fontWeight: 400, mb: 1 }}>
+                  {featureThumbnails[selectedFeatureIdx].label}
+                </Typography>
+                <Typography variant="h4" sx={{ fontWeight: 200, color: "#A0A4B8" }}>
+                  Click and Walk. Explore any room in 360°—right from your mobile or
+                  laptop.
+                </Typography>
+              </Box>
+              <Card
+                sx={{
+                  borderRadius: '32px',
+                  overflow: "hidden",
+                  bgcolor: "#030712",
+                  border: "2px solid #1F2937",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: '250px',
+                  position: "relative",
+                  zIndex: 1,
+                  width: "85%",
+                  marginLeft: "auto",
+                  padding: '50px',
+                }}
+              >
+                <Image
+                  src={FSLOGO}
+                  alt="Sitepace Logo"
+                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                  width={500}
+                  height={500}
+                />
+              </Card>
+
+            </Box>
           </Box>
         </Box>
 
         <Box sx={{ mt: 4 }}>
-          <Grid container gap={2} spacing={2} sx={{ flexWrap: "nowrap" }}>
+          <Grid container gap={2} spacing={2} sx={{
+            flexWrap: "nowrap",
+            overflowX: "scroll",
+          }}>
             {featureThumbnails.map((feature, idx) => (
               <Card
                 key={idx}
@@ -222,48 +327,8 @@ export default function FeatureShowcase() {
         </Box>
 
         {/* Constant Right Text */}
-        <Box
-          sx={{
-            color: "#fff",
-            px: 2,
-            width: "400px",
-            position: "absolute",
-            right: 400,
-            bottom: 400,
-          }}
-        >
-          <Typography variant="h3" sx={{ fontWeight: 400, mb: 1 }}>
-            {featureThumbnails[selectedFeatureIdx].label}
-          </Typography>
-          <Typography variant="h4" sx={{ fontWeight: 200, color: "#A0A4B8" }}>
-            Click and Walk. Explore any room in 360°—right from your mobile or
-            laptop.
-          </Typography>
-        </Box>
-        <Card
-          sx={{
-            borderRadius: 4,
-            overflow: "hidden",
-            bgcolor: "#23263A",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: 120,
-            position: "absolute",
-            zIndex: 1,
-            width: "250px",
-            right: 300,
-            bottom: 150,
-          }}
-        >
-          <Image
-            src={FSLOGO}
-            alt="Sitepace Logo"
-            style={{ width: "80%", objectFit: "contain" }}
-            width={500}
-            height={500}
-          />
-        </Card>
+
+
       </Container>
     </Box>
   );
