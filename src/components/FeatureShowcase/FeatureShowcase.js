@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   Typography,
-  Grid,
   Card,
   CardMedia,
 } from "@mui/material";
@@ -18,46 +17,58 @@ import Slider from "react-slick";
 import styles from "./FeatureShowcase.module.css";
 import { isMobileScreen, isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const featureThumbnails = [
   {
     label: "360° Navigation",
+    subLabel: "Click and Walk. Explore any room in 360°—right from your mobile or laptop.",
     img: "/images/feature-360.jpg",
     video: "/videos/360_video_navigation.mp4",
   },
   {
+    label: "IntelliViz – Talk to Your Site",
+    subLabel: "Built on a construction-specific AI language model, IntelliViz lets you generate site reports, detect issues, and get answers—instantly from a single prompt.",
+    img: "/images/feature-360.jpg",
+    video: "/videos/AI_chat_with_blur.mp4",
+  },
+  {
     label: "Sticky Notes",
+    subLabel: "Smart Annotation notes as snags pinned directly on objects—bypass the excel sheets.",
     img: "/images/feature-sticky.jpg",
     video: "/videos/Sticky_Notes.mp4",
   },
   {
     label: "Camera Dates",
+    subLabel: "Track progress views between two dates—spot changes at a glance.",
     img: "/images/feature-camera.jpg",
     video: "/videos/Compare_Dates.mp4",
   },
   {
     label: "Secure QR Code Access",
+    subLabel: "Instantly share secure site access with clients or consultants—temporarily.",
     img: "/images/feature-qr.jpg",
     video: "/videos/Secure_QR_code.mp4",
   },
   {
     label: "Calendar Timeline",
+    subLabel: "Track site progress by date and time—floor by floor, in one view.",
     img: "/images/feature-calendar.jpg",
     video: "/videos/Calendar_Timeline.mp4",
   },
   {
     label: "Virtual Site Meet",
+    subLabel: "Meet your team on- site—remotely, without leaving your desk.",
     img: "/images/feature-virtual.jpg",
     video: "/videos/Virtual_Site_Meet.mp4",
   },
   {
     label: "Live 360° Stream",
+    subLabel: "Broadcast your site in real-time—anywhere, anytime.",
     img: "/images/feature-live.jpg",
     video: "/videos/360_Live_stream.mp4",
   },
   {
     label: "Floor Plan",
+    subLabel: "Live 360° Stream Broadcast your site in real- time—anywhere, anytime.",
     img: "/images/feature-floorplan.jpg",
     video: "/videos/Floor_plan.mp4",
   },
@@ -81,9 +92,22 @@ export default function FeatureShowcase() {
 
     if (!sectionElement) return;
 
+    function calculateStartPosition(screenHeight) {
+      // Calculate using slope-intercept form (y = mx + b)
+      return Math.round(-0.745 * screenHeight + 1060);
+    }
+
+    function calculateStartPositionMobile(screenHeight) {
+      if (screenHeight >= 700) {
+        return 0;
+      } else {
+        return "100px"
+      }
+    }
+
     const scrollTriggerConfig = {
       trigger: sectionElement,
-      start: `top+=${isMobileScreen()? "100px" : isSmallScreen() ? "300px" : "600px"} top`,
+      start: `top+=${isMobileScreen() || isSmallScreen() ? calculateStartPositionMobile(window.innerHeight) : calculateStartPosition(window.innerHeight) + "px"} top`,
       end: `+=${isMobileScreen() ? featureThumbnails.length * 200 : featureThumbnails.length * 300}`, // Adjust scroll length dynamically
       scrub: true,
       pin: true,
@@ -116,27 +140,27 @@ export default function FeatureShowcase() {
       <Container maxWidth="lg" sx={{ position: "relative" }}>
         <Box sx={{ mb: { xs: 3, md: 5 } }}>
           <Typography
-            variant="body2"
-            sx={{
-              color: "#A0A4B8",
-              mb: 1,
-              fontSize: 14,
-              textAlign: { xs: "center", md: "center" },
-            }}
-          >
-            Take that important decision in minutes, Not Hours
-          </Typography>
-          <Typography
             variant="h4"
             sx={{
               color: "#fff",
-              mb: 4,
               fontWeight: 600,
+              mb: 1,
+              textAlign: { xs: "center", md: "center" },
+            }}
+          >
+            360° Walkthroughs That Do More Than Just View
+          </Typography>
+          <Typography
+            variant="body2"
+            sx={{
+              color: "#A0A4B8",
+              mb: 4,
+              fontSize: 14,
               letterSpacing: 1,
               textAlign: { xs: "center", md: "center" },
             }}
           >
-            YOUR PROJECT, ANYWHERE, ANYTIME
+            Navigate your site remotely with virtual tours, AI insights, progress tracking, and real-time collaboration—only with SitePace.ai.
           </Typography>
         </Box>
 
@@ -145,14 +169,14 @@ export default function FeatureShowcase() {
           sx={{
             position: "absolute",
             height: {
-              xs: "45%",
+              xs: "55%",
               sm: "60%",
               md: "70%",
               lg: "68%",
               xl: "68%",
             },
             width: {
-              xs: "50%",
+              xs: "45%",
               sm: "45%",
               md: "45%",
               lg: "68%",
@@ -166,12 +190,13 @@ export default function FeatureShowcase() {
             },
             transform: "translateY(-50%)",
             right: {
-              xs: "5%",
+              xs: "12%",
+              sm: "5%",
               md: "5%",
               lg: "0",
               xl: "0",
             },
-            zIndex: -4,
+            // zIndex: -4,
             display: "flex",
             justifyContent: "flex-end",
           }}
@@ -332,8 +357,7 @@ export default function FeatureShowcase() {
                   fontSize: { xs: '1.4rem', md: '1.8rem', lg: '2rem', xl: '2.2rem' },
                   color: "#A0A4B8"
                 }}>
-                  Click and Walk. Explore any room in 360°—right from your mobile or
-                  laptop.
+                  {featureThumbnails[selectedFeatureIdx].subLabel || "Click and Walk. Explore any room in 360°—right from your mobile or laptop."}
                 </Typography>
               </Box>
               <Card
