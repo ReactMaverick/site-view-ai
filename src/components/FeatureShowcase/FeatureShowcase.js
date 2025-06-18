@@ -16,6 +16,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styles from "./FeatureShowcase.module.css";
+import { isMobileScreen, isSmallScreen } from "@/values/Constants/ResponsiveCheck";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,12 +83,12 @@ export default function FeatureShowcase() {
 
     const scrollTriggerConfig = {
       trigger: sectionElement,
-      start: "top+=200px top",
-      end: `+=${featureThumbnails.length * 300}`, // Reduce scroll length for faster transitions
+      start: `top+=${isMobileScreen()? "100px" : isSmallScreen() ? "300px" : "600px"} top`,
+      end: `+=${isMobileScreen() ? featureThumbnails.length * 200 : featureThumbnails.length * 300}`, // Adjust scroll length dynamically
       scrub: true,
       pin: true,
-      markers: true,
-      pinSpacing: true,
+      pinSpacing: true, // Ensures proper spacing for pinned elements
+      // markers: true, // Enable markers for debugging
       onUpdate: (self) => {
         const progress = self.progress;
         const scaledProgress = progress * 1; // Scale up the progress
@@ -109,7 +110,7 @@ export default function FeatureShowcase() {
         width: "100%",
         bgcolor: "#030712",
         py: { xs: 6, md: 10 },
-        height: "150vh",
+        minHeight: "100vh",
       }}
     >
       <Container maxWidth="lg" sx={{ position: "relative" }}>
