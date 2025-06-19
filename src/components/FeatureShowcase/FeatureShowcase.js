@@ -21,55 +21,55 @@ const featureThumbnails = [
   {
     label: "360° Navigation",
     subLabel: "Click and Walk. Explore any room in 360°—right from your mobile or laptop.",
-    img: "/images/feature-360.jpg",
+    img: "/images/feature-360.png",
     video: "/videos/360_video_navigation.mp4",
   },
   {
     label: "IntelliViz – Talk to Your Site",
     subLabel: "Built on a construction-specific AI language model, IntelliViz lets you generate site reports, detect issues, and get answers—instantly from a single prompt.",
-    img: "/images/feature-360.jpg",
+    img: "/images/InteliViz.png",
     video: "/videos/AI_chat_with_blur.mp4",
   },
   {
     label: "Sticky Notes",
     subLabel: "Smart Annotation notes as snags pinned directly on objects—bypass the excel sheets.",
-    img: "/images/feature-sticky.jpg",
+    img: "/images/feature-sticky.png",
     video: "/videos/Sticky_Notes.mp4",
   },
   {
     label: "Camera Dates",
     subLabel: "Track progress views between two dates—spot changes at a glance.",
-    img: "/images/feature-camera.jpg",
+    img: "/images/feature-camera.png",
     video: "/videos/Compare_Dates.mp4",
   },
   {
     label: "Secure QR Code Access",
     subLabel: "Instantly share secure site access with clients or consultants—temporarily.",
-    img: "/images/feature-qr.jpg",
+    img: "/images/feature-qr.png",
     video: "/videos/Secure_QR_code.mp4",
   },
   {
     label: "Calendar Timeline",
     subLabel: "Track site progress by date and time—floor by floor, in one view.",
-    img: "/images/feature-calendar.jpg",
+    img: "/images/feature-calendar.png",
     video: "/videos/Calendar_Timeline.mp4",
   },
   {
     label: "Virtual Site Meet",
     subLabel: "Meet your team on- site—remotely, without leaving your desk.",
-    img: "/images/feature-virtual.jpg",
+    img: "/images/feature-virtual.png",
     video: "/videos/Virtual_Site_Meet.mp4",
   },
   {
     label: "Live 360° Stream",
     subLabel: "Broadcast your site in real-time—anywhere, anytime.",
-    img: "/images/feature-live.jpg",
+    img: "/images/feature-live.png",
     video: "/videos/360_Live_stream.mp4",
   },
   {
     label: "Floor Plan",
     subLabel: "Live 360° Stream Broadcast your site in real- time—anywhere, anytime.",
-    img: "/images/feature-floorplan.jpg",
+    img: "/images/feature-floorplan.png",
     video: "/videos/Floor_plan.mp4",
   },
 ];
@@ -473,7 +473,7 @@ export default function FeatureShowcase() {
                     lg: "170px",
                     xl: "170px"
                   },
-                  width: "100%",
+                  width: "70%",
                   position: "relative",
                   border:
                     idx === selectedFeatureIdx
@@ -481,15 +481,16 @@ export default function FeatureShowcase() {
                       : "3px solid transparent",
                   borderRadius: 3,
                   transition: "all 0.3s ease-in-out",
+                  backgroundColor: "transparent",
                 }}
                 onClick={() => feature.video && setSelectedFeatureIdx(idx)}
               >
-                <CardMedia
-                  component="video"
-                  src={feature.video}
-                  sx={{
-                    height: "100%",
-                    width: "100%",
+               <Image
+                  src={feature.img}
+                  alt={feature.label}
+                  height={170}
+                  width={150}
+                  style={{
                     objectFit: "cover",
                   }}
                 />
