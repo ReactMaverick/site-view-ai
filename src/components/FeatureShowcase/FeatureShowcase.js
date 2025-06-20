@@ -50,7 +50,7 @@ const featureThumbnails = [
   },
   {
     label: "Calendar Timeline",
-    subLabel: "Track site progress by date and time—floor by floor, in one view.",
+    subLabel: "Compare site progress by date and time—floor by floor, in one view.",
     img: "/images/feature-calendar.png",
     video: "/videos/Calendar_Timeline.mp4",
   },
@@ -78,6 +78,29 @@ const videos = [
   { src: "/videos/PersonWalking_fast_speed.mp4", alt: "Worker Demo" },
   { src: "/videos/Floor_map_animation.mp4", alt: "Floorplan Demo" },
 ];
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "transparent",height:"20px" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "transparent",height:"20px" }}
+      onClick={onClick}
+    >
+    </div>
+  );
+}
 
 export default function FeatureShowcase() {
   const [selectedFeatureIdx, setSelectedFeatureIdx] = useState(0);
@@ -430,32 +453,46 @@ export default function FeatureShowcase() {
           </Box>
         </Box>
 
-        <Box sx={{ mt: 4 }}>
+        <Box
+          sx={{
+            mt: 4,
+            width: {
+              xs: "90%", // Explicitly set 90% width for extra small screens
+              sm: "90%", // 90% width for small screens
+              md: "100%", // 100% width for medium screens and above
+              lg: "100%",
+              xl: "100%",
+            },
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
           <Slider
             className="featureSlider"
             dots={false}
-            arrows={false}
             infinite={false}
             speed={500}
-            slidesToShow={8} // Number of slides visible at once
-            slidesToScroll={1} // Number of slides to scroll at a time
+            slidesToShow={8}
+            slidesToScroll={1}
+            nextArrow={<SampleNextArrow />}
+            prevArrow={<SamplePrevArrow />}
             responsive={[
               {
-                breakpoint: 1024, // Adjust for smaller screens
+                breakpoint: 1024,
                 settings: {
                   slidesToShow: 4.5,
                   slidesToScroll: 1,
                 },
               },
               {
-                breakpoint: 600, // Adjust for smaller screens
+                breakpoint: 600,
                 settings: {
                   slidesToShow: 4.2,
                   slidesToScroll: 1,
                 },
               },
               {
-                breakpoint: 480, // Adjust for smaller screens
+                breakpoint: 480,
                 settings: {
                   slidesToShow: 3.2,
                   slidesToScroll: 1,
@@ -485,7 +522,7 @@ export default function FeatureShowcase() {
                 }}
                 onClick={() => feature.video && setSelectedFeatureIdx(idx)}
               >
-               <Image
+                <Image
                   src={feature.img}
                   alt={feature.label}
                   height={170}
