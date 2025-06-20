@@ -46,13 +46,18 @@ export default function VideoSec() {
               >
                 <video
                   className="videoPlayer"
-                  width={"100%"}
-                  height={"100%"}
+                  width="100%"
+                  height="100%"
                   src={item.video}
+                  muted // IMPORTANT: Required for autoplay to work in all browsers
+                  autoPlay
+                  loop
+                  playsInline // Ensures autoplay on iOS
                   controls
-                  controlsList="nodownload" // <-- Add this line
+                  controlsList="nodownload"
                   style={{ objectFit: "cover" }}
                 />
+
               </Box>
             )}
             <Box
