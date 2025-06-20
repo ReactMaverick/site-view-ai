@@ -378,7 +378,16 @@ export default function FeatureShowcase() {
                 <Typography variant="h4" sx={{
                   fontWeight: 200,
                   fontSize: { xs: '1.4rem', md: '1.8rem', lg: '2rem', xl: '2.2rem' },
-                  color: "#A0A4B8"
+                  color: "#A0A4B8",
+                  overflowY: "auto",
+                  scrollbarWidth: "none",
+                  maxHeight: {
+                    xs: "35px",
+                    sm: "35px",
+                    md: "fit-content",
+                    lg: "fit-content",
+                    xl: "fit-content",
+                  }
                 }}>
                   {featureThumbnails[selectedFeatureIdx].subLabel || "Click and Walk. Explore any room in 360°—right from your mobile or laptop."}
                 </Typography>
