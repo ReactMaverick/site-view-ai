@@ -26,7 +26,7 @@ export default function Workflow() {
         <Swiper
           className={`partnersLogoSlider`}
           spaceBetween={20}
-          slidesPerView={5}
+          slidesPerView={4} // Reduce the number of slides visible at once to increase their width
           loop={true}
           speed={2000}
           modules={[Autoplay]}
@@ -37,11 +37,11 @@ export default function Workflow() {
           breakpoints={{
             200: { slidesPerView: 1, spaceBetween: 10 },
             640: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 5, spaceBetween: 30 },
+            1024: { slidesPerView: 4, spaceBetween: 30 }, // Adjust slidesPerView for larger screens
           }}
         >
           {workflowContents.map((workflow, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} style={{ width: "100px" }}> {/* Explicitly set width */}
               <WorkflowBox
                 backgroundColor={
                   backgroundColors[index % backgroundColors.length]
