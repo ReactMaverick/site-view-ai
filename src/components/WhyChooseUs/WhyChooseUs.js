@@ -9,7 +9,7 @@ const features = [
   {
         icon: <TipsAndUpdatesOutlinedIcon sx={{ fontSize: 40, color: "#C6FF00" }} />,
     title: "Smart",
-    desc: "SitePace.ai captures 360° site visuals using a helmet-mounted camera and automatically aligns them to your floorplan using AI and IoT. All on request with just minutes effort needed.",
+        desc: "SitePace.ai captures 360° site visuals with a helmet-mounted camera and automatically aligns them with your floor plan using AI and more smart tech — done in minutes, on request.",
   },
   {
     icon: <SpeedIcon sx={{ fontSize: 40, color: "#C6FF00" }} />,

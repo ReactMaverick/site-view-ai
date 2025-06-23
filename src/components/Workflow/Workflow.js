@@ -28,7 +28,7 @@ export default function Workflow() {
           spaceBetween={20}
           slidesPerView={4} // Reduce the number of slides visible at once to increase their width
           loop={true}
-          speed={2000}
+          speed={3000}
           modules={[Autoplay]}
           autoplay={{
             delay: 0,

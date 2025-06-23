@@ -9,7 +9,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { FSLOGO } from "@/values/Constants/ImageConstants";
+import { FSLOGO, FSLOGO2 } from "@/values/Constants/ImageConstants";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -38,7 +38,7 @@ const featureThumbnails = [
   },
   {
     label: "Camera Dates",
-    subLabel: "Track progress views between two dates—spot changes at a glance.",
+    subLabel: "Compare progress views between two dates—spot changes at a glance.",
     img: "/images/feature-camera.png",
     video: "/videos/Compare_Dates.mp4",
   },
@@ -171,7 +171,7 @@ export default function FeatureShowcase() {
               textAlign: { xs: "center", md: "center" },
             }}
           >
-            360° Walkthroughs That Do More Than Just View
+            360° WALKTHROUGHS THAT DO MORE THAN JUST VIEW
           </Typography>
           <Typography
             variant="body2"
@@ -376,7 +376,7 @@ export default function FeatureShowcase() {
                   {featureThumbnails[selectedFeatureIdx].label}
                 </Typography>
                 <Typography variant="h4" sx={{
-                  fontWeight: 200,
+                  fontWeight: 300,
                   fontSize: { xs: '1.4rem', md: '1.8rem', lg: '2rem', xl: '2.2rem' },
                   color: "#A0A4B8",
                   overflowY: "auto",
@@ -389,7 +389,7 @@ export default function FeatureShowcase() {
                     xl: "fit-content",
                   }
                 }}>
-                  {featureThumbnails[selectedFeatureIdx].subLabel || "Click and Walk. Explore any room in 360°—right from your mobile or laptop."}
+                  {featureThumbnails[selectedFeatureIdx].subLabel }
                 </Typography>
               </Box>
               <Card
@@ -411,7 +411,7 @@ export default function FeatureShowcase() {
                     sm: "150px",
                     md: "200px",
                     lg: "250px",
-                    xl: "250px"
+                    xl: "auto"
                   },
                   position: {
                     xs: "absolute",
@@ -450,7 +450,7 @@ export default function FeatureShowcase() {
                 }}
               >
                 <Image
-                  src={FSLOGO}
+                  src={FSLOGO2}
                   alt="Sitepace Logo"
                   style={{ width: "100%", height: "100%", objectFit: "contain" }}
                   width={500}
