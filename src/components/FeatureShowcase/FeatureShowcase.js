@@ -37,7 +37,7 @@ const featureThumbnails = [
     video: "/videos/Sticky_Notes.mp4",
   },
   {
-    label: "Camera Dates",
+    label: "Compare Progress",
     subLabel: "Compare progress views between two dates—spot changes at a glance.",
     img: "/images/feature-camera.png",
     video: "/videos/Compare_Dates.mp4",
