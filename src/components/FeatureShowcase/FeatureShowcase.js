@@ -420,6 +420,7 @@ export default function FeatureShowcase() {
                     xl: "relative"
                   },
                   zIndex: 1,
+                  maxHeight:'220px',
                   width: {
                     xs: "40%",
                     sm: "30%",
@@ -432,8 +433,8 @@ export default function FeatureShowcase() {
                     xs: "10px",
                     sm: "30px",
                     md: "30px",
-                    lg: "50px",
-                    xl: "50px"
+                    lg: "34px",
+                    xl: "34px"
                   },
                   right: {
                     xs: "0",
