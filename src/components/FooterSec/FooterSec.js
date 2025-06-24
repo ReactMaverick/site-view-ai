@@ -18,15 +18,15 @@ export default function FooterSec() {
                                 “If the whole construction project can be shown digitally, and available at your fingertips, then the possibilities are immense”
                             </Typography>
                             <Box sx={MUIStyle.FooterSocialBox}>
-                                <Button sx={MUIStyle.FooterSocialButton}>
+                                <Button href="https://www.linkedin.com/company/sitepace/" sx={MUIStyle.FooterSocialButton}>
                                     <Icon icon="hugeicons:linkedin-01" />
                                 </Button>
-                                <Button sx={MUIStyle.FooterSocialButton}>
+                                {/* <Button sx={MUIStyle.FooterSocialButton}>
                                     <Icon icon="lucide:instagram" />
                                 </Button>
                                 <Button sx={MUIStyle.FooterSocialButton}>
                                     <Icon icon="hugeicons:new-twitter" />
-                                </Button>
+                                </Button> */}
                             </Box>
                         </Box>
                         <Box sx={MUIStyle.FooterMenuBoxOuter}>
