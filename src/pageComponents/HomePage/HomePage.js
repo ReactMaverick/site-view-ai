@@ -15,6 +15,7 @@ import FullPageLoader from "@/components/FullPageLoader/FullPageLoader";
 import VideoSec from "@/components/VideoSec/VideoSec";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 import FeatureShowcase from "@/components/FeatureShowcase/FeatureShowcase";
+import FeatureShowcaseNew from "@/components/FeatureShowcaseNew/FeatureShowcaseNew";
 
 
 export default function HomePage() {
@@ -27,14 +28,15 @@ export default function HomePage() {
       <BannerThree
         setIsThreeJSLoading={setIsThreeJSLoading}
       />
-      <FeatureShowcase/>
+      {/* <FeatureShowcase/> */}
+      <FeatureShowcaseNew />
       <About />
       <Partners />
-      <WhyChooseUs/>
+      <WhyChooseUs />
       <Project />
       <Workflow />
       <VideoSec />
-      <Industries /> 
+      <Industries />
       <OurTeam />
       <CTA />
     </Box>

@@ -1,0 +1,44 @@
+.linkLineBig {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 0% 30%;
+}
+@media only screen and (min-width: 1460px) and (max-width: 1535px) {
+  .linkLineBig {
+    object-position: 0% 20%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .linkLineBig {
+    object-position: 0% 20%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .linkLineBig {
+    object-position: 0% 20%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .featureCardVideoBox {
+    height: 200px;
+  }
+  .TopVideoBox {
+    height: 270px;
+  }
+  .LogoBox {
+    min-height: 300px;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .featureCardVideoBox {
+        height: 150px;
+      }
+      .TopVideoBox {
+        height: 180px;
+      }
+      .LogoBox {
+        min-height: 180px;
+      }
+}

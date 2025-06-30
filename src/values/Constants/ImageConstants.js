@@ -161,4 +161,7 @@ export const SITECONT = URL('/images/siteContent.svg');
 
 // Feature Showcase 
 export const FSLOGO = URL('/images/sitepace-logo.png');
-export const FSLOGO2 = URL('/images/SitepaceEngine.jpg')
+export const FSLOGO2 = URL('/images/SitepaceEngine.jpg');
+export const LINKLINEBIG = URL('/images/LinkLineBig.svg');
+export const LINKLINEMOB = URL('/images/LinkLineMob.svg');
+export const SITELGO = URL('/images/SiteLogo.png');
