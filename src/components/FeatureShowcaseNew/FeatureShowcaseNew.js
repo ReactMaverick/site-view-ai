@@ -247,7 +247,10 @@ export default function FeatureShowcaseNew() {
               xl: "none",
             },
             position: "absolute",
-            top: "42rem",
+            top: {
+              xs: "35rem",
+              sm: "42rem",
+            },
             right: {
               xs: "1rem",
               sm: "1rem",

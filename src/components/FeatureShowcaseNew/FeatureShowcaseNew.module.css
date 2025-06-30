@@ -32,13 +32,24 @@
   }
 }
 @media only screen and (max-width: 768px) {
-    .featureCardVideoBox {
-        height: 150px;
-      }
-      .TopVideoBox {
+  .featureCardVideoBox {
+    height: 150px;
+  }
+  .TopVideoBox {
+    height: 180px;
+  }
+  .LogoBox {
+    min-height: 180px;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .featureCardVideoBox {
+    height: 200px;
+  }
+  /* .TopVideoBox {
         height: 180px;
       }
       .LogoBox {
         min-height: 180px;
-      }
+      } */
 }
