@@ -28,7 +28,7 @@ const featureThumbnails = [
   },
   {
     label: "IntelliViz – Talk to Your Site",
-    subLabel: "Built on a construction-specific AI language model, IntelliViz lets you generate site reports, detect issues, and get answers—instantly from a single prompt.",
+    subLabel: "IntelliViz uses construction-focused AI to generate reports, detect issues, and answer queries from a single prompt",
     img: "/images/InteliViz.png",
     video: "/videos/AI_chat_with_blur.mp4",
   },
@@ -70,7 +70,7 @@ const featureThumbnails = [
   },
   {
     label: "Floor Plan",
-    subLabel: "Live 360° Stream Broadcast your site in real- time—anywhere, anytime.",
+    subLabel: "Navigate your site via floor plans. Click to view any room in 360° — fast, intuitive access to every corner of your project.",
     img: "/images/feature-floorplan.png",
     video: "/videos/Floor_plan.mp4",
   },
@@ -335,21 +335,15 @@ export default function FeatureShowcaseNew() {
                 borderRadius: "25px",
                 overflow: "hidden",
               }}>
-              {/* <video
+              <video
                 src={videos[1].src}
                 // controls
                 autoPlay
                 muted
                 loop
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              /> */}
-              <Lottie
-                // animationData={require("../../../public/videos/assets/Floormap_animation.json")}
-                path="/videos/Stroke_motion_1.json"
-                loop
-                autoplay
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
+              
             </Box>
           </Box>
           {/* logobox */}
@@ -470,21 +464,13 @@ export default function FeatureShowcaseNew() {
                   <video
                     ref={el => videoRefs.current[index] = el}
                     src={feature.video}
-                    controls
-                    controlsList="nodownload"
-                    autoPlay={playingFeatureIdx === index}
+                    // controls
+                    // controlsList="nodownload"
+                    autoPlay={true}
                     muted
-                    loop={false}
+                    loop={true}
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                    onEnded={() => {
-                      console.log("onended", index);
-                      if (index < featureThumbnails.length) {
-                        console.log("setPlayingFeatureIdx", index + 1);
-                        setPlayingFeatureIdx(index + 1);
-                      } else {
-                        setPlayingFeatureIdx(0);
-                      }
-                    }}
+                    
                   />
                 </Box>
                 {/* text box */}
