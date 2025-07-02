@@ -46,10 +46,7 @@
   .featureCardVideoBox {
     height: 200px;
   }
-  /* .TopVideoBox {
-        height: 180px;
-      }
-      .LogoBox {
-        min-height: 180px;
-      } */
+  .LogoBox {
+    height: 100px;
+  }
 }

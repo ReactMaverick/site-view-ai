@@ -21,12 +21,15 @@ export default function FooterSec() {
                                 <Button href="https://www.linkedin.com/company/sitepace/" sx={MUIStyle.FooterSocialButton}>
                                     <Icon icon="hugeicons:linkedin-01" />
                                 </Button>
-                                {/* <Button sx={MUIStyle.FooterSocialButton}>
+                                <Button href="https://www.instagram.com/sitepace.ai/" sx={MUIStyle.FooterSocialButton}>
                                     <Icon icon="lucide:instagram" />
                                 </Button>
-                                <Button sx={MUIStyle.FooterSocialButton}>
+                                <Button href="https://x.com/SitepaceAi" sx={MUIStyle.FooterSocialButton}>
                                     <Icon icon="hugeicons:new-twitter" />
-                                </Button> */}
+                                </Button>
+                                <Button href="https://www.youtube.com/@SitePaceAI" sx={MUIStyle.FooterSocialButton}>
+                                    <Icon icon="hugeicons:youtube" />
+                                </Button>
                             </Box>
                         </Box>
                         <Box sx={MUIStyle.FooterMenuBoxOuter}>

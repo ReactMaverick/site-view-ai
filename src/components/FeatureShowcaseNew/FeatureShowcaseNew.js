@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect } from "react";
+import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import {
   Box,
   Container,
@@ -17,6 +17,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styles from "./FeatureShowcaseNew.module.css";
 import { isMobileScreen, isSmallScreen } from "@/values/Constants/ResponsiveCheck";
+import Lottie from "lottie-react";
 
 const featureThumbnails = [
   {
@@ -78,6 +79,7 @@ const featureThumbnails = [
 const videos = [
   { src: "/videos/PersonWalking_fast_speed.mp4", alt: "Worker Demo" },
   { src: "/videos/Floor_map_animation.mp4", alt: "Floorplan Demo" },
+  { src: "/videos/Sitepace_ai_engine_logo_animation.mp4", alt: "360 Navigation Demo" },
 ];
 
 function SampleNextArrow(props) {
@@ -104,51 +106,36 @@ function SamplePrevArrow(props) {
 }
 
 export default function FeatureShowcaseNew() {
-  const [selectedFeatureIdx, setSelectedFeatureIdx] = useState(0);
+  const [playingFeatureIdx, setPlayingFeatureIdx] = useState(0);
   const sectionRef = useRef(null);
+  const videoRefs = useRef([]);
 
-  // useLayoutEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  // }, []);
+  // Initialize the array to store video references
+  useEffect(() => {
+    videoRefs.current = videoRefs.current.slice(0, featureThumbnails.length);
+  }, []);
 
-  // useGSAP(() => {
-  //   const sectionElement = sectionRef.current;
+  // Play the video when playingFeatureIdx changes
+  useEffect(() => {
+    console.log("Playing feature index changed:", playingFeatureIdx);
 
-  //   if (!sectionElement) return;
+    // Make sure the video reference exists and try to play it
+    if (videoRefs.current[playingFeatureIdx]) {
+      const video = videoRefs.current[playingFeatureIdx];
 
-  //   function calculateStartPosition(screenHeight) {
-  //     // Calculate using slope-intercept form (y = mx + b)
-  //     return Math.round(-0.745 * screenHeight + 1060);
-  //   }
+      // Reset the video to the beginning if needed
+      video.currentTime = 0;
 
-  //   function calculateStartPositionMobile(screenHeight) {
-  //     if (screenHeight >= 700) {
-  //       return 0;
-  //     } else {
-  //       return "100px"
-  //     }
-  //   }
+      // Play the video with error handling (important for mobile browsers)
+      const playPromise = video.play();
 
-  //   const scrollTriggerConfig = {
-  //     trigger: sectionElement,
-  //     start: `top+=${isMobileScreen() || isSmallScreen() ? calculateStartPositionMobile(window.innerHeight) : calculateStartPosition(window.innerHeight) + "px"} top`,
-  //     end: `+=${isMobileScreen() ? featureThumbnails.length * 200 : featureThumbnails.length * 300}`, // Adjust scroll length dynamically
-  //     scrub: true,
-  //     pin: true,
-  //     pinSpacing: true, // Ensures proper spacing for pinned elements
-  //     // markers: true, // Enable markers for debugging
-  //     onUpdate: (self) => {
-  //       const progress = self.progress;
-  //       const scaledProgress = progress * 1; // Scale up the progress
-  //       const easedProgress = gsap.parseEase("power1.inOut")(scaledProgress);
-  //       const interpolatedIdx = gsap.utils.interpolate(0, featureThumbnails.length - 1, easedProgress);
-  //       const idx = Math.round(interpolatedIdx);
-  //       setSelectedFeatureIdx(idx);
-  //     },
-  //   };
-
-  //   ScrollTrigger.create(scrollTriggerConfig);
-  // });
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.error("Video play failed:", error);
+        });
+      }
+    }
+  }, [playingFeatureIdx]);
 
   return (
     <Box
@@ -172,7 +159,7 @@ export default function FeatureShowcaseNew() {
                 xs: 2,
                 md: 2,
               },
-              fontSize: 14,
+              fontSize: 18,
               letterSpacing: 1,
               textAlign: { xs: "center", md: "center" },
             }}
@@ -183,7 +170,7 @@ export default function FeatureShowcaseNew() {
             variant="h4"
             sx={{
               color: "#fff",
-              fontWeight: 500,
+              fontWeight: 400,
               fontSize: { xs: '2rem', md: '2.4rem', lg: '2.8rem', xl: '3.2rem' },
               mb: 1,
               textTransform: "uppercase",
@@ -317,8 +304,8 @@ export default function FeatureShowcaseNew() {
               }}>
               <video
                 src={videos[0].src}
-                controls
-                autoPlay
+                // controls
+                autoPlay={true}
                 muted
                 loop
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -348,12 +335,19 @@ export default function FeatureShowcaseNew() {
                 borderRadius: "25px",
                 overflow: "hidden",
               }}>
-              <video
+              {/* <video
                 src={videos[1].src}
-                controls
+                // controls
                 autoPlay
                 muted
                 loop
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              /> */}
+              <Lottie
+                // animationData={require("../../../public/videos/assets/Floormap_animation.json")}
+                path="/videos/Stroke_motion_1.json"
+                loop
+                autoplay
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </Box>
@@ -361,39 +355,40 @@ export default function FeatureShowcaseNew() {
           {/* logobox */}
           <Box
             className={styles.LogoBox}
-           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "100%",
-            backgroundColor: "#030712",
-            border: "1px solid #1F2937",
-            minHeight: {
-              xs: "150px",
-              sm: "250px",
-              md: "350px",
-              lg: "250px",
-              xl: "280px",
-            },
-            borderRadius: {
-              xs: "18px",
-              sm: "20px",
-              md: "25px",
-              lg: "30px",
-              xl: "32px",
-            },
-            position: "relative",
-            zIndex: 1,
-            py: {
-              xs: "20px",
-              sm: "30px",
-              md: "50px",
-              lg: "40px",
-              xl: "40px",
-            }
-          }}>
-            <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+              backgroundColor: "#030712",
+              // border: "1px solid #1F2937",
+              height: {
+                xs: "150px",
+                sm: "250px",
+                md: "350px",
+                lg: "250px",
+                xl: "280px",
+              },
+
+              borderRadius: {
+                xs: "18px",
+                sm: "20px",
+                md: "25px",
+                lg: "30px",
+                xl: "32px",
+              },
+              position: "relative",
+              zIndex: 1,
+              // py: {
+              //   xs: "20px",
+              //   sm: "30px",
+              //   md: "50px",
+              //   lg: "40px",
+              //   xl: "40px",
+              // }
+            }}>
+            {/* <Box
               
               sx={{
                 width: {
@@ -404,14 +399,23 @@ export default function FeatureShowcaseNew() {
                   xl: "30%",
                 },
                 height: "auto",
-              }}>
-              <Image height={500} width={500} src={SITELGO} alt="Feature Logo"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  objectFit: "contain",
-                }} />
-            </Box>
+              }}> */}
+            <video
+              src={videos[2].src}
+              autoPlay
+              muted
+              loop
+              // controls
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "fill",
+                border: "none",
+                maxHeight: "280px",
+              }}
+
+            />
+            {/* </Box> */}
           </Box>
 
           {/* grid Box */}
@@ -464,9 +468,23 @@ export default function FeatureShowcaseNew() {
                   className={styles.featureCardVideoBox}
                 >
                   <video
+                    ref={el => videoRefs.current[index] = el}
                     src={feature.video}
                     controls
+                    controlsList="nodownload"
+                    autoPlay={playingFeatureIdx === index}
+                    muted
+                    loop={false}
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    onEnded={() => {
+                      console.log("onended", index);
+                      if (index < featureThumbnails.length) {
+                        console.log("setPlayingFeatureIdx", index + 1);
+                        setPlayingFeatureIdx(index + 1);
+                      } else {
+                        setPlayingFeatureIdx(0);
+                      }
+                    }}
                   />
                 </Box>
                 {/* text box */}
