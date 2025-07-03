@@ -33,13 +33,30 @@ export const MUIStyle = {
     top: "0",
     left: "0",
     zIndex: "1",
-    // display:{
-    //   xs: "none",
-    //   sm: "none",
-    //   md: "block",
-    //   lg: "block",
-    //   xl: "block",
-    // }
+    display:{
+      xs: "none",
+      sm: "block",
+      md: "block",
+      lg: "block",
+      xl: "block",
+    }
+
+  },
+  VideoSecVideoSM: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    position: "absolute",
+    top: "0",
+    left: "0",
+    zIndex: "1",
+    display: {
+      xs: "block",
+      sm: "none",
+      md: "none",
+      lg: "none",
+      xl: "none",
+    }
 
   },
   VideoOverlay: {

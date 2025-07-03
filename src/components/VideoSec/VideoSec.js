@@ -40,10 +40,12 @@ export default function VideoSec() {
             key={index}
           >
             {item.video && (
+              <>
               <Box
                 className="videoPlayerOuter"
                 sx={MUIStyle.VideoSecVideo}
               >
+                
                 <video
                   className="videoPlayer"
                   width="100%"
@@ -53,12 +55,35 @@ export default function VideoSec() {
                   autoPlay
                   loop
                   playsInline // Ensures autoplay on iOS
-                  // controls
+                  controls
                   controlsList="nodownload"
                   style={{ objectFit: "cover" }}
                 />
-
               </Box>
+                <Box
+                  className="videoPlayerOuter"
+                  sx={MUIStyle.VideoSecVideoSM}
+                >
+
+                  <video
+                    className="videoPlayer"
+                    width="100%"
+                    height="100%"
+                    src={item.videoSM}
+                    muted // IMPORTANT: Required for autoplay to work in all browsers
+                    autoPlay
+                    loop
+                    playsInline // Ensures autoplay on iOS
+                    controls
+                    controlsList="nodownload"
+                    style={{ objectFit: "cover" }}
+                  />
+
+
+
+                </Box>
+              </>
+              
             )}
             <Box
               component={"img"}

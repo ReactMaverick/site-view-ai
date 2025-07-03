@@ -1,12 +1,13 @@
 import { BOTTOMIMAGE, LBIMAGE, LTIMAGE, MIDDLEIMAGE, RBIMAGE, RTIMAGE, TOPIMAGE } from "@/values/Constants/ImageConstants";
-import { CONNECTEDCONSTRUCTION } from "@/values/Constants/VideoConstants";
+import { CONNECTEDCONSTRUCTION, CONNECTEDCONSTRUCTIONSM } from "@/values/Constants/VideoConstants";
 
 export const sectionContent = [
     {
         image: MIDDLEIMAGE,
         alt: "VideoSecMiddle",
         style: {},
-        video: CONNECTEDCONSTRUCTION
+        video: CONNECTEDCONSTRUCTION,
+        videoSM: CONNECTEDCONSTRUCTIONSM, // For small screens
     },
     {
         image: LTIMAGE,

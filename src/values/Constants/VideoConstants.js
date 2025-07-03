@@ -5,4 +5,5 @@ const URL = (url) => {
 }
 
 export const CONNECTEDCONSTRUCTION = URL('connected-construction-2.mp4');
+export const CONNECTEDCONSTRUCTIONSM = URL('connected-construction-sm.mp4');
 // export const CONNECTEDCONSTRUCTION = URL('/videos/connected-construction.mp4'); UNCOMMENT ON PRODUCTION
