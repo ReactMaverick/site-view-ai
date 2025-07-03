@@ -98,9 +98,9 @@ export const MUIStyle = {
         },
     },
     AboutSecText: {
-        color: commonColor.grey,
+        color: commonColor.brightGrey,
         fontSize: {
-            xs: FONT_SIZE.text12,
+            xs: FONT_SIZE.text14,
             sm: FONT_SIZE.text14,
             md: FONT_SIZE.text16,
             lg: FONT_SIZE.text16,
@@ -120,7 +120,7 @@ export const MUIStyle = {
             lg: FONT_SIZE.heading24,
             xl: FONT_SIZE.heading28,
         },
-        lineHeight: FONT_SIZE.heading40,
+        lineHeight: FONT_SIZE.heading32,
         fontWeight: FONT_WEIGHT.REGULAR,
         textTransform: "uppercase",
         textAlign: "center",

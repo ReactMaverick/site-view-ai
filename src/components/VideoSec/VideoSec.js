@@ -53,7 +53,7 @@ export default function VideoSec() {
                   autoPlay
                   loop
                   playsInline // Ensures autoplay on iOS
-                  controls
+                  // controls
                   controlsList="nodownload"
                   style={{ objectFit: "cover" }}
                 />

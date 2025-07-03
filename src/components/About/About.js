@@ -286,7 +286,7 @@ export default function About() {
           <Box sx={MUIStyle.AboutSecHeadingBox}>
             <Typography variant="body1" sx={MUIStyle.AboutSecText}>
               Boost productivity. Eliminate waste. Streamline operation with 360° visibility
-            </Typography>
+            </Typography> 
             <Typography variant="h2" sx={MUIStyle.AboutSecHeading}>
               DAILY DIGITAL-TWINS, VISUAL progress tracking, and real-time issue resolution, all within a single platform
             </Typography>

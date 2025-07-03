@@ -164,7 +164,7 @@ export default function FeatureShowcaseNew() {
               textAlign: { xs: "center", md: "center" },
             }}
           >
-            Take that important decision in minutes,Not Hours
+            Navigate your site remotely with virtual tours, AI insights, progress tracking, and real-time collaboration—only with SitePace.ai.
           </Typography>
           <Typography
             variant="h4"
@@ -177,7 +177,7 @@ export default function FeatureShowcaseNew() {
               textAlign: { xs: "center", md: "center" },
             }}
           >
-            your project, anywhere, anytime
+            360° Walkthroughs That Do More Than Just View
           </Typography>
         </Box>
         {/* main content box */}

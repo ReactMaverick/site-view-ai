@@ -33,6 +33,14 @@ export const MUIStyle = {
     top: "0",
     left: "0",
     zIndex: "1",
+    // display:{
+    //   xs: "none",
+    //   sm: "none",
+    //   md: "block",
+    //   lg: "block",
+    //   xl: "block",
+    // }
+
   },
   VideoOverlay: {
     position: "absolute",
