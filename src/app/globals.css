@@ -446,3 +446,11 @@ p.BlogContent {
 .slick-track:after {
   display: none !important;
 }
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
