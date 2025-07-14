@@ -16,6 +16,7 @@ import VideoSec from "@/components/VideoSec/VideoSec";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 import FeatureShowcase from "@/components/FeatureShowcase/FeatureShowcase";
 import FeatureShowcaseNew from "@/components/FeatureShowcaseNew/FeatureShowcaseNew";
+import HomepageBlogs from "@/components/HomepageBlogs/HomepageBlogs";
 
 
 export default function HomePage() {
@@ -38,6 +39,7 @@ export default function HomePage() {
       <VideoSec />
       <Industries />
       <OurTeam />
+      <HomepageBlogs />
       <CTA />
     </Box>
   );
