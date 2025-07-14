@@ -1,9 +1,10 @@
 "use client"
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Button, Container, Typography } from '@mui/material'
 import React from 'react'
 import { MUIStyle } from './MUIStyle'
 import HomepageBlogItem from './component/HomepageBlogItem/HomepageBlogItem'
 import { BLOG1, BLOG2, BLOG3, BLOG4, BLOG5, BLOG6 } from '@/values/Constants/ImageConstants'
+import Link from 'next/link'
 
 
 
@@ -72,6 +73,16 @@ const HomepageBlogs = () => {
               blog={blog}
             />
           ))}
+        </Box>
+        <Box>
+          {/* see all button */}
+          <Box sx={MUIStyle.SeeAllBtnBox}>
+            <Button
+              sx={MUIStyle.HeaderBtn}
+              variant="contained" >See All
+            </Button>
+          </Box>
+
         </Box>
       </Container>
     </Box>

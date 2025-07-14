@@ -94,4 +94,36 @@ export const MUIStyle = {
       xl: "32px",
     },
   },
+  SeeAllBtnBox: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "20px",
+  },
+  HeaderBtn: {
+    background: commonColor.green,
+    border: "2px solid",
+    borderColor: commonColor.green,
+    boxShadow: "none",
+    padding: {
+      xs: "6px 20px",
+      sm: "6px 20px",
+      md: "6px 20px",
+      lg: "6px 20px",
+      xl: "10px 42px",
+    },
+    borderRadius: "100px",
+    textTransform: "capitalize",
+    fontSize: {
+      xs: FONT_SIZE.text16,
+      sm: FONT_SIZE.text16,
+      md: FONT_SIZE.text16,
+      lg: FONT_SIZE.text16,
+    },
+    lineHeight: "1.5em",
+    fontWeight: FONT_WEIGHT.MEDIUM,
+    color: commonColor.black,
+  },
+
+
 };

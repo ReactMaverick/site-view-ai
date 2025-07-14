@@ -90,7 +90,7 @@ export const MUIStyle = {
       sm: FONT_SIZE.text22,
       md: FONT_SIZE.heading24,
       lg: FONT_SIZE.heading24,
-      xl: FONT_SIZE.heading28,
+      xl: FONT_SIZE.heading24,
     },
     height: "auto",
     display: "flex",
