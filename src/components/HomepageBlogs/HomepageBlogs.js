@@ -1,10 +1,12 @@
 "use client"
 import { Box, Button, Container, Typography } from '@mui/material'
-import React from 'react'
+import React, { use, useEffect } from 'react'
 import { MUIStyle } from './MUIStyle'
 import HomepageBlogItem from './component/HomepageBlogItem/HomepageBlogItem'
 import { BLOG1, BLOG2, BLOG3, BLOG4, BLOG5, BLOG6 } from '@/values/Constants/ImageConstants'
 import Link from 'next/link'
+import { useDispatch, useSelector } from 'react-redux'
+import { getAllBlogs, SelectBlogs, SelectBlogsLoading } from '@/redux/blogSlice'
 
 
 
@@ -52,6 +54,16 @@ export const blogData = [
 
 
 const HomepageBlogs = () => {
+  const dispatch = useDispatch();
+  const blogs = useSelector((state) => state.blog.blogs);
+  const blogsLoading = useSelector(SelectBlogsLoading);
+  
+  useEffect(() => {
+    console.log("Blogs:", blogs);
+  },[blogs, blogsLoading])
+  useEffect(() => {
+    dispatch(getAllBlogs());
+  },[])
   return (
     <Box sx={MUIStyle.BlogsSectionMain}>
       <Container maxWidth="xl">
@@ -66,18 +78,20 @@ const HomepageBlogs = () => {
           </Box>
         </Box>
         <Box sx={MUIStyle.BlogsSectionContent}>
-          {/* Here you can map through your blog items and render them */}
-          {blogData.map((blog) => (
-            <HomepageBlogItem
-              key={blog.id}
-              blog={blog}
-            />
-          ))}
+          {blogs
+            .filter(blog => blog.home_page_blog)
+            .map(blog => (
+              <HomepageBlogItem
+                key={blog.id}
+                blog={blog}
+              />
+            ))}
         </Box>
         <Box>
           {/* see all button */}
           <Box sx={MUIStyle.SeeAllBtnBox}>
             <Button
+              href='/blogs'
               sx={MUIStyle.HeaderBtn}
               variant="contained" >See All
             </Button>

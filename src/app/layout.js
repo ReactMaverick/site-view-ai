@@ -6,7 +6,9 @@ import Image from "next/image";
 import { ARROWDOWN, MOUSEDOWN } from "@/values/Constants/ImageConstants";
 import Head from "next/head";
 import Script from "next/script";
-
+import Providers from "@/redux/Provider";
+// import { Provider } from 'react-redux';
+// import Store from "@/redux/store";
 const Fellix = localFont({
   src: "./fonts/Fellix-Black.ttf",
   variable: "--font-Fellix-sans",
@@ -70,26 +72,31 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    
     <html lang="en">
       <body className={`${Fellix.variable}`}>
-        <Header />
-        {children}
-        <FooterSec />
-        <Image
-          src={MOUSEDOWN}
-          alt="up"
-          className="up"
-          width={140}
-          height={42}
-          style={{
-            position: "fixed",
-            bottom: "5%",
-            left: "50%",
-            transform: "translate(-50%, 0%)",
-            backgroundColor: "transparent",
-            zIndex: 1000,
-          }}
-        />
+
+        <Providers>
+          <Header />
+          {children}
+          <FooterSec />
+          <Image
+            src={MOUSEDOWN}
+            alt="up"
+            className="up"
+            width={140}
+            height={42}
+            style={{
+              position: "fixed",
+              bottom: "5%",
+              left: "50%",
+              transform: "translate(-50%, 0%)",
+              backgroundColor: "transparent",
+              zIndex: 1000,
+            }}
+          />
+        </Providers>
+
 
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-Y1V7H0SSWP" async strategy="beforeInteractive" />
         <Script id="google-analytics" strategy="beforeInteractive">

@@ -55,7 +55,7 @@ export const MUIStyle = {
         borderRadius: "20px",
         marginBottom: "40px",
     },
-    BlogText:{
+    BlogText: {
         fontSize: {
             xs: FONT_SIZE.text14,
             sm: FONT_SIZE.text16,
@@ -64,10 +64,10 @@ export const MUIStyle = {
             xl: FONT_SIZE.text20,
         },
         color: commonColor.grey,
-        fontWeight: FONT_WEIGHT.MEDIUM,
-     lineHeight: "1.5em",
+        fontWeight: FONT_WEIGHT.REGULAR,
+        lineHeight: "1.5em",
         marginBottom: "30px",
-        "& strong":{
+        "& strong": {
             fontWeight: FONT_WEIGHT.BOLD,
             color: commonColor.black,
         },

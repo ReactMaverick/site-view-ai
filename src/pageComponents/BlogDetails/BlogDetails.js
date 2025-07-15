@@ -5,25 +5,37 @@ import { MUIStyle } from "./MUIStyle";
 import React, { useEffect, useState } from "react";
 import { BLOG2 } from "@/values/Constants/ImageConstants";
 import { BlogContent } from "@/components/BlogGrid/BlogContent";
+import { useDispatch } from "react-redux";
+import { getBlogById } from "@/redux/blogSlice";
+import Image from "next/image";
 
 export default function BlogDetails({
   slug = "virtual-construction",
 }) {
-
+  const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(true);
   const [blog, setBlog] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const blogDetails = BlogContent.find((item) => item.slug === slug);
+    dispatch(getBlogById(slug))
+      .then((result) => {
+        console.log("getBlogById Details:", result);
+        setBlog(result.payload);
+        setIsLoading(false);
+      }).catch((err) => {
+        setError("Error fetching blog");
+        setIsLoading(false);
+      });
 
-    if (blogDetails) {
-      setBlog(blogDetails);
-      setIsLoading(false);
-    } else {
-      setError("Blog not found");
-      setIsLoading(false);
-    }
+    // if (blogDetails) {
+    //   setBlog(blogDetails);
+    //   setIsLoading(false);
+    // } else {
+    //   setError("Blog not found");
+    //   setIsLoading(false);
+    // }
   }, [slug]);
 
   return (
@@ -44,8 +56,23 @@ export default function BlogDetails({
             <Typography variant="h1" sx={MUIStyle.BlogHeading}>
               {blog.title}
             </Typography>
-            <Box component={"img"} src={blog.img} sx={MUIStyle.BlogImg} />
+            <Image
+              src={blog.banner_image}
+              alt={blog.title}
+              layout="responsive"
+              width={800}
+              height={400}
+              objectFit="cover"
+              className={styles.BlogImg}
+            />
             <Box sx={MUIStyle.BlogDetailsContent}>
+              <Typography
+                variant="body1"
+                sx={MUIStyle.BlogText}
+                dangerouslySetInnerHTML={{ __html: blog.content }}
+              />
+            </Box>
+            {/* <Box sx={MUIStyle.BlogDetailsContent}>
               <Typography variant="body1" sx={MUIStyle.BlogText}>
                 There’s no doubt that the pandemic has led businesses into work
                 challenges and overcoming these challenges, companies have
@@ -127,7 +154,7 @@ export default function BlogDetails({
                   </Typography>
                 </Box>
               </Box>
-            </Box>
+            </Box> */}
           </Box>
         )}
 
