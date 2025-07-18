@@ -1,6 +1,52 @@
 import { commonColor } from "@/values/Colors/CommonColor";
 import { FONT_SIZE, FONT_WEIGHT } from "@/values/Constants/FontConstants";
 
+const PricingQuoteInputItem = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "5px",
+    width: "100%",
+    "& .MuiOutlinedInput-root": {
+        borderRadius: "100px !important",
+        borderColor: commonColor.grey600,
+        "& fieldset": {
+            borderColor: commonColor.grey600,
+        },
+        "&:hover fieldset": {
+            borderColor: commonColor.grey600,
+        },
+        "&.Mui-focused fieldset": {
+            borderColor: commonColor.grey600,
+        },
+        "&.Mui-focused": {
+            borderColor: commonColor.grey600,
+        },
+    },
+    "& .MuiInputBase-input": {
+        padding: "2px 20px 3px",
+        minHeight: "42px",
+        backgroundColor: commonColor.white,
+        color: commonColor.black,
+        fontSize: FONT_SIZE.text16,
+        lightHeight: "1.5em",
+        fontWeight: FONT_WEIGHT.MEDIUM,
+        width: "100%",
+        borderColor: commonColor.grey600,
+        borderRadius: "50px",
+        "&::placeholder": {
+            color: commonColor.grey,
+            fontSize: FONT_SIZE.text16,
+            fontWeight: FONT_WEIGHT.MEDIUM,
+            lineHeight: "1.5em",
+            opacity: 1,
+        },
+    },
+    "& .MuiSelect-select": {
+        display: "flex",
+        alignItems: "center",
+    },
+}
+
 export const MUIStyle = {
     modalOuterBox: {
         display: "flex",
@@ -9,93 +55,94 @@ export const MUIStyle = {
         width: "100%",
         height: "100%",
     },
+    PricingQuoteInputItem,
+    PricingQuoteInputItemMulti: {
+        ...PricingQuoteInputItem,
+        "& .MuiOutlinedInput-root": {
+            ...PricingQuoteInputItem["& .MuiOutlinedInput-root"],
+            borderRadius: "20px !important",
+        },
+        "& .MuiInputBase-input": {
+            ...PricingQuoteInputItem["& .MuiInputBase-input"],
+            padding: "5px 20px",
+            lineHeight: "normal",
+        },
+        marginBottom: "10px",
+        borderRadius: "20px !important",
+    },
+    PricingQuoteInputLabel: {
+        fontSize: FONT_SIZE.text16,
+        lineHeight: "1.5em",
+        fontWeight: FONT_WEIGHT.MEDIUM,
+        color: commonColor.grey,
+        textAlign: "left",
+        paddingLeft: "5px",
+        transition: "all 0.5s ease-in-out",
+        "span": {
+            color: commonColor.red,
+        },
+    },
+    commentBox: {
+       "& .css-w4nesw-MuiInputBase-input-MuiOutlinedInput-input": {
+           padding: "1px 4px",
+       }
+    },
     modalBox: {
-        background: 'url("/images/contact-form-bg.jpg")',
-        width: {
-            xs: "90vw",
-            sm: "calc(60vh*0.75)",
-            md: "calc(80vh/0.75)",
-            lg: "calc(80vh/0.75)",
-            xl: "calc(80vh/0.75)",
+        background: '#fff',
+        borderRadius: {
+            xs: '0px',
+            sm: '0px',
+            md: '24px',
+            lg: '24px',
         },
-        // Height should be 0.75 times the width
-        height: {
-            xs: "calc(90vw/0.60)",
-            sm: "60vh",
-            md: "80vh",
-            lg: "80vh",
-            xl: "80vh",
+        boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
+        width: { xs: '100vh', sm: '100vh', md: '800px', lg: '900px' },
+        maxWidth: '98vw',
+        maxHeight: '98vh',
+        overflowY: 'scroll',
+        "&::-webkit-scrollbar": {
+            display: "none", // Chrome, Safari, and Opera
         },
-        maxWidth: "95vw",
-        maxHeight: "95vh",
-        backgroundSize: "cover",
-        zIndex: 1,
         position: 'relative',
     },
     closeIcon: {
         cursor: "pointer",
         position: "absolute",
-        top: "0.5%",
-        right: "0.5%",
-        width: {
-            xs: "5vw",
-            sm: "3vw",
-            md: "2vw",
-            lg: "2vw",
-            xl: "2vw",
-        },
-        height: {
-            xs: "5vw",
-            sm: "3vw",
-            md: "2vw",
-            lg: "2vw",
-            xl: "2vw",
-        },
-        filter: 'drop-shadow(5px 5px 5px black)',
+        top: "24px",
+        right: "24px",
+        width: "32px",
+        height: "32px",
+        zIndex: 2,
     },
     modalContent: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-evenly",
-        height: "100%",
-        width: {
-            xs: "100%",
-            sm: "100%",
-            md: "50%",
-            lg: "50%",
-            xl: "50%",
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        padding: { xs: '18px', md: '24px' },
+        paddingTop: { xs: '100px',sm:'100px', md: '24px' },
+        background: '#fff',
+        overflowY: 'scroll',
+        "&::-webkit-scrollbar": {
+            display: "none", // Chrome, Safari, and Opera
         },
-        padding: "3rem",
     },
     letsTalkButton: {
-        background: commonColor.green,
-        border: "2px solid",
-        borderColor: commonColor.green,
-        boxShadow: "none",
-        padding: {
-            xs: "6px 20px",
-            sm: "6px 20px",
-            md: "6px 20px",
-            lg: "6px 20px",
-            xl: "10px 42px",
-        },
-        borderRadius: "100px",
-        textTransform: "capitalize",
-        fontSize: {
-            xs: FONT_SIZE.text14,
-            sm: FONT_SIZE.text14,
-            md: FONT_SIZE.text14,
-            lg: FONT_SIZE.text14,
-        },
-        lineHeight: "1.5em",
-        fontWeight: FONT_WEIGHT.MEDIUM,
-        color: commonColor.black,
-        transition: 'all 0.3s ease',
-        "&:hover": {
-          background: commonColor.trans,
-          boxShadow: "none",
-          color: commonColor.white,
+        background: '#eafd6b',
+        color: '#222',
+        borderRadius: '20px',
+        fontWeight: 600,
+        fontSize: '1.15rem',
+        width: '100%',
+        mt: 2,
+        py: 1.5,
+        boxShadow: 'none',
+        '&:hover': {
+            background: '#d4f000',
+            color: '#222',
+            boxShadow: 'none',
         },
     },
     successMessage: {
@@ -131,5 +178,17 @@ export const MUIStyle = {
         },
         fontWeight: FONT_WEIGHT.MEDIUM,
         textAlign: "center",
-    }
+    },
+    imageSection: {
+        padding: { xs: '0', md: '12px' },
+        display: { xs: 'none', md: 'flex' },
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'white',
+        minWidth: '320px',
+        maxWidth: '385px',
+        width: '100%',
+        position: 'relative',
+    },
+    
 }

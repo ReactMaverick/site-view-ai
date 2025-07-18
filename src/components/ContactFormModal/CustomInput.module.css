@@ -10,13 +10,28 @@
     position: relative;
 }
 
-.inputContainer input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #C9F625;
+.inputContainer input,
+.inputContainer textarea {
+    background: #fff !important;
+    border: 1.5px solid #E5E7EB;
+    color: #222;
     border-radius: 20px;
-    font-size: 1.35rem;
-    line-height: 2rem;
+    font-size: 1.1rem;
+    padding: 12px 18px;
+    margin-bottom: 18px;
+    transition: border 0.2s;
+}
+
+.inputContainer input:focus,
+.inputContainer textarea:focus {
+    border: 1.5px solid #b6d800;
+    outline: none;
+}
+
+.inputContainer input::placeholder,
+.inputContainer textarea::placeholder {
+    color: #bdbdbd;
+    opacity: 1;
 }
 
 .inputContainer textarea {
@@ -53,15 +68,15 @@
     position: absolute;
     display: flex;
     transform: translateY(-50%);
-    justify-content: center;
+    /* justify-content: center; */
     z-index: 5;
 }
 
 .labelText {
-    color: white;
+    color: #6B7280;
     font-size: 1.5rem;
     padding: 0 5px;
-    /* background-color: black; */
+    background-color: white;
     transition: 0.3s;
     border-radius: 5px;
 }
@@ -158,8 +173,8 @@
 .searchInput {
     /* position: absolute; */
     border-radius: 20px 20px 0 0 !important;
-    background-color: #121212 !important;
-    color: white;
+    background-color: white !important;
+    color: black;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -185,5 +200,5 @@
 }
 
 .textareaField {
-    background-color: #121212 !important;
+    background-color: white !important;
 }

@@ -1,4 +1,4 @@
-import { Backdrop, Box, Button, Modal, Typography } from "@mui/material";
+import { Backdrop, Box, Button, Modal, TextField, Typography } from "@mui/material";
 // import Backdrop from "@mui/material/Backdrop";
 import Fade from "@mui/material/Fade";
 import { MUIStyle } from "./MUIStyle";
@@ -32,14 +32,18 @@ export default function ContactFormModal({
         countryCode: "",
         contactNumber: "",
         email: "",
-        message: "",
+        comment: "",
+        companyName: '',
+        city: ''
     });
     const [error, setError] = useState({
         name: '',
         country: '',
         contactNumber: '',
         email: '',
-        message: '',
+        comment: '',
+        companyName: '',
+        city: ''
     });
     const [isSuccess, setIsSuccess] = useState(false);
     const [isError, setIsError] = useState(false);
@@ -47,6 +51,7 @@ export default function ContactFormModal({
     // Google Recaptcha v2
     const [recaptchaToken, setRecaptchaToken] = useState("");
 
+    // const recaptchaToken= "ahfjkdshf"
 
     const resetFormData = () => {
         setFormData({
@@ -55,7 +60,9 @@ export default function ContactFormModal({
             countryCode: "",
             contactNumber: "",
             email: "",
-            message: "",
+            comment: "",
+            companyName: '',
+            city: '',
         });
     }
 
@@ -65,7 +72,9 @@ export default function ContactFormModal({
             country: '',
             contactNumber: '',
             email: '',
-            message: '',
+            comment: '',
+            companyName: '',
+            city: '',
         });
     }
 
@@ -88,8 +97,8 @@ export default function ContactFormModal({
         if (key === "country") {
             setFormData({
                 ...formData,
-                country: value.label,
-                countryCode: value.value,
+                country: value,
+                // countryCode: value.value,
             });
 
             resetError();
@@ -108,7 +117,7 @@ export default function ContactFormModal({
     const handleFormSubmit = () => {
 
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
+        // console.log("formData", formData);
         if (!formData.name) {
             setError({
                 ...error,
@@ -118,7 +127,7 @@ export default function ContactFormModal({
         } else if (!formData.country) {
             setError({
                 ...error,
-                country: "Please select your country",
+                country: "Please Enter your country",
             });
             return;
         } else if (!formData.email) {
@@ -133,7 +142,20 @@ export default function ContactFormModal({
                 email: "Please enter a valid email",
             });
             return;
-        } else {
+        } else if (!formData.contactNumber) {
+            setError({
+                ...error,
+                contactNumber: "Please enter your contact number",
+            });
+            return;
+        }  else if (!formData.city) {
+            setError({
+                ...error,
+                city: "Please enter your city",
+            });
+            return;
+        }
+        else {
             console.log("Form Submitted", formData);
 
             submitForm();
@@ -154,7 +176,9 @@ export default function ContactFormModal({
             newFormData.append("country", formData.country);
             newFormData.append("contact_number", formData.countryCode + formData.contactNumber);
             newFormData.append("email", formData.email);
-            newFormData.append("message", formData.message);
+            newFormData.append("comment", formData.comment);
+            newFormData.append("company_name", formData.companyName);
+            newFormData.append("city", formData.city);
 
             const response = await fetch(CONTACT_US, {
                 method: "POST",
@@ -207,6 +231,7 @@ export default function ContactFormModal({
         >
             <Fade in={isModalOpen}>
                 <Box
+                    id="contactFormModal"
                     sx={[MUIStyle.modalOuterBox, {
                         backgroundColor: theme === "light" ? "rgba(0, 0, 0, 0.5)" : "rgba(255, 255, 255, 0.5)",
                     }]}
@@ -256,7 +281,17 @@ export default function ContactFormModal({
                                         Please try again later
                                     </Typography>
                                 </Box>) : (<>
-                                    <CustomInput
+                                    <Typography variant="h4" sx={{ fontWeight: 700, fontSize: { xs: '32px',sm:'32px', md: '2.5rem' }, mb: 1, color: '#222' }}>
+                                        Let&apos;s Connect
+                                    </Typography>
+                                    <Typography sx={{
+                                        color: '#555', mb: 3, fontSize: {
+                                            xs: '16px', md: '20px'
+                                        }
+                                    }}>
+                                        Join us to discover sitepace and enhance your construction endeavors!
+                                    </Typography>
+                                    {/* <CustomInput
                                         label="Name"
                                         placeholder="Enter your name"
                                         value={formData.name}
@@ -264,10 +299,27 @@ export default function ContactFormModal({
                                         error={error?.name !== ''}
                                         helperText={error?.name || ''}
                                         labelContainerStyle={{
-                                            background: 'linear-gradient(#030303, #121212)',
+                                            background: 'white',
                                         }}
-                                    />
-                                    <CustomInput
+                                    /> */}
+                                    <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
+                                        <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
+                                            Name *
+                                        </Typography>
+                                        <TextField
+                                            id="name"
+                                            placeholder="Enter your name"
+                                            variant="outlined"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={(e) => {
+                                                handleTextChange("name", e.target.value);
+                                            }}
+                                            error={!!error.name}
+                                            helperText={error.name}
+                                        />
+                                    </Box>
+                                    {/* <CustomInput
                                         label="Country"
                                         placeholder="Select your country"
                                         value={formData.country}
@@ -279,33 +331,124 @@ export default function ContactFormModal({
                                         error={error?.country !== ''}
                                         helperText={error?.country || ''}
                                         labelContainerStyle={{
-                                            background: 'linear-gradient(#040404, #121212)',
+                                            background: 'white',
                                         }}
-                                    />
-                                    <CustomInput
-                                        label="Contact Number"
-                                        placeholder="Enter your contact number"
-                                        type="number"
-                                        value={formData.contactNumber}
-                                        onTextChange={(value) => handleTextChange("contactNumber", value)}
-                                        error={error?.contactNumber !== ''}
-                                        helperText={error?.contactNumber || ''}
-                                        labelContainerStyle={{
-                                            background: 'linear-gradient(#030303, #121212)',
-                                        }}
-                                    />
-                                    <CustomInput
-                                        label="Email"
-                                        placeholder="Enter your email"
-                                        value={formData.email}
-                                        onTextChange={(value) => handleTextChange("email", value)}
-                                        error={error?.email !== ''}
-                                        helperText={error?.email || ''}
-                                        labelContainerStyle={{
-                                            background: 'linear-gradient(#050505, #121212)',
-                                        }}
-                                    />
-                                    <CustomInput
+                                    /> */}
+                                        <Box
+                                            sx={{
+                                                display: { xs: "block", md: "flex" },
+                                                gap: { xs: 0, md: 2 },
+                                                width: "100%",
+                                            }}
+                                        >
+                                            <Box sx={{ flex: 1, mb: { xs: 2, md: 0 } }}>
+                                                <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
+                                                    <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
+                                                        Number *
+                                                    </Typography>
+                                                    <TextField
+                                                        id="contactNumber"
+                                                        placeholder="Enter your Number"
+                                                        variant="outlined"
+                                                        name="contactNumber"
+                                                        type="text"
+                                                        value={formData.contactNumber}
+                                                        onChange={(e) => {
+                                                            handleTextChange("contactNumber", e.target.value);
+                                                        }}
+                                                        error={!!error.contactNumber}
+                                                        helperText={error.contactNumber}
+                                                    />
+                                                </Box>
+                                            </Box>
+                                            <Box sx={{ flex: 1 }}>
+                                                <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
+                                                    <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
+                                                        Email *
+                                                    </Typography>
+                                                    <TextField
+                                                        id="email"
+                                                        placeholder="Enter your email"
+                                                        variant="outlined"
+                                                        name="email"
+                                                        type="email"
+                                                        value={formData.email}
+                                                        onChange={(e) => {
+                                                            handleTextChange("email", e.target.value);
+                                                        }}
+                                                        error={!!error.email}
+                                                        helperText={error.email}
+                                                    />
+                                                </Box>
+                                            </Box>
+                                        </Box>
+                                    
+                                        <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
+                                            <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
+                                                Company Name 
+                                            </Typography>
+                                            <TextField
+                                                id="companyName"
+                                                placeholder="Enter your Company Name"
+                                                variant="outlined"
+                                                name="companyName"
+                                                value={formData.companyName}
+                                                onChange={(e) => {
+                                                    handleTextChange("companyName", e.target.value);
+                                                }}
+                                                error={!!error.companyName}
+                                                helperText={error.companyName}
+                                            />
+                                        </Box>
+                                        <Box
+                                            sx={{
+                                                display: { xs: "block", md: "flex" },
+                                                gap: { xs: 0, md: 2 },
+                                                width: "100%",
+                                            }}
+                                        >
+                                            <Box sx={{ flex: 1, mb: { xs: 2, md: 0 } }}>
+                                                <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
+                                                    <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
+                                                        Country *
+                                                    </Typography>
+                                                    <TextField
+                                                        id="country"
+                                                        placeholder="Enter your country name"
+                                                        variant="outlined"
+                                                        name="country"
+                                                        value={formData.country}
+                                                        onChange={(e) => {
+                                                            handleTextChange("country", e.target.value);
+                                                        }}
+                                                        error={!!error.country}
+                                                        helperText={error.country}
+                                                    />
+                                                </Box>
+                                            </Box>
+
+                                            <Box sx={{ flex: 1 }}>
+                                                <Box sx={MUIStyle.PricingQuoteInputItem} className="quoteFormInput">
+                                                    <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
+                                                        City *
+                                                    </Typography>
+                                                    <TextField
+                                                        id="city"
+                                                        placeholder="Enter your city name"
+                                                        variant="outlined"
+                                                        name="city"
+                                                        type="city"
+                                                        value={formData.city}
+                                                        onChange={(e) => {
+                                                            handleTextChange("city", e.target.value);
+                                                        }}
+                                                        error={!!error.city}
+                                                        helperText={error.city}
+                                                    />
+                                                </Box>
+                                            </Box>
+                                        </Box>
+                                    {/* <CustomInput
                                         label="Please Add More"
                                         placeholder="Enter your message"
                                         multiline
@@ -314,15 +457,35 @@ export default function ContactFormModal({
                                         error={error?.message !== ''}
                                         helperText={error?.message || ''}
                                         labelContainerStyle={{
-                                            background: 'linear-gradient(#030303, #121212)',
+                                            background: 'white',
                                         }}
-                                    />
+                                    /> */}
+                                    <Box sx={MUIStyle.PricingQuoteInputItemMulti} className="quoteFormInput">
+                                        <Typography variant="h5" sx={MUIStyle.PricingQuoteInputLabel}>
+                                            Comment
+                                        </Typography>
+                                        <TextField
+                                            id="comment"
+                                            placeholder="write your comment"
+                                            variant="outlined"
+                                            name="comment"
+                                            multiline
+                                            rows={1} // Reduced height from 4 to 2
+                                            value={formData.comment}
+                                            onChange={(e) => {
+                                                handleTextChange("comment", e.target.value);
+                                            }}
+                                            error={!!error.comment}
+                                            helperText={error.comment}
+                                            sx={MUIStyle.commentBox}
+                                        />
+                                    </Box>
                                     <ReCAPTCHA
                                         sitekey={process.env.GOOGLE_SITE_KEY || ""}
                                         ref={recaptchaRef}
                                         onChange={handleRecaptchaChange}
                                         onExpired={handleRecaptchaExpired}
-                                        style={{ marginBottom: '10px' }}
+                                        style={{ marginBottom: '10px',display: 'flex', justifyContent: 'center' }}
                                     />
                                     <Button
                                         sx={MUIStyle.letsTalkButton}
@@ -332,6 +495,13 @@ export default function ContactFormModal({
                                         Let&apos;s Connect
                                     </Button>
                                 </>)}
+                        </Box>
+                        <Box sx={MUIStyle.imageSection}>
+                            <Box>
+                                <img src="/images/site-view-ai-contact-image.png" alt="SiteView" style={{ width: '100%', objectFit: 'cover' }} />
+
+                            </Box>
+                            {/* Add logo if needed */}
                         </Box>
                     </Box>
                 </Box>
