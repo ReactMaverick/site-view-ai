@@ -83,9 +83,9 @@ export const MUIStyle = {
         },
     },
     commentBox: {
-       "& .css-w4nesw-MuiInputBase-input-MuiOutlinedInput-input": {
-           padding: "1px 4px",
-       }
+        "& .css-w4nesw-MuiInputBase-input-MuiOutlinedInput-input": {
+            padding: "1px 4px",
+        }
     },
     modalBox: {
         background: '#fff',
@@ -97,15 +97,21 @@ export const MUIStyle = {
         },
         boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
         display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' },
-        width: { xs: '100vh', sm: '100vh', md: '800px', lg: '900px' },
-        maxWidth: '98vw',
-        maxHeight: '98vh',
-        overflowY: 'scroll',
-        "&::-webkit-scrollbar": {
-            display: "none", // Chrome, Safari, and Opera
+        flexDirection: { xs: 'column', md: 'row', },
+        alignItems: "stretch",
+        width: { xs: '100vw', sm: '100vw', md: '70vw', lg: '58vw', xl: '50vw' },
+        maxWidth: '100vw',
+        maxHeight: {
+            xs: '100%',
+            sm: '100%',
+            md: '90%',
+            lg: '90%',
+            xl: '90%',
         },
+        height: '100%',
+        gap: '24px',
         position: 'relative',
+        padding: "20px",
     },
     closeIcon: {
         cursor: "pointer",
@@ -117,17 +123,27 @@ export const MUIStyle = {
         zIndex: 2,
     },
     modalContent: {
-        flex: 1,
+        maxWidth: {
+            xs: '100%',
+            sm: '100%',
+            md: '60%',
+            lg: '60%',
+            xl: '60%',
+        },
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        padding: { xs: '18px', md: '24px' },
-        paddingTop: { xs: '100px',sm:'100px', md: '24px' },
+        justifyContent: 'start',
+        // padding: { xs: '18px', md: '24px' },
         background: '#fff',
         overflowY: 'scroll',
         "&::-webkit-scrollbar": {
             display: "none", // Chrome, Safari, and Opera
         },
+    },
+    PricingQuoteInputContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '16px',
     },
     letsTalkButton: {
         background: '#eafd6b',
@@ -180,15 +196,22 @@ export const MUIStyle = {
         textAlign: "center",
     },
     imageSection: {
-        padding: { xs: '0', md: '12px' },
         display: { xs: 'none', md: 'flex' },
         alignItems: 'center',
         justifyContent: 'center',
         background: 'white',
-        minWidth: '320px',
-        maxWidth: '385px',
-        width: '100%',
+        width: "100%",
+        maxWidth: {
+            xs: '100%',
+            sm: '100%',
+            md: '40%',
+            lg: '40%',
+            xl: '40%',
+        },
+        height: '100%',
         position: 'relative',
+        borderRadius: '12px',
+        overflow: 'hidden',
     },
-    
+
 }

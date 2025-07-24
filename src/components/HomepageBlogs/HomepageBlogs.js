@@ -57,13 +57,13 @@ const HomepageBlogs = () => {
   const dispatch = useDispatch();
   const blogs = useSelector((state) => state.blog.blogs);
   const blogsLoading = useSelector(SelectBlogsLoading);
-  
+
   useEffect(() => {
     console.log("Blogs:", blogs);
-  },[blogs, blogsLoading])
+  }, [blogs, blogsLoading])
   useEffect(() => {
     dispatch(getAllBlogs());
-  },[])
+  }, [])
   return (
     <Box sx={MUIStyle.BlogsSectionMain}>
       <Container maxWidth="xl">
