@@ -133,11 +133,19 @@ export const MUIStyle = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'start',
-        // padding: { xs: '18px', md: '24px' },
+        paddingRight: { xs: 'none', md: '24px' },
+
         background: '#fff',
-        overflowY: 'scroll',
+        overflowY: 'auto',
         "&::-webkit-scrollbar": {
-            display: "none", // Chrome, Safari, and Opera
+            display: {
+                xs: 'none',
+                sm: 'none',
+                md: 'block',
+                lg: 'block',
+                xl: 'block',
+                xxl: 'none',
+            }, // Chrome, Safari, and Opera
         },
     },
     PricingQuoteInputContainer: {
