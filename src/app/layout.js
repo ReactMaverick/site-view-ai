@@ -7,6 +7,7 @@ import { ARROWDOWN, MOUSEDOWN } from "@/values/Constants/ImageConstants";
 import Head from "next/head";
 import Script from "next/script";
 import Providers from "@/redux/Provider";
+import ScrollDownButton from "@/components/ScrollDownButton/ScrollDownButton";
 // import { Provider } from 'react-redux';
 // import Store from "@/redux/store";
 const Fellix = localFont({
@@ -80,7 +81,8 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <FooterSec />
-          <Image
+          <ScrollDownButton/>
+          {/* <Image
             src={MOUSEDOWN}
             alt="up"
             className="up"
@@ -94,7 +96,7 @@ export default function RootLayout({ children }) {
               backgroundColor: "transparent",
               zIndex: 1000,
             }}
-          />
+          /> */}
         </Providers>
 
 

@@ -62,13 +62,17 @@ export default function BannerNew({
 
   return (
     <>
-      <Box sx={[MUIStyle.BannerMain, {
-        background: theme === "light" ? commonColor.white : commonColor.black,
-      }]}>
+      <Box
+        sx={[
+          MUIStyle.BannerMain,
+          {
+            background:
+              theme === "light" ? commonColor.white : commonColor.black,
+          },
+        ]}
+      >
         <Box sx={MUIStyle.BannerSVGContainer}>
-          <SiteViewSVG
-            fillOpacity={theme === "light" ? 1 : 0.05}
-          />
+          <SiteViewSVG fillOpacity={theme === "light" ? 1 : 0.05} />
         </Box>
         <Container maxWidth="xl">
           <Box sx={MUIStyle.BannerRow}>
@@ -79,30 +83,64 @@ export default function BannerNew({
                     {headerButtonText}
                   </Typography>
                 )}
-                <Typography variant="h1" sx={[MUIStyle.BannerHeading, {
-                  color: theme === "light" ? commonColor.black : commonColor.white,
-                }]}>
+                <Typography
+                  variant="h1"
+                  sx={[
+                    MUIStyle.BannerHeading,
+                    {
+                      color:
+                        theme === "light"
+                          ? commonColor.black
+                          : commonColor.white,
+                    },
+                  ]}
+                >
                   {title}
                 </Typography>
                 <Typography variant="body1" sx={MUIStyle.BannerText}>
                   {subtitle}
                 </Typography>
                 {button && (
-                  <Button sx={[MUIStyle.BannerBtn, {
-                    color: {
-                      xs: commonColor.black,
-                      sm: commonColor.black,
-                      md: theme === "light" ? commonColor.black : isButtonHovered ? commonColor.black : commonColor.white,
-                      lg: theme === "light" ? commonColor.black : isButtonHovered ? commonColor.black : commonColor.white,
-                      xl: theme === "light" ? commonColor.black : isButtonHovered ? commonColor.black : commonColor.white,
-                    },
-                  }]} variant="contained" size="large"
-                    onMouseEnter={() => setTimeout(() => {
-                      setIsButtonHovered(true)
-                    }, 200)}
-                    onMouseLeave={() => setTimeout(() => {
-                      setIsButtonHovered(false)
-                    }, 200)}
+                  <Button
+                    sx={[
+                      MUIStyle.BannerBtn,
+                      {
+                        color: {
+                          xs: commonColor.black,
+                          sm: commonColor.black,
+                          md:
+                            theme === "light"
+                              ? commonColor.black
+                              : isButtonHovered
+                              ? commonColor.black
+                              : commonColor.white,
+                          lg:
+                            theme === "light"
+                              ? commonColor.black
+                              : isButtonHovered
+                              ? commonColor.black
+                              : commonColor.white,
+                          xl:
+                            theme === "light"
+                              ? commonColor.black
+                              : isButtonHovered
+                              ? commonColor.black
+                              : commonColor.white,
+                        },
+                      },
+                    ]}
+                    variant="contained"
+                    size="large"
+                    onMouseEnter={() =>
+                      setTimeout(() => {
+                        setIsButtonHovered(true);
+                      }, 200)
+                    }
+                    onMouseLeave={() =>
+                      setTimeout(() => {
+                        setIsButtonHovered(false);
+                      }, 200)
+                    }
                     onClick={() => setIsModalOpen(true)}
                   >
                     <Box
@@ -116,9 +154,10 @@ export default function BannerNew({
                     <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG} />
                   </Button>
                 )}
-                {pricingButton && (
+                {/* {pricingButton && (
                   <Box sx={MUIStyle.BtnRow} ref={container}>
-                    <Button sx={MUIStyle.CustomBtn} id="custom-pricing-btn"
+                    <Button sx={MUIStyle.CustomBtn} 
+                    id="custom-pricing-btn"
                       ref={pricingButtonRef}
                     >
                       {pricingButtonText}
@@ -127,10 +166,31 @@ export default function BannerNew({
                       </Box>
                     </Button>
                   </Box>
+                )} */}
+                {pricingButton && (
+                  <Button
+                    sx={MUIStyle.BannerBtn}
+
+                    variant="contained"
+                    size="large"
+                    id="custom-pricing-btn"
+                    ref={pricingButtonRef}
+                  >
+                    <Box
+                      component={"span"}
+                      className="BannerBtnIcon"
+                      sx={MUIStyle.BannerBtnIcon}
+                    >
+                      <Icon icon="flowbite:arrow-right-outline" />
+                    </Box>
+                    {pricingButtonText}
+                    <Box className="BannerBtnBG" sx={MUIStyle.BannerBtnBG} />
+                  </Button>
                 )}
                 {talkToSalesButton && (
                   <Box sx={MUIStyle.BtnRow}>
-                    <Button sx={MUIStyle.CustomBtn}
+                    <Button
+                      sx={MUIStyle.CustomBtn}
                       onClick={() => setIsModalOpen(true)}
                     >
                       {talkToSalesButtonText}
@@ -138,27 +198,19 @@ export default function BannerNew({
                   </Box>
                 )}
                 {contactButtons && (
-                  <Box
-                    sx={MUIStyle.BannerContactBtns}
-                  >
+                  <Box sx={MUIStyle.BannerContactBtns}>
                     <Button
                       sx={[
                         MUIStyle.ContactBtn,
                         {
                           backgroundColor: commonColor.grey4,
                           borderColor: commonColor.grey4,
-                        }
+                        },
                       ]}
                     >
                       Contact Us
                     </Button>
-                    <Button
-                      sx={[
-                        MUIStyle.ContactBtn
-                      ]}
-                    >
-                      Book A Demo
-                    </Button>
+                    <Button sx={[MUIStyle.ContactBtn]}>Book A Demo</Button>
                   </Box>
                 )}
               </Box>

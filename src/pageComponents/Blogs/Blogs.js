@@ -15,7 +15,7 @@ export default function Blogs() {
         subtitle="Dive into topics that elevate your construction and engineering strategies"
         button={false}
       />
-      <SingleBlogContent />
+      {/* <SingleBlogContent /> */}
       <BlogGrid />
     </Box>
   );
