@@ -26,6 +26,29 @@ export default function ScrollDownButton() {
     requestAnimationFrame(animation);
   };
 
+  const slowScrollByAmount = (amount = 1500, duration = 1600) => {
+    const start = window.scrollY;
+    const end = start + amount;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const target = Math.min(end, maxScroll);
+    const distance = target - start;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      const ease = progress < 0.5
+        ? 2 * progress * progress
+        : -1 + (4 - 2 * progress) * progress;
+      window.scrollTo(0, start + distance * ease);
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    }
+    requestAnimationFrame(animation);
+  };
+
   return (
     <div
       style={{
@@ -37,7 +60,7 @@ export default function ScrollDownButton() {
         zIndex: 1000,
         cursor: "pointer",
       }}
-      onClick={slowScrollToBottom}
+      onClick={() => slowScrollByAmount(1500, 2000)}
     >
       <Image
         src={MOUSEDOWN}
