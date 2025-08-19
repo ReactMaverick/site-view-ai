@@ -31,7 +31,7 @@ export default function BlogGrid() {
   }
 
   return (
-    <Box sx={MUIStyle.SingleBlogMain}>
+    <Box className="container-op" sx={MUIStyle.SingleBlogMain}>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.SingleBlogGrid}>
           {blogs.map((item, i) => (

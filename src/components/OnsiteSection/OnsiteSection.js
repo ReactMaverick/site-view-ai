@@ -105,7 +105,7 @@ export default function OnsiteSection() {
   });
 
   return (
-    <Box sx={MUIStyle.OnsiteSectionMain} ref={onSiteSec}>
+    <Box className="container-op" sx={MUIStyle.OnsiteSectionMain} ref={onSiteSec}>
       <Box sx={MUIStyle.VisionSVGContainer}>
         <SiteViewSVG
           fillOpacity="0.05"

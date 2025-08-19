@@ -80,7 +80,7 @@ export default function PricingSec() {
   })
 
   return (
-    <Box sx={MUIStyle.PricingSec} className="pricing-sec">
+    <Box sx={MUIStyle.PricingSec} className="pricing-sec container-op">
       <Container maxWidth="xl">
         <Box sx={MUIStyle.PricingSecHeadingBoxOuter} className="onsite-heading">
           <Box sx={MUIStyle.PricingSecHeadingBoxInner}>

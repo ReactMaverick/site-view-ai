@@ -98,7 +98,7 @@ export default function ConstructionProject() {
   });
 
   return (
-    <Box sx={MUIStyle.ConstructionProjectMain} ref={constructionSec}>
+    <Box className="container-op" sx={MUIStyle.ConstructionProjectMain} ref={constructionSec}>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.workflowHeadingBoxOuter}>
           <Box sx={MUIStyle.workflowHeadingBoxInner}>

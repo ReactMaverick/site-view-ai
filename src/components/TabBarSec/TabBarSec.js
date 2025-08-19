@@ -246,7 +246,7 @@ export default function TabBarSec({
 
 
   return (
-    <Box sx={[MUIStyle.TabBarSec,
+    <Box className="container-op" sx={[MUIStyle.TabBarSec,
     { background: theme === "light" ? commonColor.white : commonColor.black }
     ]}
       ref={sectionRef}

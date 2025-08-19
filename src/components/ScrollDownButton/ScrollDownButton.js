@@ -49,6 +49,76 @@ export default function ScrollDownButton() {
     requestAnimationFrame(animation);
   };
 
+  const scrollToNextSection = () => {
+    const sections = Array.from(document.querySelectorAll('.container-op'));
+    console.log("sections found:", sections);
+    if (sections.length === 0) {
+      console.log("No sections found!");
+      return;
+    }
+    
+    // Find the first section that's below the current scroll position
+    const currentScroll = window.scrollY + 50; // Add small offset
+    
+    let nextSection = null;
+    
+    for (let i = 0; i < sections.length; i++) {
+      const sectionTop = sections[i].offsetTop;
+      console.log(`Section ${i} top: ${sectionTop}, current scroll: ${currentScroll}`);
+      
+      if (sectionTop > currentScroll) {
+        nextSection = sections[i];
+        console.log(`Found next section: ${i}`);
+        break;
+      }
+    }
+    
+    if (nextSection) {
+      // Calculate dynamic duration based on scroll distance
+      const scrollDistance = Math.abs(nextSection.offsetTop - window.scrollY);
+      const baseDuration = 800;
+      const durationPerPixel = 1.2; // Increase this for slower scroll
+      const calculatedDuration = Math.min(
+        baseDuration + (scrollDistance * durationPerPixel),
+        4000 // Maximum 4 seconds
+      );
+      
+      console.log(`Scroll distance: ${scrollDistance}px, Duration: ${calculatedDuration}ms`);
+      
+      // Use custom smooth scroll with calculated duration
+      smoothScrollToElement(nextSection, calculatedDuration);
+    } else {
+      // Go back to first section
+      console.log("Going back to first section");
+      smoothScrollToElement(sections[0], 800);
+    }
+  };
+
+  const smoothScrollToElement = (element, duration) => {
+    const start = window.scrollY;
+    const targetPosition = element.offsetTop;
+    const distance = targetPosition - start;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+
+      // Easing function for smooth animation
+      const ease = progress < 0.5
+        ? 2 * progress * progress
+        : -1 + (4 - 2 * progress) * progress;
+
+      window.scrollTo(0, start + distance * ease);
+
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    }
+
+    requestAnimationFrame(animation);
+  };
   return (
     <div
       style={{
@@ -60,12 +130,11 @@ export default function ScrollDownButton() {
         zIndex: 1000,
         cursor: "pointer",
       }}
-      onClick={() => slowScrollByAmount(1500, 2000)}
+      onClick={scrollToNextSection}
     >
       <Image
         src={MOUSEDOWN}
-        alt="up"
-        className="up"
+        alt="scroll down"
         width={140}
         height={42}
         style={{

@@ -14,7 +14,7 @@ export default function VisionSection({
   orientation = "image-left",
 }) {
   return (
-    <Box sx={MUIStyle.VisionMain}>
+    <Box sx={MUIStyle.VisionMain} className="container-op">
       {/* <Box sx={MUIStyle.VisionSVGContainer}>
         <SiteViewSVG
                 fillOpacity="0.05"

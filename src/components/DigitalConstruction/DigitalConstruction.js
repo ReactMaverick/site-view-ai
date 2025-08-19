@@ -7,7 +7,7 @@ import { commonColor } from "@/values/Colors/CommonColor";
 
 export default function DigitalConstruction() {
   return (
-    <Box sx={MUIStyle.DigitalConstructionMain}>
+    <Box className="container-op" sx={MUIStyle.DigitalConstructionMain}>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.DigitalConstructionHeadingBoxOuter}>
           <Box sx={MUIStyle.DigitalConstructionHeadingBoxInner}>

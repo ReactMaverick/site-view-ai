@@ -77,7 +77,7 @@ export default function ContactUs() {
       // button={false}
       // contactButtons={true}
       />
-      <Box sx={MUIStyle.ContactSec}>
+      <Box className="container-op" sx={MUIStyle.ContactSec}>
         <Box sx={MUIStyle.ContactSecSVGContainer}>
           <SiteViewSVG
             fillOpacity={0.05}
@@ -138,10 +138,10 @@ export default function ContactUs() {
           </Box>
         </Container>
       </Box>
-      <Box sx={MUIStyle.ContactSecMap}>
+      <Box className="container-op" sx={MUIStyle.ContactSecMap}>
         <Box component={"img"} src={MAP} alt="map" />
       </Box>
-      <Box sx={MUIStyle.FAQSec}>
+      <Box className="container-op" sx={MUIStyle.FAQSec}>
         <Container maxWidth="xl">
           <Box sx={MUIStyle.FAQSecOuter}>
             <Box sx={MUIStyle.FAQSecAccrodin}>

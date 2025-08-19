@@ -70,6 +70,7 @@ export default function BannerNew({
               theme === "light" ? commonColor.white : commonColor.black,
           },
         ]}
+        className="container-op"
       >
         <Box sx={MUIStyle.BannerSVGContainer}>
           <SiteViewSVG fillOpacity={theme === "light" ? 1 : 0.05} />

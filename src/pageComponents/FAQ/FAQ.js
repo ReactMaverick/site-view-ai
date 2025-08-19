@@ -31,7 +31,7 @@ export default function FAQ() {
         subtitle="Find quick, straightforward answers to everything about SitePace.ai’s features and benefits"
         button={false}
       />
-      <Box sx={MUIStyle.FAQSec}>
+      <Box className="container-op" sx={MUIStyle.FAQSec}>
         <Container maxWidth="xl">
           <Box sx={MUIStyle.FAQSecOuter}>
             <Box sx={MUIStyle.FAQSecAccrodin}>

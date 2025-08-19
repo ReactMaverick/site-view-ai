@@ -25,6 +25,7 @@ export default function OutTech() {
 
   return (
     <Box className={styles.OurTechSec}>
+      {/* <div></div> */}
       <BannerNew
         theme="dark"
         headerButtonText="Tech Unleashed"

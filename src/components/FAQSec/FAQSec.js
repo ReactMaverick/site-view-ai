@@ -90,7 +90,7 @@ export default function FAQSec() {
   const router = useRouter();
 
   return (
-    <Box sx={MUIStyle.FAQSecMain}>
+    <Box className="container-op" sx={MUIStyle.FAQSecMain}>
       <Container maxWidth="xl">
         <Box sx={MUIStyle.FAQSecBoxOuter}>
           <Box sx={MUIStyle.FAQSecBoxInner}>

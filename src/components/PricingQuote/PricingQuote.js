@@ -271,7 +271,7 @@ export default function PricingQuote() {
 
 
   return (
-    <Box sx={MUIStyle.PricingQuoteSec}>
+    <Box sx={MUIStyle.PricingQuoteSec} className="container-op">
       <Container maxWidth="xl">
         <Box sx={MUIStyle.PricingQuoteHeadingBoxOuter}>
           <Box sx={MUIStyle.PricingQuoteHeadingBoxInner}>

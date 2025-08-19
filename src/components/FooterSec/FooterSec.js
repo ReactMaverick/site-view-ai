@@ -7,7 +7,7 @@ import { FTRMARK, LOGOFTR } from "@/values/Constants/ImageConstants";
 export default function FooterSec() {
 
     return (
-        <Box sx={MUIStyle.FooterSec}>
+        <Box className="container-op" sx={MUIStyle.FooterSec}>
             <Box component={"img"} src={FTRMARK} sx={MUIStyle.ftrwaternark} />
             <Box sx={MUIStyle.MainFooterBox}>
                 <Container maxWidth="xl">

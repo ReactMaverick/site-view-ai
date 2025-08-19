@@ -20,27 +20,47 @@ import HomepageBlogs from "@/components/HomepageBlogs/HomepageBlogs";
 
 
 export default function HomePage() {
-
   const [isThreeJSLoading, setIsThreeJSLoading] = useState(true);
 
   return (
     <Box className={styles.homePage}>
       {isThreeJSLoading && <FullPageLoader />}
-      <BannerThree
-        setIsThreeJSLoading={setIsThreeJSLoading}
-      />
-      {/* <FeatureShowcase/> */}
-      <FeatureShowcaseNew />
-      <About />
-      <Partners />
-      <WhyChooseUs />
-      <Project />
-      <Workflow />
-      <VideoSec />
-      <Industries />
-      <OurTeam />
-      <HomepageBlogs />
-      <CTA />
+      <div className="container-op">
+        <BannerThree setIsThreeJSLoading={setIsThreeJSLoading} />
+      </div>
+      <div className="container-op">
+        <FeatureShowcaseNew />
+      </div>
+      <div className="container-op">
+        <About />
+      </div>
+      <div className="container-op">
+        <Partners />
+      </div>
+      <div className="container-op">
+        <WhyChooseUs />
+      </div>
+      <div className="container-op">
+        <Project />
+      </div>
+      <div className="container-op">
+        <Workflow />
+      </div>
+      <div className="container-op">
+        <VideoSec />
+      </div>
+      <div className="container-op">
+        <Industries />
+      </div>
+      <div className="container-op">
+        <OurTeam />
+      </div>
+      <div className="container-op">
+        <HomepageBlogs />
+      </div>
+      <div className="container-op">
+        <CTA />
+      </div>
     </Box>
   );
 }
