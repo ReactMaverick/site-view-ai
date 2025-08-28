@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sitepace.ai/sitemap.xml
+
+# Optional: Disallow sensitive or admin routes
+# Disallow: /admin/
+# Disallow: /api/
