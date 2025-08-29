@@ -28,112 +28,112 @@ export default function ProblemSolution() {
   // console.log("problemSolutionPairs", problemSolutionPairs);
 
 
-  // useLayoutEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  // }, []);
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+  }, []);
 
-  // useGSAP(() => {
+  useGSAP(() => {
 
-  //   const problemCards = gsap.utils.toArray(".problem-main");
-  //   const solutionCards = gsap.utils.toArray(".solution-main");
+    const problemCards = gsap.utils.toArray(".problem-main");
+    const solutionCards = gsap.utils.toArray(".solution-main");
 
-  //   if (isMobileScreen()) {
-  //     // use staggering for mobile
-  //     gsap.set(".problem-main", {
-  //       xPercent: 50
-  //     });
+    if (isMobileScreen()) {
+      // use staggering for mobile
+      gsap.set(".problem-main", {
+        xPercent: 50
+      });
 
-  //     gsap.set(".solution-main", {
-  //       xPercent: -50
-  //     });
+      gsap.set(".solution-main", {
+        xPercent: -50
+      });
 
-  //     problemCards.forEach((card, index) => {
-  //       gsap.to(card, {
-  //         scrollTrigger: {
-  //           trigger: card,
-  //           start: "top " + (4 * window.innerHeight / 5),
-  //           end: "+=100",
-  //           scrub: true,
-  //           // markers: true,
-  //           id: `problem-card`,
-  //           snap: 1,
-  //         },
-  //         xPercent: 0,
-  //         ease: "power1.inOut",
-  //       });
-  //     });
+      problemCards.forEach((card, index) => {
+        gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top " + (4 * window.innerHeight / 5),
+            end: "+=100",
+            scrub: true,
+            // markers: true,
+            id: `problem-card`,
+            snap: 1,
+          },
+          xPercent: 0,
+          ease: "power1.inOut",
+        });
+      });
 
-  //     solutionCards.forEach((card, index) => {
-  //       gsap.to(card, {
-  //         scrollTrigger: {
-  //           trigger: card,
-  //           start: "top " + (4 * window.innerHeight / 5),
-  //           end: "+=100",
-  //           scrub: 1,
-  //           // markers: true,
-  //           id: `solution-card`,
-  //           snap: 1,
-  //         },
-  //         xPercent: 0,
-  //         ease: "power1.inOut",
-  //       });
-  //     });
+      solutionCards.forEach((card, index) => {
+        gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top " + (4 * window.innerHeight / 5),
+            end: "+=100",
+            scrub: 1,
+            // markers: true,
+            id: `solution-card`,
+            snap: 1,
+          },
+          xPercent: 0,
+          ease: "power1.inOut",
+        });
+      });
 
-  //     return;
-  //   }
+      return;
+    }
 
-  //   // Set Problem Cards
-  //   gsap.set(".problem-main", {
-  //     xPercent: 52
-  //   });
+    // Set Problem Cards
+    gsap.set(".problem-main", {
+      xPercent: 52
+    });
 
-  //   // Set Solution Cards
-  //   gsap.set(".solution-main", {
-  //     xPercent: -52
-  //   });
+    // Set Solution Cards
+    gsap.set(".solution-main", {
+      xPercent: -52
+    });
 
-  //   gsap.to('.problem-solution-main', {
-  //     scrollTrigger: {
-  //       trigger: '.problem-solution-main',
-  //       start: "top top",
-  //       end: "+=" + window.innerHeight * (3.5 / 2),
-  //       scrub: true,
-  //       // markers: true,
-  //       pin: true,
-  //     },
-  //   });
+    gsap.to('.problem-solution-main', {
+      scrollTrigger: {
+        trigger: '.problem-solution-main',
+        start: "top top",
+        end: "+=" + window.innerHeight * (3.5 / 2),
+        scrub: true,
+        // markers: true,
+        pin: true,
+      },
+    });
 
-  //   gsap.to(problemCards, {
-  //     scrollTrigger: {
-  //       trigger: '.problem-solution-main',
-  //       start: "top top",
-  //       end: "+=" + window.innerHeight * 1.5,
-  //       scrub: true,
-  //       // markers: true,
-  //       id: `solution-card`,
-  //       snap: 1,
-  //     },
-  //     xPercent: 0,
-  //     ease: "power1.inOut",
-  //     stagger: 0.05,
-  //   });
+    gsap.to(problemCards, {
+      scrollTrigger: {
+        trigger: '.problem-solution-main',
+        start: "top top",
+        end: "+=" + window.innerHeight * 1.5,
+        scrub: true,
+        // markers: true,
+        id: `solution-card`,
+        snap: 1,
+      },
+      xPercent: 0,
+      ease: "power1.inOut",
+      stagger: 0.05,
+    });
 
-  //   gsap.to(solutionCards, {
-  //     scrollTrigger: {
-  //       trigger: '.problem-solution-main',
-  //       start: "top top",
-  //       end: "+=" + window.innerHeight * 1.5,
-  //       scrub: true,
-  //       // markers: true,
-  //       id: `solution-card`,
-  //       snap: 1,
-  //     },
-  //     xPercent: 0,
-  //     ease: "power1.inOut",
-  //     stagger: 0.05,
-  //   });
+    gsap.to(solutionCards, {
+      scrollTrigger: {
+        trigger: '.problem-solution-main',
+        start: "top top",
+        end: "+=" + window.innerHeight * 1.5,
+        scrub: true,
+        // markers: true,
+        id: `solution-card`,
+        snap: 1,
+      },
+      xPercent: 0,
+      ease: "power1.inOut",
+      stagger: 0.05,
+    });
 
-  // })
+  })
 
   return (
     <Box sx={MUIStyle.ProblemSolutionMain} className="problem-solution-main">
