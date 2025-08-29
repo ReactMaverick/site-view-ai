@@ -5,6 +5,10 @@ export const metadata = {
     description: "Reach out today to see how SitePace can make site monitoring simple and remote.",
     alternates: {
         canonical: "https://sitepace.ai/contact-us"
+    },
+    robots: {
+        index: true,
+        follow: true
     }
 };
 

@@ -75,11 +75,11 @@ export const MUIStyle = {
   ProblemText: {
     // color: commonColor.white,
     fontSize: {
-      xs: FONT_SIZE.text12,
-      sm: FONT_SIZE.text12,
-      md: FONT_SIZE.text12,
-      lg: FONT_SIZE.text12,
-      xl: FONT_SIZE.text14,
+      xs: FONT_SIZE.text14,
+      sm: FONT_SIZE.text14,
+      md: FONT_SIZE.text14,
+      lg: FONT_SIZE.text16,
+      xl: FONT_SIZE.text18,
     },
     lineHeight: FONT_SIZE.heading28,
     fontWeight: FONT_WEIGHT.MEDIUM,

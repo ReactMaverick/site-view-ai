@@ -5,6 +5,10 @@ export const metadata = {
     description: "Monitor your construction site with AI + 360ｰ Vision. SitePace.ai delivers remote updates, snag tracking, and complete site visibility.",
     alternates: {
         canonical: "https://sitepace.ai/home"
+    },
+    robots: {
+        index: true,
+        follow: true
     }
 };
 

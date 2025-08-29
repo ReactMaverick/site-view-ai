@@ -1,0 +1,109 @@
+# SitePace.ai - Advanced Construction Management & 360° Visualization Platform
+
+## Project Overview
+SitePace.ai is a cutting-edge construction management platform that revolutionizes how construction projects are captured, viewed, monitored, and managed. Built with Next.js and React, it offers comprehensive tools for construction professionals to enhance project oversight, collaboration, and quality control.
+
+## Core Technologies
+- **Framework**: Next.js 15.0.3 with React 18.3.1
+- **Styling**: Material-UI (MUI) 6.1.7, Emotion for styled components
+- **State Management**: Redux Toolkit 2.8.2 with React Redux 9.2.0
+- **Animations**: GSAP 3.12.5, Lottie React animations
+- **Form Handling**: React Google reCAPTCHA integration
+- **Development**: TypeScript support via JSConfig
+
+## Key Features & Capabilities
+
+### 1. 360° Imaging & Virtual Tours
+- **360° Site Capture**: Complete spherical imaging for comprehensive site documentation
+- **Virtual Tours**: Interactive walkthrough experiences for remote site inspection
+- **Visual Indoor Positioning System (VIPS)**: Advanced navigation and positioning within indoor spaces
+- **No Blind Spots**: Complete visual coverage of construction sites
+
+### 2. Construction Workflow Management
+- **Capture**: Automated data collection and image capture systems
+- **View**: Real-time visualization of project progress and status
+- **Monitor**: Continuous tracking of construction milestones and quality metrics
+- **Collaborate**: Team-based collaboration tools for enhanced communication
+
+### 3. AI-Powered Tools
+- **Progress Tracking**: Automated progress monitoring with AI analysis
+- **Quality Control**: AI-based quality assessment and anomaly detection
+- **Risk Assessment**: Predictive analytics for identifying potential project risks
+- **Data Analytics**: Comprehensive reporting and insights generation
+
+### 4. Platform Features
+- **Real-time Collaboration**: Live updates and team communication
+- **Cloud-based Platform**: Accessible from anywhere with internet connectivity
+- **Offline Functionality**: Continue working even without internet connection
+- **Mobile Responsive**: Optimized for tablets, smartphones, and desktop devices
+- **Calendar Integration**: Project scheduling and milestone tracking
+- **QR Code Generation**: Quick access to specific project areas or documents
+
+## Application Structure
+
+### Pages & Routes
+- **Home** (`/` or `/home`): Main landing page with platform overview
+- **Why SitePace** (`/why-site-pace`): Benefits and value proposition
+- **Our Technology** (`/our-tech`): Technical capabilities and features
+- **Pricing** (`/pricing`): Service plans and pricing information
+- **Blogs** (`/blogs`): Industry insights and platform updates
+- **Contact Us** (`/contact-us`): Contact form and company information
+- **FAQ** (`/faq`): Frequently asked questions and support
+
+### Legal & Compliance Pages
+- **Privacy Policy** (`/privacy-policy`): Data protection and privacy terms
+- **Terms & Conditions** (`/terms-conditions`): Service usage terms
+- **Cookie Policy** (`/cookie-policy`): Cookie usage and preferences
+
+## Target Industries
+
+### Primary Markets
+- **Construction & Infrastructure**: Building projects, civil engineering
+- **Real Estate Development**: Property development and management
+- **Architecture & Engineering**: Design verification and progress monitoring
+- **Manufacturing & Industrial**: Facility management and quality control
+
+### Specialized Applications
+- **Government & Public Services**: Public infrastructure projects
+- **Healthcare Facilities**: Hospitals and clinic construction monitoring
+- **Educational Institutions**: School and university facility management
+- **Hospitality & Event Venues**: Hotel and venue construction oversight
+- **Oil & Gas Industry**: Industrial facility monitoring and safety compliance
+- **Mining & Resources**: Site safety and operational oversight
+- **Disaster Relief**: Emergency response and reconstruction efforts
+- **Museums & Galleries**: Cultural site preservation and documentation
+- **Forestry & Agriculture**: Agricultural facility and land management
+
+## Key Differentiators
+- **Helmet Camera Integration**: Hands-free capture during construction work
+- **Visual Indoor Positioning System**: Revolutionary indoor navigation technology
+- **AI-Based Progress Tracking**: Automated milestone detection and reporting
+- **Real-time Collaboration**: Instant updates across all stakeholders
+- **Comprehensive Documentation**: Complete project lifecycle documentation
+- **Quality Control Automation**: AI-powered defect detection and reporting
+
+## Technical Architecture
+- **Frontend**: React-based components with Material-UI design system
+- **Animations**: GSAP and Lottie for smooth user interactions
+- **Responsive Design**: Mobile-first approach with cross-device compatibility
+- **Performance Optimization**: Next.js optimization features for fast loading
+- **SEO Ready**: Built-in SEO optimization and sitemap generation
+- **Form Validation**: Comprehensive form handling with security features
+
+## Contact Information
+- **Email**: connect@sitepace.ai
+- **Website**: SitePace.ai
+- **Platform**: Advanced Construction Management Solution
+
+## Value Proposition
+SitePace.ai transforms construction project management by providing unprecedented visibility, control, and collaboration capabilities. Through advanced 360° imaging, AI-powered analytics, and real-time collaboration tools, the platform enables construction professionals to deliver projects faster, safer, and with higher quality outcomes.
+
+## Use Cases
+- **Project Progress Monitoring**: Track construction milestones in real-time
+- **Quality Assurance**: Automated defect detection and compliance verification
+- **Stakeholder Communication**: Share progress with investors, clients, and teams
+- **Documentation & Compliance**: Comprehensive project records for regulatory compliance
+- **Remote Site Inspection**: Virtual site visits for remote stakeholders
+- **Training & Onboarding**: Use captured data for team training and process improvement
+
+This comprehensive platform represents the future of construction management, combining cutting-edge technology with practical construction industry needs to deliver measurable improvements in project outcomes.

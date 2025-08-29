@@ -5,6 +5,10 @@ export const metadata = {
     description: "Got questions? SitePace.ai FAQ explains everything about AI-powered construction monitoring and remote site updates.",
     alternates: {
         canonical: "https://sitepace.ai/faq"
+    },
+    robots: {
+        index: true,
+        follow: true
     }
 };
 

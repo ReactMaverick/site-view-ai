@@ -5,6 +5,10 @@ export const metadata = {
     description: "SitePace.ai offers cost-effective, AI-driven site monitoring. 360ｰ helmet cameras capture progress and deliver instant remote updates.",
     alternates: {
         canonical: "https://sitepace.ai/why-site-pace"
+    },
+    robots: {
+        index: true,
+        follow: true
     }
 };
 

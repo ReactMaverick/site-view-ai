@@ -5,6 +5,10 @@ export const metadata = {
     description: "Explore pricing for SitePace.ai. Smarter site monitoring solutions at cost-effective rates for projects of every scale.",
     alternates: {
         canonical: "https://sitepace.ai/pricing"
+    },
+    robots: {
+        index: true,
+        follow: true
     }
 };
 
