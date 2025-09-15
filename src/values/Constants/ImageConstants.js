@@ -165,3 +165,9 @@ export const FSLOGO2 = URL('/images/SitepaceEngine.jpg');
 export const LINKLINEBIG = URL('/images/LinkLineBig.svg');
 export const LINKLINEMOB = URL('/images/LinkLineMob.svg');
 export const SITELGO = URL('/images/SiteLogo.png');
+
+// top common slider images
+export const CARD = URL('/images/Card.png');
+export const CARD1 = URL('/images/Card-1.png');
+export const CARD2 = URL('/images/Card-2.png');
+export const CARD3 = URL('/images/Card-3.png');

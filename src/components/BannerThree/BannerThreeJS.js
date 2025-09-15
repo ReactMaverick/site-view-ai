@@ -310,7 +310,7 @@ export const stopAnimation = ({
     gsap.to(window,
         {
             duration: 0.5,
-            scrollTo: "#featureShowcase",
+            scrollTo: "#top-common-slider",
             onComplete: () => {
                 document.body.style.overflow = 'auto';
             }

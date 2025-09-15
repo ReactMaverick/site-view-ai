@@ -17,6 +17,7 @@ import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 import FeatureShowcase from "@/components/FeatureShowcase/FeatureShowcase";
 import FeatureShowcaseNew from "@/components/FeatureShowcaseNew/FeatureShowcaseNew";
 import HomepageBlogs from "@/components/HomepageBlogs/HomepageBlogs";
+import TopCommonSlider from "@/components/TopCommonSlider/TopCommonSlider";
 
 
 export default function HomePage() {
@@ -27,6 +28,10 @@ export default function HomePage() {
       {isThreeJSLoading && <FullPageLoader />}
       <div className="container-op">
         <BannerThree setIsThreeJSLoading={setIsThreeJSLoading} />
+        
+      </div>
+      <div className="container-op">
+        <TopCommonSlider />
       </div>
       <div className="container-op">
         <FeatureShowcaseNew />
