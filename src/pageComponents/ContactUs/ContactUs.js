@@ -105,7 +105,7 @@ export default function ContactUs() {
                   Contact Number
                 </Typography>
                 <Typography variant="body1" sx={MUIStyle.ContactBoxText}>
-                  +91 9819555095
+                  +91 9819555059
                 </Typography>
               </Box>
             </Box>
