@@ -16,60 +16,51 @@ import { CARD, CARD1, CARD2, CARD3 } from '@/values/Constants/ImageConstants';
 const sliderData = [
     {
         id: 1,
-        title: "Next-Gen Construction Startup - BigShift 2025",
-        description: "Showcased as a rising force shaping construction's future.",
         image: CARD,
-        award: "Recognized Startup - Construction Technology BigShift 2025"
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7344395216302280704"
     },
     {
         id: 2,
-        title: "Best Tech Innovation - NICMAR ICCRIP 2025",
-        description: "Awarded for groundbreaking AI-driven site monitoring.",
+        title: "Next-Gen",
         image: CARD1,
-        award: "Best Tech Innovation Award"
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7360638701556711424"
     },
     {
         id: 3,
-        title: "Top 10 Construction Tech Startups - TechReview 2024",
-        description: "Honored among the most innovative startups transforming construction.",
+        title: "Best Tech Innovation - NICMAR ICCRIP 2025",
         image: CARD2,
-        award: "Top 10 Construction Tech Startups - TechReview 2024"
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7365765987486380033"
     },
     {
         id: 4,
-        title: "Innovation in Construction Award - BuildTech 2024",
-        description: "Celebrated for pioneering advancements in construction technology.",
+        title: "Best Construction Tech - Reality NXT 2025",
         image: CARD3,
-        award: "Innovation in Construction Award - BuildTech 2024"
+        link: "https://www.linkedin.com/posts/sitepace_ictdd2025-realtynxt-sitepace-activity-7331003768265719808-mV7p?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFsnfZ8BQDG49S-JQeZkfJjyRnQFlZqsreM"
     },
     {
         id: 1,
-        title: "Next-Gen Construction Startup - BigShift 2025",
-        description: "Showcased as a rising force shaping construction's future.",
         image: CARD,
-        award: "Recognized Startup - Construction Technology BigShift 2025"
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7344395216302280704"
     },
     {
         id: 2,
-        title: "Best Tech Innovation - NICMAR ICCRIP 2025",
-        description: "Awarded for groundbreaking AI-driven site monitoring.",
+        title: "Next-Gen",
         image: CARD1,
-        award: "Best Tech Innovation Award"
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7360638701556711424"
     },
     {
         id: 3,
-        title: "Top 10 Construction Tech Startups - TechReview 2024",
-        description: "Honored among the most innovative startups transforming construction.",
+        title: "Best Tech Innovation - NICMAR ICCRIP 2025",
         image: CARD2,
-        award: "Top 10 Construction Tech Startups - TechReview 2024"
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7365765987486380033"
     },
     {
         id: 4,
-        title: "Innovation in Construction Award - BuildTech 2024",
-        description: "Celebrated for pioneering advancements in construction technology.",
+        title: "Best Construction Tech - Reality NXT 2025",
         image: CARD3,
-        award: "Innovation in Construction Award - BuildTech 2024"
+        link: "https://www.linkedin.com/posts/sitepace_ictdd2025-realtynxt-sitepace-activity-7331003768265719808-mV7p?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFsnfZ8BQDG49S-JQeZkfJjyRnQFlZqsreM"
     },
+
 ];
 
 const TopCommonSlider = () => {
@@ -108,7 +99,13 @@ const TopCommonSlider = () => {
                     >
                         {sliderData.map((slide, index) => (
                             <SwiperSlide key={`${slide.id}-${index}`}>
-                                <Box sx={sliderStyles.imageContainer}>
+                                <Box
+                                    sx={{
+                                        ...sliderStyles.imageContainer,
+                                        cursor: 'pointer'
+                                    }}
+                                    onClick={() => window.open(slide.link, '_blank')}
+                                >
                                     <Image
                                         src={slide.image}
                                         alt={slide.title}
