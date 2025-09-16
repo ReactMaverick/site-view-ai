@@ -105,7 +105,7 @@ export default function ContactUs() {
                   Contact Number
                 </Typography>
                 <Typography variant="body1" sx={MUIStyle.ContactBoxText}>
-                  +91 9819555059
+                  +91 9819555127
                 </Typography>
               </Box>
             </Box>
@@ -160,10 +160,10 @@ export default function ContactUs() {
                   <AccordionSummary
                     sx={MUIStyle.FAQAccordionSummary}
                     expandIcon={
-                      <Box 
-                      component={"img"} 
-                      src={BUTTONDOWN} 
-                      alt="plus" 
+                      <Box
+                        component={"img"}
+                        src={BUTTONDOWN}
+                        alt="plus"
                         sx={MUIStyle.FAQAccordionIcon}
                       />
                     }
@@ -185,10 +185,10 @@ export default function ContactUs() {
                 <Button sx={MUIStyle.CustomBtn}
                   onClick={() => router.push("/faq")}
                 >
-                    View All FAQ
-                    <Box component={"span"} sx={MUIStyle.BtnIcon}>
-                      <Icon icon="radix-icons:arrow-right" />
-                    </Box>
+                  View All FAQ
+                  <Box component={"span"} sx={MUIStyle.BtnIcon}>
+                    <Icon icon="radix-icons:arrow-right" />
+                  </Box>
                 </Button>
               </Box>
             </Box>
