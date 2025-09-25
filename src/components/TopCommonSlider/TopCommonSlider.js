@@ -81,11 +81,11 @@ const TopCommonSlider = () => {
                         breakpoints={{
                             320: {
                                 slidesPerView: 1,
-                                spaceBetween: 10,
+                                spaceBetween: 1,
                             },
-                            768: {
+                            450: {
                                 slidesPerView: 2,
-                                spaceBetween: 10,
+                                spaceBetween: 4,
                             },
                             1024: {
                                 slidesPerView: 3,
